@@ -8,7 +8,7 @@
   <created_user/>
   <created_date>2013&#47;08&#47;29 12:34:38.111</created_date>
   <modified_user>jaapandre</modified_user>
-  <modified_date>2013&#47;08&#47;29 13:43:31.771</modified_date>
+  <modified_date>2013&#47;08&#47;29 14:52:42.569</modified_date>
     <parameters>
     </parameters>
   <connection>
@@ -100,7 +100,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>29</xloc>
+      <xloc>192</xloc>
       <yloc>63</yloc>
       </entry>
     <entry>
@@ -133,7 +133,7 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>131</xloc>
+      <xloc>294</xloc>
       <yloc>63</yloc>
       </entry>
     <entry>
@@ -166,8 +166,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>229</xloc>
-      <yloc>63</yloc>
+      <xloc>249</xloc>
+      <yloc>148</yloc>
       </entry>
     <entry>
       <name>dim_project</name>
@@ -199,8 +199,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>336</xloc>
-      <yloc>63</yloc>
+      <xloc>354</xloc>
+      <yloc>148</yloc>
       </entry>
     <entry>
       <name>dim_training</name>
@@ -232,8 +232,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>452</xloc>
-      <yloc>63</yloc>
+      <xloc>529</xloc>
+      <yloc>148</yloc>
       </entry>
     <entry>
       <name>dim_questionnaire</name>
@@ -265,8 +265,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>108</xloc>
-      <yloc>149</yloc>
+      <xloc>287</xloc>
+      <yloc>228</yloc>
       </entry>
     <entry>
       <name>dim_question &#47; stage_lookup_question</name>
@@ -298,8 +298,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>216</xloc>
-      <yloc>169</yloc>
+      <xloc>410</xloc>
+      <yloc>260</yloc>
       </entry>
     <entry>
       <name>dim_respondent</name>
@@ -309,7 +309,7 @@
       <trans_object_id/>
       <filename/>
       <transname>dim_respondent</transname>
-      <directory>&#47;webenq</directory>
+      <directory>&#47;</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -331,8 +331,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>362</xloc>
-      <yloc>182</yloc>
+      <xloc>319</xloc>
+      <yloc>370</yloc>
       </entry>
     <entry>
       <name>dim_date</name>
@@ -364,8 +364,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>520</xloc>
-      <yloc>201</yloc>
+      <xloc>389</xloc>
+      <yloc>59</yloc>
       </entry>
     <entry>
       <name>lookup_answer_label_and_stage_lookup_answer_label</name>
@@ -397,8 +397,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>80</xloc>
-      <yloc>296</yloc>
+      <xloc>572</xloc>
+      <yloc>282</yloc>
       </entry>
     <entry>
       <name>fact_answer</name>
@@ -430,8 +430,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>356</xloc>
-      <yloc>301</yloc>
+      <xloc>523</xloc>
+      <yloc>421</yloc>
       </entry>
   </entries>
   <hops>
@@ -443,15 +443,6 @@
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>set-variables</from>
-      <to>dim_country</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>dim_country</from>
@@ -490,8 +481,17 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>dim_question &#47; stage_lookup_question</from>
-      <to>dim_respondent</to>
+      <from>set-variables</from>
+      <to>dim_date</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>dim_date</from>
+      <to>dim_country</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -500,7 +500,7 @@
     </hop>
     <hop>
       <from>dim_respondent</from>
-      <to>dim_date</to>
+      <to>fact_answer</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -508,7 +508,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>dim_date</from>
+      <from>dim_question &#47; stage_lookup_question</from>
       <to>lookup_answer_label_and_stage_lookup_answer_label</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -518,7 +518,7 @@
     </hop>
     <hop>
       <from>lookup_answer_label_and_stage_lookup_answer_label</from>
-      <to>fact_answer</to>
+      <to>dim_respondent</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -527,5 +527,93 @@
     </hop>
   </hops>
   <notepads>
+    <notepad>
+      <note>Prepare 
+no datase lookup</note>
+      <xloc>53</xloc>
+      <yloc>81</yloc>
+      <width>109</width>
+      <heigth>42</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>special dimensions</note>
+      <xloc>53</xloc>
+      <yloc>165</yloc>
+      <width>121</width>
+      <heigth>26</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Questionnaires
+Questions
+Answer possibilities</note>
+      <xloc>49</xloc>
+      <yloc>247</yloc>
+      <width>126</width>
+      <heigth>58</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Respondents &amp; 
+Answers</note>
+      <xloc>50</xloc>
+      <yloc>366</yloc>
+      <width>104</width>
+      <heigth>42</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
 </job>
