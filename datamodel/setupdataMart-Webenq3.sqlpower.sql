@@ -41,7 +41,7 @@ ALTER TABLE stage_lookup_answer_label MODIFY COLUMN answer INTEGER COMMENT 'w3: 
 
 CREATE TABLE lookup_answer_label (
                 answer_label_key INT AUTO_INCREMENT NOT NULL,
-                answer_label LONGBLOB NOT NULL,
+                answer_label TEXT NOT NULL,
                 missing_answer INT DEFAULT 0,
                 PRIMARY KEY (answer_label_key)
 );
@@ -50,7 +50,7 @@ CREATE TABLE lookup_answer_label (
 CREATE TABLE dim_question (
                 question_key INT AUTO_INCREMENT NOT NULL,
                 group_title_en VARCHAR(255),
-                question_text_en LONGBLOB NOT NULL,
+                question_text_en TEXT,
                 sequence BIGINT NOT NULL,
                 PRIMARY KEY (question_key)
 );
@@ -136,7 +136,7 @@ CREATE TABLE fact_answer (
                 project_key INT,
                 training_key INT,
                 answer DOUBLE PRECISION DEFAULT NULL,
-                answer_string LONGBLOB,
+                answer_string TEXT,
                 PRIMARY KEY (respondent_key, question_key, answer_label_key)
 );
 
