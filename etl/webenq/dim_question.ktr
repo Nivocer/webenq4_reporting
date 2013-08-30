@@ -63,9 +63,74 @@
   <created_user>admin</created_user>
   <created_date>2013&#47;08&#47;27 09:52:28.000</created_date>
   <modified_user>jaapandre</modified_user>
-  <modified_date>2013&#47;08&#47;29 15:09:00.643</modified_date>
+  <modified_date>2013&#47;08&#47;29 15:41:38.749</modified_date>
   </info>
   <notepads>
+    <notepad>
+      <note>get questions</note>
+      <xloc>29</xloc>
+      <yloc>31</yloc>
+      <width>88</width>
+      <heigth>26</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>merge to get type of answer 
+in tbl_respondent_antwoorden</note>
+      <xloc>11</xloc>
+      <yloc>95</yloc>
+      <width>183</width>
+      <heigth>42</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>get group to which question 
+(optional) belong</note>
+      <xloc>17</xloc>
+      <yloc>179</yloc>
+      <width>174</width>
+      <heigth>42</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <connection>
     <name>source-database</name>
@@ -143,7 +208,7 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>get group</from><to>merge category</to><enabled>Y</enabled> </hop>  <hop> <from>Select field dim_question</from><to>Output to dim_question</to><enabled>Y</enabled> </hop>  <hop> <from>merge category</from><to>add question_key</to><enabled>Y</enabled> </hop>  <hop> <from>add question_key</from><to>Select field dim_question</to><enabled>Y</enabled> </hop>  <hop> <from>add question_key</from><to>Get System Info</to><enabled>Y</enabled> </hop>  <hop> <from>Get System Info</from><to>Select field lookup_question</to><enabled>Y</enabled> </hop>  <hop> <from>Select field lookup_question</from><to>output stage_lookup_question</to><enabled>Y</enabled> </hop>  <hop> <from>get questions</from><to>add sequence in questionnaire</to><enabled>Y</enabled> </hop>  <hop> <from>add sequence in questionnaire</from><to>merge category</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>get group</from><to>merge group</to><enabled>Y</enabled> </hop>  <hop> <from>Select field dim_question</from><to>Output to dim_question</to><enabled>Y</enabled> </hop>  <hop> <from>add question_key</from><to>Select field dim_question</to><enabled>Y</enabled> </hop>  <hop> <from>add question_key</from><to>Get System Info</to><enabled>Y</enabled> </hop>  <hop> <from>Get System Info</from><to>Select field lookup_question</to><enabled>Y</enabled> </hop>  <hop> <from>Select field lookup_question</from><to>output stage_lookup_question</to><enabled>Y</enabled> </hop>  <hop> <from>get questions</from><to>Stream lookup</to><enabled>Y</enabled> </hop>  <hop> <from>question_answerType</from><to>Stream lookup</to><enabled>Y</enabled> </hop>  <hop> <from>Stream lookup</from><to>merge group</to><enabled>Y</enabled> </hop>  <hop> <from>merge group</from><to>add sequence in questionnaire</to><enabled>Y</enabled> </hop>  <hop> <from>add sequence in questionnaire</from><to>add question_key</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>Get System Info</name>
     <type>SystemInfo</type>
@@ -162,8 +227,8 @@
       </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>465</xloc>
-      <yloc>250</yloc>
+      <xloc>597</xloc>
+      <yloc>213</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -215,8 +280,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>781</xloc>
-      <yloc>160</yloc>
+      <xloc>780</xloc>
+      <yloc>372</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -237,10 +302,12 @@
       </remove>      <remove>        <name>page_order</name>
       </remove>      <remove>        <name>sub_order</name>
       </remove>      <remove>        <name>question_id</name>
+      </remove>      <remove>        <name>answer_type</name>
+      </remove>      <remove>        <name>question_type</name>
       </remove>    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>583</xloc>
-      <yloc>154</yloc>
+      <xloc>780</xloc>
+      <yloc>280</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -263,10 +330,11 @@
       </remove>      <remove>        <name>sequence</name>
       </remove>      <remove>        <name>group_title_en</name>
       </remove>      <remove>        <name>questionnaire_id_external</name>
+      </remove>      <remove>        <name>question_type</name>
       </remove>    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>611</xloc>
-      <yloc>256</yloc>
+      <xloc>597</xloc>
+      <yloc>280</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -293,8 +361,8 @@
       <max_value>999999999</max_value>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>354</xloc>
-      <yloc>196</yloc>
+      <xloc>779</xloc>
+      <yloc>149</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -381,8 +449,8 @@
 </calculation>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>195</xloc>
-      <yloc>127</yloc>
+      <xloc>598</xloc>
+      <yloc>149</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -411,8 +479,8 @@ order by question_id</sql>
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>62</xloc>
-      <yloc>232</yloc>
+      <xloc>225</xloc>
+      <yloc>181</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -434,7 +502,8 @@ order by question_id</sql>
 	vrg.pagina_nr as page_number,
 	vrg.vraag_nummer as page_order,
 	vrg.sub_order as sub_order,
-	vrg_txt.vraag as question_text_en
+	vrg_txt.vraag as question_text_en,
+	vrg.vraag_type as question_type
 from tbl_vragen vrg
 join tbl_vragen_text vrg_txt
 	on vrg.vraag_id=vrg_txt.vraag_id
@@ -448,14 +517,14 @@ order by vrg.enquete_id, vrg.vraag_id
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>65</xloc>
-      <yloc>123</yloc>
+      <xloc>232</xloc>
+      <yloc>23</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>merge category</name>
+    <name>merge group</name>
     <type>StreamLookup</type>
     <description/>
     <distribute>N</distribute>
@@ -483,8 +552,8 @@ order by vrg.enquete_id, vrg.vraag_id
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>245</xloc>
-      <yloc>194</yloc>
+      <xloc>472</xloc>
+      <yloc>149</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -532,8 +601,107 @@ order by vrg.enquete_id, vrg.vraag_id
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>788</xloc>
-      <yloc>256</yloc>
+      <xloc>597</xloc>
+      <yloc>372</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>question_answerType</name>
+    <type>DataGrid</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>question_type</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>answer_type</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <data>
+      <line> <item>1</item><item>answer_id</item> </line>
+      <line> <item>2</item><item>answer_id</item> </line>
+      <line> <item>3</item><item>answer_id</item> </line>
+      <line> <item>4</item><item>answer_id</item> </line>
+      <line> <item>5</item><item>open</item> </line>
+      <line> <item>6</item><item>open</item> </line>
+      <line> <item>7</item><item>open</item> </line>
+      <line> <item>8</item><item>open</item> </line>
+      <line> <item>9</item><item>answer_id</item> </line>
+      <line> <item>10</item><item>open</item> </line>
+      <line> <item>12</item><item>open</item> </line>
+      <line> <item>13</item><item>answer_id</item> </line>
+      <line> <item>14</item><item>answer_id</item> </line>
+      <line> <item>15</item><item>open</item> </line>
+      <line> <item>51</item><item>answer_id</item> </line>
+      <line> <item>101</item><item>country</item> </line>
+      <line> <item>102</item><item>project</item> </line>
+      <line> <item>103</item><item>training</item> </line>
+      <line> <item>104</item><item>training</item> </line>
+      <line> <item>105</item><item>project</item> </line>
+      <line> <item>201</item><item>open</item> </line>
+      <line> <item/><item/> </line>
+    </data>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>227</xloc>
+      <yloc>97</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Stream lookup</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <from>question_answerType</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>question_type</name>
+        <field>question_type</field>
+      </key>
+      <value>
+        <name>answer_type</name>
+        <rename>answer_type</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>472</xloc>
+      <yloc>57</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
