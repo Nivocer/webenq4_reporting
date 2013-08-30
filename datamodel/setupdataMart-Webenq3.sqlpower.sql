@@ -1,9 +1,9 @@
 
 CREATE TABLE stage_lookup_respondent (
-                respondent_id VARCHAR(255) NOT NULL,
+                respondent_id INT NOT NULL,
                 date_import DATE NOT NULL,
                 respondent_key INT NOT NULL,
-                date_key DATE NOT NULL,
+                date_key INT NOT NULL,
                 questionnaire_key INT NOT NULL,
                 country_key INT,
                 training_key INT,
@@ -15,6 +15,7 @@ CREATE TABLE stage_lookup_respondent (
 CREATE TABLE stage_lookup_question (
                 question_id INT NOT NULL,
                 date_import DATE NOT NULL,
+                answer_type VARCHAR(255) NOT NULL,
                 question_key INT NOT NULL,
                 PRIMARY KEY (question_id)
 );
@@ -92,7 +93,7 @@ ALTER TABLE dim_date MODIFY COLUMN month INTEGER COMMENT 'month-nummer 1-12';
 
 CREATE TABLE dim_respondent (
                 respondent_key INT AUTO_INCREMENT NOT NULL,
-                respondent_id_external VARCHAR(255),
+                respondent_id_external INT NOT NULL,
                 respondent_name VARCHAR(255),
                 respondent_email VARCHAR(255),
                 language CHAR(3) DEFAULT "en",
@@ -116,7 +117,7 @@ ALTER TABLE dim_country MODIFY COLUMN country_code3 VARCHAR(3) COMMENT '3 charac
 CREATE TABLE dim_questionnaire (
                 questionnaire_key INT AUTO_INCREMENT NOT NULL,
                 questionnaire_title_en VARCHAR(255) NOT NULL,
-                questionnaire_id_external VARCHAR(255) NOT NULL,
+                questionnaire_id_external INT NOT NULL,
                 questionnaire_category_text_en VARCHAR(255),
                 sequence INT NOT NULL,
                 PRIMARY KEY (questionnaire_key)
@@ -131,12 +132,12 @@ CREATE TABLE fact_answer (
                 answer_label_key INT NOT NULL,
                 date_key INT NOT NULL,
                 questionnaire_key INT NOT NULL,
-                country_key INT NOT NULL,
-                project_key INT NOT NULL,
-                training_key INT NOT NULL,
+                country_key INT,
+                project_key INT,
+                training_key INT,
                 answer DOUBLE PRECISION DEFAULT NULL,
-                answer_string LONGBLOB NOT NULL,
-                PRIMARY KEY (respondent_key, question_key)
+                answer_string LONGBLOB,
+                PRIMARY KEY (respondent_key, question_key, answer_label_key)
 );
 
 ALTER TABLE fact_answer MODIFY COLUMN questionnaire_key INTEGER COMMENT 'link to question table';
