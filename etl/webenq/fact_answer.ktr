@@ -63,7 +63,7 @@
   <created_user>admin</created_user>
   <created_date>2013&#47;08&#47;27 09:53:07.000</created_date>
   <modified_user>jaapandre</modified_user>
-  <modified_date>2013&#47;08&#47;30 14:01:10.364</modified_date>
+  <modified_date>2013&#47;08&#47;30 15:34:32.375</modified_date>
   </info>
   <notepads>
     <notepad>
@@ -193,81 +193,6 @@
       <drawshadow>Y</drawshadow>
     </notepad>
   </notepads>
-  <connection>
-    <name>source-database</name>
-    <server>${SOURCE_HOST}</server>
-    <type>MYSQL</type>
-    <access>Native</access>
-    <database>${SOURCE_DB}</database>
-    <port>${SOURCE_PORT}</port>
-    <username>${SOURCE_USER}</username>
-    <password>${SOURCE_PASSWORD}</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
-      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${SOURCE_PORT}</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>target-database</name>
-    <server>${TARGET_HOST}</server>
-    <type>MYSQL</type>
-    <access>Native</access>
-    <database>${TARGET_DB}</database>
-    <port>${TARGET_PORT}</port>
-    <username>${TARGET_USER}</username>
-    <password>${TARGET_PASSWORD}</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
-      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${TARGET_PORT}</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
-    <name>wcm_dwh</name>
-    <server>localhost</server>
-    <type>MYSQL</type>
-    <access>Native</access>
-    <database>pentaho_wcm_dwh</database>
-    <port>3306</port>
-    <username>jaapandre</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79a57fd894a6df</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
-      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
   <order>
   <hop> <from>lookup respondent</from><to>lookup question</to><enabled>Y</enabled> </hop>  <hop> <from>add field answer_id</from><to>Select fiels answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>add field country</from><to>Select field country</to><enabled>Y</enabled> </hop>  <hop> <from>add field project</from><to>Select field project</to><enabled>Y</enabled> </hop>  <hop> <from>add field training</from><to>Select field training</to><enabled>Y</enabled> </hop>  <hop> <from>add field numeric</from><to>Select field numeric</to><enabled>Y</enabled> </hop>  <hop> <from>Add field string</from><to>set answer_db to answer_string</to><enabled>Y</enabled> </hop>  <hop> <from>get answers</from><to>trim answer</to><enabled>Y</enabled> </hop>  <hop> <from>trim answer</from><to>lookup respondent</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>lookup country</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>lookup project</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>lookup training</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>answer is numeric?</to><enabled>Y</enabled> </hop>  <hop> <from>lookup answer_key (answer_id)</from><to>add field answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>lookup project</from><to>add field project</to><enabled>Y</enabled> </hop>  <hop> <from>lookup training</from><to>add field training</to><enabled>Y</enabled> </hop>  <hop> <from>answer is numeric?</from><to>add field numeric</to><enabled>Y</enabled> </hop>  <hop> <from>answer is numeric?</from><to>Add field string</to><enabled>Y</enabled> </hop>  <hop> <from>lookup country</from><to>add field country</to><enabled>Y</enabled> </hop>  <hop> <from>Select field numeric</from><to>Output to fact_answer numeric</to><enabled>Y</enabled> </hop>  <hop> <from>set answer_db to answer_string</from><to>Output to fact_answer string</to><enabled>Y</enabled> </hop>  <hop> <from>Select field training</from><to>Output to fact_answer training</to><enabled>Y</enabled> </hop>  <hop> <from>Select field project</from><to>Output to fact_answer project</to><enabled>Y</enabled> </hop>  <hop> <from>Select field country</from><to>Output to fact_answer country</to><enabled>Y</enabled> </hop>  <hop> <from>Select fiels answer_id</from><to>Output to fact_answer answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer answer_id</from><to>error output answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer numeric</from><to>error output numeric</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer string</from><to>error output string</to><enabled>Y</enabled> </hop>  <hop> <from>lookup answer_key (answer_id)</from><to>error output lookup answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>answer_db to integer</to><enabled>Y</enabled> </hop>  <hop> <from>answer_db to integer</from><to>lookup answer_key (answer_id)</to><enabled>Y</enabled> </hop>  <hop> <from>answer_db to integer</from><to>error output answer_db  to integer</to><enabled>Y</enabled> </hop>  <hop> <from>lookup question</from><to>valid answer</to><enabled>Y</enabled> </hop>  <hop> <from>valid answer</from><to>answer type switch</to><enabled>Y</enabled> </hop>  <hop> <from>valid answer</from><to>Dummy (do nothing)</to><enabled>Y</enabled> </hop>  <hop> <from>lookup country</from><to>error output lookup country</to><enabled>Y</enabled> </hop>  <hop> <from>lookup project</from><to>error output lookup project</to><enabled>Y</enabled> </hop>  <hop> <from>lookup training</from><to>error output lookup training</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer training</from><to>error output training</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer project</from><to>error output project</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer country</from><to>error output country</to><enabled>Y</enabled> </hop>  </order>
   <step>
