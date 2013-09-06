@@ -42,7 +42,7 @@ ALTER TABLE stage_lookup_answer_label MODIFY COLUMN answer INTEGER COMMENT 'w3: 
 CREATE TABLE lookup_answer_label (
                 answer_label_key INT AUTO_INCREMENT NOT NULL,
                 answer_label TEXT NOT NULL,
-                missing_answer INT DEFAULT 0,
+                missing_answer INT,
                 PRIMARY KEY (answer_label_key)
 );
 
@@ -78,6 +78,7 @@ CREATE TABLE dim_date (
                 date_key INT NOT NULL,
                 date DATE,
                 year INT NOT NULL,
+                quarter VARCHAR(255) NOT NULL,
                 month INT NOT NULL,
                 month_text_en VARCHAR(255) NOT NULL,
                 day INT NOT NULL,
