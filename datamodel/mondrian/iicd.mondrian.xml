@@ -1,0 +1,146 @@
+<Schema name="iicd">
+  <Dimension visible="true" highCardinality="false" name="Dim country">
+    <Hierarchy name="Country code3" visible="true" hasAll="true" primaryKey="country_key">
+      <Table name="dim_country">
+      </Table>
+      <Level name="Country code3" visible="true" column="country_code3" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Country name en" visible="true" hasAll="true" primaryKey="country_key">
+      <Table name="dim_country">
+      </Table>
+      <Level name="Country name en" visible="true" column="country_name_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Dim date">
+    <Hierarchy name="Date" visible="true" hasAll="true" primaryKey="date_key">
+      <Table name="dim_date">
+      </Table>
+      <Level name="Date" visible="true" column="date" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Month" visible="true" hasAll="true" primaryKey="date_key">
+      <Table name="dim_date">
+      </Table>
+      <Level name="Month" visible="true" column="month" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Month text en" visible="true" hasAll="true" primaryKey="date_key">
+      <Table name="dim_date">
+      </Table>
+      <Level name="Month text en" visible="true" column="month_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Year" visible="true" hasAll="true" primaryKey="date_key">
+      <Table name="dim_date">
+      </Table>
+      <Level name="Year" visible="true" column="year" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Quarter" visible="true" column="quarter" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Dim project">
+    <Hierarchy name="Project text en" visible="true" hasAll="true" primaryKey="project_key">
+      <Table name="dim_project">
+      </Table>
+      <Level name="Project text en" visible="true" column="project_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Dim question">
+    <Hierarchy name="Group title en" visible="true" hasAll="true" primaryKey="question_key">
+      <Table name="dim_question">
+      </Table>
+      <Level name="Group title en" visible="true" column="group_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Question text en" visible="true" column="question_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Dim questionnaire">
+    <Hierarchy name="Questionnaire category text en" visible="true" hasAll="true" primaryKey="questionnaire_key">
+      <Table name="dim_questionnaire">
+      </Table>
+      <Level name="Questionnaire category text en" visible="true" column="questionnaire_category_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+      <Level name="Questionnaire title en" visible="true" column="questionnaire_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Sequence" visible="true" hasAll="true" primaryKey="questionnaire_key">
+      <Table name="dim_questionnaire">
+      </Table>
+      <Level name="Sequence" visible="true" column="sequence" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Dim respondent">
+    <Hierarchy name="Language" visible="true" hasAll="true" primaryKey="respondent_key">
+      <Table name="dim_respondent">
+      </Table>
+      <Level name="Language" visible="true" column="language" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Respondent name" visible="true" hasAll="true" primaryKey="respondent_key">
+      <Table name="dim_respondent">
+      </Table>
+      <Level name="Respondent name" visible="true" column="respondent_name" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Dim training">
+    <Hierarchy name="Training text en" visible="true" hasAll="true" primaryKey="training_key">
+      <Table name="dim_training">
+      </Table>
+      <Level name="Training text en" visible="true" column="training_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension visible="true" highCardinality="false" name="Lookup answer label">
+    <Hierarchy name="Answer label" visible="true" hasAll="true" primaryKey="answer_label_key">
+      <Table name="lookup_answer_label">
+      </Table>
+      <Level name="Answer label" visible="true" column="answer_label" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Missing answer" visible="true" hasAll="true" primaryKey="answer_label_key">
+      <Table name="lookup_answer_label">
+      </Table>
+      <Level name="Missing answer" visible="true" column="missing_answer" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="iicd" visible="true" cache="true" enabled="true">
+    <Table name="fact_answer">
+    </Table>
+    <DimensionUsage source="Dim country" name="Dim country" visible="true" foreignKey="country_key" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Dim date" name="Dim date" visible="true" foreignKey="date_key" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Dim project" name="Dim project" visible="true" foreignKey="project_key" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Dim question" name="Dim question" visible="true" foreignKey="question_key" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Dim questionnaire" name="Dim questionnaire" visible="true" foreignKey="questionnaire_key" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Dim respondent" name="Dim respondent" visible="true" foreignKey="respondent_key" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Dim training" name="Dim training" visible="true" foreignKey="training_key" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Lookup answer label" name="Lookup answer label" visible="true" foreignKey="answer_label_key" highCardinality="false">
+    </DimensionUsage>
+    <Measure name="Average" column="answer" formatString="#,###.00;(#,###.00)" aggregator="avg">
+    </Measure>
+    <Measure name="Count" column="answer" formatString="#,###;(#,###)" aggregator="count">
+    </Measure>
+    <Measure name="Distinct count" column="answer" formatString="#,###;(#,###)" aggregator="distinct count">
+    </Measure>
+    <Measure name="Min" column="answer" formatString="#" aggregator="min">
+    </Measure>
+    <Measure name="Max" column="answer" formatString="#" aggregator="max">
+    </Measure>
+    <Measure name="Respondents" column="respondent_key" formatString="#" aggregator="distinct count">
+    </Measure>
+  </Cube>
+</Schema>
