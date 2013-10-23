@@ -8,7 +8,7 @@
   <created_user/>
   <created_date>2013&#47;08&#47;29 12:34:38.111</created_date>
   <modified_user>jaapandre</modified_user>
-  <modified_date>2013&#47;10&#47;20 14:56:08.579</modified_date>
+  <modified_date>2013&#47;10&#47;23 12:28:34.968</modified_date>
     <parameters>
     </parameters>
   <connection>
@@ -101,7 +101,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>188</xloc>
-      <yloc>63</yloc>
+      <yloc>65</yloc>
       </entry>
     <entry>
       <name>dim_country</name>
@@ -133,8 +133,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>288</xloc>
-      <yloc>144</yloc>
+      <xloc>290</xloc>
+      <yloc>178</yloc>
       </entry>
     <entry>
       <name>dim_project</name>
@@ -166,8 +166,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>418</xloc>
-      <yloc>144</yloc>
+      <xloc>541</xloc>
+      <yloc>177</yloc>
       </entry>
     <entry>
       <name>dim_training</name>
@@ -199,8 +199,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>548</xloc>
-      <yloc>144</yloc>
+      <xloc>822</xloc>
+      <yloc>176</yloc>
       </entry>
     <entry>
       <name>dim_questionnaire</name>
@@ -232,8 +232,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>288</xloc>
-      <yloc>228</yloc>
+      <xloc>290</xloc>
+      <yloc>262</yloc>
       </entry>
     <entry>
       <name>dim_question &#47; stage_lookup_question</name>
@@ -265,8 +265,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>418</xloc>
-      <yloc>256</yloc>
+      <xloc>541</xloc>
+      <yloc>289</yloc>
       </entry>
     <entry>
       <name>dim_respondent</name>
@@ -298,8 +298,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>288</xloc>
-      <yloc>370</yloc>
+      <xloc>290</xloc>
+      <yloc>404</yloc>
       </entry>
     <entry>
       <name>dim_date</name>
@@ -332,7 +332,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>822</xloc>
-      <yloc>60</yloc>
+      <yloc>65</yloc>
       </entry>
     <entry>
       <name>lookup_answer_label_and_stage_lookup_answer_label</name>
@@ -364,8 +364,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>548</xloc>
-      <yloc>282</yloc>
+      <xloc>822</xloc>
+      <yloc>314</yloc>
       </entry>
     <entry>
       <name>fact_answer</name>
@@ -397,8 +397,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>418</xloc>
-      <yloc>416</yloc>
+      <xloc>541</xloc>
+      <yloc>449</yloc>
       </entry>
     <entry>
       <name>Set variables</name>
@@ -418,10 +418,10 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>317</xloc>
-      <yloc>64</yloc>
+      <yloc>65</yloc>
       </entry>
     <entry>
-      <name>empty-create database</name>
+      <name>create database</name>
       <description/>
       <type>SQL</type>
       <sql/>
@@ -433,8 +433,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>451</xloc>
-      <yloc>64</yloc>
+      <xloc>548</xloc>
+      <yloc>65</yloc>
       </entry>
     <entry>
       <name>dimension add null values</name>
@@ -466,8 +466,24 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>588</xloc>
-      <yloc>60</yloc>
+      <xloc>679</xloc>
+      <yloc>65</yloc>
+      </entry>
+    <entry>
+      <name>drop tables</name>
+      <description/>
+      <type>SQL</type>
+      <sql/>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>T</sqlfromfile>
+      <sqlfilename>${PATH_TO_SQL}setupdataMart-Webenq3DropTables.sql</sqlfilename>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>target-database</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>440</xloc>
+      <yloc>65</yloc>
       </entry>
   </entries>
   <hops>
@@ -544,15 +560,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Set variables</from>
-      <to>empty-create database</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
       <from>START</from>
       <to>Set variables</to>
       <from_nr>0</from_nr>
@@ -562,7 +569,7 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>empty-create database</from>
+      <from>create database</from>
       <to>dimension add null values</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -573,6 +580,24 @@
     <hop>
       <from>dimension add null values</from>
       <to>dim_date</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Set variables</from>
+      <to>drop tables</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>drop tables</from>
+      <to>create database</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -605,8 +630,8 @@ no datase lookup</note>
     </notepad>
     <notepad>
       <note>special dimensions</note>
-      <xloc>53</xloc>
-      <yloc>165</yloc>
+      <xloc>55</xloc>
+      <yloc>199</yloc>
       <width>121</width>
       <heigth>26</heigth>
       <fontname/>
@@ -628,8 +653,8 @@ no datase lookup</note>
       <note>Questionnaires
 Questions
 Answer possibilities</note>
-      <xloc>49</xloc>
-      <yloc>247</yloc>
+      <xloc>51</xloc>
+      <yloc>281</yloc>
       <width>126</width>
       <heigth>58</heigth>
       <fontname/>
@@ -650,8 +675,8 @@ Answer possibilities</note>
     <notepad>
       <note>Respondents &amp; 
 Answers</note>
-      <xloc>50</xloc>
-      <yloc>366</yloc>
+      <xloc>52</xloc>
+      <yloc>400</yloc>
       <width>104</width>
       <heigth>42</heigth>
       <fontname/>
