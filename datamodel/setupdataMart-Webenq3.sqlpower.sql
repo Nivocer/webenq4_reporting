@@ -122,7 +122,7 @@ ALTER TABLE dim_question MODIFY COLUMN sequence BIGINT COMMENT 'order in questio
 
 CREATE TABLE lookup_answer_label (
                 answer_label_key INT AUTO_INCREMENT NOT NULL,
-                question_key INT NOT NULL,
+                question_key INT,
                 answer_label TEXT NOT NULL,
                 missing_answer INT,
                 PRIMARY KEY (answer_label_key)

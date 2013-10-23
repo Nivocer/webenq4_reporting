@@ -56,7 +56,7 @@
   </data-source>
  </project-data-sources>
  <source-databases>
-  <database id="DB0" populated="true" UUID="c567306d-3adc-4474-890f-59dd64795b9c" dbcs-ref="DS2" name="mysql-localhost iicd" physicalName="mysql-localhost iicd" sql-exception="ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: Couldn&apos;t connect to database: Access denied for user &apos;jaapandre&apos;@&apos;localhost&apos; (using password: NO)" >
+  <database id="DB0" populated="true" UUID="c567306d-3adc-4474-890f-59dd64795b9c" dbcs-ref="DS2" name="mysql-localhost iicd" physicalName="mysql-localhost iicd" sql-exception="ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: Couldn&apos;t connect to database: Access denied for user &apos;jaapandre&apos;@&apos;localhost&apos; (using password: NO)" >
    <catalog id="CAT1" populated="true" UUID="0e97a56e-f73f-435d-a09e-2f5b1b73b49b" name="information_schema" nativeTerm="database" physicalName="information_schema" >
    </catalog>
    <catalog id="CAT2" populated="true" UUID="44d5cede-1fe4-4300-a202-ef932462ae9d" name="iicd_org" nativeTerm="database" physicalName="iicd_org" >
@@ -4666,7 +4666,7 @@
     <column id="COL1506" populated="true" UUID="995897e0-8171-480f-97ef-28e119d7c2ca" autoIncrement="true" autoIncrementSequenceName="lookup_answer_label_answer_label_key_seq" defaultValue="" name="answer_label_key" nullable="0" physicalName="answer_label_key" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL1507" populated="true" UUID="76068772-bf08-45a3-8c95-e64ef289a262" autoIncrement="false" autoIncrementSequenceName="dim_question_question_key_seq_1" defaultValue="" name="question_key" nullable="0" physicalName="question_key" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL1507" populated="true" UUID="76068772-bf08-45a3-8c95-e64ef289a262" autoIncrement="false" autoIncrementSequenceName="dim_question_question_key_seq_1" defaultValue="" name="question_key" nullable="1" physicalName="question_key" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     <column id="COL1508" populated="true" UUID="d1318420-5f4f-4ab5-8187-72dd78e2896e" autoIncrement="false" autoIncrementSequenceName="lookup_answer_label_answer_label_seq" defaultValue="" name="answer_label" nullable="0" physicalName="answer_label" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-1" userDefinedTypeUUID="9a814859-ab26-4acd-9415-ea82291bcac1" >
@@ -4805,11 +4805,11 @@
    <relationship id="REL1553" populated="true" UUID="ef88d32e-78f5-4dd7-9b5b-4fb8c0a2b177" deferrability="7" deleteRule="0" fk-table-ref="TAB1437" fkCardinality="7" identifying="false" name="dim_question_fact_answer_fk" physicalName="dim_question_fact_answer_fk" pk-table-ref="TAB1497" pkCardinality="2" updateRule="0" >
     <column-mapping id="CMP1554" populated="true" UUID="cb50fad8-6b9d-4488-b3a9-b3093ebe71e1" fk-column-ref="COL1439" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL1498" />
    </relationship>
-   <relationship id="REL1555" populated="true" UUID="9efc669e-788e-4e7e-8289-0f48190d1388" deferrability="7" deleteRule="0" fk-table-ref="TAB1505" fkCardinality="7" identifying="false" name="dim_question_lookup_answer_label_fk" physicalName="dim_question_lookup_answer_label_fk" pk-table-ref="TAB1497" pkCardinality="2" updateRule="0" >
-    <column-mapping id="CMP1556" populated="true" UUID="431a4236-e62a-4992-9acc-676f7383b880" fk-column-ref="COL1507" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL1498" />
+   <relationship id="REL1555" populated="true" UUID="9efc669e-788e-4e7e-8289-0f48190d1388" deferrability="7" deleteRule="0" fk-table-ref="TAB1505" fkCardinality="7" identifying="false" name="dim_question_lookup_answer_label_fk" physicalName="dim_question_lookup_answer_label_fk" pk-table-ref="TAB1497" pkCardinality="3" updateRule="0" >
+    <column-mapping id="CMP1556" populated="true" UUID="767a3d94-1a21-4072-ae82-784e3f8fc210" fk-column-ref="COL1507" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL1498" />
    </relationship>
-   <relationship id="REL1557" populated="true" UUID="06065f61-c111-4288-beb6-98322b88af14" deferrability="7" deleteRule="0" fk-table-ref="TAB1437" fkCardinality="7" identifying="false" name="lookup_answer_label_fact_answer_fk" physicalName="lookup_answer_label_fact_answer_fk" pk-table-ref="TAB1505" pkCardinality="2" updateRule="0" >
-    <column-mapping id="CMP1558" populated="true" UUID="68b30530-4fc7-4e34-ad9b-ab72c4b90877" fk-column-ref="COL1440" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL1506" />
+   <relationship id="REL1557" populated="true" UUID="06065f61-c111-4288-beb6-98322b88af14" deferrability="7" deleteRule="0" fk-table-ref="TAB1437" fkCardinality="7" identifying="false" name="lookup_answer_label_fact_answer_fk" physicalName="lookup_answer_label_fact_answer_fk" pk-table-ref="TAB1505" pkCardinality="3" updateRule="0" >
+    <column-mapping id="CMP1558" populated="true" UUID="1c39cb80-8f07-4a13-a9f5-fec373c7b90f" fk-column-ref="COL1440" name="Column Mapping" physicalName="Column Mapping" pk-column-ref="COL1506" />
    </relationship>
   </relationships>
  </target-database>
