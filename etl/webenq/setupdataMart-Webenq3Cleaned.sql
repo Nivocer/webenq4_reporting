@@ -29,6 +29,7 @@ CREATE TABLE stage_lookup_answer_label (
                 date_import DATE NOT NULL,
                 answer_label_key INT NOT NULL,
                 answer INT NOT NULL,
+                sequence BIGINT NOT NULL,
                 PRIMARY KEY (question_id, answer_id)
 );
 
@@ -101,11 +102,11 @@ CREATE TABLE dim_questionnaire (
                 questionnaire_title_en VARCHAR(255) NOT NULL,
                 questionnaire_id_external INT NOT NULL,
                 questionnaire_category_text_en VARCHAR(255),
-                sequence INT NOT NULL,
+                sequence BIGINT NOT NULL,
                 PRIMARY KEY (questionnaire_key)
 );
 
-ALTER TABLE dim_questionnaire MODIFY COLUMN sequence INTEGER COMMENT 'order in questionnaire';
+ALTER TABLE dim_questionnaire MODIFY COLUMN sequence BIGINT COMMENT 'order in questionnaire';
 
 
 CREATE TABLE dim_question (
@@ -125,6 +126,7 @@ CREATE TABLE lookup_answer_label (
                 question_key INT,
                 answer_label TEXT NOT NULL,
                 missing_answer INT,
+                sequence BIGINT NOT NULL,
                 PRIMARY KEY (answer_label_key)
 );
 
