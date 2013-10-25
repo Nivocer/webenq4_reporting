@@ -63,7 +63,7 @@
   <created_user>admin</created_user>
   <created_date>2013&#47;08&#47;27 09:51:59.000</created_date>
   <modified_user>jaapandre</modified_user>
-  <modified_date>2013&#47;10&#47;23 15:13:00.970</modified_date>
+  <modified_date>2013&#47;10&#47;25 12:18:46.624</modified_date>
   </info>
   <notepads>
     <notepad>
@@ -181,7 +181,7 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Identify last row in a stream</from><to>last row?</to><enabled>Y</enabled> </hop>  <hop> <from>last row?</from><to>nothing</to><enabled>Y</enabled> </hop>  <hop> <from>last row?</from><to>Calculator 2</to><enabled>Y</enabled> </hop>  <hop> <from>Calculator 2</from><to>Set answer_label_key</to><enabled>Y</enabled> </hop>  <hop> <from>get countries from database</from><to>add answer_label_key</to><enabled>Y</enabled> </hop>  <hop> <from>add answer_label_key</from><to>Identify last row in a stream</to><enabled>Y</enabled> </hop>  <hop> <from>add answer_label_key</from><to>add fields</to><enabled>Y</enabled> </hop>  <hop> <from>add fields</from><to>remove  fields</to><enabled>Y</enabled> </hop>  <hop> <from>remove  fields</from><to>output lookup_answer_label</to><enabled>Y</enabled> </hop>  <hop> <from>add answer_label_key</from><to>adjust fields</to><enabled>Y</enabled> </hop>  <hop> <from>adjust fields</from><to>Output to dim_country</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Identify last row in a stream</from><to>last row?</to><enabled>Y</enabled> </hop>  <hop> <from>last row?</from><to>nothing</to><enabled>Y</enabled> </hop>  <hop> <from>last row?</from><to>Calculator 2</to><enabled>Y</enabled> </hop>  <hop> <from>Calculator 2</from><to>Set answer_label_key</to><enabled>Y</enabled> </hop>  <hop> <from>get countries from database</from><to>add answer_label_key</to><enabled>Y</enabled> </hop>  <hop> <from>add answer_label_key</from><to>Identify last row in a stream</to><enabled>Y</enabled> </hop>  <hop> <from>add answer_label_key</from><to>add fields</to><enabled>Y</enabled> </hop>  <hop> <from>remove  fields</from><to>output lookup_answer_label</to><enabled>Y</enabled> </hop>  <hop> <from>add answer_label_key</from><to>adjust fields</to><enabled>Y</enabled> </hop>  <hop> <from>adjust fields</from><to>Output to dim_country</to><enabled>Y</enabled> </hop>  <hop> <from>add fields</from><to>add sequence</to><enabled>Y</enabled> </hop>  <hop> <from>add sequence</from><to>remove  fields</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>Calculator 2</name>
     <type>Calculator</type>
@@ -327,7 +327,7 @@
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>656</xloc>
-      <yloc>79</yloc>
+      <yloc>94</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -382,7 +382,7 @@
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>248</xloc>
-      <yloc>92</yloc>
+      <yloc>94</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -423,8 +423,40 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>347</xloc>
-      <yloc>213</yloc>
+      <xloc>308</xloc>
+      <yloc>210</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>add sequence</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>sequence</field_name>
+<calc_type>COPY_FIELD</calc_type>
+<field_a>answer_label_key</field_a>
+<field_b/>
+<field_c/>
+<value_type>Integer</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>400</xloc>
+      <yloc>210</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -459,7 +491,7 @@
     </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>495</xloc>
-      <yloc>92</yloc>
+      <yloc>94</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -579,11 +611,15 @@
           <column_name>question_key</column_name>
           <stream_name>question_key</stream_name>
         </field>
+        <field>
+          <column_name>sequence</column_name>
+          <stream_name>sequence</stream_name>
+        </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>666</xloc>
-      <yloc>213</yloc>
+      <yloc>210</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -614,11 +650,15 @@
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
+      </field>      <field>        <name>sequence</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
       </field>        <select_unspecified>N</select_unspecified>
     </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>512</xloc>
-      <yloc>214</yloc>
+      <yloc>210</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
