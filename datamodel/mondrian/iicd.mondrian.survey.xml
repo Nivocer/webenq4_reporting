@@ -16,48 +16,48 @@
     </Hierarchy>
   </Dimension>
   <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Questionnaire">
-    <Hierarchy name="Questionnaire-hierarchy" visible="true" hasAll="true" primaryKey="question_key" primaryKeyTable="question">
-      <Join leftAlias="questionnaire" leftKey="questionnaire_key" rightAlias="question" rightKey="questionnaire_key">
-        <Table name="dim_questionnaire" alias="questionnaire">
+    <Hierarchy name="Questionnaire-hierarchy" visible="true" hasAll="true" primaryKey="question_key" primaryKeyTable="q">
+      <Join leftAlias="qe" leftKey="questionnaire_key" rightAlias="q" rightKey="questionnaire_key">
+        <Table name="dim_questionnaire" alias="qe">
         </Table>
-        <Table name="dim_question" alias="question">
+        <Table name="dim_question" alias="q">
         </Table>
       </Join>
-      <Level name="questionnaire_category" visible="true" table="questionnaire" column="questionnaire_category_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="questionnaire_category" visible="true" table="qe" column="questionnaire_category_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
-      <Level name="Questionnaire_title" visible="true" table="questionnaire" column="questionnaire_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="Questionnaire_title" visible="true" table="qe" column="questionnaire_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
-      <Level name="Question group" visible="true" table="question" column="group_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="Question group" visible="true" table="q" column="group_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
-      <Level name="Question" visible="true" table="question" column="question_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="Question" visible="true" table="q" column="question_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
   </Dimension>
   <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Question">
-    <Hierarchy name="Question hierarcy" visible="true" hasAll="true" primaryKey="answer_label_key" primaryKeyTable="answer">
-      <Join leftAlias="answer" leftKey="question_key" rightAlias="question" rightKey="question_key">
-        <Table name="lookup_answer_label" alias="answer">
+    <Hierarchy name="Question hierarcy" visible="true" hasAll="true" primaryKey="answer_label_key" primaryKeyTable="a2">
+      <Join leftAlias="a2" leftKey="question_key" rightAlias="q2" rightKey="question_key">
+        <Table name="lookup_answer_label" alias="a2">
         </Table>
-        <Table name="dim_question" alias="question">
+        <Table name="dim_question" alias="q2">
         </Table>
       </Join>
-      <Level name="Question group" visible="true" table="question" column="group_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="Question group" visible="true" table="q2" column="group_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
-      <Level name="Question" visible="true" table="question" column="question_text_en" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="Question" visible="true" table="q2" column="question_text_en" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
-      <Level name="Answer" visible="true" table="answer" column="answer_label" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="Answer" visible="true" table="a2" column="answer_label" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
-    <Hierarchy name="Question - answer" visible="true" hasAll="true" primaryKey="answer_label_key" primaryKeyTable="answer2">
-      <Join leftAlias="answer2" leftKey="question_key" rightAlias="question2" rightKey="question_key">
-        <Table name="lookup_answer_label" alias="answer2">
+    <Hierarchy name="Question - answer" visible="true" hasAll="true" primaryKey="answer_label_key" primaryKeyTable="a3">
+      <Join leftAlias="a3" leftKey="question_key" rightAlias="q3" rightKey="question_key">
+        <Table name="lookup_answer_label" alias="a3">
         </Table>
-        <Table name="dim_question" alias="question2">
+        <Table name="dim_question" alias="q3">
         </Table>
       </Join>
-      <Level name="Question" visible="true" table="question2" column="question_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="Question" visible="true" table="q3" column="question_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
-      <Level name="Answer" visible="true" table="answer2" column="answer_label" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="Answer" visible="true" table="a3" column="answer_label" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -90,7 +90,7 @@
     </Hierarchy>
   </Dimension>
   <Cube name="IICD" visible="true" description="Analyse survey data" cache="true" enabled="true">
-    <Table name="fact_answer" alias="Answers">
+    <Table name="fact_answer" alias="answers">
     </Table>
     <DimensionUsage source="Country" name="Country" visible="true" foreignKey="country_key" highCardinality="false">
     </DimensionUsage>
