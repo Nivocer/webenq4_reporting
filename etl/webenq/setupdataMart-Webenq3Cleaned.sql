@@ -1,3 +1,4 @@
+SET storage_engine=INNODB;
 
 CREATE TABLE stage_lookup_respondent (
                 respondent_id INT NOT NULL,
