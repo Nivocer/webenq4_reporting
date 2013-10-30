@@ -1,4 +1,4 @@
-<Schema name="Survey">
+<Schema name="Survey-no-aggregate">
   <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Country">
     <Hierarchy name="Country" visible="true" hasAll="true" primaryKey="country_key">
       <Table name="dim_country">
@@ -89,7 +89,7 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Cube name="IICD" visible="true" description="Analyse survey data" cache="true" enabled="true">
+  <Cube name="IICD" visible="true" description="Survey data, with questionnaire to question hierarchy and question to anwer-label" cache="true" enabled="true">
     <Table name="fact_answer" alias="answers">
     </Table>
     <DimensionUsage source="Country" name="Country" visible="true" foreignKey="country_key" highCardinality="false">
