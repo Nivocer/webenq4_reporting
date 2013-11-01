@@ -1,4 +1,4 @@
-<Schema name="Survey-no-aggregate">
+<Schema name="Survey-no-aggregates">
   <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Country">
     <Hierarchy name="Country" visible="true" hasAll="true" primaryKey="country_key">
       <Table name="dim_country">
@@ -23,13 +23,13 @@
         <Table name="dim_question">
         </Table>
       </Join>
-      <Level name="questionnaire_category" visible="true" table="dim_questionnaire" column="questionnaire_category_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="qe_cat" visible="true" table="dim_questionnaire" column="questionnaire_category_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="questionnaire_category">
       </Level>
-      <Level name="Questionnaire_title" visible="true" table="dim_questionnaire" column="questionnaire_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="qe_title" visible="true" table="dim_questionnaire" column="questionnaire_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Questionnaire_title">
       </Level>
-      <Level name="Question group" visible="true" table="dim_question" column="group_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="q_group" visible="true" table="dim_question" column="group_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Question group">
       </Level>
-      <Level name="Question" visible="true" table="dim_question" column="question_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="q" visible="true" table="dim_question" column="question_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Question">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -41,11 +41,11 @@
         <Table name="dim_question">
         </Table>
       </Join>
-      <Level name="Question group" visible="true" table="dim_question" column="group_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="q2_group" visible="true" table="dim_question" column="group_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Question group">
       </Level>
-      <Level name="Question" visible="true" table="dim_question" column="question_text_en" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="q2" visible="true" table="dim_question" column="question_text_en" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Question">
       </Level>
-      <Level name="Answer" visible="true" table="lookup_answer_label" column="answer_label" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="a2" visible="true" table="lookup_answer_label" column="answer_label" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Answer">
       </Level>
     </Hierarchy>
     <Hierarchy name="Question - answer" visible="true" hasAll="true" primaryKey="answer_label_key" primaryKeyTable="lookup_answer_label">
@@ -55,17 +55,17 @@
         <Table name="dim_question">
         </Table>
       </Join>
-      <Level name="Question" visible="true" table="dim_question" column="question_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="q3" visible="true" table="dim_question" column="question_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Question">
       </Level>
-      <Level name="Answer" visible="true" table="lookup_answer_label" column="answer_label" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="a3" visible="true" table="lookup_answer_label" column="answer_label" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Answer">
       </Level>
     </Hierarchy>
   </Dimension>
   <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Training">
-    <Hierarchy name="Training" visible="true" hasAll="true">
+    <Hierarchy name="Training" visible="true" hasAll="true" primaryKey="training_key">
       <Table name="dim_training">
       </Table>
-      <Level name="Training" visible="true" column="training_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="Training" visible="true" table="dim_training" column="training_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -103,8 +103,6 @@
     <DimensionUsage source="Training" name="Training" visible="true" foreignKey="training_key" highCardinality="false">
     </DimensionUsage>
     <DimensionUsage source="Date" name="Date" visible="true" foreignKey="date_key" highCardinality="false">
-    </DimensionUsage>
-    <DimensionUsage source="Missing value" name="Missing value" visible="true" foreignKey="answer_label_key" highCardinality="false">
     </DimensionUsage>
     <Measure name="Average" column="answer" datatype="Numeric" aggregator="avg" visible="true">
     </Measure>
