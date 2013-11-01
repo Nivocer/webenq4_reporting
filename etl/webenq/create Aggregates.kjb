@@ -8,11 +8,16 @@
   <created_user>-</created_user>
   <created_date>2013&#47;10&#47;29 14:36:57.476</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2013&#47;10&#47;29 16:10:28.129</modified_date>
+  <modified_date>2013&#47;11&#47;01 15:19:34.336</modified_date>
     <parameters>
         <parameter>
             <name>AGGREGATE_NAME</name>
-            <default_value>iicd_iicd_</default_value>
+            <default_value>dummy_dummy</default_value>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>config-file</name>
+            <default_value/>
             <description/>
         </parameter>
     </parameters>
