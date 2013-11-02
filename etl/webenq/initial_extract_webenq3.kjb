@@ -8,7 +8,7 @@
   <created_user/>
   <created_date>2013&#47;08&#47;29 12:34:38.111</created_date>
   <modified_user>jaapandre</modified_user>
-  <modified_date>2013&#47;11&#47;01 13:28:31.545</modified_date>
+  <modified_date>2013&#47;11&#47;02 11:13:51.091</modified_date>
     <parameters>
         <parameter>
             <name>config-file</name>
@@ -138,8 +138,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>295</xloc>
-      <yloc>259</yloc>
+      <xloc>509</xloc>
+      <yloc>262</yloc>
       </entry>
     <entry>
       <name>dim_project</name>
@@ -171,8 +171,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>543</xloc>
-      <yloc>258</yloc>
+      <xloc>674</xloc>
+      <yloc>259</yloc>
       </entry>
     <entry>
       <name>dim_training</name>
@@ -205,7 +205,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>824</xloc>
-      <yloc>257</yloc>
+      <yloc>262</yloc>
       </entry>
     <entry>
       <name>dim_questionnaire</name>
@@ -607,6 +607,61 @@
       <xloc>385</xloc>
       <yloc>67</yloc>
       </entry>
+    <entry>
+      <name>alter dim_country</name>
+      <description/>
+      <type>SQL</type>
+      <sql>ALTER TABLE dim_country ADD civic_activism_range VARCHAR(255);
+ALTER TABLE dim_country ADD clubs_and_associations_range VARCHAR(255);
+ALTER TABLE dim_country ADD gender_equality_range VARCHAR(255);
+ALTER TABLE dim_country ADD inclusion_range VARCHAR(255);
+ALTER TABLE dim_country ADD intergroup_cohesion_range VARCHAR(255);
+ALTER TABLE dim_country ADD interpersonal_safety_and_trust_range VARCHAR(255);
+ALTER TABLE dim_country ADD year_indsoc INT;</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>target-database</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>251</xloc>
+      <yloc>262</yloc>
+      </entry>
+    <entry>
+      <name>lookup2010</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>rep_name</specification_method>
+      <trans_object_id/>
+      <filename/>
+      <transname>lookup2010</transname>
+      <directory>&#47;other&#47;indsoc</directory>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>385</xloc>
+      <yloc>262</yloc>
+      </entry>
   </entries>
   <hops>
     <hop>
@@ -646,15 +701,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>dim_date</from>
-      <to>dim_country</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>dim_respondent</from>
       <to>fact_answer</to>
       <from_nr>0</from_nr>
@@ -675,15 +721,6 @@
     <hop>
       <from>lookup_answer_label_and_stage_lookup_answer_label</from>
       <to>dim_respondent</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>create database</from>
-      <to>dimension add null values</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -774,6 +811,42 @@
     <hop>
       <from>Check Db connections</from>
       <to>Set answer label key</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>create database</from>
+      <to>dimension add null values</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>dim_date</from>
+      <to>alter dim_country</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>alter dim_country</from>
+      <to>lookup2010</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>lookup2010</from>
+      <to>dim_country</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>

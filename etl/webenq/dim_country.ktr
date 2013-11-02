@@ -63,7 +63,7 @@
   <created_user>admin</created_user>
   <created_date>2013&#47;08&#47;27 09:51:59.000</created_date>
   <modified_user>jaapandre</modified_user>
-  <modified_date>2013&#47;10&#47;25 12:18:46.624</modified_date>
+  <modified_date>2013&#47;11&#47;02 10:55:10.656</modified_date>
   </info>
   <notepads>
     <notepad>
@@ -181,7 +181,7 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Identify last row in a stream</from><to>last row?</to><enabled>Y</enabled> </hop>  <hop> <from>last row?</from><to>nothing</to><enabled>Y</enabled> </hop>  <hop> <from>last row?</from><to>Calculator 2</to><enabled>Y</enabled> </hop>  <hop> <from>Calculator 2</from><to>Set answer_label_key</to><enabled>Y</enabled> </hop>  <hop> <from>get countries from database</from><to>add answer_label_key</to><enabled>Y</enabled> </hop>  <hop> <from>add answer_label_key</from><to>Identify last row in a stream</to><enabled>Y</enabled> </hop>  <hop> <from>add answer_label_key</from><to>add fields</to><enabled>Y</enabled> </hop>  <hop> <from>remove  fields</from><to>output lookup_answer_label</to><enabled>Y</enabled> </hop>  <hop> <from>add answer_label_key</from><to>adjust fields</to><enabled>Y</enabled> </hop>  <hop> <from>adjust fields</from><to>Output to dim_country</to><enabled>Y</enabled> </hop>  <hop> <from>add fields</from><to>add sequence</to><enabled>Y</enabled> </hop>  <hop> <from>add sequence</from><to>remove  fields</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Identify last row in a stream</from><to>last row?</to><enabled>Y</enabled> </hop>  <hop> <from>last row?</from><to>nothing</to><enabled>Y</enabled> </hop>  <hop> <from>last row?</from><to>Calculator 2</to><enabled>Y</enabled> </hop>  <hop> <from>Calculator 2</from><to>Set answer_label_key</to><enabled>Y</enabled> </hop>  <hop> <from>get countries from database</from><to>add answer_label_key</to><enabled>Y</enabled> </hop>  <hop> <from>add answer_label_key</from><to>Identify last row in a stream</to><enabled>Y</enabled> </hop>  <hop> <from>add answer_label_key</from><to>add fields</to><enabled>Y</enabled> </hop>  <hop> <from>remove  fields</from><to>output lookup_answer_label</to><enabled>Y</enabled> </hop>  <hop> <from>adjust select&#47;fields</from><to>Output to dim_country</to><enabled>Y</enabled> </hop>  <hop> <from>add fields</from><to>add sequence</to><enabled>Y</enabled> </hop>  <hop> <from>add sequence</from><to>remove  fields</to><enabled>Y</enabled> </hop>  <hop> <from>add answer_label_key</from><to>add indsoc indicators</to><enabled>Y</enabled> </hop>  <hop> <from>add indsoc indicators</from><to>adjust select&#47;fields</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>Calculator 2</name>
     <type>Calculator</type>
@@ -462,7 +462,7 @@
     </step>
 
   <step>
-    <name>adjust fields</name>
+    <name>adjust select&#47;fields</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -485,6 +485,34 @@
         <precision>-2</precision>
       </field>      <field>        <name>answer_label_key</name>
         <rename>country_key</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>civic_activism_range</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>clubs_and_associations_range</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>gender_equality_range</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>inclusion_range</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>intergroup_cohesion_range</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>interpersonal_safety_and_trust_range</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>year</name>
+        <rename>year_indsoc</rename>
         <length>-2</length>
         <precision>-2</precision>
       </field>        <select_unspecified>N</select_unspecified>
@@ -659,6 +687,95 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>512</xloc>
       <yloc>210</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>add indsoc indicators</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>target-database</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>stage_lookup_country_indsoc</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>country_code3</name>
+        <field>iso_country_code</field>
+        <condition>=</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>year</name>
+        <rename>year</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+      <value>
+        <name>civic_activism_range</name>
+        <rename>civic_activism_range</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>intergroup_cohesion_range</name>
+        <rename>intergroup_cohesion_range</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>clubs_and_associations_range</name>
+        <rename>clubs_and_associations_range</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>interpersonal_safety_and_trust_range</name>
+        <rename>interpersonal_safety_and_trust_range</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>gender_equality_range</name>
+        <rename>gender_equality_range</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>inclusion_range</name>
+        <rename>inclusion_range</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>iso_country_code</name>
+        <rename>iso_country_code</rename>
+        <default/>
+        <type>-</type>
+      </value>
+      <value>
+        <name>iso_country_code</name>
+        <rename>iso_country_code</rename>
+        <default/>
+        <type>-</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>373</xloc>
+      <yloc>91</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
