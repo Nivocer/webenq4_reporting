@@ -63,7 +63,7 @@
   <created_user>admin</created_user>
   <created_date>2013&#47;08&#47;27 09:53:07.000</created_date>
   <modified_user>jaapandre</modified_user>
-  <modified_date>2013&#47;11&#47;02 11:05:23.469</modified_date>
+  <modified_date>2013&#47;11&#47;03 18:30:55.861</modified_date>
   </info>
   <notepads>
     <notepad>
@@ -246,7 +246,7 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>lookup respondent</from><to>lookup question</to><enabled>Y</enabled> </hop>  <hop> <from>add field answer_id</from><to>Select fiels answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>add field country</from><to>Select field country</to><enabled>Y</enabled> </hop>  <hop> <from>add field project</from><to>Select field project</to><enabled>Y</enabled> </hop>  <hop> <from>add field training</from><to>Select field training</to><enabled>Y</enabled> </hop>  <hop> <from>add field numeric</from><to>Select field numeric</to><enabled>Y</enabled> </hop>  <hop> <from>Add field string</from><to>set answer_db to answer_string</to><enabled>Y</enabled> </hop>  <hop> <from>get answers</from><to>trim answer</to><enabled>Y</enabled> </hop>  <hop> <from>trim answer</from><to>lookup respondent</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>lookup country</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>lookup project</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>lookup training</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>answer is numeric?</to><enabled>Y</enabled> </hop>  <hop> <from>lookup answer_key (answer_id)</from><to>add field answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>lookup project</from><to>add field project</to><enabled>Y</enabled> </hop>  <hop> <from>lookup training</from><to>add field training</to><enabled>Y</enabled> </hop>  <hop> <from>answer is numeric?</from><to>add field numeric</to><enabled>Y</enabled> </hop>  <hop> <from>answer is numeric?</from><to>Add field string</to><enabled>Y</enabled> </hop>  <hop> <from>lookup country</from><to>add field country</to><enabled>Y</enabled> </hop>  <hop> <from>Select field numeric</from><to>Output to fact_answer numeric</to><enabled>Y</enabled> </hop>  <hop> <from>set answer_db to answer_string</from><to>Output to fact_answer string</to><enabled>Y</enabled> </hop>  <hop> <from>Select field training</from><to>Output to fact_answer training</to><enabled>Y</enabled> </hop>  <hop> <from>Select field project</from><to>Output to fact_answer project</to><enabled>Y</enabled> </hop>  <hop> <from>Select field country</from><to>Output to fact_answer country</to><enabled>Y</enabled> </hop>  <hop> <from>Select fiels answer_id</from><to>Output to fact_answer answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer answer_id</from><to>error output answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer numeric</from><to>error output numeric</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer string</from><to>error output string</to><enabled>Y</enabled> </hop>  <hop> <from>lookup answer_key (answer_id)</from><to>error output lookup answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>answer_db to integer</to><enabled>Y</enabled> </hop>  <hop> <from>answer_db to integer</from><to>lookup answer_key (answer_id)</to><enabled>Y</enabled> </hop>  <hop> <from>answer_db to integer</from><to>error output answer_db  to integer</to><enabled>Y</enabled> </hop>  <hop> <from>lookup question</from><to>valid answer</to><enabled>Y</enabled> </hop>  <hop> <from>valid answer</from><to>answer type switch</to><enabled>Y</enabled> </hop>  <hop> <from>valid answer</from><to>Dummy (do nothing)</to><enabled>Y</enabled> </hop>  <hop> <from>lookup country</from><to>error output lookup country</to><enabled>Y</enabled> </hop>  <hop> <from>lookup project</from><to>error output lookup project</to><enabled>Y</enabled> </hop>  <hop> <from>lookup training</from><to>error output lookup training</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer training</from><to>error output training</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer project</from><to>error output project</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer country</from><to>error output country</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>lookup respondent</from><to>lookup question</to><enabled>Y</enabled> </hop>  <hop> <from>add field answer_id</from><to>Select fiels answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>add field country</from><to>Select field country</to><enabled>Y</enabled> </hop>  <hop> <from>add field project</from><to>Select field project</to><enabled>Y</enabled> </hop>  <hop> <from>add field training</from><to>Select field training</to><enabled>Y</enabled> </hop>  <hop> <from>add field numeric</from><to>Select field numeric</to><enabled>Y</enabled> </hop>  <hop> <from>Add field string</from><to>set answer_db to answer_string</to><enabled>Y</enabled> </hop>  <hop> <from>get answers</from><to>trim answer</to><enabled>Y</enabled> </hop>  <hop> <from>trim answer</from><to>lookup respondent</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>lookup country</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>lookup project</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>lookup training</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>answer is numeric?</to><enabled>Y</enabled> </hop>  <hop> <from>lookup project</from><to>add field project</to><enabled>Y</enabled> </hop>  <hop> <from>lookup training</from><to>add field training</to><enabled>Y</enabled> </hop>  <hop> <from>answer is numeric?</from><to>add field numeric</to><enabled>Y</enabled> </hop>  <hop> <from>answer is numeric?</from><to>Add field string</to><enabled>Y</enabled> </hop>  <hop> <from>lookup country</from><to>add field country</to><enabled>Y</enabled> </hop>  <hop> <from>Select field numeric</from><to>Output to fact_answer numeric</to><enabled>Y</enabled> </hop>  <hop> <from>set answer_db to answer_string</from><to>Output to fact_answer string</to><enabled>Y</enabled> </hop>  <hop> <from>Select field training</from><to>Output to fact_answer training</to><enabled>Y</enabled> </hop>  <hop> <from>Select field project</from><to>Output to fact_answer project</to><enabled>Y</enabled> </hop>  <hop> <from>Select field country</from><to>Output to fact_answer country</to><enabled>Y</enabled> </hop>  <hop> <from>Select fiels answer_id</from><to>Output to fact_answer answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer answer_id</from><to>error output answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer numeric</from><to>error output numeric</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer string</from><to>error output string</to><enabled>Y</enabled> </hop>  <hop> <from>lookup answer_key (answer_id)</from><to>error output lookup answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>answer_db to integer</to><enabled>Y</enabled> </hop>  <hop> <from>answer_db to integer</from><to>lookup answer_key (answer_id)</to><enabled>Y</enabled> </hop>  <hop> <from>answer_db to integer</from><to>error output answer_db  to integer</to><enabled>Y</enabled> </hop>  <hop> <from>lookup question</from><to>valid answer</to><enabled>Y</enabled> </hop>  <hop> <from>valid answer</from><to>answer type switch</to><enabled>Y</enabled> </hop>  <hop> <from>valid answer</from><to>Dummy (do nothing)</to><enabled>Y</enabled> </hop>  <hop> <from>lookup country</from><to>error output lookup country</to><enabled>Y</enabled> </hop>  <hop> <from>lookup project</from><to>error output lookup project</to><enabled>Y</enabled> </hop>  <hop> <from>lookup training</from><to>error output lookup training</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer training</from><to>error output training</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer project</from><to>error output project</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer country</from><to>error output country</to><enabled>Y</enabled> </hop>  <hop> <from>lookup answer_key (answer_id)</from><to>remove missing answer</to><enabled>Y</enabled> </hop>  <hop> <from>remove missing answer</from><to>add field answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>remove missing answer</from><to>Dummy (do nothing) 2</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>Add field string</name>
     <type>Constant</type>
@@ -303,6 +303,24 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>840</xloc>
       <yloc>13</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Dummy (do nothing) 2</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>17</xloc>
+      <yloc>590</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -378,8 +396,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>80</xloc>
-      <yloc>720</yloc>
+      <xloc>85</xloc>
+      <yloc>857</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1094,8 +1112,8 @@
         <storage_type/>
       </meta>    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>80</xloc>
-      <yloc>620</yloc>
+      <xloc>85</xloc>
+      <yloc>757</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1125,8 +1143,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>80</xloc>
-      <yloc>520</yloc>
+      <xloc>85</xloc>
+      <yloc>657</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1679,8 +1697,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>98</xloc>
-      <yloc>93</yloc>
+      <xloc>93</xloc>
+      <yloc>109</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1850,8 +1868,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>82</xloc>
-      <yloc>840</yloc>
+      <xloc>87</xloc>
+      <yloc>977</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -3513,6 +3531,12 @@ from tbl_respondent_antwoorden</sql>
         <default/>
         <type>Number</type>
       </value>
+      <value>
+        <name>missing_answer</name>
+        <rename>missing_answer</rename>
+        <default/>
+        <type>Number</type>
+      </value>
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -3759,6 +3783,34 @@ from tbl_respondent_antwoorden</sql>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>560</xloc>
       <yloc>380</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>remove missing answer</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>add field answer_id</send_true_to>
+<send_false_to>Dummy (do nothing) 2</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>missing_answer</leftvalue>
+ <function>=</function>
+ <rightvalue/>
+ <value><name>constant</name><type>Integer</type><text>0</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>#;-#</mask></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>84</xloc>
+      <yloc>528</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

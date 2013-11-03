@@ -31,6 +31,7 @@ CREATE TABLE stage_lookup_answer_label (
                 answer_label_key INT NOT NULL,
                 answer INT NOT NULL,
                 sequence BIGINT NOT NULL,
+                missing_answer INT DEFAULT 0 NOT NULL,
                 PRIMARY KEY (question_id, answer_id)
 );
 
