@@ -63,7 +63,7 @@
   <created_user>admin</created_user>
   <created_date>2013&#47;08&#47;27 09:53:07.000</created_date>
   <modified_user>jaapandre</modified_user>
-  <modified_date>2013&#47;11&#47;03 18:30:55.861</modified_date>
+  <modified_date>2013&#47;11&#47;05 09:33:21.367</modified_date>
   </info>
   <notepads>
     <notepad>
@@ -235,14 +235,12 @@
       <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>INITIAL_POOL_SIZE</code><attribute>1</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>MAXIMUM_POOL_SIZE</code><attribute>5</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>${TARGET_PORT}</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
   <order>
@@ -1544,7 +1542,7 @@
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>${user.home}&#47;pentaho_${Internal.Transformation.Name}_answerDbToInteger</name>
+      <name>${PATH_TO_LOG}pentaho_${Internal.Transformation.Name}_answerDbToInteger</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -1727,7 +1725,7 @@
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>${user.home}&#47;pentaho-fact_answer_save_answer_id</name>
+      <name>${PATH_TO_LOG}pentaho_fact_answer_save_answer_id</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -1898,7 +1896,7 @@
     <fileNameField/>
     <create_parent_folder>N</create_parent_folder>
     <file>
-      <name>${user.home}&#47;pentaho-fact_answer_save_answer_country</name>
+      <name>${PATH_TO_LOG}pentaho_fact_answer_save_answer_country</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>Y</do_not_open_new_file_init>
@@ -2069,7 +2067,7 @@
     <fileNameField/>
     <create_parent_folder>N</create_parent_folder>
     <file>
-      <name>${user.home}&#47;pentaho-${Internal.Transformation.Name}-lookupAnswerId</name>
+      <name>${PATH_TO_LOG}pentaho_${Internal.Transformation.Name}-lookupAnswerId</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -2252,7 +2250,7 @@
     <fileNameField/>
     <create_parent_folder>N</create_parent_folder>
     <file>
-      <name>${user.home}&#47;pentaho-${Internal.Transformation.Name}-lookupCountry</name>
+      <name>${PATH_TO_LOG}pentaho_${Internal.Transformation.Name}-lookupCountry</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -2435,7 +2433,7 @@
     <fileNameField/>
     <create_parent_folder>N</create_parent_folder>
     <file>
-      <name>${user.home}&#47;pentaho-${Internal.Transformation.Name}-lookupProject</name>
+      <name>${PATH_TO_LOG}pentaho_${Internal.Transformation.Name}-lookupProject</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -2618,7 +2616,7 @@
     <fileNameField/>
     <create_parent_folder>N</create_parent_folder>
     <file>
-      <name>${user.home}&#47;pentaho-${Internal.Transformation.Name}-lookupTraining</name>
+      <name>${PATH_TO_LOG}pentaho_${Internal.Transformation.Name}-lookupTraining</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -2801,7 +2799,7 @@
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>${user.home}&#47;pentaho-fact_answer_save_answer_numeric</name>
+      <name>${PATH_TO_LOG}pentaho_fact_answer_save_answer_numeric</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -2972,7 +2970,7 @@
     <fileNameField/>
     <create_parent_folder>N</create_parent_folder>
     <file>
-      <name>${user.home}&#47;pentaho-fact_answer_save_answer_project</name>
+      <name>${PATH_TO_LOG}pentaho_fact_answer_save_answer_project</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>Y</do_not_open_new_file_init>
@@ -3143,7 +3141,7 @@
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>${user.home}&#47;pentaho-fact_answer_save_answer_string</name>
+      <name>${PATH_TO_LOG}pentaho_fact_answer_save_answer_string</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -3314,7 +3312,7 @@
     <fileNameField/>
     <create_parent_folder>N</create_parent_folder>
     <file>
-      <name>${user.home}&#47;pentaho-fact_answer_save_answer_training</name>
+      <name>${PATH_TO_LOG}pentaho_fact_answer_save_answer_training</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>Y</do_not_open_new_file_init>
