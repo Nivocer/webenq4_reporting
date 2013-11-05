@@ -15,52 +15,6 @@
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Questionnaire">
-    <Hierarchy name="Questionnaire-hierarchy" visible="true" hasAll="true" primaryKey="question_key" primaryKeyTable="dim_question">
-      <Join leftAlias="dim_questionnaire" leftKey="questionnaire_key" rightAlias="dim_question" rightKey="questionnaire_key">
-        <Table name="dim_questionnaire">
-        </Table>
-        <Table name="dim_question">
-        </Table>
-      </Join>
-      <Level name="qe_cat" visible="true" table="dim_questionnaire" column="questionnaire_category_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="questionnaire_category">
-      </Level>
-      <Level name="qe_title" visible="true" table="dim_questionnaire" column="questionnaire_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Questionnaire_title">
-      </Level>
-      <Level name="q_group" visible="true" table="dim_question" column="group_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Question group">
-      </Level>
-      <Level name="q" visible="true" table="dim_question" column="question_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Question">
-      </Level>
-    </Hierarchy>
-  </Dimension>
-  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Question">
-    <Hierarchy name="Question hierarcy" visible="true" hasAll="true" primaryKey="answer_label_key" primaryKeyTable="lookup_answer_label">
-      <Join leftAlias="lookup_answer_label" leftKey="question_key" rightAlias="dim_question" rightKey="question_key">
-        <Table name="lookup_answer_label">
-        </Table>
-        <Table name="dim_question">
-        </Table>
-      </Join>
-      <Level name="q2_group" visible="true" table="dim_question" column="group_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Question group">
-      </Level>
-      <Level name="q2" visible="true" table="dim_question" column="question_text_en" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Question">
-      </Level>
-      <Level name="a2" visible="true" table="lookup_answer_label" column="answer_label" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Answer">
-      </Level>
-    </Hierarchy>
-    <Hierarchy name="Question - answer" visible="true" hasAll="true" primaryKey="answer_label_key" primaryKeyTable="lookup_answer_label">
-      <Join leftAlias="lookup_answer_label" leftKey="question_key" rightAlias="dim_question" rightKey="question_key">
-        <Table name="lookup_answer_label">
-        </Table>
-        <Table name="dim_question">
-        </Table>
-      </Join>
-      <Level name="q3" visible="true" table="dim_question" column="question_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Question">
-      </Level>
-      <Level name="a3" visible="true" table="lookup_answer_label" column="answer_label" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Answer">
-      </Level>
-    </Hierarchy>
-  </Dimension>
   <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Training">
     <Hierarchy name="Training" visible="true" hasAll="true" primaryKey="training_key">
       <Table name="dim_training">
@@ -70,39 +24,101 @@
     </Hierarchy>
   </Dimension>
   <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Date">
-    <Hierarchy name="Date" visible="true" hasAll="true">
+    <Hierarchy name="Date" visible="true" hasAll="true" primaryKey="date_key">
       <Table name="dim_date">
       </Table>
       <Level name="Year" visible="true" table="dim_date" column="year" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
-      <Level name="Quarter" visible="true" table="dim_date" column="quarter" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="Quarter" visible="true" table="dim_date" column="quarter" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
-      <Level name="Month" visible="true" column="month_text_en" ordinalColumn="month" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never">
+      <Level name="Month" visible="true" column="month_text_en" ordinalColumn="month" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Missing value">
-    <Hierarchy name="Missing value" visible="true" hasAll="true">
-      <Table name="lookup_answer_label">
+  <Dimension type="StandardDimension" visible="true" name="Questionnaire">
+    <Hierarchy name="Questionnaire" visible="true" hasAll="true" primaryKey="questionnaire_key">
+      <Table name="dim_questionnaire">
       </Table>
-      <Level name="Missing value" visible="true" table="lookup_answer_label" column="missing_answer" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="qe4_group" visible="true" table="dim_questionnaire" column="questionnaire_category_text_en" ordinalColumn="questionnaire_category_text_en" uniqueMembers="false" caption="Questionnaire group">
+      </Level>
+      <Level name="qe4" visible="true" table="dim_questionnaire" column="questionnaire_title_en" ordinalColumn="sequence" uniqueMembers="true" caption="Questionnaire">
       </Level>
     </Hierarchy>
   </Dimension>
-  <Cube name="IICD" visible="true" description="Survey data, with questionnaire to question hierarchy and question to anwer-label" cache="true" enabled="true">
+  <Dimension type="StandardDimension" visible="true" name="Question">
+    <Hierarchy name="Question" visible="true" hasAll="true" primaryKey="question_key">
+      <Table name="dim_question">
+      </Table>
+      <Level name="q5_group" visible="true" table="dim_question" column="group_title_en" uniqueMembers="false" caption="Question group">
+      </Level>
+      <Level name="q5" visible="true" table="dim_question" column="question_text_en" ordinalColumn="sequence" uniqueMembers="false" caption="Question">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" name="Answer options">
+    <Hierarchy name="Answers options" visible="true" hasAll="true" primaryKey="answer_label_key">
+      <Table name="lookup_answer_label" alias="">
+      </Table>
+      <Level name="a6" visible="true" table="lookup_answer_label" column="answer_label" ordinalColumn="sequence" uniqueMembers="false" caption="Answer options">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Dimension type="StandardDimension" visible="true" name="Country indicators">
+    <Hierarchy name="Gender equality" visible="true" hasAll="true" primaryKey="country_key">
+      <Table name="dim_country">
+      </Table>
+      <Level name="Gender equality" visible="true" table="dim_country" column="gender_equality_range" uniqueMembers="false">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Inclusion" visible="true" hasAll="true" primaryKey="country_key">
+      <Table name="dim_country">
+      </Table>
+      <Level name="Inclusion" visible="true" table="dim_country" column="inclusion_range" uniqueMembers="false">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Intergroup cohesion" visible="true" hasAll="true" primaryKey="country_key">
+      <Table name="dim_country">
+      </Table>
+      <Level name="Intergroup cohesion" visible="true" table="dim_country" column="intergroup_cohesion_range" uniqueMembers="false">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Interpersonal safety and trust" visible="true" hasAll="true" primaryKey="country_key">
+      <Table name="dim_country">
+      </Table>
+      <Level name="Interpersonal safety and trust" visible="true" table="dim_country" column="interpersonal_safety_and_trust_range" uniqueMembers="false">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Civic activism" visible="true" hasAll="true" primaryKey="country_key">
+      <Table name="dim_country">
+      </Table>
+      <Level name="Civic activism" visible="true" table="dim_country" column="civic_activism_range" uniqueMembers="false">
+      </Level>
+    </Hierarchy>
+    <Hierarchy name="Clubs and associations" visible="true" hasAll="true" primaryKey="country_key">
+      <Table name="dim_country">
+      </Table>
+      <Level name="Clubs and assocications" visible="true" table="dim_country" column="clubs_and_associations_range" uniqueMembers="false">
+      </Level>
+    </Hierarchy>
+  </Dimension>
+  <Cube name="IICD" visible="true" description="Survey data, with country indicators, questionnaire ,question answer options as seperate dimensions" cache="true" enabled="true">
     <Table name="fact_answer" alias="answers">
     </Table>
     <DimensionUsage source="Country" name="Country" visible="true" foreignKey="country_key" highCardinality="false">
     </DimensionUsage>
     <DimensionUsage source="Project" name="Project" visible="true" foreignKey="project_key" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Questionnaire" name="Questionnaire" visible="true" foreignKey="question_key" highCardinality="false">
+    <DimensionUsage source="Questionnaire" name="Questionnaire" visible="true" foreignKey="questionnaire_key" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Question" name="Question" visible="true" foreignKey="answer_label_key" highCardinality="false">
+    <DimensionUsage source="Question" name="Question" visible="true" foreignKey="question_key" highCardinality="false">
     </DimensionUsage>
     <DimensionUsage source="Training" name="Training" visible="true" foreignKey="training_key" highCardinality="false">
     </DimensionUsage>
     <DimensionUsage source="Date" name="Date" visible="true" foreignKey="date_key" highCardinality="false">
+    </DimensionUsage>
+    <DimensionUsage source="Answer options" name="Answer options" visible="true" foreignKey="answer_label_key">
+    </DimensionUsage>
+    <DimensionUsage source="Country indicators" name="Country indicators" visible="true" foreignKey="country_key">
     </DimensionUsage>
     <Measure name="Average" column="answer" datatype="Numeric" aggregator="avg" visible="true">
     </Measure>
