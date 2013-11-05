@@ -70,7 +70,7 @@
 			<Level name="Gender equality" visible="true" table="dim_country" column="gender_equality_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
 			</Level>
 		</Hierarchy>
-		<Hierarchy name="Civic activism" visible="false" hasAll="true" primaryKey="country_key">
+		<Hierarchy name="Civic activism" visible="true" hasAll="true" primaryKey="country_key">
 			<Table name="dim_country">
 			</Table>
 			<Level name="Civic activism" visible="true" table="dim_country" column="civic_activism_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
