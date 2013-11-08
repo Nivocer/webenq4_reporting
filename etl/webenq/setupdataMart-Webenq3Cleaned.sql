@@ -115,7 +115,7 @@ CREATE TABLE dim_question (
                 question_key INT AUTO_INCREMENT NOT NULL,
                 questionnaire_key INT NOT NULL,
                 group_title_en VARCHAR(255),
-                question_text_en TEXT,
+                question_text_en VARCHAR(512),
                 sequence BIGINT NOT NULL,
                 PRIMARY KEY (question_key)
 );
@@ -126,7 +126,7 @@ ALTER TABLE dim_question MODIFY COLUMN sequence BIGINT COMMENT 'order in questio
 CREATE TABLE lookup_answer_label (
                 answer_label_key INT AUTO_INCREMENT NOT NULL,
                 question_key INT,
-                answer_label TEXT NOT NULL,
+                answer_label VARCHAR(512) NOT NULL,
                 missing_answer INT,
                 sequence BIGINT NOT NULL,
                 PRIMARY KEY (answer_label_key)
@@ -143,7 +143,7 @@ CREATE TABLE fact_answer (
                 project_key INT NOT NULL,
                 training_key INT NOT NULL,
                 answer DOUBLE PRECISION DEFAULT NULL,
-                answer_string TEXT,
+                answer_string VARCHAR(512),
                 PRIMARY KEY (respondent_key, question_key, answer_label_key)
 );
 
