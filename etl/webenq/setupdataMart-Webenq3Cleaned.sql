@@ -21,8 +21,6 @@ CREATE TABLE stage_lookup_question (
                 PRIMARY KEY (question_id)
 );
 
-ALTER TABLE stage_lookup_question MODIFY COLUMN question_id INTEGER COMMENT 'w3: tbl_vragen_id';
-
 
 CREATE TABLE stage_lookup_answer_label (
                 question_id INT NOT NULL,
@@ -34,10 +32,6 @@ CREATE TABLE stage_lookup_answer_label (
                 missing_answer INT DEFAULT 0 NOT NULL,
                 PRIMARY KEY (question_id, answer_id)
 );
-
-ALTER TABLE stage_lookup_answer_label MODIFY COLUMN question_id INTEGER COMMENT 'w3: tbl_antwoordmogelijkheden: vraag_id';
-
-ALTER TABLE stage_lookup_answer_label MODIFY COLUMN answer_id INTEGER COMMENT 'w3:tbl_antwoordmogelijkheden: antwoord_id';
 
 ALTER TABLE stage_lookup_answer_label MODIFY COLUMN answer INTEGER COMMENT 'w3: tbl_antwoordmogelijkheden: antw_nummer';
 
@@ -108,8 +102,6 @@ CREATE TABLE dim_questionnaire (
                 PRIMARY KEY (questionnaire_key)
 );
 
-ALTER TABLE dim_questionnaire MODIFY COLUMN sequence BIGINT COMMENT 'order in questionnaire';
-
 
 CREATE TABLE dim_question (
                 question_key INT AUTO_INCREMENT NOT NULL,
@@ -120,13 +112,11 @@ CREATE TABLE dim_question (
                 PRIMARY KEY (question_key)
 );
 
-ALTER TABLE dim_question MODIFY COLUMN sequence BIGINT COMMENT 'order in questionnaire';
-
 
 CREATE TABLE lookup_answer_label (
                 answer_label_key INT AUTO_INCREMENT NOT NULL,
                 question_key INT,
-                answer_label VARCHAR(512) NOT NULL,
+                answer_label VARCHAR(1024) NOT NULL,
                 missing_answer INT,
                 sequence BIGINT NOT NULL,
                 PRIMARY KEY (answer_label_key)
@@ -143,11 +133,8 @@ CREATE TABLE fact_answer (
                 project_key INT NOT NULL,
                 training_key INT NOT NULL,
                 answer DOUBLE PRECISION DEFAULT NULL,
-                answer_string VARCHAR(512),
                 PRIMARY KEY (respondent_key, question_key, answer_label_key)
 );
-
-ALTER TABLE fact_answer MODIFY COLUMN questionnaire_key INTEGER COMMENT 'link to question table';
 
 
 ALTER TABLE fact_answer ADD CONSTRAINT dim_project_fact_answer_fk

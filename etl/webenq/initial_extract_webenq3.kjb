@@ -8,7 +8,7 @@
   <created_user/>
   <created_date>2013&#47;08&#47;29 12:34:38.111</created_date>
   <modified_user>jaapandre</modified_user>
-  <modified_date>2013&#47;11&#47;08 14:25:44.099</modified_date>
+  <modified_date>2013&#47;11&#47;19 10:27:55.567</modified_date>
     <parameters>
         <parameter>
             <name>config-file</name>
@@ -270,8 +270,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>543</xloc>
-      <yloc>370</yloc>
+      <xloc>474</xloc>
+      <yloc>362</yloc>
       </entry>
     <entry>
       <name>dim_respondent</name>
@@ -670,6 +670,39 @@ ALTER TABLE dim_country ADD year_indsoc INT;</sql>
       <xloc>385</xloc>
       <yloc>262</yloc>
       </entry>
+    <entry>
+      <name>lookup_open_answer</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>rep_name</specification_method>
+      <trans_object_id/>
+      <filename/>
+      <transname>lookup_open_answer</transname>
+      <directory>&#47;webenq</directory>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>Y</set_logfile>
+      <logfile>${PATH_TO_LOG}${Internal.Job.Name}</logfile>
+      <logext>txt</logext>
+      <add_date>Y</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>Y</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>622</xloc>
+      <yloc>375</yloc>
+      </entry>
   </entries>
   <hops>
     <hop>
@@ -711,15 +744,6 @@ ALTER TABLE dim_country ADD year_indsoc INT;</sql>
     <hop>
       <from>dim_respondent</from>
       <to>fact_answer</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>dim_question &#47; stage_lookup_question</from>
-      <to>lookup_answer_label_and_stage_lookup_answer_label</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -855,6 +879,24 @@ ALTER TABLE dim_country ADD year_indsoc INT;</sql>
     <hop>
       <from>lookup2010</from>
       <to>dim_country</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>dim_question &#47; stage_lookup_question</from>
+      <to>lookup_open_answer</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>lookup_open_answer</from>
+      <to>lookup_answer_label_and_stage_lookup_answer_label</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
