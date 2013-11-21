@@ -3,7 +3,7 @@
 		<Hierarchy name="Country" visible="true" hasAll="true" primaryKey="country_key">
 			<Table name="dim_country">
 			</Table>
-			<Level name="Country name" visible="true" table="dim_country" column="country_name_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			<Level name="Country name" visible="true" table="dim_country" column="country_key" nameColumn="country_name_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
 			</Level>
 		</Hierarchy>
 	</Dimension>
@@ -11,7 +11,7 @@
 		<Hierarchy name="Project" visible="true" hasAll="true" primaryKey="project_key">
 			<Table name="dim_project">
 			</Table>
-			<Level name="project_name" visible="true" table="dim_project" column="project_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			<Level name="project_name" visible="true" table="dim_project" column="project_key" nameColumn="project_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
 			</Level>
 		</Hierarchy>
 	</Dimension>
@@ -19,7 +19,7 @@
 		<Hierarchy name="Training" visible="true" hasAll="true" primaryKey="training_key">
 			<Table name="dim_training">
 			</Table>
-			<Level name="Training" visible="true" table="dim_training" column="training_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			<Level name="Training" visible="true" table="dim_training" column="training_key" nameColumn="training_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
 			</Level>
 		</Hierarchy>
 	</Dimension>
@@ -31,7 +31,7 @@
 			</Level>
 			<Level name="Quarter" visible="true" table="dim_date" column="quarter" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
 			</Level>
-			<Level name="Month" visible="true" column="month_text_en" ordinalColumn="month" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			<Level name="Month" visible="true" column="month" nameColumn="month_text_en" ordinalColumn="month" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
 			</Level>
 		</Hierarchy>
 	</Dimension>
@@ -41,7 +41,7 @@
 			</Table>
 			<Level name="qe4_group" visible="true" table="dim_questionnaire" column="questionnaire_category_text_en" ordinalColumn="questionnaire_category_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Questionnaire group">
 			</Level>
-			<Level name="qe4" visible="true" table="dim_questionnaire" column="questionnaire_title_en" ordinalColumn="sequence" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Questionnaire">
+			<Level name="qe4" visible="true" table="dim_questionnaire" column="questionnaire_key" nameColumn="questionnaire_title_en" ordinalColumn="sequence" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Questionnaire">
 			</Level>
 		</Hierarchy>
 	</Dimension>
@@ -51,7 +51,7 @@
 			</Table>
 			<Level name="q5_group" visible="true" table="dim_question" column="group_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Question group">
 			</Level>
-			<Level name="q5" visible="true" table="dim_question" column="question_text_en" ordinalColumn="sequence" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Question">
+			<Level name="q5" visible="true" table="dim_question" column="question_text_en" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Question">
 			</Level>
 		</Hierarchy>
 	</Dimension>
@@ -59,7 +59,7 @@
 		<Hierarchy name="Answers options" visible="true" hasAll="true" primaryKey="answer_label_key">
 			<Table name="lookup_answer_label">
 			</Table>
-			<Level name="a6" visible="true" table="lookup_answer_label" column="answer_label" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Answer options">
+			<Level name="a6" visible="true" table="lookup_answer_label" column="answer_label_key" nameColumn="answer_label" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Answer options">
 			</Level>
 		</Hierarchy>
 	</Dimension>
@@ -112,7 +112,7 @@
 				</AggMeasure>
 				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
 				</AggMeasure>
-				<AggLevel column="dim_country_Country_name" name="[Country].[Country name]">
+				<AggLevel column="dim_country_Country_name_(Key)" name="[Country].[Country name]">
 				</AggLevel>
 			</AggName>
 			<AggName name="Survey_IICD_2">
@@ -124,7 +124,7 @@
 				</AggMeasure>
 				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
 				</AggMeasure>
-				<AggLevel column="dim_project_project_name" name="[Project].[project_name]">
+				<AggLevel column="dim_project_project_name_(Key)" name="[Project].[project_name]">
 				</AggLevel>
 			</AggName>
 			<AggName name="Survey_IICD_3">
@@ -150,7 +150,7 @@
 				</AggMeasure>
 				<AggLevel column="dim_questionnaire_qe4_group" name="[Questionnaire].[qe4_group]">
 				</AggLevel>
-				<AggLevel column="dim_questionnaire_qe4" name="[Questionnaire].[qe4]">
+				<AggLevel column="dim_questionnaire_qe4_(Key)" name="[Questionnaire].[qe4]">
 				</AggLevel>
 			</AggName>
 			<AggName name="Survey_IICD_5">
@@ -188,7 +188,7 @@
 				</AggMeasure>
 				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
 				</AggMeasure>
-				<AggLevel column="dim_training_Training" name="[Training].[Training]">
+				<AggLevel column="dim_training_Training_(Key)" name="[Training].[Training]">
 				</AggLevel>
 			</AggName>
 			<AggName name="Survey_IICD_8">
@@ -216,6 +216,8 @@
 				</AggLevel>
 				<AggLevel column="dim_date_Quarter" name="[Date].[Quarter]">
 				</AggLevel>
+				<AggLevel column="dim_date_Month_(Key)" name="[Date].[Month]">
+				</AggLevel>
 			</AggName>
 			<AggName name="Survey_IICD_10">
 				<AggFactCount column="fact_answer_fact_count">
@@ -226,11 +228,7 @@
 				</AggMeasure>
 				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
 				</AggMeasure>
-				<AggLevel column="dim_date_Year" name="[Date].[Year]">
-				</AggLevel>
-				<AggLevel column="dim_date_Quarter" name="[Date].[Quarter]">
-				</AggLevel>
-				<AggLevel column="dim_date_Month" name="[Date].[Month]">
+				<AggLevel column="lookup_answer_label_a6_(Key)" name="[Answer options.Answers options].[a6]">
 				</AggLevel>
 			</AggName>
 			<AggName name="Survey_IICD_11">
@@ -242,7 +240,7 @@
 				</AggMeasure>
 				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
 				</AggMeasure>
-				<AggLevel column="lookup_answer_label_a6" name="[Answer options.Answers options].[a6]">
+				<AggLevel column="dim_country_Gender_equality" name="[Country indicators.Gender equality].[Gender equality]">
 				</AggLevel>
 			</AggName>
 			<AggName name="Survey_IICD_12">
@@ -254,7 +252,9 @@
 				</AggMeasure>
 				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
 				</AggMeasure>
-				<AggLevel column="dim_country_Country_name" name="[Country].[Country name]">
+				<AggLevel column="dim_questionnaire_qe4_group" name="[Questionnaire].[qe4_group]">
+				</AggLevel>
+				<AggLevel column="dim_questionnaire_qe4_(Key)" name="[Questionnaire].[qe4]">
 				</AggLevel>
 				<AggLevel column="dim_question_q5_group" name="[Question].[q5_group]">
 				</AggLevel>
@@ -270,11 +270,11 @@
 				</AggMeasure>
 				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
 				</AggMeasure>
-				<AggLevel column="dim_project_project_name" name="[Project].[project_name]">
-				</AggLevel>
 				<AggLevel column="dim_question_q5_group" name="[Question].[q5_group]">
 				</AggLevel>
 				<AggLevel column="dim_question_q5" name="[Question].[q5]">
+				</AggLevel>
+				<AggLevel column="lookup_answer_label_a6_(Key)" name="[Answer options.Answers options].[a6]">
 				</AggLevel>
 			</AggName>
 			<AggName name="Survey_IICD_14">
@@ -286,13 +286,11 @@
 				</AggMeasure>
 				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
 				</AggMeasure>
-				<AggLevel column="dim_questionnaire_qe4_group" name="[Questionnaire].[qe4_group]">
-				</AggLevel>
-				<AggLevel column="dim_questionnaire_qe4" name="[Questionnaire].[qe4]">
-				</AggLevel>
 				<AggLevel column="dim_question_q5_group" name="[Question].[q5_group]">
 				</AggLevel>
 				<AggLevel column="dim_question_q5" name="[Question].[q5]">
+				</AggLevel>
+				<AggLevel column="dim_date_Year" name="[Date].[Year]">
 				</AggLevel>
 			</AggName>
 			<AggName name="Survey_IICD_15">
@@ -304,11 +302,13 @@
 				</AggMeasure>
 				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
 				</AggMeasure>
+				<AggLevel column="dim_country_Country_name_(Key)" name="[Country].[Country name]">
+				</AggLevel>
 				<AggLevel column="dim_question_q5_group" name="[Question].[q5_group]">
 				</AggLevel>
 				<AggLevel column="dim_question_q5" name="[Question].[q5]">
 				</AggLevel>
-				<AggLevel column="dim_training_Training" name="[Training].[Training]">
+				<AggLevel column="lookup_answer_label_a6_(Key)" name="[Answer options.Answers options].[a6]">
 				</AggLevel>
 			</AggName>
 			<AggName name="Survey_IICD_16">
@@ -320,11 +320,15 @@
 				</AggMeasure>
 				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
 				</AggMeasure>
+				<AggLevel column="dim_questionnaire_qe4_group" name="[Questionnaire].[qe4_group]">
+				</AggLevel>
+				<AggLevel column="dim_questionnaire_qe4_(Key)" name="[Questionnaire].[qe4]">
+				</AggLevel>
 				<AggLevel column="dim_question_q5_group" name="[Question].[q5_group]">
 				</AggLevel>
 				<AggLevel column="dim_question_q5" name="[Question].[q5]">
 				</AggLevel>
-				<AggLevel column="dim_date_Year" name="[Date].[Year]">
+				<AggLevel column="lookup_answer_label_a6_(Key)" name="[Answer options.Answers options].[a6]">
 				</AggLevel>
 			</AggName>
 			<AggName name="Survey_IICD_17">
@@ -336,13 +340,17 @@
 				</AggMeasure>
 				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
 				</AggMeasure>
+				<AggLevel column="dim_questionnaire_qe4_group" name="[Questionnaire].[qe4_group]">
+				</AggLevel>
+				<AggLevel column="dim_questionnaire_qe4_(Key)" name="[Questionnaire].[qe4]">
+				</AggLevel>
 				<AggLevel column="dim_question_q5_group" name="[Question].[q5_group]">
 				</AggLevel>
 				<AggLevel column="dim_question_q5" name="[Question].[q5]">
 				</AggLevel>
 				<AggLevel column="dim_date_Year" name="[Date].[Year]">
 				</AggLevel>
-				<AggLevel column="dim_date_Quarter" name="[Date].[Quarter]">
+				<AggLevel column="lookup_answer_label_a6_(Key)" name="[Answer options.Answers options].[a6]">
 				</AggLevel>
 			</AggName>
 			<AggName name="Survey_IICD_18">
@@ -354,15 +362,13 @@
 				</AggMeasure>
 				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
 				</AggMeasure>
+				<AggLevel column="dim_country_Country_name_(Key)" name="[Country].[Country name]">
+				</AggLevel>
+				<AggLevel column="dim_project_project_name_(Key)" name="[Project].[project_name]">
+				</AggLevel>
 				<AggLevel column="dim_question_q5_group" name="[Question].[q5_group]">
 				</AggLevel>
 				<AggLevel column="dim_question_q5" name="[Question].[q5]">
-				</AggLevel>
-				<AggLevel column="dim_date_Year" name="[Date].[Year]">
-				</AggLevel>
-				<AggLevel column="dim_date_Quarter" name="[Date].[Quarter]">
-				</AggLevel>
-				<AggLevel column="dim_date_Month" name="[Date].[Month]">
 				</AggLevel>
 			</AggName>
 			<AggName name="Survey_IICD_19">
@@ -374,11 +380,13 @@
 				</AggMeasure>
 				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
 				</AggMeasure>
-				<AggLevel column="dim_question_q5_group" name="[Question].[q5_group]">
+				<AggLevel column="dim_questionnaire_qe4_group" name="[Questionnaire].[qe4_group]">
 				</AggLevel>
-				<AggLevel column="dim_question_q5" name="[Question].[q5]">
+				<AggLevel column="dim_date_Year" name="[Date].[Year]">
 				</AggLevel>
-				<AggLevel column="dim_country_Gender_equality" name="[Country indicators.Gender equality].[Gender equality]">
+				<AggLevel column="dim_date_Quarter" name="[Date].[Quarter]">
+				</AggLevel>
+				<AggLevel column="dim_date_Month_(Key)" name="[Date].[Month]">
 				</AggLevel>
 			</AggName>
 			<AggName name="Survey_IICD_20">
@@ -390,15 +398,11 @@
 				</AggMeasure>
 				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
 				</AggMeasure>
-				<AggLevel column="dim_questionnaire_qe4_group" name="[Questionnaire].[qe4_group]">
+				<AggLevel column="dim_project_project_name_(Key)" name="[Project].[project_name]">
 				</AggLevel>
-				<AggLevel column="dim_questionnaire_qe4" name="[Questionnaire].[qe4]">
+				<AggLevel column="dim_country_Inclusion" name="[Country indicators.Inclusion].[Inclusion]">
 				</AggLevel>
-				<AggLevel column="dim_question_q5_group" name="[Question].[q5_group]">
-				</AggLevel>
-				<AggLevel column="dim_question_q5" name="[Question].[q5]">
-				</AggLevel>
-				<AggLevel column="lookup_answer_label_a6" name="[Answer options.Answers options].[a6]">
+				<AggLevel column="dim_country_Clubs_and_associca" name="[Country indicators.Clubs and associations].[Clubs and assocications]">
 				</AggLevel>
 			</AggName>
 			<AggName name="Survey_IICD_21">
@@ -410,17 +414,17 @@
 				</AggMeasure>
 				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
 				</AggMeasure>
-				<AggLevel column="dim_question_q5_group" name="[Question].[q5_group]">
-				</AggLevel>
-				<AggLevel column="dim_question_q5" name="[Question].[q5]">
-				</AggLevel>
 				<AggLevel column="dim_date_Year" name="[Date].[Year]">
 				</AggLevel>
 				<AggLevel column="dim_date_Quarter" name="[Date].[Quarter]">
 				</AggLevel>
-				<AggLevel column="dim_date_Month" name="[Date].[Month]">
+				<AggLevel column="dim_country_Gender_equality" name="[Country indicators.Gender equality].[Gender equality]">
 				</AggLevel>
-				<AggLevel column="lookup_answer_label_a6" name="[Answer options.Answers options].[a6]">
+				<AggLevel column="dim_country_Interpersonal_safe" name="[Country indicators.Interpersonal safety and trust].[Interpersonal safety and trust]">
+				</AggLevel>
+				<AggLevel column="dim_country_Civic_activism" name="[Country indicators.Civic activism].[Civic activism]">
+				</AggLevel>
+				<AggLevel column="dim_country_Clubs_and_associca" name="[Country indicators.Clubs and associations].[Clubs and assocications]">
 				</AggLevel>
 			</AggName>
 			<AggName name="Survey_IICD_22">
@@ -432,13 +436,11 @@
 				</AggMeasure>
 				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
 				</AggMeasure>
-				<AggLevel column="dim_country_Country_name" name="[Country].[Country name]">
+				<AggLevel column="dim_questionnaire_qe4_group" name="[Questionnaire].[qe4_group]">
 				</AggLevel>
-				<AggLevel column="dim_project_project_name" name="[Project].[project_name]">
+				<AggLevel column="dim_country_Interpersonal_safe" name="[Country indicators.Interpersonal safety and trust].[Interpersonal safety and trust]">
 				</AggLevel>
-				<AggLevel column="dim_question_q5_group" name="[Question].[q5_group]">
-				</AggLevel>
-				<AggLevel column="dim_question_q5" name="[Question].[q5]">
+				<AggLevel column="dim_country_Civic_activism" name="[Country indicators.Civic activism].[Civic activism]">
 				</AggLevel>
 			</AggName>
 			<AggName name="Survey_IICD_23">
@@ -450,13 +452,157 @@
 				</AggMeasure>
 				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
 				</AggMeasure>
-				<AggLevel column="dim_project_project_name" name="[Project].[project_name]">
-				</AggLevel>
-				<AggLevel column="dim_question_q5_group" name="[Question].[q5_group]">
-				</AggLevel>
-				<AggLevel column="dim_question_q5" name="[Question].[q5]">
+				<AggLevel column="dim_questionnaire_qe4_group" name="[Questionnaire].[qe4_group]">
 				</AggLevel>
 				<AggLevel column="dim_date_Year" name="[Date].[Year]">
+				</AggLevel>
+				<AggLevel column="dim_country_Inclusion" name="[Country indicators.Inclusion].[Inclusion]">
+				</AggLevel>
+				<AggLevel column="dim_country_Civic_activism" name="[Country indicators.Civic activism].[Civic activism]">
+				</AggLevel>
+				<AggLevel column="dim_country_Clubs_and_associca" name="[Country indicators.Clubs and associations].[Clubs and assocications]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey_IICD_24">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
+				</AggMeasure>
+				<AggLevel column="dim_date_Year" name="[Date].[Year]">
+				</AggLevel>
+				<AggLevel column="dim_date_Quarter" name="[Date].[Quarter]">
+				</AggLevel>
+				<AggLevel column="dim_country_Inclusion" name="[Country indicators.Inclusion].[Inclusion]">
+				</AggLevel>
+				<AggLevel column="dim_country_Interpersonal_safe" name="[Country indicators.Interpersonal safety and trust].[Interpersonal safety and trust]">
+				</AggLevel>
+				<AggLevel column="dim_country_Clubs_and_associca" name="[Country indicators.Clubs and associations].[Clubs and assocications]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey_IICD_25">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
+				</AggMeasure>
+				<AggLevel column="dim_date_Year" name="[Date].[Year]">
+				</AggLevel>
+				<AggLevel column="dim_date_Quarter" name="[Date].[Quarter]">
+				</AggLevel>
+				<AggLevel column="dim_date_Month_(Key)" name="[Date].[Month]">
+				</AggLevel>
+				<AggLevel column="dim_country_Intergroup_cohesio" name="[Country indicators.Intergroup cohesion].[Intergroup cohesion]">
+				</AggLevel>
+				<AggLevel column="dim_country_Interpersonal_safe" name="[Country indicators.Interpersonal safety and trust].[Interpersonal safety and trust]">
+				</AggLevel>
+				<AggLevel column="dim_country_Civic_activism" name="[Country indicators.Civic activism].[Civic activism]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey_IICD_26">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
+				</AggMeasure>
+				<AggLevel column="dim_country_Gender_equality" name="[Country indicators.Gender equality].[Gender equality]">
+				</AggLevel>
+				<AggLevel column="dim_country_Inclusion" name="[Country indicators.Inclusion].[Inclusion]">
+				</AggLevel>
+				<AggLevel column="dim_country_Intergroup_cohesio" name="[Country indicators.Intergroup cohesion].[Intergroup cohesion]">
+				</AggLevel>
+				<AggLevel column="dim_country_Civic_activism" name="[Country indicators.Civic activism].[Civic activism]">
+				</AggLevel>
+				<AggLevel column="dim_country_Clubs_and_associca" name="[Country indicators.Clubs and associations].[Clubs and assocications]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey_IICD_27">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
+				</AggMeasure>
+				<AggLevel column="dim_date_Year" name="[Date].[Year]">
+				</AggLevel>
+				<AggLevel column="dim_date_Quarter" name="[Date].[Quarter]">
+				</AggLevel>
+				<AggLevel column="dim_date_Month_(Key)" name="[Date].[Month]">
+				</AggLevel>
+				<AggLevel column="dim_country_Inclusion" name="[Country indicators.Inclusion].[Inclusion]">
+				</AggLevel>
+				<AggLevel column="dim_country_Intergroup_cohesio" name="[Country indicators.Intergroup cohesion].[Intergroup cohesion]">
+				</AggLevel>
+				<AggLevel column="dim_country_Clubs_and_associca" name="[Country indicators.Clubs and associations].[Clubs and assocications]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey_IICD_28">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
+				</AggMeasure>
+				<AggLevel column="dim_questionnaire_qe4_group" name="[Questionnaire].[qe4_group]">
+				</AggLevel>
+				<AggLevel column="dim_questionnaire_qe4_(Key)" name="[Questionnaire].[qe4]">
+				</AggLevel>
+				<AggLevel column="dim_country_Inclusion" name="[Country indicators.Inclusion].[Inclusion]">
+				</AggLevel>
+				<AggLevel column="dim_country_Intergroup_cohesio" name="[Country indicators.Intergroup cohesion].[Intergroup cohesion]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey_IICD_29">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
+				</AggMeasure>
+				<AggLevel column="dim_date_Year" name="[Date].[Year]">
+				</AggLevel>
+				<AggLevel column="dim_date_Quarter" name="[Date].[Quarter]">
+				</AggLevel>
+				<AggLevel column="dim_country_Interpersonal_safe" name="[Country indicators.Interpersonal safety and trust].[Interpersonal safety and trust]">
+				</AggLevel>
+				<AggLevel column="dim_country_Clubs_and_associca" name="[Country indicators.Clubs and associations].[Clubs and assocications]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey_IICD_30">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Sum" name="[Measures].[Sum]">
+				</AggMeasure>
+				<AggLevel column="dim_date_Year" name="[Date].[Year]">
+				</AggLevel>
+				<AggLevel column="dim_date_Quarter" name="[Date].[Quarter]">
+				</AggLevel>
+				<AggLevel column="dim_date_Month_(Key)" name="[Date].[Month]">
+				</AggLevel>
+				<AggLevel column="dim_country_Gender_equality" name="[Country indicators.Gender equality].[Gender equality]">
+				</AggLevel>
+				<AggLevel column="dim_country_Civic_activism" name="[Country indicators.Civic activism].[Civic activism]">
+				</AggLevel>
+				<AggLevel column="dim_country_Clubs_and_associca" name="[Country indicators.Clubs and associations].[Clubs and assocications]">
 				</AggLevel>
 			</AggName>
 		</Table>

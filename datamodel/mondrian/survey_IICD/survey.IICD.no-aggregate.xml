@@ -3,7 +3,7 @@
     <Hierarchy name="Country" visible="true" hasAll="true" primaryKey="country_key">
       <Table name="dim_country">
       </Table>
-      <Level name="Country name" visible="true" table="dim_country" column="country_name_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="Country name" visible="true" table="dim_country" column="country_key" nameColumn="country_name_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -11,7 +11,7 @@
     <Hierarchy name="Project" visible="true" hasAll="true" primaryKey="project_key">
       <Table name="dim_project">
       </Table>
-      <Level name="project_name" visible="true" table="dim_project" column="project_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="project_name" visible="true" table="dim_project" column="project_key" nameColumn="project_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -19,7 +19,7 @@
     <Hierarchy name="Training" visible="true" hasAll="true" primaryKey="training_key">
       <Table name="dim_training">
       </Table>
-      <Level name="Training" visible="true" table="dim_training" column="training_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="Training" visible="true" table="dim_training" column="training_key" nameColumn="training_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -31,73 +31,73 @@
       </Level>
       <Level name="Quarter" visible="true" table="dim_date" column="quarter" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
-      <Level name="Month" visible="true" column="month_text_en" ordinalColumn="month" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+      <Level name="Month" visible="true" column="month" nameColumn="month_text_en" ordinalColumn="month" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" name="Questionnaire">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Questionnaire">
     <Hierarchy name="Questionnaire" visible="true" hasAll="true" primaryKey="questionnaire_key">
       <Table name="dim_questionnaire">
       </Table>
-      <Level name="qe4_group" visible="true" table="dim_questionnaire" column="questionnaire_category_text_en" ordinalColumn="questionnaire_category_text_en" uniqueMembers="false" caption="Questionnaire group">
+      <Level name="qe4_group" visible="true" table="dim_questionnaire" column="questionnaire_category_text_en" ordinalColumn="questionnaire_category_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Questionnaire group">
       </Level>
-      <Level name="qe4" visible="true" table="dim_questionnaire" column="questionnaire_title_en" ordinalColumn="sequence" uniqueMembers="true" caption="Questionnaire">
+      <Level name="qe4" visible="true" table="dim_questionnaire" column="questionnaire_key" nameColumn="questionnaire_title_en" ordinalColumn="sequence" type="String" uniqueMembers="true" levelType="Regular" hideMemberIf="Never" caption="Questionnaire">
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" name="Question">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Question">
     <Hierarchy name="Question" visible="true" hasAll="true" primaryKey="question_key">
       <Table name="dim_question">
       </Table>
-      <Level name="q5_group" visible="true" table="dim_question" column="group_title_en" uniqueMembers="false" caption="Question group">
+      <Level name="q5_group" visible="true" table="dim_question" column="group_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Question group">
       </Level>
-      <Level name="q5" visible="true" table="dim_question" column="question_text_en" ordinalColumn="sequence" uniqueMembers="false" caption="Question">
+      <Level name="q5" visible="true" table="dim_question" column="question_text_en" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Question">
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" name="Answer options">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Answer options">
     <Hierarchy name="Answers options" visible="true" hasAll="true" primaryKey="answer_label_key">
-      <Table name="lookup_answer_label" alias="">
+      <Table name="lookup_answer_label">
       </Table>
-      <Level name="a6" visible="true" table="lookup_answer_label" column="answer_label" ordinalColumn="sequence" uniqueMembers="false" caption="Answer options">
+      <Level name="a6" visible="true" table="lookup_answer_label" column="answer_label_key" nameColumn="answer_label" ordinalColumn="sequence" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never" caption="Answer options">
       </Level>
     </Hierarchy>
   </Dimension>
-  <Dimension type="StandardDimension" visible="true" name="Country indicators">
+  <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Country indicators">
     <Hierarchy name="Gender equality" visible="true" hasAll="true" primaryKey="country_key">
       <Table name="dim_country">
       </Table>
-      <Level name="Gender equality" visible="true" table="dim_country" column="gender_equality_range" uniqueMembers="false">
+      <Level name="Gender equality" visible="true" table="dim_country" column="gender_equality_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
     <Hierarchy name="Inclusion" visible="true" hasAll="true" primaryKey="country_key">
       <Table name="dim_country">
       </Table>
-      <Level name="Inclusion" visible="true" table="dim_country" column="inclusion_range" uniqueMembers="false">
+      <Level name="Inclusion" visible="true" table="dim_country" column="inclusion_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
     <Hierarchy name="Intergroup cohesion" visible="true" hasAll="true" primaryKey="country_key">
       <Table name="dim_country">
       </Table>
-      <Level name="Intergroup cohesion" visible="true" table="dim_country" column="intergroup_cohesion_range" uniqueMembers="false">
+      <Level name="Intergroup cohesion" visible="true" table="dim_country" column="intergroup_cohesion_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
     <Hierarchy name="Interpersonal safety and trust" visible="true" hasAll="true" primaryKey="country_key">
       <Table name="dim_country">
       </Table>
-      <Level name="Interpersonal safety and trust" visible="true" table="dim_country" column="interpersonal_safety_and_trust_range" uniqueMembers="false">
+      <Level name="Interpersonal safety and trust" visible="true" table="dim_country" column="interpersonal_safety_and_trust_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
     <Hierarchy name="Civic activism" visible="true" hasAll="true" primaryKey="country_key">
       <Table name="dim_country">
       </Table>
-      <Level name="Civic activism" visible="true" table="dim_country" column="civic_activism_range" uniqueMembers="false">
+      <Level name="Civic activism" visible="true" table="dim_country" column="civic_activism_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
     <Hierarchy name="Clubs and associations" visible="true" hasAll="true" primaryKey="country_key">
       <Table name="dim_country">
       </Table>
-      <Level name="Clubs and assocications" visible="true" table="dim_country" column="clubs_and_associations_range" uniqueMembers="false">
+      <Level name="Clubs and assocications" visible="true" table="dim_country" column="clubs_and_associations_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
       </Level>
     </Hierarchy>
   </Dimension>
@@ -116,9 +116,9 @@
     </DimensionUsage>
     <DimensionUsage source="Date" name="Date" visible="true" foreignKey="date_key" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Answer options" name="Answer options" visible="true" foreignKey="answer_label_key">
+    <DimensionUsage source="Answer options" name="Answer options" visible="true" foreignKey="answer_label_key" highCardinality="false">
     </DimensionUsage>
-    <DimensionUsage source="Country indicators" name="Country indicators" visible="true" foreignKey="country_key">
+    <DimensionUsage source="Country indicators" name="Country indicators" visible="true" foreignKey="country_key" highCardinality="false">
     </DimensionUsage>
     <Measure name="Average" column="answer" datatype="Numeric" aggregator="avg" visible="true">
     </Measure>
