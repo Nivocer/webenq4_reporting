@@ -8,8 +8,13 @@
   <created_user>-</created_user>
   <created_date>2011&#47;02&#47;25 01:25:23.052</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2013&#47;11&#47;28 08:53:32.857</modified_date>
+  <modified_date>2013&#47;11&#47;28 09:30:41.533</modified_date>
     <parameters>
+        <parameter>
+            <name>PATH_TO_DATA</name>
+            <default_value/>
+            <description/>
+        </parameter>
     </parameters>
   <connection>
     <name>source-database</name>
@@ -122,7 +127,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>138</xloc>
+      <xloc>75</xloc>
       <yloc>100</yloc>
       </entry>
     <entry>
@@ -191,17 +196,28 @@
       <xloc>455</xloc>
       <yloc>100</yloc>
       </entry>
+    <entry>
+      <name>Set variables</name>
+      <description/>
+      <type>SET_VARIABLES</type>
+      <replacevars>Y</replacevars>
+      <filename/>
+      <file_variable_type>JVM</file_variable_type>
+      <fields>
+        <field>
+          <variable_name>path_to_data</variable_name>
+          <variable_value>${PATH_TO_DATA}</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+      </fields>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>167</xloc>
+      <yloc>101</yloc>
+      </entry>
   </entries>
   <hops>
-    <hop>
-      <from>START</from>
-      <to>Determine Layout</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
     <hop>
       <from>Determine Layout</from>
       <to>Read Spreadsheet</to>
@@ -210,6 +226,24 @@
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>START</from>
+      <to>Set variables</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Set variables</from>
+      <to>Determine Layout</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
     </hop>
   </hops>
   <notepads>

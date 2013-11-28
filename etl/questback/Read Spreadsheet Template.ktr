@@ -63,7 +63,7 @@
   <created_user>-</created_user>
   <created_date>2011&#47;02&#47;25 01:43:16.470</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2013&#47;11&#47;28 09:02:33.108</modified_date>
+  <modified_date>2013&#47;11&#47;28 09:31:49.122</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -257,10 +257,10 @@
     <accept_field/>
     <accept_stepname/>
     <file>
-      <name>&#47;home&#47;jaapandre&#47;workspace&#47;webenq4_reporting&#47;etl&#47;questback&#47;spreadsheet.xlsx</name>
-      <filemask/>
+      <name>${path_to_data}</name>
+      <filemask>.*.xlsx</filemask>
       <exclude_filemask/>
-      <file_required>N</file_required>
+      <file_required>Y</file_required>
       <include_subfolders>N</include_subfolders>
     </file>
     <fields>
@@ -772,7 +772,7 @@
     <spreadsheet_type>POI</spreadsheet_type>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>179</xloc>
+      <xloc>178</xloc>
       <yloc>101</yloc>
       <draw>Y</draw>
       </GUI>
