@@ -80,7 +80,7 @@
   <created_user>-</created_user>
   <created_date>2011&#47;02&#47;24 23:14:08.270</created_date>
   <modified_user>admin</modified_user>
-  <modified_date>2013&#47;11&#47;28 09:31:33.961</modified_date>
+  <modified_date>2013&#47;11&#47;28 13:49:17.913</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -246,35 +246,7 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Microsoft Excel Input</from><to>Row Normaliser</to><enabled>Y</enabled> </hop>  <hop> <from>Row Normaliser</from><to>Filter rows</to><enabled>Y</enabled> </hop>  <hop> <from>Filter rows</from><to>layout.txt</to><enabled>Y</enabled> </hop>  </order>
-  <step>
-    <name>Filter rows</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<send_true_to/>
-<send_false_to/>
-    <compare>
-<condition>
- <negated>N</negated>
- <leftvalue>date</leftvalue>
- <function>IS NOT NULL</function>
- <rightvalue/>
- </condition>
-    </compare>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>543</xloc>
-      <yloc>70</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
+  <hop> <from>Microsoft Excel Input</from><to>Row Normaliser</to><enabled>Y</enabled> </hop>  <hop> <from>Row Normaliser</from><to>Filter rows</to><enabled>Y</enabled> </hop>  <hop> <from>Filter rows</from><to>Abort</to><enabled>Y</enabled> </hop>  <hop> <from>Abort</from><to>layout.txt</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>Microsoft Excel Input</name>
     <type>ExcelInput</type>
@@ -309,7 +281,7 @@
     </file>
     <fields>
       <field>
-        <name>PROD_CODE</name>
+        <name>Datum</name>
         <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
@@ -322,600 +294,12 @@
       </field>
       <field>
         <name>COL_0001</name>
-        <type>Date</type>
+        <type>String</type>
         <length>-1</length>
         <precision>-1</precision>
         <trim_type>none</trim_type>
         <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0002</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0003</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0004</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0005</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0006</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0007</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0008</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0009</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0010</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0011</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0012</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0013</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0014</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0015</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0016</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0017</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0018</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0019</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0020</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0021</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0022</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0023</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0024</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0025</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0026</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0027</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0028</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0029</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0030</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0031</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0032</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0033</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0034</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0035</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0036</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0037</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0038</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0039</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0040</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0041</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0042</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0043</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0044</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0045</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0046</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0047</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0048</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0049</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
-        <currency/>
-        <decimal/>
-        <group/>
-      </field>
-      <field>
-        <name>COL_0050</name>
-        <type>Date</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-        <format>yyyy-MM-dd</format>
+        <format/>
         <currency/>
         <decimal/>
         <group/>
@@ -958,7 +342,7 @@
     <name>Row Normaliser</name>
     <type>Normaliser</type>
     <description/>
-    <distribute>Y</distribute>
+    <distribute>N</distribute>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -967,154 +351,46 @@
    <typefield>typefield</typefield>
     <fields>      <field>        <name>COL_0001</name>
         <value>COL_0001</value>
-        <norm>date</norm>
+        <norm>question</norm>
         </field>      <field>        <name>COL_0002</name>
         <value>COL_0002</value>
-        <norm>date</norm>
+        <norm>question</norm>
         </field>      <field>        <name>COL_0003</name>
         <value>COL_0003</value>
-        <norm>date</norm>
+        <norm>question</norm>
         </field>      <field>        <name>COL_0004</name>
         <value>COL_0004</value>
-        <norm>date</norm>
+        <norm>question</norm>
         </field>      <field>        <name>COL_0005</name>
         <value>COL_0005</value>
-        <norm>date</norm>
+        <norm>question</norm>
         </field>      <field>        <name>COL_0006</name>
         <value>COL_0006</value>
-        <norm>date</norm>
+        <norm>question</norm>
         </field>      <field>        <name>COL_0007</name>
         <value>COL_0007</value>
-        <norm>date</norm>
+        <norm>question</norm>
         </field>      <field>        <name>COL_0008</name>
         <value>COL_0008</value>
-        <norm>date</norm>
+        <norm>question</norm>
         </field>      <field>        <name>COL_0009</name>
         <value>COL_0009</value>
-        <norm>date</norm>
+        <norm>question</norm>
         </field>      <field>        <name>COL_0010</name>
         <value>COL_0010</value>
-        <norm>date</norm>
+        <norm>question</norm>
         </field>      <field>        <name>COL_0011</name>
         <value>COL_0011</value>
-        <norm>date</norm>
+        <norm>question</norm>
         </field>      <field>        <name>COL_0012</name>
         <value>COL_0012</value>
-        <norm>date</norm>
+        <norm>question</norm>
         </field>      <field>        <name>COL_0013</name>
         <value>COL_0013</value>
-        <norm>date</norm>
+        <norm>question</norm>
         </field>      <field>        <name>COL_0014</name>
         <value>COL_0014</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0015</name>
-        <value>COL_0015</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0016</name>
-        <value>COL_0016</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0017</name>
-        <value>COL_0017</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0018</name>
-        <value>COL_0018</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0019</name>
-        <value>COL_0019</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0020</name>
-        <value>COL_0020</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0021</name>
-        <value>COL_0021</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0022</name>
-        <value>COL_0022</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0023</name>
-        <value>COL_0023</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0024</name>
-        <value>COL_0024</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0025</name>
-        <value>COL_0025</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0026</name>
-        <value>COL_0026</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0027</name>
-        <value>COL_0027</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0028</name>
-        <value>COL_0028</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0029</name>
-        <value>COL_0029</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0030</name>
-        <value>COL_0030</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0031</name>
-        <value>COL_0031</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0032</name>
-        <value>COL_0032</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0033</name>
-        <value>COL_0033</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0034</name>
-        <value>COL_0034</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0035</name>
-        <value>COL_0035</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0036</name>
-        <value>COL_0036</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0037</name>
-        <value>COL_0037</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0038</name>
-        <value>COL_0038</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0039</name>
-        <value>COL_0039</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0040</name>
-        <value>COL_0040</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0041</name>
-        <value>COL_0041</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0042</name>
-        <value>COL_0042</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0043</name>
-        <value>COL_0043</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0044</name>
-        <value>COL_0044</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0045</name>
-        <value>COL_0045</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0046</name>
-        <value>COL_0046</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0047</name>
-        <value>COL_0047</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0048</name>
-        <value>COL_0048</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0049</name>
-        <value>COL_0049</value>
-        <norm>date</norm>
-        </field>      <field>        <name>COL_0050</name>
-        <value>COL_0050</value>
-        <norm>date</norm>
+        <norm>question</norm>
         </field>      </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>329</xloc>
@@ -1178,9 +454,9 @@
         <precision>-1</precision>
       </field>
       <field>
-        <name>date</name>
-        <type>Date</type>
-        <format>yyyy-MM-dd</format>
+        <name>question</name>
+        <type>String</type>
+        <format/>
         <currency/>
         <decimal/>
         <group/>
@@ -1194,6 +470,55 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>911</xloc>
       <yloc>70</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter rows</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to/>
+<send_false_to/>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>question</leftvalue>
+ <function>IS NOT NULL</function>
+ <rightvalue/>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>494</xloc>
+      <yloc>72</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Abort</name>
+    <type>Abort</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <row_threshold>999</row_threshold>
+      <message>aborting: too much columns.</message>
+      <always_log_rows>Y</always_log_rows>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>707</xloc>
+      <yloc>72</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
