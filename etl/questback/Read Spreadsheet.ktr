@@ -63,7 +63,7 @@
   <created_user>-</created_user>
   <created_date>2011&#47;02&#47;25 01:33:04.265</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2013&#47;11&#47;28 14:23:56.632</modified_date>
+  <modified_date>2013&#47;11&#47;29 14:00:26.454</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -336,162 +336,6 @@
     </step>
 
   <step>
-    <name>ETL Metadata Injection</name>
-    <type>MetaInject</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <specification_method>rep_name</specification_method>
-    <trans_object_id/>
-    <trans_name>Read Spreadsheet Template</trans_name>
-    <filename/>
-    <directory_path>&#47;questback</directory_path>
-    <source_step/>
-    <mappings>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
-        <target_attribute_key>DECIMAL</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
-        <source_field>Decimal</source_field>
-      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
-        <target_attribute_key>GROUP</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
-        <source_field>Group</source_field>
-      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
-        <target_attribute_key>NAME</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
-        <source_field>Name</source_field>
-      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
-        <target_attribute_key>TRIM_TYPE</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
-        <source_field>TrimType</source_field>
-      </mapping>      <mapping>        <target_step_name>Row Normaliser</target_step_name>
-        <target_attribute_key>NAME</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Normaliser Target</source_step>
-        <source_field>Name</source_field>
-      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
-        <target_attribute_key>PRECISION</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
-        <source_field>Precision</source_field>
-      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
-        <target_attribute_key>CURRENCY</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
-        <source_field>Currency</source_field>
-      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
-        <target_attribute_key>REPEAT</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
-        <source_field>Repeat</source_field>
-      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
-        <target_attribute_key>FORMAT</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
-        <source_field>Format</source_field>
-      </mapping>      <mapping>        <target_step_name>Row Normaliser</target_step_name>
-        <target_attribute_key>VALUE</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Normaliser Target</source_step>
-        <source_field>Value</source_field>
-      </mapping>      <mapping>        <target_step_name>Row Normaliser</target_step_name>
-        <target_attribute_key>NORMALISED</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Normaliser Target</source_step>
-        <source_field>NormalisedField</source_field>
-      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
-        <target_attribute_key>LENGTH</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
-        <source_field>Length</source_field>
-      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
-        <target_attribute_key>SHEET_NAME</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Sheet name</source_step>
-        <source_field>sheet name</source_field>
-      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
-        <target_attribute_key>TYPE</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
-        <source_field>Type</source_field>
-      </mapping>    </mappings>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>838</xloc>
-      <yloc>106</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>NormalisedField</name>
-    <type>Constant</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      <field>
-        <name>NormalisedField</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif>metric</nullif>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>641</xloc>
-      <yloc>281</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Normaliser Target</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>      <field>        <name>Name</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>Name</name>
-        <rename>Value</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>NormalisedField</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>        <select_unspecified>N</select_unspecified>
-    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>760</xloc>
-      <yloc>281</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
     <name>Datum</name>
     <type>DataGrid</type>
     <description/>
@@ -615,6 +459,180 @@
     </step>
 
   <step>
+    <name>Dummy (do nothing)</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>295</xloc>
+      <yloc>79</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ETL Metadata Injection</name>
+    <type>MetaInject</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <specification_method>rep_name</specification_method>
+    <trans_object_id/>
+    <trans_name>Read Spreadsheet Template</trans_name>
+    <filename/>
+    <directory_path>&#47;questback</directory_path>
+    <source_step/>
+    <mappings>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
+        <target_attribute_key>DECIMAL</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Append streams</source_step>
+        <source_field>Decimal</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
+        <target_attribute_key>GROUP</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Append streams</source_step>
+        <source_field>Group</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
+        <target_attribute_key>NAME</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Append streams</source_step>
+        <source_field>Name</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
+        <target_attribute_key>TRIM_TYPE</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Append streams</source_step>
+        <source_field>TrimType</source_field>
+      </mapping>      <mapping>        <target_step_name>Row Normaliser</target_step_name>
+        <target_attribute_key>NAME</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Normaliser Target</source_step>
+        <source_field>Name</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
+        <target_attribute_key>PRECISION</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Append streams</source_step>
+        <source_field>Precision</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
+        <target_attribute_key>CURRENCY</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Append streams</source_step>
+        <source_field>Currency</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
+        <target_attribute_key>REPEAT</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Append streams</source_step>
+        <source_field>Repeat</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
+        <target_attribute_key>FORMAT</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Append streams</source_step>
+        <source_field>Format</source_field>
+      </mapping>      <mapping>        <target_step_name>Row Normaliser</target_step_name>
+        <target_attribute_key>VALUE</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Normaliser Target</source_step>
+        <source_field>Value</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
+        <target_attribute_key>SHEET_NAME</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Sheet name</source_step>
+        <source_field>sheet name</source_field>
+      </mapping>      <mapping>        <target_step_name>Row Normaliser</target_step_name>
+        <target_attribute_key>NORMALISED</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Normaliser Target</source_step>
+        <source_field>NormalisedField</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
+        <target_attribute_key>LENGTH</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Append streams</source_step>
+        <source_field>Length</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
+        <target_attribute_key>TYPE</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Append streams</source_step>
+        <source_field>Type</source_field>
+      </mapping>    </mappings>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>838</xloc>
+      <yloc>106</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>NormalisedField</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>NormalisedField</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>metric</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>641</xloc>
+      <yloc>281</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Normaliser Target</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>Name</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Name</name>
+        <rename>Value</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>NormalisedField</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>760</xloc>
+      <yloc>281</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
     <name>Select Date Columns</name>
     <type>SelectValues</type>
     <description/>
@@ -701,24 +719,6 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>523</xloc>
       <yloc>46</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Dummy (do nothing)</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>295</xloc>
-      <yloc>79</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

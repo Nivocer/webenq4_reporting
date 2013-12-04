@@ -6,8 +6,13 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#47;questback</directory>
+    <directory>&#x2f;questback</directory>
     <parameters>
+        <parameter>
+            <name>PATH_TO_DATA</name>
+            <default_value>&#x2f;home&#x2f;jaapandre&#x2f;workspace&#x2f;management_git&#x2f;SLA&#x2f;2013&#x2f;hva-oo&#x2f;inputs&#x2f;meting1&#x2f;</default_value>
+            <description/>
+        </parameter>
     </parameters>
     <log>
 <trans-log-table><connection/>
@@ -16,7 +21,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
 <perf-log-table><connection/>
 <schema/>
 <table/>
@@ -33,6 +38,11 @@
 <table/>
 <timeout_days/>
 <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -61,43 +71,21 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>-</created_user>
-  <created_date>2011&#47;02&#47;24 23:24:09.288</created_date>
+  <created_date>2011&#x2f;02&#x2f;24 23&#x3a;24&#x3a;09.288</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2013&#47;11&#47;28 14:23:48.081</modified_date>
+  <modified_date>2013&#x2f;12&#x2f;02 10&#x3a;07&#x3a;08.333</modified_date>
   </info>
   <notepads>
-    <notepad>
-      <note>This transformation reads the information from the header.
-We know it&apos;s column PROD_CODE with N columns behind it.</note>
-      <xloc>178</xloc>
-      <yloc>47</yloc>
-      <width>298</width>
-      <heigth>36</heigth>
-      <fontname>Arial</fontname>
-      <fontsize>8</fontsize>
-      <fontbold>N</fontbold>
-      <fontitalic>N</fontitalic>
-      <fontcolorred>0</fontcolorred>
-      <fontcolorgreen>0</fontcolorgreen>
-      <fontcolorblue>0</fontcolorblue>
-      <backgroundcolorred>255</backgroundcolorred>
-      <backgroundcolorgreen>165</backgroundcolorgreen>
-      <backgroundcolorblue>0</backgroundcolorblue>
-      <bordercolorred>100</bordercolorred>
-      <bordercolorgreen>100</bordercolorgreen>
-      <bordercolorblue>100</bordercolorblue>
-      <drawshadow>Y</drawshadow>
-    </notepad>
   </notepads>
   <connection>
     <name>source-database</name>
-    <server>${SOURCE_HOST}</server>
+    <server>&#x24;&#x7b;SOURCE_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${SOURCE_DB}</database>
-    <port>${SOURCE_PORT}</port>
-    <username>${SOURCE_USER}</username>
-    <password>${SOURCE_PASSWORD}</password>
+    <database>&#x24;&#x7b;SOURCE_DB&#x7d;</database>
+    <port>&#x24;&#x7b;SOURCE_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;SOURCE_USER&#x7d;</username>
+    <password>&#x24;&#x7b;SOURCE_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -107,7 +95,7 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${SOURCE_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;SOURCE_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -116,13 +104,13 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
   </connection>
   <connection>
     <name>target-database</name>
-    <server>${TARGET_HOST}</server>
+    <server>&#x24;&#x7b;TARGET_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${TARGET_DB}</database>
-    <port>${TARGET_PORT}</port>
-    <username>${TARGET_USER}</username>
-    <password>${TARGET_PASSWORD}</password>
+    <database>&#x24;&#x7b;TARGET_DB&#x7d;</database>
+    <port>&#x24;&#x7b;TARGET_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;TARGET_USER&#x7d;</username>
+    <password>&#x24;&#x7b;TARGET_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -132,7 +120,7 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${TARGET_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;TARGET_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -162,12 +150,22 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
     </attributes>
   </connection>
   <order>
-  <hop> <from>1000 columns</from><to>colnr</to><enabled>Y</enabled> </hop>  <hop> <from>colnr</from><to>Set format</to><enabled>Y</enabled> </hop>  <hop> <from>Datum</from><to>Append streams</to><enabled>N</enabled> </hop>  <hop> <from>Append streams</from><to>ETL Metadata Injection</to><enabled>Y</enabled> </hop>  <hop> <from>Set format</from><to>Calculator</to><enabled>Y</enabled> </hop>  <hop> <from>Calculator</from><to>Add constants</to><enabled>Y</enabled> </hop>  <hop> <from>Add constants</from><to>Select Question Columns</to><enabled>Y</enabled> </hop>  <hop> <from>Select Question Columns</from><to>Append streams</to><enabled>Y</enabled> </hop>  <hop> <from>Normalised field</from><to>Select values</to><enabled>Y</enabled> </hop>  <hop> <from>Select values</from><to>ETL Metadata Injection</to><enabled>Y</enabled> </hop>  <hop> <from>Add constants</from><to>Normalised field</to><enabled>Y</enabled> </hop>  <hop> <from>Dummy (do nothing)</from><to>Append streams</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>1000 columns</from><to>colnr</to><enabled>Y</enabled> </hop>
+  <hop> <from>colnr</from><to>Set format</to><enabled>Y</enabled> </hop>
+  <hop> <from>Set format</from><to>Calculator</to><enabled>Y</enabled> </hop>
+  <hop> <from>Calculator</from><to>Add constants</to><enabled>Y</enabled> </hop>
+  <hop> <from>Add constants</from><to>Select Question Columns</to><enabled>Y</enabled> </hop>
+  <hop> <from>Normalised field</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>Add constants</from><to>Normalised field</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select Question Columns</from><to>ETL Metadata Injection</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values</from><to>ETL Metadata Injection</to><enabled>Y</enabled> </hop>
+  </order>
   <step>
     <name>1000 columns</name>
     <type>RowGenerator</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -184,9 +182,14 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
         <nullif>COL_</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
     </fields>
     <limit>1000</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms/>
+    <row_time_field/>
+    <last_time_field/>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>100</xloc>
@@ -200,6 +203,7 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
     <type>Constant</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -216,6 +220,7 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
         <nullif>String</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>Length</name>
@@ -227,6 +232,7 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
         <nullif/>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>Precision</name>
@@ -238,6 +244,7 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
         <nullif/>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>Format</name>
@@ -249,6 +256,7 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
         <nullif/>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>Currency</name>
@@ -260,6 +268,7 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
         <nullif/>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>Decimal</name>
@@ -271,6 +280,7 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
         <nullif/>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>Group</name>
@@ -282,6 +292,7 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
         <nullif/>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>TrimType</name>
@@ -293,6 +304,7 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
         <nullif>none</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>Repeat</name>
@@ -304,6 +316,7 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
         <nullif>N</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
     </fields>
      <cluster_schema/>
@@ -315,30 +328,11 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
     </step>
 
   <step>
-    <name>Append streams</name>
-    <type>Append</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<head_name>Dummy (do nothing)</head_name>
-<tail_name>Select Question Columns</tail_name>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>670</xloc>
-      <yloc>114</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
     <name>Calculator</name>
     <type>Calculator</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -367,133 +361,11 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
     </step>
 
   <step>
-    <name>Datum</name>
-    <type>DataGrid</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      <field>
-        <name>Name</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>Type</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>Length</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>Precision</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>Format</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>Currency</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>Decimal</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>Group</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>TrimType</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>Repeat</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <data>
-      <line> <item>Datum</item><item>String</item><item/><item/><item/><item/><item/><item/><item>right</item><item>N</item> </line>
-    </data>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>100</xloc>
-      <yloc>114</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
     <name>ETL Metadata Injection</name>
     <type>MetaInject</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -503,53 +375,120 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
     <trans_object_id/>
     <trans_name>Determine Layout Template</trans_name>
     <filename/>
-    <directory_path>&#47;questback</directory_path>
+    <directory_path>&#x2f;questback</directory_path>
     <source_step/>
-    <mappings>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
-        <target_attribute_key>DECIMAL</target_attribute_key>
+    <target_file>&#x2f;tmp&#x2f;pentaho_spreadsheet_steps.ktr</target_file>
+    <no_execution>Y</no_execution>
+    <mappings>      <mapping>        <target_step_name>Microsoft Excel Input </target_step_name>
+        <target_attribute_key>LENGTH</target_attribute_key>
         <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
-        <source_field>Decimal</source_field>
-      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
-        <target_attribute_key>GROUP</target_attribute_key>
+        <source_step>Select Question Columns</source_step>
+        <source_field>Length</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input </target_step_name>
+        <target_attribute_key>TYPE</target_attribute_key>
         <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
-        <source_field>Group</source_field>
-      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
-        <target_attribute_key>NAME</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
-        <source_field>Name</source_field>
-      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
-        <target_attribute_key>TRIM_TYPE</target_attribute_key>
-        <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
-        <source_field>TrimType</source_field>
+        <source_step>Select Question Columns</source_step>
+        <source_field>Type</source_field>
       </mapping>      <mapping>        <target_step_name>Row Normaliser</target_step_name>
         <target_attribute_key>NAME</target_attribute_key>
         <target_detail>Y</target_detail>
         <source_step>Select values</source_step>
         <source_field>Name</source_field>
+      </mapping>      <mapping>        <target_step_name>Row Normaliser answer</target_step_name>
+        <target_attribute_key>NAME</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Select values</source_step>
+        <source_field>Name</source_field>
+      </mapping>      <mapping>        <target_step_name>Row Normaliser question</target_step_name>
+        <target_attribute_key>VALUE</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Select values</source_step>
+        <source_field>value</source_field>
+      </mapping>      <mapping>        <target_step_name>Row Normaliser question</target_step_name>
+        <target_attribute_key>NORMALISED</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Select values</source_step>
+        <source_field>Normalised Field question</source_field>
       </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
         <target_attribute_key>PRECISION</target_attribute_key>
         <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
+        <source_step>Select Question Columns</source_step>
+        <source_field>Precision</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input </target_step_name>
+        <target_attribute_key>PRECISION</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Select Question Columns</source_step>
         <source_field>Precision</source_field>
       </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
+        <target_attribute_key>LENGTH</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Select Question Columns</source_step>
+        <source_field>Length</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
+        <target_attribute_key>TYPE</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Select Question Columns</source_step>
+        <source_field>Type</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
+        <target_attribute_key>DECIMAL</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Select Question Columns</source_step>
+        <source_field>Decimal</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
+        <target_attribute_key>GROUP</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Select Question Columns</source_step>
+        <source_field>Group</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
+        <target_attribute_key>NAME</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Select Question Columns</source_step>
+        <source_field>Name</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input </target_step_name>
         <target_attribute_key>CURRENCY</target_attribute_key>
         <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
+        <source_step>Select Question Columns</source_step>
         <source_field>Currency</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input </target_step_name>
+        <target_attribute_key>REPEAT</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Select Question Columns</source_step>
+        <source_field>Repeat</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
+        <target_attribute_key>TRIM_TYPE</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Select Question Columns</source_step>
+        <source_field>TrimType</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input </target_step_name>
+        <target_attribute_key>FORMAT</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Select Question Columns</source_step>
+        <source_field>Format</source_field>
       </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
         <target_attribute_key>REPEAT</target_attribute_key>
         <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
+        <source_step>Select Question Columns</source_step>
         <source_field>Repeat</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
+        <target_attribute_key>CURRENCY</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Select Question Columns</source_step>
+        <source_field>Currency</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input </target_step_name>
+        <target_attribute_key>TRIM_TYPE</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Select Question Columns</source_step>
+        <source_field>TrimType</source_field>
       </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
         <target_attribute_key>FORMAT</target_attribute_key>
         <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
+        <source_step>Select Question Columns</source_step>
         <source_field>Format</source_field>
+      </mapping>      <mapping>        <target_step_name>Row Normaliser answer</target_step_name>
+        <target_attribute_key>NORMALISED</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Select values</source_step>
+        <source_field>Normalised Field Answer</source_field>
       </mapping>      <mapping>        <target_step_name>Row Normaliser</target_step_name>
         <target_attribute_key>VALUE</target_attribute_key>
         <target_detail>Y</target_detail>
@@ -560,16 +499,31 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
         <target_detail>Y</target_detail>
         <source_step>Select values</source_step>
         <source_field>Normalised Field</source_field>
-      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
-        <target_attribute_key>LENGTH</target_attribute_key>
+      </mapping>      <mapping>        <target_step_name>Row Normaliser answer</target_step_name>
+        <target_attribute_key>VALUE</target_attribute_key>
         <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
-        <source_field>Length</source_field>
-      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input</target_step_name>
-        <target_attribute_key>TYPE</target_attribute_key>
+        <source_step>Select values</source_step>
+        <source_field>value</source_field>
+      </mapping>      <mapping>        <target_step_name>Row Normaliser question</target_step_name>
+        <target_attribute_key>NAME</target_attribute_key>
         <target_detail>Y</target_detail>
-        <source_step>Append streams</source_step>
-        <source_field>Type</source_field>
+        <source_step>Select values</source_step>
+        <source_field>Name</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input </target_step_name>
+        <target_attribute_key>DECIMAL</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Select Question Columns</source_step>
+        <source_field>Decimal</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input </target_step_name>
+        <target_attribute_key>GROUP</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Select Question Columns</source_step>
+        <source_field>Group</source_field>
+      </mapping>      <mapping>        <target_step_name>Microsoft Excel Input </target_step_name>
+        <target_attribute_key>NAME</target_attribute_key>
+        <target_detail>Y</target_detail>
+        <source_step>Select Question Columns</source_step>
+        <source_field>Name</source_field>
       </mapping>    </mappings>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>889</xloc>
@@ -583,6 +537,7 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
     <type>Constant</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -590,7 +545,7 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
            </partitioning>
     <fields>
       <field>
-        <name>Normalised Field</name>
+        <name>Normalised Field question</name>
         <type>String</type>
         <format/>
         <currency/>
@@ -599,6 +554,19 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
         <nullif>question</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>Normalised Field Answer</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>answer</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
     </fields>
      <cluster_schema/>
@@ -614,6 +582,7 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -662,8 +631,8 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
       </field>        <select_unspecified>N</select_unspecified>
     </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>670</xloc>
-      <yloc>253</yloc>
+      <xloc>696</xloc>
+      <yloc>246</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -673,6 +642,7 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -686,7 +656,11 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
         <rename>value</rename>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>Normalised Field</name>
+      </field>      <field>        <name>Normalised Field question</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Normalised Field Answer</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
@@ -704,6 +678,7 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -712,11 +687,14 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
     <fields>        <select_unspecified>N</select_unspecified>
       <meta>        <name>colnr</name>
         <rename>colnr</rename>
-        <type>-</type>
+        <type>None</type>
         <length>-2</length>
         <precision>-2</precision>
         <conversion_mask>0000</conversion_mask>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -735,6 +713,7 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
     <type>Sequence</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -758,27 +737,10 @@ We know it&apos;s column PROD_CODE with N columns behind it.</note>
       </GUI>
     </step>
 
-  <step>
-    <name>Dummy (do nothing)</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>551</xloc>
-      <yloc>42</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
   <step_error_handling>
   </step_error_handling>
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
+
 </transformation>

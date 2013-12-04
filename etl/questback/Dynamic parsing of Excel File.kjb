@@ -4,27 +4,27 @@
     <extended_description/>
     <job_version/>
     <job_status>0</job_status>
-  <directory>&#47;questback</directory>
+  <directory>&#x2f;questback</directory>
   <created_user>-</created_user>
-  <created_date>2011&#47;02&#47;25 01:25:23.052</created_date>
+  <created_date>2011&#x2f;02&#x2f;25 01&#x3a;25&#x3a;23.052</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2013&#47;11&#47;28 13:49:32.052</modified_date>
+  <modified_date>2013&#x2f;11&#x2f;30 08&#x3a;15&#x3a;31.922</modified_date>
     <parameters>
         <parameter>
             <name>PATH_TO_DATA</name>
-            <default_value/>
+            <default_value>&#x2f;home&#x2f;jaapandre&#x2f;workspace&#x2f;management_git&#x2f;SLA&#x2f;2013&#x2f;hva-oo&#x2f;inputs&#x2f;meting1&#x2f;</default_value>
             <description/>
         </parameter>
     </parameters>
   <connection>
     <name>source-database</name>
-    <server>${SOURCE_HOST}</server>
+    <server>&#x24;&#x7b;SOURCE_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${SOURCE_DB}</database>
-    <port>${SOURCE_PORT}</port>
-    <username>${SOURCE_USER}</username>
-    <password>${SOURCE_PASSWORD}</password>
+    <database>&#x24;&#x7b;SOURCE_DB&#x7d;</database>
+    <port>&#x24;&#x7b;SOURCE_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;SOURCE_USER&#x7d;</username>
+    <password>&#x24;&#x7b;SOURCE_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -34,7 +34,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${SOURCE_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;SOURCE_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -43,13 +43,13 @@
   </connection>
   <connection>
     <name>target-database</name>
-    <server>${TARGET_HOST}</server>
+    <server>&#x24;&#x7b;TARGET_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${TARGET_DB}</database>
-    <port>${TARGET_PORT}</port>
-    <username>${TARGET_USER}</username>
-    <password>${TARGET_PASSWORD}</password>
+    <database>&#x24;&#x7b;TARGET_DB&#x7d;</database>
+    <port>&#x24;&#x7b;TARGET_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;TARGET_USER&#x7d;</username>
+    <password>&#x24;&#x7b;TARGET_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -59,7 +59,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${TARGET_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;TARGET_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -96,7 +96,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_JOB</id><enabled>Y</enabled><name>ID_JOB</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>JOBNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></job-log-table>
+<field><id>ID_JOB</id><enabled>Y</enabled><name>ID_JOB</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>JOBNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>START_JOB_ENTRY</id><enabled>N</enabled><name>START_JOB_ENTRY</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></job-log-table>
 <jobentry-log-table><connection/>
 <schema/>
 <table/>
@@ -127,8 +127,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>75</xloc>
-      <yloc>100</yloc>
+      <xloc>70</xloc>
+      <yloc>50</yloc>
       </entry>
     <entry>
       <name>Determine Layout</name>
@@ -138,10 +138,10 @@
       <trans_object_id/>
       <filename/>
       <transname>Determine Layout</transname>
-      <directory>&#47;questback</directory>
-      <arg_from_previous>N</arg_from_previous>
+      <directory>&#x2f;questback</directory>
+      <arg_from_previous>Y</arg_from_previous>
       <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
+      <exec_per_row>Y</exec_per_row>
       <clear_rows>N</clear_rows>
       <clear_files>N</clear_files>
       <set_logfile>N</set_logfile>
@@ -156,12 +156,13 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>302</xloc>
-      <yloc>100</yloc>
+      <xloc>292</xloc>
+      <yloc>243</yloc>
       </entry>
     <entry>
       <name>Read Spreadsheet</name>
@@ -171,7 +172,7 @@
       <trans_object_id/>
       <filename/>
       <transname>Read Spreadsheet</transname>
-      <directory>&#47;questback</directory>
+      <directory>&#x2f;questback</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -189,32 +190,66 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>455</xloc>
-      <yloc>100</yloc>
+      <xloc>444</xloc>
+      <yloc>244</yloc>
       </entry>
     <entry>
-      <name>Set variables</name>
+      <name>Add filenames to result</name>
       <description/>
-      <type>SET_VARIABLES</type>
-      <replacevars>Y</replacevars>
-      <filename/>
-      <file_variable_type>JVM</file_variable_type>
+      <type>ADD_RESULT_FILENAMES</type>
+      <arg_from_previous>N</arg_from_previous>
+      <include_subfolders>N</include_subfolders>
+      <delete_all_before>N</delete_all_before>
       <fields>
         <field>
-          <variable_name>path_to_data</variable_name>
-          <variable_value>${PATH_TO_DATA}</variable_value>
-          <variable_type>CURRENT_JOB</variable_type>
+          <name>&#x24;&#x7b;PATH_TO_DATA&#x7d;</name>
+          <filemask>.&#x2a;.&#x2a;xlsx</filemask>
         </field>
       </fields>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>167</xloc>
-      <yloc>101</yloc>
+      <xloc>228</xloc>
+      <yloc>47</yloc>
+      </entry>
+    <entry>
+      <name>get files as row</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>rep_name</specification_method>
+      <trans_object_id/>
+      <filename/>
+      <transname>get files as row</transname>
+      <directory>&#x2f;questback</directory>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>364</xloc>
+      <yloc>60</yloc>
       </entry>
   </entries>
   <hops>
@@ -223,13 +258,13 @@
       <to>Read Spreadsheet</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
-      <enabled>Y</enabled>
+      <enabled>N</enabled>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>START</from>
-      <to>Set variables</to>
+      <to>Add filenames to result</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -237,7 +272,16 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>Set variables</from>
+      <from>Add filenames to result</from>
+      <to>get files as row</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>get files as row</from>
       <to>Determine Layout</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -248,25 +292,9 @@
   </hops>
   <notepads>
     <notepad>
-      <note>This job executes 2 templated transformations:
-
-Determine layout:
-----------------------
-This transformation determines the layout of the ever changing spreadsheet by analyzing the header row.
-It reads up to a maximum of 1000 columns (configurable) and figures out how many colums there are.
-It also knows the date stored in each column.
-
-Read Spreadsheet
----------------------
-The information gathered in the first transformation is used here to drive another templated transformation that actually reads the spreadsheet.
-It also normalizes the data so it can be stored in a database or processed in a data warehouse.
-
-2 Result files
---&gt; layout.txt : the layout of the file, the date per column (after PROD_CODE)
---&gt; result.txt : the normalized form of the spreadsheet.
-</note>
-      <xloc>106</xloc>
-      <yloc>172</yloc>
+      <note>This job executes 2 templated transformations&#x3a;&#xa;&#xa;Determine layout&#x3a;&#xa;----------------------&#xa;This transformation determines the layout of the ever changing spreadsheet by analyzing the header row.&#xa;It reads up to a maximum of 1000 columns &#x28;configurable&#x29; and figures out how many colums there are.&#xa;It also knows the date stored in each column.&#xa;&#xa;Read Spreadsheet&#xa;---------------------&#xa;The information gathered in the first transformation is used here to drive another templated transformation that actually reads the spreadsheet.&#xa;It also normalizes the data so it can be stored in a database or processed in a data warehouse.&#xa;&#xa;2 Result files&#xa;--&#x3e; layout.txt &#x3a; the layout of the file, the date per column &#x28;after PROD_CODE&#x29;&#xa;--&#x3e; result.txt &#x3a; the normalized form of the spreadsheet.&#xa;</note>
+      <xloc>103</xloc>
+      <yloc>347</yloc>
       <width>832</width>
       <heigth>282</heigth>
       <fontname>Arial</fontname>
@@ -284,5 +312,27 @@ It also normalizes the data so it can be stored in a database or processed in a 
       <bordercolorblue>100</bordercolorblue>
       <drawshadow>Y</drawshadow>
     </notepad>
+    <notepad>
+      <note>Answers</note>
+      <xloc>136</xloc>
+      <yloc>248</yloc>
+      <width>61</width>
+      <heigth>26</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
+
 </job>
