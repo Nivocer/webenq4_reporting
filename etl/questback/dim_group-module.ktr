@@ -63,7 +63,7 @@
   <created_user>-</created_user>
   <created_date>2013&#47;11&#47;28 14:50:12.391</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2013&#47;12&#47;01 16:13:01.068</modified_date>
+  <modified_date>2013&#47;12&#47;06 11:58:16.500</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -118,7 +118,7 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Split row</from><to>has module code</to><enabled>Y</enabled> </hop>  <hop> <from>has module code</from><to>Split group info</to><enabled>Y</enabled> </hop>  <hop> <from>has module code</from><to>select rename fields</to><enabled>Y</enabled> </hop>  <hop> <from>Split group info</from><to>Calculator</to><enabled>Y</enabled> </hop>  <hop> <from>Calculator</from><to>Split modulecode</to><enabled>Y</enabled> </hop>  <hop> <from>Split group info</from><to>Select values</to><enabled>Y</enabled> </hop>  <hop> <from>Split modulecode</from><to>Select values 2</to><enabled>Y</enabled> </hop>  <hop> <from>Microsoft Excel Input</from><to>Split row</to><enabled>Y</enabled> </hop>  <hop> <from>select rename fields</from><to>Insert &#47; Update</to><enabled>Y</enabled> </hop>  <hop> <from>Select values</from><to>Insert &#47; Update 2</to><enabled>Y</enabled> </hop>  <hop> <from>Select values 2</from><to>Insert &#47; Update 3</to><enabled>Y</enabled> </hop>  <hop> <from>Get files from result</from><to>Microsoft Excel Input</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Split row</from><to>has module code</to><enabled>Y</enabled> </hop>  <hop> <from>has module code</from><to>Split group info</to><enabled>Y</enabled> </hop>  <hop> <from>has module code</from><to>select rename fields</to><enabled>Y</enabled> </hop>  <hop> <from>Calculator</from><to>Split modulecode</to><enabled>Y</enabled> </hop>  <hop> <from>Split group info</from><to>Select values</to><enabled>Y</enabled> </hop>  <hop> <from>Split modulecode</from><to>Select values 2</to><enabled>Y</enabled> </hop>  <hop> <from>Microsoft Excel Input</from><to>Split row</to><enabled>Y</enabled> </hop>  <hop> <from>select rename fields</from><to>Insert &#47; Update</to><enabled>Y</enabled> </hop>  <hop> <from>Select values</from><to>Insert &#47; Update 2</to><enabled>Y</enabled> </hop>  <hop> <from>Select values 2</from><to>Insert &#47; Update 3</to><enabled>Y</enabled> </hop>  <hop> <from>Get files from result</from><to>Microsoft Excel Input</to><enabled>Y</enabled> </hop>  <hop> <from>Split group info</from><to>correct module code</to><enabled>Y</enabled> </hop>  <hop> <from>correct module code</from><to>Calculator</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>Calculator</name>
     <type>Calculator</type>
@@ -145,7 +145,7 @@
 </calculation>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>609</xloc>
+      <xloc>607</xloc>
       <yloc>305</yloc>
       <draw>Y</draw>
       </GUI>
@@ -662,6 +662,36 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>715</xloc>
       <yloc>87</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>correct module code</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>module_code</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>^(K_)(.*)</replace_string>
+        <replace_by_string>DT_$2</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>556</xloc>
+      <yloc>285</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

@@ -85,7 +85,7 @@
   <created_user>-</created_user>
   <created_date>2011&#47;02&#47;24 23:14:08.270</created_date>
   <modified_user>admin</modified_user>
-  <modified_date>2013&#47;12&#47;03 12:35:01.165</modified_date>
+  <modified_date>2013&#47;12&#47;06 12:03:32.499</modified_date>
   </info>
   <notepads>
     <notepad>
@@ -295,7 +295,7 @@ with module code
     </attributes>
   </connection>
   <order>
-  <hop> <from>Row Normaliser question</from><to>only rows with question</to><enabled>Y</enabled> </hop>  <hop> <from>reset counter for each filename</from><to>header row</to><enabled>Y</enabled> </hop>  <hop> <from>header row</from><to>Row Normaliser question</to><enabled>Y</enabled> </hop>  <hop> <from>only rows with question</from><to>count rows with question</to><enabled>Y</enabled> </hop>  <hop> <from>count rows with question</from><to>too many questions</to><enabled>Y</enabled> </hop>  <hop> <from>too many questions</from><to>Abort</to><enabled>Y</enabled> </hop>  <hop> <from>too many questions</from><to>Dummy (do nothing)</to><enabled>Y</enabled> </hop>  <hop> <from>too many questions</from><to>Dummy (do nothing)</to><enabled>Y</enabled> </hop>  <hop> <from>Dummy (do nothing)</from><to>has group_id </to><enabled>Y</enabled> </hop>  <hop> <from>has module code and question</from><to>splits modcode&#47;rapportcijfer-openvraag</to><enabled>Y</enabled> </hop>  <hop> <from>has group_id </from><to>has module code</to><enabled>Y</enabled> </hop>  <hop> <from>has module code</from><to>has module code and question</to><enabled>Y</enabled> </hop>  <hop> <from>has module code</from><to>Split Fields</to><enabled>Y</enabled> </hop>  <hop> <from>Get files from result</from><to>Microsoft Excel Input</to><enabled>Y</enabled> </hop>  <hop> <from>has module code and question</from><to>splits group_id, question_text</to><enabled>Y</enabled> </hop>  <hop> <from>Microsoft Excel Input</from><to>add questionnaire key</to><enabled>Y</enabled> </hop>  <hop> <from>add questionnaire key</from><to>reset counter for each filename</to><enabled>Y</enabled> </hop>  <hop> <from>Select values stage 1</from><to>save stage_question 1</to><enabled>Y</enabled> </hop>  <hop> <from>lookup question key 1</from><to>Add constants stage 1</to><enabled>Y</enabled> </hop>  <hop> <from>Add constants stage 1</from><to>Select values stage 1</to><enabled>Y</enabled> </hop>  <hop> <from>Select values stage 4</from><to>save stage_question 4</to><enabled>Y</enabled> </hop>  <hop> <from>Select values stage 3</from><to>save stage_question 3</to><enabled>Y</enabled> </hop>  <hop> <from>Select values stage 2</from><to>save stage_question 2</to><enabled>Y</enabled> </hop>  <hop> <from>Lookup group key 2</from><to>Select values stage 2</to><enabled>Y</enabled> </hop>  <hop> <from>lookup question key 3</from><to>Add constants stage 3</to><enabled>Y</enabled> </hop>  <hop> <from>Add constants stage 3</from><to>Lookup group key 3</to><enabled>Y</enabled> </hop>  <hop> <from>Lookup group key 3</from><to>Select values stage 3</to><enabled>Y</enabled> </hop>  <hop> <from>Add constants stage 4</from><to>Select values stage 4</to><enabled>Y</enabled> </hop>  <hop> <from>lookup module_key 2</from><to>Lookup group key 2</to><enabled>Y</enabled> </hop>  <hop> <from>lookup question key 4</from><to>lookup module_key 4</to><enabled>Y</enabled> </hop>  <hop> <from>lookup module_key 4</from><to>Add constants stage 4</to><enabled>Y</enabled> </hop>  <hop> <from>Split Fields</from><to>lookup question key 2</to><enabled>Y</enabled> </hop>  <hop> <from>splits modcode&#47;rapportcijfer-openvraag</from><to>lookup question key 4</to><enabled>Y</enabled> </hop>  <hop> <from>splits group_id, question_text</from><to>lookup question key 3</to><enabled>N</enabled> </hop>  <hop> <from>has group_id </from><to>lookup question key 1</to><enabled>Y</enabled> </hop>  <hop> <from>lookup question key 2</from><to>lookup module_key 2</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Row Normaliser question</from><to>only rows with question</to><enabled>Y</enabled> </hop>  <hop> <from>reset counter for each filename</from><to>header row</to><enabled>Y</enabled> </hop>  <hop> <from>header row</from><to>Row Normaliser question</to><enabled>Y</enabled> </hop>  <hop> <from>only rows with question</from><to>count rows with question</to><enabled>Y</enabled> </hop>  <hop> <from>count rows with question</from><to>too many questions</to><enabled>Y</enabled> </hop>  <hop> <from>too many questions</from><to>Abort</to><enabled>Y</enabled> </hop>  <hop> <from>too many questions</from><to>Dummy (do nothing)</to><enabled>Y</enabled> </hop>  <hop> <from>too many questions</from><to>Dummy (do nothing)</to><enabled>Y</enabled> </hop>  <hop> <from>Dummy (do nothing)</from><to>has group_id </to><enabled>Y</enabled> </hop>  <hop> <from>has module code and question</from><to>splits modcode&#47;rapportcijfer-openvraag</to><enabled>Y</enabled> </hop>  <hop> <from>has group_id </from><to>has module code</to><enabled>Y</enabled> </hop>  <hop> <from>has module code</from><to>has module code and question</to><enabled>Y</enabled> </hop>  <hop> <from>has module code</from><to>Split Fields</to><enabled>Y</enabled> </hop>  <hop> <from>Get files from result</from><to>Microsoft Excel Input</to><enabled>Y</enabled> </hop>  <hop> <from>has module code and question</from><to>splits group_id, question_text</to><enabled>Y</enabled> </hop>  <hop> <from>Microsoft Excel Input</from><to>add questionnaire key</to><enabled>Y</enabled> </hop>  <hop> <from>add questionnaire key</from><to>reset counter for each filename</to><enabled>Y</enabled> </hop>  <hop> <from>Select values stage 1</from><to>save stage_question 1</to><enabled>Y</enabled> </hop>  <hop> <from>lookup question key 1</from><to>Add constants stage 1</to><enabled>Y</enabled> </hop>  <hop> <from>Add constants stage 1</from><to>Select values stage 1</to><enabled>Y</enabled> </hop>  <hop> <from>Select values stage 4</from><to>save stage_question 4</to><enabled>Y</enabled> </hop>  <hop> <from>Select values stage 3</from><to>save stage_question 3</to><enabled>Y</enabled> </hop>  <hop> <from>Select values stage 2</from><to>save stage_question 2</to><enabled>Y</enabled> </hop>  <hop> <from>Lookup group key 2</from><to>Select values stage 2</to><enabled>Y</enabled> </hop>  <hop> <from>lookup question key 3</from><to>Add constants stage 3</to><enabled>Y</enabled> </hop>  <hop> <from>Add constants stage 3</from><to>Lookup group key 3</to><enabled>Y</enabled> </hop>  <hop> <from>Lookup group key 3</from><to>Select values stage 3</to><enabled>Y</enabled> </hop>  <hop> <from>Add constants stage 4</from><to>Select values stage 4</to><enabled>Y</enabled> </hop>  <hop> <from>lookup module_key 2</from><to>Lookup group key 2</to><enabled>Y</enabled> </hop>  <hop> <from>lookup question key 4</from><to>lookup module_key 4</to><enabled>Y</enabled> </hop>  <hop> <from>lookup module_key 4</from><to>Add constants stage 4</to><enabled>Y</enabled> </hop>  <hop> <from>splits group_id, question_text</from><to>lookup question key 3</to><enabled>N</enabled> </hop>  <hop> <from>has group_id </from><to>lookup question key 1</to><enabled>Y</enabled> </hop>  <hop> <from>lookup question key 2</from><to>lookup module_key 2</to><enabled>Y</enabled> </hop>  <hop> <from>splits modcode&#47;rapportcijfer-openvraag</from><to>correct module code</to><enabled>Y</enabled> </hop>  <hop> <from>correct module code</from><to>lookup question key 4</to><enabled>Y</enabled> </hop>  <hop> <from>Split Fields</from><to>lookup question key 2</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>Abort</name>
     <type>Abort</type>
@@ -16656,6 +16656,36 @@ with module code
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>630</xloc>
       <yloc>248</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>correct module code</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>N</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>module_code</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>^(K_)(.*)</replace_string>
+        <replace_by_string>DT_$2</replace_by_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>312</xloc>
+      <yloc>598</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
