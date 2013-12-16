@@ -63,7 +63,7 @@
   <created_user>-</created_user>
   <created_date>2013&#47;12&#47;04 13:31:38.800</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2013&#47;12&#47;04 13:32:29.531</modified_date>
+  <modified_date>2013&#47;12&#47;06 11:59:09.487</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -120,57 +120,6 @@
   <order>
   <hop> <from>Samenvatting Quest</from><to>Microsoft Excel Writer 3</to><enabled>Y</enabled> </hop>  </order>
   <step>
-    <name>Samenvatting Quest</name>
-    <type>DataGrid</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      <field>
-        <name>group</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-      <field>
-        <name>value</name>
-        <type/>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-    <data>
-      <line> <item>Titel Quest</item><item>Modulenevaluatie</item> </line>
-      <line> <item>Startdatum</item><item/> </line>
-      <line> <item>Einddatum</item><item/> </line>
-      <line> <item>Unieke respondenten</item><item/> </line>
-      <line> <item>E-mail uitnodigingen</item><item/> </line>
-      <line> <item>E-mail antwoorden</item><item/> </line>
-      <line> <item>Totale respons</item><item/> </line>
-      <line> <item>Response percentage</item><item/> </line>
-      <line> <item>Export datum</item><item/> </line>
-    </data>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>286</xloc>
-      <yloc>202</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
     <name>Microsoft Excel Writer 3</name>
     <type>TypeExitExcelWriterStep</type>
     <description/>
@@ -195,7 +144,7 @@
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
       <name>&#47;home&#47;jaapandre&#47;pentaho-hva</name>
-      <extention>xlsx</extention>
+      <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <split>N</split>
       <add_date>N</add_date>
@@ -248,6 +197,57 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>452</xloc>
       <yloc>192</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Samenvatting Quest</name>
+    <type>DataGrid</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>group</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>value</name>
+        <type/>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+    </fields>
+    <data>
+      <line> <item>Titel Quest</item><item>Modulenevaluatie</item> </line>
+      <line> <item>Startdatum</item><item/> </line>
+      <line> <item>Einddatum</item><item/> </line>
+      <line> <item>Unieke respondenten</item><item/> </line>
+      <line> <item>E-mail uitnodigingen</item><item/> </line>
+      <line> <item>E-mail antwoorden</item><item/> </line>
+      <line> <item>Totale respons</item><item/> </line>
+      <line> <item>Response percentage</item><item/> </line>
+      <line> <item>Export datum</item><item/> </line>
+    </data>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>286</xloc>
+      <yloc>202</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
