@@ -90,18 +90,8 @@ CREATE TABLE `Survey2_IICD_10` (
     `fact_answer_fact_count` INTEGER);
 
 -- Aggregate table Survey2_IICD_11
--- Estimated 110993 rows, 4439755 bytes
-CREATE TABLE `Survey2_IICD_11` (
-    `dim_question_Group_title` VARCHAR(255),
-    `dim_question_Question_text` VARCHAR(512),
-    `fact_answer_Average` DOUBLE,
-    `fact_answer_Respondents` INTEGER,
-    `fact_answer_Answers` INTEGER,
-    `fact_answer_fact_count` INTEGER);
-
--- Aggregate table Survey2_IICD_12
 -- Estimated 1103145 rows, 48538409 bytes
-CREATE TABLE `Survey2_IICD_12` (
+CREATE TABLE `Survey2_IICD_11` (
     `dim_date_Year` INT(11),
     `dim_question_Group_title` VARCHAR(255),
     `dim_question_Question_text` VARCHAR(512),
@@ -110,9 +100,9 @@ CREATE TABLE `Survey2_IICD_12` (
     `fact_answer_Answers` INTEGER,
     `fact_answer_fact_count` INTEGER);
 
--- Aggregate table Survey2_IICD_13
+-- Aggregate table Survey2_IICD_12
 -- Estimated 1525156 rows, 91509360 bytes
-CREATE TABLE `Survey2_IICD_13` (
+CREATE TABLE `Survey2_IICD_12` (
     `dim_project_Project_text` VARCHAR(255),
     `dim_question_Group_title` VARCHAR(255),
     `dim_question_Question_text` VARCHAR(512),
@@ -121,20 +111,9 @@ CREATE TABLE `Survey2_IICD_13` (
     `fact_answer_Answers` INTEGER,
     `fact_answer_fact_count` INTEGER);
 
--- Aggregate table Survey2_IICD_14
--- Estimated 781937 rows, 46916273 bytes
-CREATE TABLE `Survey2_IICD_14` (
-    `dim_question_Group_title` VARCHAR(255),
-    `dim_question_Question_text` VARCHAR(512),
-    `dim_questionnaire_Questionnair` VARCHAR(255),
-    `fact_answer_Average` DOUBLE,
-    `fact_answer_Respondents` INTEGER,
-    `fact_answer_Answers` INTEGER,
-    `fact_answer_fact_count` INTEGER);
-
--- Aggregate table Survey2_IICD_15
+-- Aggregate table Survey2_IICD_13
 -- Estimated 1336968 rows, 80218134 bytes
-CREATE TABLE `Survey2_IICD_15` (
+CREATE TABLE `Survey2_IICD_13` (
     `dim_question_Group_title` VARCHAR(255),
     `dim_question_Question_text` VARCHAR(512),
     `dim_questionnaire_Questionnair` VARCHAR(255),
@@ -143,9 +122,9 @@ CREATE TABLE `Survey2_IICD_15` (
     `fact_answer_Answers` INTEGER,
     `fact_answer_fact_count` INTEGER);
 
--- Aggregate table Survey2_IICD_16
+-- Aggregate table Survey2_IICD_14
 -- Estimated 1525156 rows, 91509360 bytes
-CREATE TABLE `Survey2_IICD_16` (
+CREATE TABLE `Survey2_IICD_14` (
     `dim_question_Group_title` VARCHAR(255),
     `dim_question_Question_text` VARCHAR(512),
     `dim_training_Training_text` VARCHAR(255),
@@ -154,9 +133,9 @@ CREATE TABLE `Survey2_IICD_16` (
     `fact_answer_Answers` INTEGER,
     `fact_answer_fact_count` INTEGER);
 
--- Aggregate table Survey2_IICD_17
+-- Aggregate table Survey2_IICD_15
 -- Estimated 1525156 rows, 91509360 bytes
-CREATE TABLE `Survey2_IICD_17` (
+CREATE TABLE `Survey2_IICD_15` (
     `dim_question_Group_title` VARCHAR(255),
     `dim_question_Question_text` VARCHAR(512),
     `lookup_answer_label_Answer_lab` VARCHAR(1024),
@@ -165,9 +144,9 @@ CREATE TABLE `Survey2_IICD_17` (
     `fact_answer_Answers` INTEGER,
     `fact_answer_fact_count` INTEGER);
 
--- Aggregate table Survey2_IICD_18
+-- Aggregate table Survey2_IICD_16
 -- Estimated 1525156 rows, 122012480 bytes
-CREATE TABLE `Survey2_IICD_18` (
+CREATE TABLE `Survey2_IICD_16` (
     `dim_question_Group_title` VARCHAR(255),
     `dim_question_Question_text` VARCHAR(512),
     `dim_questionnaire_Questionnair` VARCHAR(255),
@@ -177,23 +156,14 @@ CREATE TABLE `Survey2_IICD_18` (
     `fact_answer_Answers` INTEGER,
     `fact_answer_fact_count` INTEGER);
 
--- Aggregate table Survey2_IICD_19
--- Estimated 1525156 rows, 91509360 bytes
-CREATE TABLE `Survey2_IICD_19` (
+-- Aggregate table Survey2_IICD_17
+-- Estimated 1525156 rows, 128113104 bytes
+CREATE TABLE `Survey2_IICD_17` (
+    `dim_date_Year` INT(11),
     `dim_question_Group_title` VARCHAR(255),
     `dim_question_Question_text` VARCHAR(512),
+    `dim_questionnaire_Questionnair` VARCHAR(255),
     `lookup_answer_label_Answer_lab` VARCHAR(1024),
-    `fact_answer_Average` DOUBLE,
-    `fact_answer_Respondents` INTEGER,
-    `fact_answer_Answers` INTEGER,
-    `fact_answer_fact_count` INTEGER);
-
--- Aggregate table Survey2_IICD_20
--- Estimated 429671 rows, 25780315 bytes
-CREATE TABLE `Survey2_IICD_20` (
-    `dim_country_Gender_equality_ra` VARCHAR(255),
-    `dim_question_Group_title` VARCHAR(255),
-    `dim_question_Question_text` VARCHAR(512),
     `fact_answer_Average` DOUBLE,
     `fact_answer_Respondents` INTEGER,
     `fact_answer_Answers` INTEGER,
