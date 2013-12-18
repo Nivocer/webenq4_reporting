@@ -23,7 +23,7 @@
   &lt;/connection&gt;
 </org.pentaho.di.core.database.DatabaseMeta>
   <org.pentaho.aggdes.ui.ext.impl.MondrianFileSchemaModel>
-    <schemaChecksum>3344700446</schemaChecksum>
+    <schemaChecksum>1629379380</schemaChecksum>
     <mondrianSchemaFilename>/home/jaapandre/workspace/webenq4_reporting/datamodel/mondrian/survey2_IICD/survey2.mondrian.xml</mondrianSchemaFilename>
     <cubeName>IICD</cubeName>
   </org.pentaho.aggdes.ui.ext.impl.MondrianFileSchemaModel>
@@ -272,8 +272,8 @@
         <org.pentaho.aggdes.model.mondrian.MondrianMeasure reference="../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[5]/attribute"/>
       </measures>
       <enabled>true</enabled>
-      <estimateRowCount>78.0</estimateRowCount>
-      <estimateSpace>1560.0</estimateSpace>
+      <estimateRowCount>79.0</estimateRowCount>
+      <estimateSpace>1580.0</estimateSpace>
     </aggregation>
     <aggregation>
       <algoAgg>false</algoAgg>
@@ -323,8 +323,8 @@
         <org.pentaho.aggdes.model.mondrian.MondrianMeasure reference="../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[5]/attribute"/>
       </measures>
       <enabled>true</enabled>
-      <estimateRowCount>110993.8804137451</estimateRowCount>
-      <estimateSpace>4439755.2165498035</estimateSpace>
+      <estimateRowCount>112416.85587027394</estimateRowCount>
+      <estimateSpace>4496674.234810958</estimateSpace>
     </aggregation>
     <aggregation>
       <algoAgg>false</algoAgg>
@@ -332,7 +332,7 @@
       <description></description>
       <attributes>
         <org.pentaho.aggdes.model.mondrian.MondrianAttribute>
-          <label>[dim_questionnaire].[Questionnaire category]</label>
+          <label>[dim_questionnaire].[Questionnaire title]</label>
           <table>dim_questionnaire</table>
         </org.pentaho.aggdes.model.mondrian.MondrianAttribute>
       </attributes>
@@ -369,58 +369,12 @@
         <org.pentaho.aggdes.model.mondrian.MondrianMeasure reference="../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[5]/attribute"/>
       </measures>
       <enabled>true</enabled>
-      <estimateRowCount>9.0</estimateRowCount>
-      <estimateSpace>180.0</estimateSpace>
-    </aggregation>
-    <aggregation>
-      <algoAgg>false</algoAgg>
-      <name>Survey2_IICD_8</name>
-      <description></description>
-      <attributes>
-        <org.pentaho.aggdes.model.mondrian.MondrianAttribute>
-          <label>[dim_questionnaire].[Questionnaire title]</label>
-          <table>dim_questionnaire</table>
-        </org.pentaho.aggdes.model.mondrian.MondrianAttribute>
-      </attributes>
-      <output class="org.pentaho.aggdes.output.impl.AggregateTableOutput">
-        <tableName>Survey2_IICD_8</tableName>
-        <aggregate class="org.pentaho.aggdes.ui.model.impl.UIAggregateImpl" reference="../.."/>
-        <columns>
-          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-            <name>dim_questionnaire_Questionnair</name>
-            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianAttribute" reference="../../../../attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
-          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-            <name>fact_answer_Average</name>
-            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianMeasure" reference="../../../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[2]/attribute"/>
-          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-            <name>fact_answer_Respondents</name>
-            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianMeasure" reference="../../../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[3]/attribute"/>
-          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-            <name>fact_answer_Answers</name>
-            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianMeasure" reference="../../../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[4]/attribute"/>
-          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-            <name>fact_answer_fact_count</name>
-            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianMeasure" reference="../../../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[5]/attribute"/>
-          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-        </columns>
-      </output>
-      <measures>
-        <org.pentaho.aggdes.model.mondrian.MondrianMeasure reference="../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[2]/attribute"/>
-        <org.pentaho.aggdes.model.mondrian.MondrianMeasure reference="../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[3]/attribute"/>
-        <org.pentaho.aggdes.model.mondrian.MondrianMeasure reference="../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[4]/attribute"/>
-        <org.pentaho.aggdes.model.mondrian.MondrianMeasure reference="../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[5]/attribute"/>
-      </measures>
-      <enabled>true</enabled>
       <estimateRowCount>51.0</estimateRowCount>
       <estimateSpace>1020.0</estimateSpace>
     </aggregation>
     <aggregation>
       <algoAgg>false</algoAgg>
-      <name>Survey2_IICD_9</name>
+      <name>Survey2_IICD_8</name>
       <description></description>
       <attributes>
         <org.pentaho.aggdes.model.mondrian.MondrianAttribute>
@@ -429,7 +383,7 @@
         </org.pentaho.aggdes.model.mondrian.MondrianAttribute>
       </attributes>
       <output class="org.pentaho.aggdes.output.impl.AggregateTableOutput">
-        <tableName>Survey2_IICD_9</tableName>
+        <tableName>Survey2_IICD_8</tableName>
         <aggregate class="org.pentaho.aggdes.ui.model.impl.UIAggregateImpl" reference="../.."/>
         <columns>
           <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
@@ -466,23 +420,21 @@
     </aggregation>
     <aggregation>
       <algoAgg>false</algoAgg>
-      <name>Survey2_IICD_10</name>
+      <name>Survey2_IICD_9</name>
       <description></description>
       <attributes>
-        <org.pentaho.aggdes.model.mondrian.MondrianAttribute reference="../../../aggregation[5]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
-        <org.pentaho.aggdes.model.mondrian.MondrianAttribute reference="../../../aggregation[6]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute[2]"/>
+        <org.pentaho.aggdes.model.mondrian.MondrianAttribute>
+          <label>[lookup_answer_label].[Answer label]</label>
+          <table>lookup_answer_label</table>
+        </org.pentaho.aggdes.model.mondrian.MondrianAttribute>
       </attributes>
       <output class="org.pentaho.aggdes.output.impl.AggregateTableOutput">
-        <tableName>Survey2_IICD_10</tableName>
+        <tableName>Survey2_IICD_9</tableName>
         <aggregate class="org.pentaho.aggdes.ui.model.impl.UIAggregateImpl" reference="../.."/>
         <columns>
           <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-            <name>dim_question_Group_title</name>
-            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianAttribute" reference="../../../../../aggregation[5]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
-          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-            <name>dim_question_Question_text</name>
-            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianAttribute" reference="../../../../../aggregation[6]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute[2]"/>
+            <name>lookup_answer_label_Answer_lab</name>
+            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianAttribute" reference="../../../../attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
           </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
           <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
             <name>fact_answer_Average</name>
@@ -509,12 +461,12 @@
         <org.pentaho.aggdes.model.mondrian.MondrianMeasure reference="../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[5]/attribute"/>
       </measures>
       <enabled>true</enabled>
-      <estimateRowCount>110993.8804137451</estimateRowCount>
-      <estimateSpace>4439755.2165498035</estimateSpace>
+      <estimateRowCount>133067.5989978615</estimateRowCount>
+      <estimateSpace>2661351.97995723</estimateSpace>
     </aggregation>
     <aggregation>
       <algoAgg>false</algoAgg>
-      <name>Survey2_IICD_11</name>
+      <name>Survey2_IICD_10</name>
       <description></description>
       <attributes>
         <org.pentaho.aggdes.model.mondrian.MondrianAttribute reference="../../../aggregation[2]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
@@ -522,7 +474,7 @@
         <org.pentaho.aggdes.model.mondrian.MondrianAttribute reference="../../../aggregation[6]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute[2]"/>
       </attributes>
       <output class="org.pentaho.aggdes.output.impl.AggregateTableOutput">
-        <tableName>Survey2_IICD_11</tableName>
+        <tableName>Survey2_IICD_10</tableName>
         <aggregate class="org.pentaho.aggdes.ui.model.impl.UIAggregateImpl" reference="../.."/>
         <columns>
           <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
@@ -562,26 +514,22 @@
         <org.pentaho.aggdes.model.mondrian.MondrianMeasure reference="../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[5]/attribute"/>
       </measures>
       <enabled>true</enabled>
-      <estimateRowCount>1103145.679509222</estimateRowCount>
-      <estimateSpace>4.853840989840577E7</estimateSpace>
+      <estimateRowCount>1107409.184087443</estimateRowCount>
+      <estimateSpace>4.872600409984749E7</estimateSpace>
     </aggregation>
     <aggregation>
       <algoAgg>false</algoAgg>
-      <name>Survey2_IICD_12</name>
+      <name>Survey2_IICD_11</name>
       <description></description>
       <attributes>
-        <org.pentaho.aggdes.model.mondrian.MondrianAttribute reference="../../../aggregation[4]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
         <org.pentaho.aggdes.model.mondrian.MondrianAttribute reference="../../../aggregation[5]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
         <org.pentaho.aggdes.model.mondrian.MondrianAttribute reference="../../../aggregation[6]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute[2]"/>
+        <org.pentaho.aggdes.model.mondrian.MondrianAttribute reference="../../../aggregation[7]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
       </attributes>
       <output class="org.pentaho.aggdes.output.impl.AggregateTableOutput">
-        <tableName>Survey2_IICD_12</tableName>
+        <tableName>Survey2_IICD_11</tableName>
         <aggregate class="org.pentaho.aggdes.ui.model.impl.UIAggregateImpl" reference="../.."/>
         <columns>
-          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-            <name>dim_project_Project_text</name>
-            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianAttribute" reference="../../../../../aggregation[4]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
-          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
           <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
             <name>dim_question_Group_title</name>
             <attribute class="org.pentaho.aggdes.model.mondrian.MondrianAttribute" reference="../../../../../aggregation[5]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
@@ -589,6 +537,63 @@
           <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
             <name>dim_question_Question_text</name>
             <attribute class="org.pentaho.aggdes.model.mondrian.MondrianAttribute" reference="../../../../../aggregation[6]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute[2]"/>
+          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
+          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
+            <name>dim_questionnaire_Questionnair</name>
+            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianAttribute" reference="../../../../../aggregation[7]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
+          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
+          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
+            <name>fact_answer_Average</name>
+            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianMeasure" reference="../../../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[2]/attribute"/>
+          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
+          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
+            <name>fact_answer_Respondents</name>
+            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianMeasure" reference="../../../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[3]/attribute"/>
+          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
+          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
+            <name>fact_answer_Answers</name>
+            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianMeasure" reference="../../../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[4]/attribute"/>
+          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
+          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
+            <name>fact_answer_fact_count</name>
+            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianMeasure" reference="../../../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[5]/attribute"/>
+          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
+        </columns>
+      </output>
+      <measures>
+        <org.pentaho.aggdes.model.mondrian.MondrianMeasure reference="../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[2]/attribute"/>
+        <org.pentaho.aggdes.model.mondrian.MondrianMeasure reference="../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[3]/attribute"/>
+        <org.pentaho.aggdes.model.mondrian.MondrianMeasure reference="../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[4]/attribute"/>
+        <org.pentaho.aggdes.model.mondrian.MondrianMeasure reference="../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[5]/attribute"/>
+      </measures>
+      <enabled>true</enabled>
+      <estimateRowCount>1339148.9357866812</estimateRowCount>
+      <estimateSpace>8.034893614720088E7</estimateSpace>
+    </aggregation>
+    <aggregation>
+      <algoAgg>false</algoAgg>
+      <name>Survey2_IICD_12</name>
+      <description></description>
+      <attributes>
+        <org.pentaho.aggdes.model.mondrian.MondrianAttribute reference="../../../aggregation[5]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
+        <org.pentaho.aggdes.model.mondrian.MondrianAttribute reference="../../../aggregation[6]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute[2]"/>
+        <org.pentaho.aggdes.model.mondrian.MondrianAttribute reference="../../../aggregation[9]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
+      </attributes>
+      <output class="org.pentaho.aggdes.output.impl.AggregateTableOutput">
+        <tableName>Survey2_IICD_12</tableName>
+        <aggregate class="org.pentaho.aggdes.ui.model.impl.UIAggregateImpl" reference="../.."/>
+        <columns>
+          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
+            <name>dim_question_Group_title</name>
+            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianAttribute" reference="../../../../../aggregation[5]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
+          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
+          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
+            <name>dim_question_Question_text</name>
+            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianAttribute" reference="../../../../../aggregation[6]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute[2]"/>
+          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
+          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
+            <name>lookup_answer_label_Answer_lab</name>
+            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianAttribute" reference="../../../../../aggregation[9]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
           </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
           <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
             <name>fact_answer_Average</name>
@@ -623,55 +628,12 @@
       <name>Survey2_IICD_13</name>
       <description></description>
       <attributes>
-        <org.pentaho.aggdes.model.mondrian.MondrianAttribute reference="../../../aggregation[8]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
-      </attributes>
-      <output class="org.pentaho.aggdes.output.impl.AggregateTableOutput">
-        <tableName>Survey2_IICD_13</tableName>
-        <aggregate class="org.pentaho.aggdes.ui.model.impl.UIAggregateImpl" reference="../.."/>
-        <columns>
-          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-            <name>dim_questionnaire_Questionnair</name>
-            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianAttribute" reference="../../../../../aggregation[8]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
-          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-            <name>fact_answer_Average</name>
-            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianMeasure" reference="../../../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[2]/attribute"/>
-          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-            <name>fact_answer_Respondents</name>
-            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianMeasure" reference="../../../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[3]/attribute"/>
-          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-            <name>fact_answer_Answers</name>
-            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianMeasure" reference="../../../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[4]/attribute"/>
-          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-          <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-            <name>fact_answer_fact_count</name>
-            <attribute class="org.pentaho.aggdes.model.mondrian.MondrianMeasure" reference="../../../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[5]/attribute"/>
-          </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-        </columns>
-      </output>
-      <measures>
-        <org.pentaho.aggdes.model.mondrian.MondrianMeasure reference="../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[2]/attribute"/>
-        <org.pentaho.aggdes.model.mondrian.MondrianMeasure reference="../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[3]/attribute"/>
-        <org.pentaho.aggdes.model.mondrian.MondrianMeasure reference="../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[4]/attribute"/>
-        <org.pentaho.aggdes.model.mondrian.MondrianMeasure reference="../../../aggregation/output/columns/org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput[5]/attribute"/>
-      </measures>
-      <enabled>true</enabled>
-      <estimateRowCount>51.0</estimateRowCount>
-      <estimateSpace>1020.0</estimateSpace>
-    </aggregation>
-    <aggregation>
-      <algoAgg>false</algoAgg>
-      <name>Survey2_IICD_14</name>
-      <description></description>
-      <attributes>
         <org.pentaho.aggdes.model.mondrian.MondrianAttribute reference="../../../aggregation[5]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
         <org.pentaho.aggdes.model.mondrian.MondrianAttribute reference="../../../aggregation[6]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute[2]"/>
         <org.pentaho.aggdes.model.mondrian.MondrianAttribute reference="../../../aggregation[9]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
       </attributes>
       <output class="org.pentaho.aggdes.output.impl.AggregateTableOutput">
-        <tableName>Survey2_IICD_14</tableName>
+        <tableName>Survey2_IICD_13</tableName>
         <aggregate class="org.pentaho.aggdes.ui.model.impl.UIAggregateImpl" reference="../.."/>
         <columns>
           <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
@@ -683,7 +645,7 @@
             <attribute class="org.pentaho.aggdes.model.mondrian.MondrianAttribute" reference="../../../../../aggregation[6]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute[2]"/>
           </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
           <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
-            <name>dim_training_Training_text</name>
+            <name>lookup_answer_label_Answer_lab</name>
             <attribute class="org.pentaho.aggdes.model.mondrian.MondrianAttribute" reference="../../../../../aggregation[9]/attributes/org.pentaho.aggdes.model.mondrian.MondrianAttribute"/>
           </org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>
           <org.pentaho.aggdes.output.impl.AggregateTableOutput_-ColumnOutput>

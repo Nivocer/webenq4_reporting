@@ -1,144 +1,342 @@
-<Schema name="survey2">
-  <Dimension visible="true" highCardinality="false" name="Country">
-    <Hierarchy name="Civic activism range" visible="true" hasAll="true" primaryKey="country_key">
-      <Table name="dim_country">
-      </Table>
-      <Level name="Civic activism range" visible="true" column="civic_activism_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-      </Level>
-    </Hierarchy>
-    <Hierarchy name="Clubs and associations range" visible="true" hasAll="true" primaryKey="country_key">
-      <Table name="dim_country">
-      </Table>
-      <Level name="Clubs and associations range" visible="true" column="clubs_and_associations_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-      </Level>
-    </Hierarchy>
-    <Hierarchy name="Country name" visible="true" hasAll="true" primaryKey="country_key">
-      <Table name="dim_country">
-      </Table>
-      <Level name="Country name" visible="true" column="country_name_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-        <Annotations>
-          <Annotation name="Data.Role">
-            <![CDATA[Geography]]>
-          </Annotation>
-          <Annotation name="Geo.Role">
-            <![CDATA[country]]>
-          </Annotation>
-        </Annotations>
-      </Level>
-    </Hierarchy>
-    <Hierarchy name="Gender equality range" visible="true" hasAll="true" primaryKey="country_key">
-      <Table name="dim_country">
-      </Table>
-      <Level name="Gender equality range" visible="true" column="gender_equality_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-      </Level>
-    </Hierarchy>
-    <Hierarchy name="Inclusion range" visible="true" hasAll="true" primaryKey="country_key">
-      <Table name="dim_country">
-      </Table>
-      <Level name="Inclusion range" visible="true" column="inclusion_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-      </Level>
-    </Hierarchy>
-    <Hierarchy name="Intergroup cohesion range" visible="true" hasAll="true" primaryKey="country_key">
-      <Table name="dim_country">
-      </Table>
-      <Level name="Intergroup cohesion range" visible="true" column="intergroup_cohesion_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-      </Level>
-    </Hierarchy>
-    <Hierarchy name="Interpersonal safety and trust range" visible="true" hasAll="true" primaryKey="country_key">
-      <Table name="dim_country">
-      </Table>
-      <Level name="Interpersonal safety and trust range" visible="true" column="interpersonal_safety_and_trust_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-      </Level>
-    </Hierarchy>
-    <Hierarchy name="Year indsoc" visible="true" hasAll="true" primaryKey="country_key">
-      <Table name="dim_country">
-      </Table>
-      <Level name="Year indsoc" visible="true" column="year_indsoc" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-      </Level>
-    </Hierarchy>
-  </Dimension>
-  <Dimension visible="true" highCardinality="false" name="Date">
-    <Hierarchy name="Year" visible="true" hasAll="true" primaryKey="date_key">
-      <Table name="dim_date">
-      </Table>
-      <Level name="Year" visible="true" column="year" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-      </Level>
-      <Level name="Quarter" visible="true" column="quarter" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-      </Level>
-      <Level name="Month text" visible="true" column="month_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-      </Level>
-    </Hierarchy>
-  </Dimension>
-  <Dimension visible="true" highCardinality="false" name="Project">
-    <Hierarchy name="Project text" visible="true" hasAll="true" primaryKey="project_key">
-      <Table name="dim_project">
-      </Table>
-      <Level name="Project text" visible="true" column="project_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-      </Level>
-    </Hierarchy>
-  </Dimension>
-  <Dimension visible="true" highCardinality="false" name="Question">
-    <Hierarchy visible="true" hasAll="true" primaryKey="question_key">
-      <Table name="dim_question">
-      </Table>
-      <Level name="Group title" visible="true" column="group_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-      </Level>
-      <Level name="Question text" visible="true" column="question_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-      </Level>
-    </Hierarchy>
-  </Dimension>
-  <Dimension visible="true" highCardinality="false" name="Questionnaire">
-    <Hierarchy name="Questionnaire category" visible="true" hasAll="true" primaryKey="questionnaire_key">
-      <Table name="dim_questionnaire">
-      </Table>
-      <Level name="Questionnaire category" visible="true" column="questionnaire_category_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-      </Level>
-    </Hierarchy>
-    <Hierarchy name="Questionnaire title" visible="true" hasAll="true" primaryKey="questionnaire_key">
-      <Table name="dim_questionnaire">
-      </Table>
-      <Level name="Questionnaire title" visible="true" column="questionnaire_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-      </Level>
-    </Hierarchy>
-  </Dimension>
-  <Dimension visible="true" highCardinality="false" name="Training">
-    <Hierarchy name="Training text" visible="true" hasAll="true" primaryKey="training_key">
-      <Table name="dim_training">
-      </Table>
-      <Level name="Training text" visible="true" column="training_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-      </Level>
-    </Hierarchy>
-  </Dimension>
-  <Dimension visible="true" highCardinality="false" name="Answer label">
-    <Hierarchy visible="true" hasAll="true" primaryKey="answer_label_key">
-      <Table name="lookup_answer_label">
-      </Table>
-      <Level name="Answer label" visible="true" column="answer_label" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
-      </Level>
-    </Hierarchy>
-  </Dimension>
-  <Cube name="IICD" visible="true" cache="true" enabled="true">
-    <Table name="fact_answer">
-    </Table>
-    <DimensionUsage source="Country" name="Country" visible="true" foreignKey="country_key" highCardinality="false">
-    </DimensionUsage>
-    <DimensionUsage source="Date" name="Date" visible="true" foreignKey="date_key" highCardinality="false">
-    </DimensionUsage>
-    <DimensionUsage source="Project" name="Project" visible="true" foreignKey="project_key" highCardinality="false">
-    </DimensionUsage>
-    <DimensionUsage source="Question" name="Question" visible="true" foreignKey="question_key" highCardinality="false">
-    </DimensionUsage>
-    <DimensionUsage source="Questionnaire" name="Questionnaire" visible="true" foreignKey="questionnaire_key" highCardinality="false">
-    </DimensionUsage>
-    <DimensionUsage source="Training" name="Training" visible="true" foreignKey="training_key" highCardinality="false">
-    </DimensionUsage>
-    <DimensionUsage source="Answer label" name="Answer label" visible="true" foreignKey="answer_label_key" highCardinality="false">
-    </DimensionUsage>
-    <Measure name="Average" column="answer" formatString="#,###.00;(#,###.00)" aggregator="avg">
-    </Measure>
-    <Measure name="Respondents" column="respondent_key" formatString="#" aggregator="distinct count">
-    </Measure>
-    <Measure name="Answers" column="respondent_key" formatString="#" aggregator="count">
-    </Measure>
-  </Cube>
+<Schema name="Survey2">
+	<Dimension visible="true" highCardinality="false" name="Country">
+		<Hierarchy name="Civic activism range" visible="true" hasAll="true" primaryKey="country_key">
+			<Table name="dim_country">
+			</Table>
+			<Level name="Civic activism range" visible="true" column="civic_activism_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			</Level>
+		</Hierarchy>
+		<Hierarchy name="Clubs and associations range" visible="true" hasAll="true" primaryKey="country_key">
+			<Table name="dim_country">
+			</Table>
+			<Level name="Clubs and associations range" visible="true" column="clubs_and_associations_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			</Level>
+		</Hierarchy>
+		<Hierarchy name="Country name" visible="true" hasAll="true" primaryKey="country_key">
+			<Table name="dim_country">
+			</Table>
+			<Level name="Country name" visible="true" column="country_name_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+				<Annotations>
+					<Annotation name="Data.Role">
+						Geography					</Annotation>
+					<Annotation name="Geo.Role">
+						country					</Annotation>
+				</Annotations>
+			</Level>
+		</Hierarchy>
+		<Hierarchy name="Gender equality range" visible="true" hasAll="true" primaryKey="country_key">
+			<Table name="dim_country">
+			</Table>
+			<Level name="Gender equality range" visible="true" column="gender_equality_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			</Level>
+		</Hierarchy>
+		<Hierarchy name="Inclusion range" visible="true" hasAll="true" primaryKey="country_key">
+			<Table name="dim_country">
+			</Table>
+			<Level name="Inclusion range" visible="true" column="inclusion_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			</Level>
+		</Hierarchy>
+		<Hierarchy name="Intergroup cohesion range" visible="true" hasAll="true" primaryKey="country_key">
+			<Table name="dim_country">
+			</Table>
+			<Level name="Intergroup cohesion range" visible="true" column="intergroup_cohesion_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			</Level>
+		</Hierarchy>
+		<Hierarchy name="Interpersonal safety and trust range" visible="true" hasAll="true" primaryKey="country_key">
+			<Table name="dim_country">
+			</Table>
+			<Level name="Interpersonal safety and trust range" visible="true" column="interpersonal_safety_and_trust_range" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			</Level>
+		</Hierarchy>
+		<Hierarchy name="Year indsoc" visible="true" hasAll="true" primaryKey="country_key">
+			<Table name="dim_country">
+			</Table>
+			<Level name="Year indsoc" visible="true" column="year_indsoc" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			</Level>
+		</Hierarchy>
+	</Dimension>
+	<Dimension visible="true" highCardinality="false" name="Date">
+		<Hierarchy name="Year" visible="true" hasAll="true" primaryKey="date_key">
+			<Table name="dim_date">
+			</Table>
+			<Level name="Year" visible="true" column="year" type="Numeric" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			</Level>
+			<Level name="Quarter" visible="true" column="quarter" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			</Level>
+			<Level name="Month text" visible="true" column="month_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			</Level>
+		</Hierarchy>
+	</Dimension>
+	<Dimension visible="true" highCardinality="false" name="Project">
+		<Hierarchy name="Project text" visible="true" hasAll="true" primaryKey="project_key">
+			<Table name="dim_project">
+			</Table>
+			<Level name="Project text" visible="true" column="project_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			</Level>
+		</Hierarchy>
+	</Dimension>
+	<Dimension visible="true" highCardinality="false" name="Question">
+		<Hierarchy visible="true" hasAll="true" primaryKey="question_key">
+			<Table name="dim_question">
+			</Table>
+			<Level name="Group title" visible="true" column="group_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			</Level>
+			<Level name="Question text" visible="true" column="question_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			</Level>
+		</Hierarchy>
+	</Dimension>
+	<Dimension visible="true" highCardinality="false" name="Questionnaire">
+		<Hierarchy name="Questionnaire category" visible="true" hasAll="true" primaryKey="questionnaire_key">
+			<Table name="dim_questionnaire">
+			</Table>
+			<Level name="Questionnaire category" visible="true" column="questionnaire_category_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			</Level>
+		</Hierarchy>
+		<Hierarchy name="Questionnaire title" visible="true" hasAll="true" primaryKey="questionnaire_key">
+			<Table name="dim_questionnaire">
+			</Table>
+			<Level name="Questionnaire title" visible="true" column="questionnaire_title_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			</Level>
+		</Hierarchy>
+	</Dimension>
+	<Dimension visible="true" highCardinality="false" name="Training">
+		<Hierarchy name="Training text" visible="true" hasAll="true" primaryKey="training_key">
+			<Table name="dim_training">
+			</Table>
+			<Level name="Training text" visible="true" column="training_text_en" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			</Level>
+		</Hierarchy>
+	</Dimension>
+	<Dimension visible="true" highCardinality="false" name="Answer label">
+		<Hierarchy visible="true" hasAll="true" primaryKey="answer_label_key">
+			<Table name="lookup_answer_label">
+			</Table>
+			<Level name="Answer label" visible="true" column="answer_label" type="String" uniqueMembers="false" levelType="Regular" hideMemberIf="Never">
+			</Level>
+		</Hierarchy>
+	</Dimension>
+	<Cube name="IICD" visible="true" cache="true" enabled="true">
+		<Table name="fact_answer">
+			<AggName name="Survey2_IICD_1">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Answers" name="[Measures].[Answers]">
+				</AggMeasure>
+				<AggLevel column="dim_country_Country_name" name="[Country.Country name].[Country name]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey2_IICD_2">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Answers" name="[Measures].[Answers]">
+				</AggMeasure>
+				<AggLevel column="dim_date_Year" name="[Date.Year].[Year]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey2_IICD_3">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Answers" name="[Measures].[Answers]">
+				</AggMeasure>
+				<AggLevel column="dim_date_Year" name="[Date.Year].[Year]">
+				</AggLevel>
+				<AggLevel column="dim_date_Quarter" name="[Date.Year].[Quarter]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey2_IICD_4">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Answers" name="[Measures].[Answers]">
+				</AggMeasure>
+				<AggLevel column="dim_project_Project_text" name="[Project.Project text].[Project text]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey2_IICD_5">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Answers" name="[Measures].[Answers]">
+				</AggMeasure>
+				<AggLevel column="dim_question_Group_title" name="[Question].[Group title]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey2_IICD_6">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Answers" name="[Measures].[Answers]">
+				</AggMeasure>
+				<AggLevel column="dim_question_Group_title" name="[Question].[Group title]">
+				</AggLevel>
+				<AggLevel column="dim_question_Question_text" name="[Question].[Question text]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey2_IICD_7">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Answers" name="[Measures].[Answers]">
+				</AggMeasure>
+				<AggLevel column="dim_questionnaire_Questionnair" name="[Questionnaire.Questionnaire title].[Questionnaire title]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey2_IICD_8">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Answers" name="[Measures].[Answers]">
+				</AggMeasure>
+				<AggLevel column="dim_training_Training_text" name="[Training.Training text].[Training text]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey2_IICD_9">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Answers" name="[Measures].[Answers]">
+				</AggMeasure>
+				<AggLevel column="lookup_answer_label_Answer_lab" name="[Answer label].[Answer label]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey2_IICD_10">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Answers" name="[Measures].[Answers]">
+				</AggMeasure>
+				<AggLevel column="dim_date_Year" name="[Date.Year].[Year]">
+				</AggLevel>
+				<AggLevel column="dim_question_Group_title" name="[Question].[Group title]">
+				</AggLevel>
+				<AggLevel column="dim_question_Question_text" name="[Question].[Question text]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey2_IICD_11">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Answers" name="[Measures].[Answers]">
+				</AggMeasure>
+				<AggLevel column="dim_question_Group_title" name="[Question].[Group title]">
+				</AggLevel>
+				<AggLevel column="dim_question_Question_text" name="[Question].[Question text]">
+				</AggLevel>
+				<AggLevel column="dim_questionnaire_Questionnair" name="[Questionnaire.Questionnaire title].[Questionnaire title]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey2_IICD_12">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Answers" name="[Measures].[Answers]">
+				</AggMeasure>
+				<AggLevel column="dim_question_Group_title" name="[Question].[Group title]">
+				</AggLevel>
+				<AggLevel column="dim_question_Question_text" name="[Question].[Question text]">
+				</AggLevel>
+				<AggLevel column="lookup_answer_label_Answer_lab" name="[Answer label].[Answer label]">
+				</AggLevel>
+			</AggName>
+			<AggName name="Survey2_IICD_13">
+				<AggFactCount column="fact_answer_fact_count">
+				</AggFactCount>
+				<AggMeasure column="fact_answer_Average" name="[Measures].[Average]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Respondents" name="[Measures].[Respondents]">
+				</AggMeasure>
+				<AggMeasure column="fact_answer_Answers" name="[Measures].[Answers]">
+				</AggMeasure>
+				<AggLevel column="dim_question_Group_title" name="[Question].[Group title]">
+				</AggLevel>
+				<AggLevel column="dim_question_Question_text" name="[Question].[Question text]">
+				</AggLevel>
+				<AggLevel column="lookup_answer_label_Answer_lab" name="[Answer label].[Answer label]">
+				</AggLevel>
+			</AggName>
+		</Table>
+		<DimensionUsage source="Country" name="Country" visible="true" foreignKey="country_key" highCardinality="false">
+		</DimensionUsage>
+		<DimensionUsage source="Date" name="Date" visible="true" foreignKey="date_key" highCardinality="false">
+		</DimensionUsage>
+		<DimensionUsage source="Project" name="Project" visible="true" foreignKey="project_key" highCardinality="false">
+		</DimensionUsage>
+		<DimensionUsage source="Question" name="Question" visible="true" foreignKey="question_key" highCardinality="false">
+		</DimensionUsage>
+		<DimensionUsage source="Questionnaire" name="Questionnaire" visible="true" foreignKey="questionnaire_key" highCardinality="false">
+		</DimensionUsage>
+		<DimensionUsage source="Training" name="Training" visible="true" foreignKey="training_key" highCardinality="false">
+		</DimensionUsage>
+		<DimensionUsage source="Answer label" name="Answer label" visible="true" foreignKey="answer_label_key" highCardinality="false">
+		</DimensionUsage>
+		<Measure name="Average" column="answer" formatString="#,###.00;(#,###.00)" aggregator="avg">
+		</Measure>
+		<Measure name="Respondents" column="respondent_key" formatString="#" aggregator="distinct count">
+		</Measure>
+		<Measure name="Answers" column="respondent_key" formatString="#" aggregator="count">
+		</Measure>
+	</Cube>
+	<Cube name="IICD-slow" visible="true" cache="true" enabled="true">
+		<Table name="fact_answer">
+		</Table>
+		<DimensionUsage source="Country" name="Country" visible="true" foreignKey="country_key" highCardinality="false">
+		</DimensionUsage>
+		<DimensionUsage source="Date" name="Date" visible="true" foreignKey="date_key" highCardinality="false">
+		</DimensionUsage>
+		<DimensionUsage source="Project" name="Project" visible="true" foreignKey="project_key" highCardinality="false">
+		</DimensionUsage>
+		<DimensionUsage source="Question" name="Question" visible="true" foreignKey="question_key" highCardinality="false">
+		</DimensionUsage>
+		<DimensionUsage source="Questionnaire" name="Questionnaire" visible="true" foreignKey="questionnaire_key" highCardinality="false">
+		</DimensionUsage>
+		<DimensionUsage source="Training" name="Training" visible="true" foreignKey="training_key" highCardinality="false">
+		</DimensionUsage>
+		<DimensionUsage source="Answer label" name="Answer label" visible="true" foreignKey="answer_label_key" highCardinality="false">
+		</DimensionUsage>
+		<Measure name="Average" column="answer" formatString="#,###.00;(#,###.00)" aggregator="avg">
+		</Measure>
+		<Measure name="Respondents" column="respondent_key" formatString="#" aggregator="distinct count">
+		</Measure>
+		<Measure name="Answers" column="respondent_key" formatString="#" aggregator="count">
+		</Measure>
+	</Cube>
 </Schema>

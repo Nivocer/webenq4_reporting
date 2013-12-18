@@ -150,29 +150,6 @@ INSERT INTO `Survey2_IICD_7` (
     `fact_answer_Answers`,
     `fact_answer_fact_count`)
 select
-    `dim_questionnaire`.`questionnaire_category_text_en` as `dim_questionnaire_Questionnair`,
-    avg(`fact_answer`.`answer`) as `fact_answer_Average`,
-    count(distinct `fact_answer`.`respondent_key`) as `fact_answer_Respondents`,
-    count(`fact_answer`.`respondent_key`) as `fact_answer_Answers`,
-    count(*) as `fact_answer_fact_count`
-from
-    `fact_answer` as `fact_answer`,
-    `dim_questionnaire` as `dim_questionnaire`
-where
-    `fact_answer`.`questionnaire_key` = `dim_questionnaire`.`questionnaire_key`
-group by
-    `dim_questionnaire`.`questionnaire_category_text_en`;
-
-
-
--- Populate aggregate table Survey2_IICD_8
-INSERT INTO `Survey2_IICD_8` (
-    `dim_questionnaire_Questionnair`,
-    `fact_answer_Average`,
-    `fact_answer_Respondents`,
-    `fact_answer_Answers`,
-    `fact_answer_fact_count`)
-select
     `dim_questionnaire`.`questionnaire_title_en` as `dim_questionnaire_Questionnair`,
     avg(`fact_answer`.`answer`) as `fact_answer_Average`,
     count(distinct `fact_answer`.`respondent_key`) as `fact_answer_Respondents`,
@@ -188,8 +165,8 @@ group by
 
 
 
--- Populate aggregate table Survey2_IICD_9
-INSERT INTO `Survey2_IICD_9` (
+-- Populate aggregate table Survey2_IICD_8
+INSERT INTO `Survey2_IICD_8` (
     `dim_training_Training_text`,
     `fact_answer_Average`,
     `fact_answer_Respondents`,
@@ -211,34 +188,31 @@ group by
 
 
 
--- Populate aggregate table Survey2_IICD_10
-INSERT INTO `Survey2_IICD_10` (
-    `dim_question_Group_title`,
-    `dim_question_Question_text`,
+-- Populate aggregate table Survey2_IICD_9
+INSERT INTO `Survey2_IICD_9` (
+    `lookup_answer_label_Answer_lab`,
     `fact_answer_Average`,
     `fact_answer_Respondents`,
     `fact_answer_Answers`,
     `fact_answer_fact_count`)
 select
-    `dim_question`.`group_title_en` as `dim_question_Group_title`,
-    `dim_question`.`question_text_en` as `dim_question_Question_text`,
+    `lookup_answer_label`.`answer_label` as `lookup_answer_label_Answer_lab`,
     avg(`fact_answer`.`answer`) as `fact_answer_Average`,
     count(distinct `fact_answer`.`respondent_key`) as `fact_answer_Respondents`,
     count(`fact_answer`.`respondent_key`) as `fact_answer_Answers`,
     count(*) as `fact_answer_fact_count`
 from
     `fact_answer` as `fact_answer`,
-    `dim_question` as `dim_question`
+    `lookup_answer_label` as `lookup_answer_label`
 where
-    `fact_answer`.`question_key` = `dim_question`.`question_key`
+    `fact_answer`.`answer_label_key` = `lookup_answer_label`.`answer_label_key`
 group by
-    `dim_question`.`group_title_en`,
-    `dim_question`.`question_text_en`;
+    `lookup_answer_label`.`answer_label`;
 
 
 
--- Populate aggregate table Survey2_IICD_11
-INSERT INTO `Survey2_IICD_11` (
+-- Populate aggregate table Survey2_IICD_10
+INSERT INTO `Survey2_IICD_10` (
     `dim_date_Year`,
     `dim_question_Group_title`,
     `dim_question_Question_text`,
@@ -269,46 +243,18 @@ group by
 
 
 
--- Populate aggregate table Survey2_IICD_12
-INSERT INTO `Survey2_IICD_12` (
-    `dim_project_Project_text`,
+-- Populate aggregate table Survey2_IICD_11
+INSERT INTO `Survey2_IICD_11` (
     `dim_question_Group_title`,
     `dim_question_Question_text`,
-    `fact_answer_Average`,
-    `fact_answer_Respondents`,
-    `fact_answer_Answers`,
-    `fact_answer_fact_count`)
-select
-    `dim_project`.`project_text_en` as `dim_project_Project_text`,
-    `dim_question`.`group_title_en` as `dim_question_Group_title`,
-    `dim_question`.`question_text_en` as `dim_question_Question_text`,
-    avg(`fact_answer`.`answer`) as `fact_answer_Average`,
-    count(distinct `fact_answer`.`respondent_key`) as `fact_answer_Respondents`,
-    count(`fact_answer`.`respondent_key`) as `fact_answer_Answers`,
-    count(*) as `fact_answer_fact_count`
-from
-    `fact_answer` as `fact_answer`,
-    `dim_project` as `dim_project`,
-    `dim_question` as `dim_question`
-where
-    `fact_answer`.`project_key` = `dim_project`.`project_key`
-and
-    `fact_answer`.`question_key` = `dim_question`.`question_key`
-group by
-    `dim_project`.`project_text_en`,
-    `dim_question`.`group_title_en`,
-    `dim_question`.`question_text_en`;
-
-
-
--- Populate aggregate table Survey2_IICD_13
-INSERT INTO `Survey2_IICD_13` (
     `dim_questionnaire_Questionnair`,
     `fact_answer_Average`,
     `fact_answer_Respondents`,
     `fact_answer_Answers`,
     `fact_answer_fact_count`)
 select
+    `dim_question`.`group_title_en` as `dim_question_Group_title`,
+    `dim_question`.`question_text_en` as `dim_question_Question_text`,
     `dim_questionnaire`.`questionnaire_title_en` as `dim_questionnaire_Questionnair`,
     avg(`fact_answer`.`answer`) as `fact_answer_Average`,
     count(distinct `fact_answer`.`respondent_key`) as `fact_answer_Respondents`,
@@ -316,19 +262,24 @@ select
     count(*) as `fact_answer_fact_count`
 from
     `fact_answer` as `fact_answer`,
+    `dim_question` as `dim_question`,
     `dim_questionnaire` as `dim_questionnaire`
 where
+    `fact_answer`.`question_key` = `dim_question`.`question_key`
+and
     `fact_answer`.`questionnaire_key` = `dim_questionnaire`.`questionnaire_key`
 group by
+    `dim_question`.`group_title_en`,
+    `dim_question`.`question_text_en`,
     `dim_questionnaire`.`questionnaire_title_en`;
 
 
 
--- Populate aggregate table Survey2_IICD_14
-INSERT INTO `Survey2_IICD_14` (
+-- Populate aggregate table Survey2_IICD_12
+INSERT INTO `Survey2_IICD_12` (
     `dim_question_Group_title`,
     `dim_question_Question_text`,
-    `dim_training_Training_text`,
+    `lookup_answer_label_Answer_lab`,
     `fact_answer_Average`,
     `fact_answer_Respondents`,
     `fact_answer_Answers`,
@@ -336,7 +287,7 @@ INSERT INTO `Survey2_IICD_14` (
 select
     `dim_question`.`group_title_en` as `dim_question_Group_title`,
     `dim_question`.`question_text_en` as `dim_question_Question_text`,
-    `dim_training`.`training_text_en` as `dim_training_Training_text`,
+    `lookup_answer_label`.`answer_label` as `lookup_answer_label_Answer_lab`,
     avg(`fact_answer`.`answer`) as `fact_answer_Average`,
     count(distinct `fact_answer`.`respondent_key`) as `fact_answer_Respondents`,
     count(`fact_answer`.`respondent_key`) as `fact_answer_Answers`,
@@ -344,15 +295,47 @@ select
 from
     `fact_answer` as `fact_answer`,
     `dim_question` as `dim_question`,
-    `dim_training` as `dim_training`
+    `lookup_answer_label` as `lookup_answer_label`
 where
     `fact_answer`.`question_key` = `dim_question`.`question_key`
 and
-    `fact_answer`.`training_key` = `dim_training`.`training_key`
+    `fact_answer`.`answer_label_key` = `lookup_answer_label`.`answer_label_key`
 group by
     `dim_question`.`group_title_en`,
     `dim_question`.`question_text_en`,
-    `dim_training`.`training_text_en`;
+    `lookup_answer_label`.`answer_label`;
+
+
+
+-- Populate aggregate table Survey2_IICD_13
+INSERT INTO `Survey2_IICD_13` (
+    `dim_question_Group_title`,
+    `dim_question_Question_text`,
+    `lookup_answer_label_Answer_lab`,
+    `fact_answer_Average`,
+    `fact_answer_Respondents`,
+    `fact_answer_Answers`,
+    `fact_answer_fact_count`)
+select
+    `dim_question`.`group_title_en` as `dim_question_Group_title`,
+    `dim_question`.`question_text_en` as `dim_question_Question_text`,
+    `lookup_answer_label`.`answer_label` as `lookup_answer_label_Answer_lab`,
+    avg(`fact_answer`.`answer`) as `fact_answer_Average`,
+    count(distinct `fact_answer`.`respondent_key`) as `fact_answer_Respondents`,
+    count(`fact_answer`.`respondent_key`) as `fact_answer_Answers`,
+    count(*) as `fact_answer_fact_count`
+from
+    `fact_answer` as `fact_answer`,
+    `dim_question` as `dim_question`,
+    `lookup_answer_label` as `lookup_answer_label`
+where
+    `fact_answer`.`question_key` = `dim_question`.`question_key`
+and
+    `fact_answer`.`answer_label_key` = `lookup_answer_label`.`answer_label_key`
+group by
+    `dim_question`.`group_title_en`,
+    `dim_question`.`question_text_en`,
+    `lookup_answer_label`.`answer_label`;
 
 
 
