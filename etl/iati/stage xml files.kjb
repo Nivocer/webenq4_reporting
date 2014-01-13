@@ -8,7 +8,7 @@
   <created_user>-</created_user>
   <created_date>2014&#47;01&#47;13 13:42:30.142</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#47;01&#47;13 16:01:24.114</modified_date>
+  <modified_date>2014&#47;01&#47;13 16:29:35.754</modified_date>
     <parameters>
     </parameters>
   <connection>
@@ -464,7 +464,7 @@
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>125</xloc>
-      <yloc>344</yloc>
+      <yloc>343</yloc>
       </entry>
     <entry>
       <name>stage_activity_document_link</name>
@@ -531,6 +531,39 @@
       <nr>0</nr>
       <xloc>141</xloc>
       <yloc>106</yloc>
+      </entry>
+    <entry>
+      <name>stage_activity_result</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>rep_name</specification_method>
+      <trans_object_id/>
+      <filename/>
+      <transname>stage_activity_result</transname>
+      <directory>&#47;iati</directory>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>489</xloc>
+      <yloc>343</yloc>
       </entry>
   </entries>
   <hops>
@@ -645,6 +678,15 @@
     <hop>
       <from>dim_date</from>
       <to>stage_activity</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>stage_activity_document_link</from>
+      <to>stage_activity_result</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
