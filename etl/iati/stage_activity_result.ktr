@@ -63,7 +63,7 @@
   <created_user>-</created_user>
   <created_date>2014&#47;01&#47;10 15:52:31.108</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#47;01&#47;13 16:29:20.284</modified_date>
+  <modified_date>2014&#47;01&#47;14 09:44:25.765</modified_date>
   </info>
   <notepads>
     <notepad>
@@ -72,10 +72,115 @@
 *bij de indicatoren hebben we geen referentie naar hogere result, dus we moete n
 get  xml (get node indicator)-&gt; get xml of node indicator
 </note>
-      <xloc>426</xloc>
-      <yloc>91</yloc>
+      <xloc>465</xloc>
+      <yloc>0</yloc>
       <width>479</width>
       <heigth>90</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>values of indicators</note>
+      <xloc>33</xloc>
+      <yloc>639</yloc>
+      <width>123</width>
+      <heigth>26</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>drop fields indicator</note>
+      <xloc>401</xloc>
+      <yloc>334</yloc>
+      <width>123</width>
+      <heigth>26</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>drop field indicator, store other info</note>
+      <xloc>316</xloc>
+      <yloc>439</yloc>
+      <width>211</width>
+      <heigth>26</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>main level</note>
+      <xloc>27</xloc>
+      <yloc>349</yloc>
+      <width>69</width>
+      <heigth>26</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>which indicators and baseline</note>
+      <xloc>26</xloc>
+      <yloc>458</yloc>
+      <width>181</width>
+      <heigth>26</heigth>
       <fontname>Arial</fontname>
       <fontsize>10</fontsize>
       <fontbold>N</fontbold>
@@ -168,7 +273,7 @@ get  xml (get node indicator)-&gt; get xml of node indicator
     </attributes>
   </connection>
   <order>
-  <hop> <from>Execute SQL script</from><to>get file names</to><enabled>Y</enabled> </hop>  <hop> <from>get file names</from><to>get activity result</to><enabled>Y</enabled> </hop>  <hop> <from>limit fieldlength</from><to>stage_activity_result</to><enabled>Y</enabled> </hop>  <hop> <from>get activity result</from><to>strip path to data</to><enabled>Y</enabled> </hop>  <hop> <from>strip path to data</from><to>limit fieldlength</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Execute SQL script</from><to>get file names</to><enabled>Y</enabled> </hop>  <hop> <from>limit fieldlength</from><to>stage_activity_result</to><enabled>Y</enabled> </hop>  <hop> <from>strip path to data</from><to>limit fieldlength</to><enabled>Y</enabled> </hop>  <hop> <from>get file names</from><to>get activity result</to><enabled>Y</enabled> </hop>  <hop> <from>get activity result</from><to>stage_activity_result_key</to><enabled>Y</enabled> </hop>  <hop> <from>stage_activity_result_key</from><to>strip path to data</to><enabled>Y</enabled> </hop>  <hop> <from>stage_activity_result_key</from><to>get indicator</to><enabled>Y</enabled> </hop>  <hop> <from>get indicator</from><to>stage_activity_indicator_key</to><enabled>Y</enabled> </hop>  <hop> <from>stage_activity_indicator_key</from><to>get indicator period</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>Execute SQL script</name>
     <type>ExecSQL</type>
@@ -186,7 +291,7 @@ get  xml (get node indicator)-&gt; get xml of node indicator
     <sql>drop table if exists stage_activity_result;
 CREATE TABLE stage_activity_result
 (
-  stage_activity_result BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY
+  stage_activity_result_key BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY
 , input_file_key INT
 , filename VARCHAR(100)
 , size INT
@@ -209,8 +314,8 @@ CREATE TABLE stage_activity_result
     </arguments>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>100</xloc>
-      <yloc>256</yloc>
+      <xloc>60</xloc>
+      <yloc>260</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -295,7 +400,7 @@ CREATE TABLE stage_activity_result
         <name>title</name>
         <xpath>title</xpath>
         <element_type>node</element_type>
-        <result_type>valueof</result_type>
+        <result_type>singlenode</result_type>
         <type>String</type>
         <format/>
         <currency/>
@@ -366,6 +471,21 @@ CREATE TABLE stage_activity_result
         <trim_type>none</trim_type>
         <repeat>N</repeat>
       </field>
+      <field>
+        <name>indicator</name>
+        <xpath>indicator</xpath>
+        <element_type>node</element_type>
+        <result_type>singlenode</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
     </fields>
     <limit>0</limit>
     <loopxpath>&#47;iati-activities&#47;iati-activity&#47;result</loopxpath>
@@ -383,8 +503,8 @@ CREATE TABLE stage_activity_result
     <sizeFieldName/>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>336</xloc>
-      <yloc>258</yloc>
+      <xloc>255</xloc>
+      <yloc>259</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -415,8 +535,8 @@ where typeFile  like &apos;activities&apos;
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>202</xloc>
-      <yloc>257</yloc>
+      <xloc>158</xloc>
+      <yloc>260</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -495,8 +615,8 @@ where typeFile  like &apos;activities&apos;
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>606</xloc>
-      <yloc>257</yloc>
+      <xloc>613</xloc>
+      <yloc>365</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -526,14 +646,14 @@ where typeFile  like &apos;activities&apos;
     <tablename_in_field>N</tablename_in_field>
     <tablename_field/>
     <tablename_in_table>Y</tablename_in_table>
-    <return_keys>Y</return_keys>
-    <return_field>stage_activity_result</return_field>
+    <return_keys>N</return_keys>
+    <return_field>stage_activity_result_key</return_field>
     <fields>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>798</xloc>
-      <yloc>257</yloc>
+      <xloc>805</xloc>
+      <yloc>365</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -562,8 +682,442 @@ where typeFile  like &apos;activities&apos;
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>477</xloc>
-      <yloc>257</yloc>
+      <xloc>484</xloc>
+      <yloc>365</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>get indicator</name>
+    <type>getXMLData</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <addresultfile>N</addresultfile>
+    <namespaceaware>N</namespaceaware>
+    <ignorecomments>N</ignorecomments>
+    <readurl>N</readurl>
+    <validating>N</validating>
+    <usetoken>N</usetoken>
+    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
+    <rownum_field/>
+    <encoding>UTF-8</encoding>
+    <file>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>title</name>
+        <xpath>title</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>title-lang</name>
+        <xpath>title&#47;@lang</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>measure</name>
+        <xpath>@measure</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>ascending</name>
+        <xpath>@ascending</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>baseline-year</name>
+        <xpath>baseline&#47;@year</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>baseline-value</name>
+        <xpath>baseline&#47;@value</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>period</name>
+        <xpath>period</xpath>
+        <element_type>node</element_type>
+        <result_type>singlenode</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>description</name>
+        <xpath>description</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>description-type</name>
+        <xpath>description&#47;@type</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>description-lang</name>
+        <xpath>description&#47;@lang</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <loopxpath>&#47;indicator</loopxpath>
+    <IsInFields>Y</IsInFields>
+    <IsAFile>N</IsAFile>
+    <XmlField>title</XmlField>
+    <prunePath/>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>265</xloc>
+      <yloc>457</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>stage_activity_result_key</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>N</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <valuename>stage_activity_result_key</valuename>
+      <use_database>N</use_database>
+      <connection/>
+      <schema/>
+      <seqname>SEQ_</seqname>
+      <use_counter>Y</use_counter>
+      <counter_name/>
+      <start_at>1</start_at>
+      <increment_by>1</increment_by>
+      <max_value>999999999</max_value>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>221</xloc>
+      <yloc>365</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>stage_activity_indicator_key</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>N</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <valuename>stage_activity_result_indicator_key</valuename>
+      <use_database>N</use_database>
+      <connection/>
+      <schema/>
+      <seqname>SEQ_</seqname>
+      <use_counter>Y</use_counter>
+      <counter_name/>
+      <start_at>1</start_at>
+      <increment_by>1</increment_by>
+      <max_value>999999999</max_value>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>208</xloc>
+      <yloc>549</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>get indicator period</name>
+    <type>getXMLData</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <include>N</include>
+    <include_field/>
+    <rownum>N</rownum>
+    <addresultfile>N</addresultfile>
+    <namespaceaware>N</namespaceaware>
+    <ignorecomments>N</ignorecomments>
+    <readurl>N</readurl>
+    <validating>N</validating>
+    <usetoken>N</usetoken>
+    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
+    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
+    <rownum_field/>
+    <encoding>UTF-8</encoding>
+    <file>
+      <name/>
+      <filemask/>
+      <exclude_filemask/>
+      <file_required>N</file_required>
+      <include_subfolders>N</include_subfolders>
+    </file>
+    <fields>
+      <field>
+        <name>period-start</name>
+        <xpath>period&#47;period-start</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>period-start-iso-date</name>
+        <xpath>period-start&#47;@iso-date</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Date</type>
+        <format>yyyy-MM-DD</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>period-end</name>
+        <xpath>period&#47;period-end</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>period-end-iso-date</name>
+        <xpath>period-end&#47;@iso-date</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>Date</type>
+        <format>yyyy-MM-DD</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>target-value</name>
+        <xpath>period&#47;target&#47;@value</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>target-comment</name>
+        <xpath>period&#47;target&#47;comment</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>actual-value</name>
+        <xpath>period&#47;actual&#47;@value</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>actual-comment</name>
+        <xpath>period&#47;actual&#47;comment</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+    </fields>
+    <limit>0</limit>
+    <loopxpath>&#47;period</loopxpath>
+    <IsInFields>Y</IsInFields>
+    <IsAFile>N</IsAFile>
+    <XmlField>title</XmlField>
+    <prunePath/>
+    <shortFileFieldName/>
+    <pathFieldName/>
+    <hiddenFieldName/>
+    <lastModificationTimeFieldName/>
+    <uriNameFieldName/>
+    <rootUriNameFieldName/>
+    <extensionFieldName/>
+    <sizeFieldName/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>306</xloc>
+      <yloc>627</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
