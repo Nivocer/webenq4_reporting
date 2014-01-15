@@ -63,7 +63,7 @@
   <created_user/>
   <created_date>2013&#47;08&#47;29 12:34:37.788</created_date>
   <modified_user>jaapandre</modified_user>
-  <modified_date>2014&#47;01&#47;13 16:00:06.339</modified_date>
+  <modified_date>2014&#47;01&#47;15 00:54:31.305</modified_date>
   </info>
   <notepads>
     <notepad>
@@ -198,10 +198,10 @@
     <server>localhost</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>webenq_org_iati</database>
+    <database>IATI</database>
     <port>3306</port>
-    <username>jaapandre</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79a57fd894a6df</password>
+    <username>root</username>
+    <password>Encrypted 2be98afc86aa7f2e4cb79ce7cd191aed6</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -269,7 +269,7 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Generate Rows with Initial Date</from><to>Days Sequence</to><enabled>Y</enabled> </hop>  <hop> <from>Days Sequence</from><to>Calculate and Format Dates</to><enabled>Y</enabled> </hop>  <hop> <from>Calculate and Format Dates</from><to>is_first_day_in_month</to><enabled>Y</enabled> </hop>  <hop> <from>is_first_day_in_month</from><to>is_last_day_in_month</to><enabled>Y</enabled> </hop>  <hop> <from>is_first_day_in_week</from><to>is_last_day_in_week</to><enabled>Y</enabled> </hop>  <hop> <from>is_last_day_in_month</from><to>is_first_day_in_week</to><enabled>Y</enabled> </hop>  <hop> <from>is_last_day_in_week</from><to>is_weekend</to><enabled>Y</enabled> </hop>  <hop> <from>Missing Date</from><to>Load dim_date</to><enabled>N</enabled> </hop>  <hop> <from>is_weekend</from><to>rename date</to><enabled>Y</enabled> </hop>  <hop> <from>rename date</from><to>Select values</to><enabled>Y</enabled> </hop>  <hop> <from>Select values</from><to>Load dim_date</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Generate Rows with Initial Date</from><to>Days Sequence</to><enabled>Y</enabled> </hop>  <hop> <from>Days Sequence</from><to>Calculate and Format Dates</to><enabled>Y</enabled> </hop>  <hop> <from>Calculate and Format Dates</from><to>is_first_day_in_month</to><enabled>Y</enabled> </hop>  <hop> <from>is_first_day_in_month</from><to>is_last_day_in_month</to><enabled>Y</enabled> </hop>  <hop> <from>is_first_day_in_week</from><to>is_last_day_in_week</to><enabled>Y</enabled> </hop>  <hop> <from>is_last_day_in_month</from><to>is_first_day_in_week</to><enabled>Y</enabled> </hop>  <hop> <from>is_last_day_in_week</from><to>is_weekend</to><enabled>Y</enabled> </hop>  <hop> <from>Missing Date</from><to>Load dim_date</to><enabled>N</enabled> </hop>  <hop> <from>is_weekend</from><to>rename date</to><enabled>Y</enabled> </hop>  <hop> <from>rename date</from><to>Load dim_date</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>Calculate and Format Dates</name>
     <type>Calculator</type>
@@ -290,20 +290,6 @@
 <value_precision>-1</value_precision>
 <remove>N</remove>
 <conversion_mask/>
-<decimal_symbol/>
-<grouping_symbol/>
-<currency_symbol/>
-</calculation>
-       <calculation><field_name>date_key</field_name>
-<calc_type>COPY_FIELD</calc_type>
-<field_a>date</field_a>
-<field_b/>
-<field_c/>
-<value_type>String</value_type>
-<value_length>-1</value_length>
-<value_precision>-1</value_precision>
-<remove>N</remove>
-<conversion_mask>yyyyMMdd</conversion_mask>
 <decimal_symbol/>
 <grouping_symbol/>
 <currency_symbol/>
@@ -751,6 +737,45 @@
     </step>
 
   <step>
+    <name>Create dim_date</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>iati</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <sql>DROP TABLE IF EXISTS dim_date;
+CREATE TABLE dim_date
+(
+  date_key DATE
+, year TINYTEXT
+, month INT
+, day INT
+, month_text_en TINYTEXT
+, quarter TINYTEXT
+)
+;</sql>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>201</xloc>
+      <yloc>38</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
     <name>Days Sequence</name>
     <type>Sequence</type>
     <description/>
@@ -796,7 +821,7 @@
         <currency/>
         <decimal/>
         <group/>
-        <nullif>199000101</nullif>
+        <nullif>19900101</nullif>
         <length>-1</length>
         <precision>-1</precision>
       </field>
@@ -827,7 +852,7 @@
     <truncate>N</truncate>
     <ignore_errors>N</ignore_errors>
     <use_batch>Y</use_batch>
-    <specify_fields>N</specify_fields>
+    <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
     <partitioning_field/>
     <partitioning_daily>N</partitioning_daily>
@@ -840,33 +865,33 @@
     <fields>
         <field>
           <column_name>date_key</column_name>
-          <stream_name>date_key</stream_name>
+          <stream_name>date_value</stream_name>
         </field>
         <field>
           <column_name>year</column_name>
-          <stream_name>year</stream_name>
+          <stream_name>year4</stream_name>
         </field>
         <field>
           <column_name>month</column_name>
-          <stream_name>month</stream_name>
+          <stream_name>month_number</stream_name>
         </field>
         <field>
           <column_name>month_text_en</column_name>
-          <stream_name>month_text_en</stream_name>
-        </field>
-        <field>
-          <column_name>date</column_name>
-          <stream_name>date</stream_name>
+          <stream_name>month_abbreviation</stream_name>
         </field>
         <field>
           <column_name>day</column_name>
-          <stream_name>day</stream_name>
+          <stream_name>day_in_month</stream_name>
+        </field>
+        <field>
+          <column_name>quarter</column_name>
+          <stream_name>quarter_name</stream_name>
         </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>650</xloc>
-      <yloc>507</yloc>
+      <xloc>649</xloc>
+      <yloc>462</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1234,53 +1259,6 @@
     </step>
 
   <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>      <field>        <name>date_key</name>
-        <rename>date_key</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>year4</name>
-        <rename>year</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>month_number</name>
-        <rename>month</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>month_name</name>
-        <rename>month_text_en</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>date_value</name>
-        <rename>date</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>day_in_month</name>
-        <rename>day</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>quarter_name</name>
-        <rename>quarter</rename>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>        <select_unspecified>N</select_unspecified>
-    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>445</xloc>
-      <yloc>475</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
     <name>is_first_day_in_month</name>
     <type>ValueMapper</type>
     <description/>
@@ -1446,45 +1424,6 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>275</xloc>
       <yloc>453</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Execute SQL script</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>iati</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>N</single_statement>
-    <replace_variables>N</replace_variables>
-    <sql>CREATE TABLE dim_date
-(
-  date_key TINYTEXT
-, year TINYTEXT
-, month INT
-, month_text_en TINYTEXT
-, date DATETIME
-, day INT
-, quarter TINYTEXT
-)
-;</sql>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>201</xloc>
-      <yloc>38</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

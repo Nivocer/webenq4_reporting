@@ -64,7 +64,7 @@ use xsd scheme for validation</extended_description>
   <created_user>-</created_user>
   <created_date>2014&#47;01&#47;09 09:08:13.789</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#47;01&#47;14 15:56:02.419</modified_date>
+  <modified_date>2014&#47;01&#47;14 18:54:43.560</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -144,7 +144,7 @@ use xsd scheme for validation</extended_description>
     </attributes>
   </connection>
   <order>
-  <hop> <from>Get filenames from snapshot</from><to>Filter empty files</to><enabled>Y</enabled> </hop>  <hop> <from>Filter empty files</from><to>Filter git stuff</to><enabled>Y</enabled> </hop>  <hop> <from>Validate as activities file</from><to>Validate as organisation file</to><enabled>Y</enabled> </hop>  <hop> <from>Validate as organisation file</from><to>Valid file?</to><enabled>Y</enabled> </hop>  <hop> <from>Filter git stuff</from><to>Validate as activities file</to><enabled>Y</enabled> </hop>  <hop> <from>Valid file?</from><to>Set type of file</to><enabled>Y</enabled> </hop>  <hop> <from>Set type of file</from><to>Add to output list of valid files</to><enabled>Y</enabled> </hop>  <hop> <from>Create tables for (in)valid files</from><to>Get filenames from snapshot</to><enabled>Y</enabled> </hop>  <hop> <from>Valid file?</from><to>Not an activity file?</to><enabled>Y</enabled> </hop>  <hop> <from>Not organisation file?</from><to>Select fields to store</to><enabled>Y</enabled> </hop>  <hop> <from>Not an activity file?</from><to>Set activity to no</to><enabled>Y</enabled> </hop>  <hop> <from>Set activity to no</from><to>Not organisation file?</to><enabled>Y</enabled> </hop>  <hop> <from>Not an activity file?</from><to>Not organisation file?</to><enabled>Y</enabled> </hop>  <hop> <from>Not organisation file?</from><to>Set organisation to no </to><enabled>Y</enabled> </hop>  <hop> <from>Set organisation to no </from><to>Select fields to store</to><enabled>Y</enabled> </hop>  <hop> <from>Select fields to store</from><to>Remove the path of the snapshot</to><enabled>Y</enabled> </hop>  <hop> <from>Remove the path of the snapshot</from><to>Store in list of invalid files</to><enabled>Y</enabled> </hop>  <hop> <from>Set type of file</from><to>Select filename, size and type</to><enabled>Y</enabled> </hop>  <hop> <from>Select filename, size and type</from><to>Store in list of valid files</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Get filenames from snapshot</from><to>File not empty?</to><enabled>Y</enabled> </hop>  <hop> <from>File not empty?</from><to>Filter git stuff</to><enabled>Y</enabled> </hop>  <hop> <from>Validate as activities file</from><to>Validate as organisation file</to><enabled>Y</enabled> </hop>  <hop> <from>Validate as organisation file</from><to>Valid file?</to><enabled>Y</enabled> </hop>  <hop> <from>Filter git stuff</from><to>Validate as activities file</to><enabled>Y</enabled> </hop>  <hop> <from>Valid file?</from><to>Set type of file</to><enabled>Y</enabled> </hop>  <hop> <from>Set type of file</from><to>Add to output list of valid files</to><enabled>Y</enabled> </hop>  <hop> <from>Create tables for (in)valid files</from><to>Get filenames from snapshot</to><enabled>Y</enabled> </hop>  <hop> <from>Valid file?</from><to>Not an activity file?</to><enabled>Y</enabled> </hop>  <hop> <from>Not organisation file?</from><to>Select fields to store</to><enabled>Y</enabled> </hop>  <hop> <from>Not an activity file?</from><to>Set activity to no</to><enabled>Y</enabled> </hop>  <hop> <from>Set activity to no</from><to>Not organisation file?</to><enabled>Y</enabled> </hop>  <hop> <from>Not an activity file?</from><to>Not organisation file?</to><enabled>Y</enabled> </hop>  <hop> <from>Not organisation file?</from><to>Set organisation to no </to><enabled>Y</enabled> </hop>  <hop> <from>Set organisation to no </from><to>Select fields to store</to><enabled>Y</enabled> </hop>  <hop> <from>Select fields to store</from><to>Remove the path of the snapshot</to><enabled>Y</enabled> </hop>  <hop> <from>Remove the path of the snapshot</from><to>Store in list of invalid files</to><enabled>Y</enabled> </hop>  <hop> <from>Set type of file</from><to>Select filename, size and type</to><enabled>Y</enabled> </hop>  <hop> <from>Select filename, size and type</from><to>Replace in string</to><enabled>Y</enabled> </hop>  <hop> <from>Replace in string</from><to>Store in list of valid files</to><enabled>Y</enabled> </hop>  </order>
   <step>
     <name>Add to output list of valid files</name>
     <type>RowsToResult</type>
@@ -181,6 +181,7 @@ use xsd scheme for validation</extended_description>
 CREATE TABLE IF NOT EXISTS `input_file` (
   `input_file_key` int(11) NOT NULL AUTO_INCREMENT,
   `filename` varchar(255) DEFAULT NULL,
+  `sfilename` varchar(255),
   `size` int(11) DEFAULT NULL,
   `typeFile` varchar(12) DEFAULT NULL,
   PRIMARY KEY (`input_file_key`)
@@ -214,7 +215,7 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     </step>
 
   <step>
-    <name>Filter empty files</name>
+    <name>File not empty?</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
@@ -236,6 +237,46 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>174</xloc>
+      <yloc>179</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter git stuff</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to/>
+<send_false_to/>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>Y</negated>
+   <leftvalue>filename</leftvalue>
+   <function>CONTAINS</function>
+   <rightvalue/>
+   <value><name>constant</name><type>String</type><text>&#47;.git&#47;</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
+  <condition>
+   <negated>N</negated>
+   <operator>AND NOT</operator>
+   <leftvalue>filename</leftvalue>
+   <function>CONTAINS</function>
+   <rightvalue/>
+   <value><name>constant</name><type>String</type><text>README.md</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>404</xloc>
       <yloc>179</yloc>
       <draw>Y</draw>
       </GUI>
@@ -275,6 +316,62 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>404</xloc>
       <yloc>76</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Not an activity file?</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Set activity to no</send_true_to>
+<send_false_to>Not organisation file?</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>ValidationMsgFieldActivities</leftvalue>
+ <function>STARTS WITH</function>
+ <rightvalue/>
+ <value><name>constant</name><type>String</type><text>cvc-elt.1: Cannot find the declaration of element</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>404</xloc>
+      <yloc>523</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Not organisation file?</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Set organisation to no </send_true_to>
+<send_false_to>Select fields to store</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>ValidationMsgFieldOrganisation</leftvalue>
+ <function>STARTS WITH</function>
+ <rightvalue/>
+ <value><name>constant</name><type>String</type><text>cvc-elt.1: Cannot find the declaration of element</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>404</xloc>
+      <yloc>631</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -440,6 +537,33 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     </step>
 
   <step>
+    <name>Set type of file</name>
+    <type>ValueMapper</type>
+    <description/>
+    <distribute>N</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <field_to_use>activities</field_to_use>
+    <target_field>typeFile</target_field>
+    <non_match_default>organisation</non_match_default>
+    <fields>
+      <field>
+        <source_value>valid</source_value>
+        <target_value>activities</target_value>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>605</xloc>
+      <yloc>316</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
     <name>Store in list of invalid files</name>
     <type>TableOutput</type>
     <description/>
@@ -509,129 +633,6 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>817</xloc>
       <yloc>428</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Filter git stuff</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<send_true_to/>
-<send_false_to/>
-    <compare>
-<condition>
- <negated>N</negated>
- <conditions>
-  <condition>
-   <negated>Y</negated>
-   <leftvalue>filename</leftvalue>
-   <function>CONTAINS</function>
-   <rightvalue/>
-   <value><name>constant</name><type>String</type><text>&#47;.git&#47;</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
-  <condition>
-   <negated>N</negated>
-   <operator>AND NOT</operator>
-   <leftvalue>filename</leftvalue>
-   <function>CONTAINS</function>
-   <rightvalue/>
-   <value><name>constant</name><type>String</type><text>README.md</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
-  </conditions>
- </condition>
-    </compare>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>404</xloc>
-      <yloc>179</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Not an activity file?</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<send_true_to>Set activity to no</send_true_to>
-<send_false_to>Not organisation file?</send_false_to>
-    <compare>
-<condition>
- <negated>N</negated>
- <leftvalue>ValidationMsgFieldActivities</leftvalue>
- <function>STARTS WITH</function>
- <rightvalue/>
- <value><name>constant</name><type>String</type><text>cvc-elt.1: Cannot find the declaration of element</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
-    </compare>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>404</xloc>
-      <yloc>523</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Not organisation file?</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<send_true_to>Set organisation to no </send_true_to>
-<send_false_to>Select fields to store</send_false_to>
-    <compare>
-<condition>
- <negated>N</negated>
- <leftvalue>ValidationMsgFieldOrganisation</leftvalue>
- <function>STARTS WITH</function>
- <rightvalue/>
- <value><name>constant</name><type>String</type><text>cvc-elt.1: Cannot find the declaration of element</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
-    </compare>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>404</xloc>
-      <yloc>631</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Set type of file</name>
-    <type>ValueMapper</type>
-    <description/>
-    <distribute>N</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <field_to_use>activities</field_to_use>
-    <target_field>typeFile</target_field>
-    <non_match_default>organisation</non_match_default>
-    <fields>
-      <field>
-        <source_value>valid</source_value>
-        <target_value>activities</target_value>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>605</xloc>
-      <yloc>316</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -730,6 +731,36 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>817</xloc>
       <yloc>179</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Replace in string</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>filename</in_stream_name>
+        <out_stream_name>sfilename</out_stream_name>
+        <use_regex>no</use_regex>
+        <replace_string>${PATH_TO_DATA}</replace_string>
+        <replace_by_string/>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>819</xloc>
+      <yloc>530</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
