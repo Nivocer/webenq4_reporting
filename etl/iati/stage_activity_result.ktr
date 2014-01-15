@@ -6,7 +6,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#47;iati</directory>
+    <directory>&#x2f;iati</directory>
     <parameters>
     </parameters>
     <log>
@@ -16,7 +16,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
 <perf-log-table><connection/>
 <schema/>
 <table/>
@@ -33,6 +33,11 @@
 <table/>
 <timeout_days/>
 <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -61,21 +66,17 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>-</created_user>
-  <created_date>2014&#47;01&#47;10 15:52:31.108</created_date>
+  <created_date>2014&#x2f;01&#x2f;10 15&#x3a;52&#x3a;31.108</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#47;01&#47;14 09:44:25.765</modified_date>
+  <modified_date>2014&#x2f;01&#x2f;15 12&#x3a;14&#x3a;01.080</modified_date>
   </info>
   <notepads>
     <notepad>
-      <note>moet aangepast worden
-*title en description kan meerdere &apos;rijen&apos; hebben
-*bij de indicatoren hebben we geen referentie naar hogere result, dus we moete n
-get  xml (get node indicator)-&gt; get xml of node indicator
-</note>
+      <note>moet aangepast worden&#xa;&#x2a;title en description kan meerdere &#x27;rijen&#x27; hebben&#xa;</note>
       <xloc>465</xloc>
       <yloc>0</yloc>
-      <width>479</width>
-      <heigth>90</heigth>
+      <width>284</width>
+      <heigth>58</heigth>
       <fontname>Arial</fontname>
       <fontsize>10</fontsize>
       <fontbold>N</fontbold>
@@ -92,10 +93,10 @@ get  xml (get node indicator)-&gt; get xml of node indicator
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>values of indicators</note>
-      <xloc>33</xloc>
-      <yloc>639</yloc>
-      <width>123</width>
+      <note>get measures of indicators</note>
+      <xloc>15</xloc>
+      <yloc>736</yloc>
+      <width>164</width>
       <heigth>26</heigth>
       <fontname>Arial</fontname>
       <fontsize>10</fontsize>
@@ -113,10 +114,10 @@ get  xml (get node indicator)-&gt; get xml of node indicator
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>drop fields indicator</note>
-      <xloc>401</xloc>
-      <yloc>334</yloc>
-      <width>123</width>
+      <note>drop field indicator</note>
+      <xloc>597</xloc>
+      <yloc>326</yloc>
+      <width>116</width>
       <heigth>26</heigth>
       <fontname>Arial</fontname>
       <fontsize>10</fontsize>
@@ -135,8 +136,8 @@ get  xml (get node indicator)-&gt; get xml of node indicator
     </notepad>
     <notepad>
       <note>drop field indicator, store other info</note>
-      <xloc>316</xloc>
-      <yloc>439</yloc>
+      <xloc>525</xloc>
+      <yloc>593</yloc>
       <width>211</width>
       <heigth>26</heigth>
       <fontname>Arial</fontname>
@@ -176,10 +177,31 @@ get  xml (get node indicator)-&gt; get xml of node indicator
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>which indicators and baseline</note>
+      <note>get indicators and baseline measure</note>
       <xloc>26</xloc>
-      <yloc>458</yloc>
-      <width>181</width>
+      <yloc>502</yloc>
+      <width>219</width>
+      <heigth>26</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>165</backgroundcolorgreen>
+      <backgroundcolorblue>0</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>drop field period</note>
+      <xloc>621</xloc>
+      <yloc>790</yloc>
+      <width>102</width>
       <heigth>26</heigth>
       <fontname>Arial</fontname>
       <fontsize>10</fontsize>
@@ -224,13 +246,13 @@ get  xml (get node indicator)-&gt; get xml of node indicator
   </connection>
   <connection>
     <name>source-database</name>
-    <server>${SOURCE_HOST}</server>
+    <server>&#x24;&#x7b;SOURCE_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${SOURCE_DB}</database>
-    <port>${SOURCE_PORT}</port>
-    <username>${SOURCE_USER}</username>
-    <password>${SOURCE_PASSWORD}</password>
+    <database>&#x24;&#x7b;SOURCE_DB&#x7d;</database>
+    <port>&#x24;&#x7b;SOURCE_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;SOURCE_USER&#x7d;</username>
+    <password>&#x24;&#x7b;SOURCE_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -240,7 +262,7 @@ get  xml (get node indicator)-&gt; get xml of node indicator
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${SOURCE_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;SOURCE_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -249,13 +271,13 @@ get  xml (get node indicator)-&gt; get xml of node indicator
   </connection>
   <connection>
     <name>target-database</name>
-    <server>${TARGET_HOST}</server>
+    <server>&#x24;&#x7b;TARGET_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${TARGET_DB}</database>
-    <port>${TARGET_PORT}</port>
-    <username>${TARGET_USER}</username>
-    <password>${TARGET_PASSWORD}</password>
+    <database>&#x24;&#x7b;TARGET_DB&#x7d;</database>
+    <port>&#x24;&#x7b;TARGET_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;TARGET_USER&#x7d;</username>
+    <password>&#x24;&#x7b;TARGET_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -265,7 +287,7 @@ get  xml (get node indicator)-&gt; get xml of node indicator
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${TARGET_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;TARGET_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -273,12 +295,33 @@ get  xml (get node indicator)-&gt; get xml of node indicator
     </attributes>
   </connection>
   <order>
-  <hop> <from>Execute SQL script</from><to>get file names</to><enabled>Y</enabled> </hop>  <hop> <from>limit fieldlength</from><to>stage_activity_result</to><enabled>Y</enabled> </hop>  <hop> <from>strip path to data</from><to>limit fieldlength</to><enabled>Y</enabled> </hop>  <hop> <from>get file names</from><to>get activity result</to><enabled>Y</enabled> </hop>  <hop> <from>get activity result</from><to>stage_activity_result_key</to><enabled>Y</enabled> </hop>  <hop> <from>stage_activity_result_key</from><to>strip path to data</to><enabled>Y</enabled> </hop>  <hop> <from>stage_activity_result_key</from><to>get indicator</to><enabled>Y</enabled> </hop>  <hop> <from>get indicator</from><to>stage_activity_indicator_key</to><enabled>Y</enabled> </hop>  <hop> <from>stage_activity_indicator_key</from><to>get indicator period</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>limit fieldlength</from><to>select field for database storage</to><enabled>Y</enabled> </hop>
+  <hop> <from>select field for database storage</from><to>stage_activity_result</to><enabled>Y</enabled> </hop>
+  <hop> <from>strip path to data</from><to>stage_activity_result_key</to><enabled>Y</enabled> </hop>
+  <hop> <from>limit fieldlength 2</from><to>select field for database storage 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>select field for database storage 2</from><to>stage_activity_result_indicator</to><enabled>Y</enabled> </hop>
+  <hop> <from>stage_activity_result_indicator_key</from><to>limit fieldlength 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>keep period and keys</from><to>get indicator period</to><enabled>Y</enabled> </hop>
+  <hop> <from>limit fieldlength 3</from><to>select field for database storage 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>select field for database storage 3</from><to>stage_activity_result_indicator_period</to><enabled>Y</enabled> </hop>
+  <hop> <from>get indicator period</from><to>limit fieldlength 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>get file names</from><to>get activity result</to><enabled>Y</enabled> </hop>
+  <hop> <from>get indicator</from><to>stage_activity_result_indicator_key</to><enabled>Y</enabled> </hop>
+  <hop> <from>not empty period</from><to>keep period and keys</to><enabled>Y</enabled> </hop>
+  <hop> <from>not empty indicator</from><to>keep indicator and keys</to><enabled>Y</enabled> </hop>
+  <hop> <from>keep indicator and keys</from><to>get indicator</to><enabled>Y</enabled> </hop>
+  <hop> <from>stage_activity_result_key</from><to>not empty indicator</to><enabled>Y</enabled> </hop>
+  <hop> <from>stage_activity_result_indicator_key</from><to>not empty period</to><enabled>Y</enabled> </hop>
+  <hop> <from>stage_activity_result_key</from><to>limit fieldlength</to><enabled>Y</enabled> </hop>
+  <hop> <from>get activity result</from><to>strip path to data</to><enabled>Y</enabled> </hop>
+  <hop> <from>Execute SQL script</from><to>get file names</to><enabled>Y</enabled> </hop>
+  </order>
   <step>
     <name>Execute SQL script</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -288,24 +331,9 @@ get  xml (get node indicator)-&gt; get xml of node indicator
     <execute_each_row>N</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
-    <sql>drop table if exists stage_activity_result;
-CREATE TABLE stage_activity_result
-(
-  stage_activity_result_key BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY
-, input_file_key INT
-, filename VARCHAR(100)
-, size INT
-, typeFile VARCHAR(12)
-, `iati-identifier` TINYTEXT
-, type TINYTEXT
-, `aggregation-status` TINYTEXT
-, title TINYTEXT
-, `title-lang` TINYTEXT
-, description TEXT
-, `description-lang` TINYTEXT
-, `description-type` TINYTEXT
-) ENGINE=myisam DEFAULT CHARSET=utf8;
-;</sql>
+    <quoteString>N</quoteString>
+    <sql>drop table if exists stage_activity_result&#x3b;&#xa;drop table if exists stage_activity_result_indicator&#x3b;&#xa;drop table if exists stage_activity_result_indicator_period&#x3b;&#xa;CREATE TABLE stage_activity_result&#xa;&#x28;&#xa;  stage_activity_result_key BIGINT NOT NULL PRIMARY KEY&#xa;, input_file_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, size INT&#xa;, typeFile VARCHAR&#x28;12&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, type TINYTEXT&#xa;, &#x60;aggregation-status&#x60; TINYTEXT&#xa;, title TEXT&#xa;, &#x60;title-lang&#x60; TINYTEXT&#xa;, description TEXT&#xa;, &#x60;description-lang&#x60; TINYTEXT&#xa;, &#x60;description-type&#x60; TINYTEXT&#xa;&#x29; ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;&#xa;&#xa;CREATE TABLE stage_activity_result_indicator&#xa;&#x28;&#xa; stage_activity_result_indicator_key BIGINT  NOT NULL PRIMARY KEY&#xa;,  input_file_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, stage_activity_result_key INT&#xa;, title TEXT&#xa;, &#x60;title-lang&#x60; TINYTEXT&#xa;, measure TINYTEXT&#xa;, ascending TINYTEXT&#xa;, &#x60;baseline-year&#x60; TINYTEXT&#xa;, &#x60;baseline-value&#x60; TINYTEXT&#xa;, description TINYTEXT&#xa;, &#x60;description-type&#x60; TINYTEXT&#xa;, &#x60;description-lang&#x60; TINYTEXT&#xa;&#x29;  ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;&#xa;CREATE TABLE stage_activity_result_indicator_period&#xa;&#x28;&#xa;  stage_activity_result_indicator_period_key BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY&#xa;, input_file_key INT&#xa;, stage_activity_result_key INT&#xa;, stage_activity_result_indicator_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, &#x60;period-start&#x60; TINYTEXT&#xa;, &#x60;period-start-iso-date&#x60; DATETIME&#xa;, &#x60;period-end&#x60; TINYTEXT&#xa;, &#x60;period-end-iso-date&#x60; DATETIME&#xa;, &#x60;target-value&#x60; TINYTEXT&#xa;, &#x60;target-comment&#x60; TINYTEXT&#xa;, &#x60;actual-value&#x60; TINYTEXT&#xa;, &#x60;actual-comment&#x60; TINYTEXT&#xa;&#x29;  ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;</sql>
+    <set_params>N</set_params>
     <insert_field/>
     <update_field/>
     <delete_field/>
@@ -325,6 +353,7 @@ CREATE TABLE stage_activity_result
     <type>getXMLData</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -353,7 +382,7 @@ CREATE TABLE stage_activity_result
     <fields>
       <field>
         <name>iati-identifier</name>
-        <xpath>..&#47;iati-identifier</xpath>
+        <xpath>..&#x2f;iati-identifier</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -368,7 +397,7 @@ CREATE TABLE stage_activity_result
       </field>
       <field>
         <name>type</name>
-        <xpath>@type</xpath>
+        <xpath>&#x40;type</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -383,7 +412,7 @@ CREATE TABLE stage_activity_result
       </field>
       <field>
         <name>aggregation-status</name>
-        <xpath>@aggregation-status</xpath>
+        <xpath>&#x40;aggregation-status</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -400,7 +429,7 @@ CREATE TABLE stage_activity_result
         <name>title</name>
         <xpath>title</xpath>
         <element_type>node</element_type>
-        <result_type>singlenode</result_type>
+        <result_type>valueof</result_type>
         <type>String</type>
         <format/>
         <currency/>
@@ -413,7 +442,7 @@ CREATE TABLE stage_activity_result
       </field>
       <field>
         <name>title-lang</name>
-        <xpath>title&#47;@lang</xpath>
+        <xpath>title&#x2f;&#x40;lang</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -443,7 +472,7 @@ CREATE TABLE stage_activity_result
       </field>
       <field>
         <name>description-lang</name>
-        <xpath>description&#47;@lang</xpath>
+        <xpath>description&#x2f;&#x40;lang</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -458,7 +487,7 @@ CREATE TABLE stage_activity_result
       </field>
       <field>
         <name>description-type</name>
-        <xpath>description&#47;@type</xpath>
+        <xpath>description&#x2f;&#x40;type</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -488,7 +517,7 @@ CREATE TABLE stage_activity_result
       </field>
     </fields>
     <limit>0</limit>
-    <loopxpath>&#47;iati-activities&#47;iati-activity&#47;result</loopxpath>
+    <loopxpath>&#x2f;iati-activities&#x2f;iati-activity&#x2f;result</loopxpath>
     <IsInFields>Y</IsInFields>
     <IsAFile>Y</IsAFile>
     <XmlField>filename</XmlField>
@@ -503,8 +532,8 @@ CREATE TABLE stage_activity_result
     <sizeFieldName/>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>255</xloc>
-      <yloc>259</yloc>
+      <xloc>282</xloc>
+      <yloc>257</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -514,20 +543,14 @@ CREATE TABLE stage_activity_result
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
     <connection>iati</connection>
-    <sql>SELECT
-  input_file_key
-, filename
-, size
-, typeFile
-FROM input_file
-where typeFile  like &apos;activities&apos;
-</sql>
+    <sql>SELECT&#xa;  input_file_key&#xa;, filename&#xa;, size&#xa;, typeFile&#xa;FROM input_file&#xa;where typeFile  like &#x27;activities&#x27;&#xa;</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -542,157 +565,11 @@ where typeFile  like &apos;activities&apos;
     </step>
 
   <step>
-    <name>limit fieldlength</name>
-    <type>StringCut</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>filename</in_stream_name>
-        <out_stream_name/>
-        <cut_from>0</cut_from>
-        <cut_to>254</cut_to>
-      </field>
-      <field>
-        <in_stream_name>typeFile</in_stream_name>
-        <out_stream_name/>
-        <cut_from>0</cut_from>
-        <cut_to>254</cut_to>
-      </field>
-      <field>
-        <in_stream_name>iati-identifier</in_stream_name>
-        <out_stream_name/>
-        <cut_from>0</cut_from>
-        <cut_to>254</cut_to>
-      </field>
-      <field>
-        <in_stream_name>type</in_stream_name>
-        <out_stream_name/>
-        <cut_from>0</cut_from>
-        <cut_to>254</cut_to>
-      </field>
-      <field>
-        <in_stream_name>aggregation-status</in_stream_name>
-        <out_stream_name/>
-        <cut_from>0</cut_from>
-        <cut_to>254</cut_to>
-      </field>
-      <field>
-        <in_stream_name>title</in_stream_name>
-        <out_stream_name/>
-        <cut_from>0</cut_from>
-        <cut_to>254</cut_to>
-      </field>
-      <field>
-        <in_stream_name>title-lang</in_stream_name>
-        <out_stream_name/>
-        <cut_from>0</cut_from>
-        <cut_to>254</cut_to>
-      </field>
-      <field>
-        <in_stream_name>description</in_stream_name>
-        <out_stream_name/>
-        <cut_from>0</cut_from>
-        <cut_to>65000</cut_to>
-      </field>
-      <field>
-        <in_stream_name>description-lang</in_stream_name>
-        <out_stream_name/>
-        <cut_from>0</cut_from>
-        <cut_to>254</cut_to>
-      </field>
-      <field>
-        <in_stream_name>description-type</in_stream_name>
-        <out_stream_name/>
-        <cut_from>0</cut_from>
-        <cut_to>254</cut_to>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>613</xloc>
-      <yloc>365</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>stage_activity_result</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>iati</connection>
-    <schema/>
-    <table>stage_activity_result</table>
-    <commit>10</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>N</use_batch>
-    <specify_fields>N</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field>stage_activity_result_key</return_field>
-    <fields>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>805</xloc>
-      <yloc>365</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>strip path to data</name>
-    <type>ReplaceString</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>filename</in_stream_name>
-        <out_stream_name/>
-        <use_regex>no</use_regex>
-        <replace_string>${PATH_TO_DATA}</replace_string>
-        <replace_by_string/>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>484</xloc>
-      <yloc>365</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
     <name>get indicator</name>
     <type>getXMLData</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -736,7 +613,7 @@ where typeFile  like &apos;activities&apos;
       </field>
       <field>
         <name>title-lang</name>
-        <xpath>title&#47;@lang</xpath>
+        <xpath>title&#x2f;&#x40;lang</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -751,7 +628,7 @@ where typeFile  like &apos;activities&apos;
       </field>
       <field>
         <name>measure</name>
-        <xpath>@measure</xpath>
+        <xpath>&#x40;measure</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -766,7 +643,7 @@ where typeFile  like &apos;activities&apos;
       </field>
       <field>
         <name>ascending</name>
-        <xpath>@ascending</xpath>
+        <xpath>&#x40;ascending</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -781,7 +658,7 @@ where typeFile  like &apos;activities&apos;
       </field>
       <field>
         <name>baseline-year</name>
-        <xpath>baseline&#47;@year</xpath>
+        <xpath>baseline&#x2f;&#x40;year</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -796,7 +673,7 @@ where typeFile  like &apos;activities&apos;
       </field>
       <field>
         <name>baseline-value</name>
-        <xpath>baseline&#47;@value</xpath>
+        <xpath>baseline&#x2f;&#x40;value</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -841,7 +718,7 @@ where typeFile  like &apos;activities&apos;
       </field>
       <field>
         <name>description-type</name>
-        <xpath>description&#47;@type</xpath>
+        <xpath>description&#x2f;&#x40;type</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -856,7 +733,7 @@ where typeFile  like &apos;activities&apos;
       </field>
       <field>
         <name>description-lang</name>
-        <xpath>description&#47;@lang</xpath>
+        <xpath>description&#x2f;&#x40;lang</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -871,10 +748,10 @@ where typeFile  like &apos;activities&apos;
       </field>
     </fields>
     <limit>0</limit>
-    <loopxpath>&#47;indicator</loopxpath>
+    <loopxpath>&#x2f;indicator</loopxpath>
     <IsInFields>Y</IsInFields>
     <IsAFile>N</IsAFile>
-    <XmlField>title</XmlField>
+    <XmlField>indicator</XmlField>
     <prunePath/>
     <shortFileFieldName/>
     <pathFieldName/>
@@ -886,64 +763,8 @@ where typeFile  like &apos;activities&apos;
     <sizeFieldName/>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>265</xloc>
-      <yloc>457</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>stage_activity_result_key</name>
-    <type>Sequence</type>
-    <description/>
-    <distribute>N</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <valuename>stage_activity_result_key</valuename>
-      <use_database>N</use_database>
-      <connection/>
-      <schema/>
-      <seqname>SEQ_</seqname>
-      <use_counter>Y</use_counter>
-      <counter_name/>
-      <start_at>1</start_at>
-      <increment_by>1</increment_by>
-      <max_value>999999999</max_value>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>221</xloc>
-      <yloc>365</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>stage_activity_indicator_key</name>
-    <type>Sequence</type>
-    <description/>
-    <distribute>N</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <valuename>stage_activity_result_indicator_key</valuename>
-      <use_database>N</use_database>
-      <connection/>
-      <schema/>
-      <seqname>SEQ_</seqname>
-      <use_counter>Y</use_counter>
-      <counter_name/>
-      <start_at>1</start_at>
-      <increment_by>1</increment_by>
-      <max_value>999999999</max_value>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>208</xloc>
-      <yloc>549</yloc>
+      <xloc>337</xloc>
+      <yloc>533</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -953,6 +774,7 @@ where typeFile  like &apos;activities&apos;
     <type>getXMLData</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -981,7 +803,7 @@ where typeFile  like &apos;activities&apos;
     <fields>
       <field>
         <name>period-start</name>
-        <xpath>period&#47;period-start</xpath>
+        <xpath>period&#x2f;period-start</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -996,11 +818,11 @@ where typeFile  like &apos;activities&apos;
       </field>
       <field>
         <name>period-start-iso-date</name>
-        <xpath>period-start&#47;@iso-date</xpath>
+        <xpath>period-start&#x2f;&#x40;iso-date</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>Date</type>
-        <format>yyyy-MM-DD</format>
+        <format>yyyy-MM-dd</format>
         <currency/>
         <decimal/>
         <group/>
@@ -1011,7 +833,7 @@ where typeFile  like &apos;activities&apos;
       </field>
       <field>
         <name>period-end</name>
-        <xpath>period&#47;period-end</xpath>
+        <xpath>period&#x2f;period-end</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -1026,11 +848,11 @@ where typeFile  like &apos;activities&apos;
       </field>
       <field>
         <name>period-end-iso-date</name>
-        <xpath>period-end&#47;@iso-date</xpath>
+        <xpath>period-end&#x2f;&#x40;iso-date</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>Date</type>
-        <format>yyyy-MM-DD</format>
+        <format>yyyy-MM-dd</format>
         <currency/>
         <decimal/>
         <group/>
@@ -1041,7 +863,7 @@ where typeFile  like &apos;activities&apos;
       </field>
       <field>
         <name>target-value</name>
-        <xpath>period&#47;target&#47;@value</xpath>
+        <xpath>period&#x2f;target&#x2f;&#x40;value</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -1056,7 +878,7 @@ where typeFile  like &apos;activities&apos;
       </field>
       <field>
         <name>target-comment</name>
-        <xpath>period&#47;target&#47;comment</xpath>
+        <xpath>period&#x2f;target&#x2f;comment</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -1071,7 +893,7 @@ where typeFile  like &apos;activities&apos;
       </field>
       <field>
         <name>actual-value</name>
-        <xpath>period&#47;actual&#47;@value</xpath>
+        <xpath>period&#x2f;actual&#x2f;&#x40;value</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -1086,7 +908,7 @@ where typeFile  like &apos;activities&apos;
       </field>
       <field>
         <name>actual-comment</name>
-        <xpath>period&#47;actual&#47;comment</xpath>
+        <xpath>period&#x2f;actual&#x2f;comment</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -1101,10 +923,10 @@ where typeFile  like &apos;activities&apos;
       </field>
     </fields>
     <limit>0</limit>
-    <loopxpath>&#47;period</loopxpath>
+    <loopxpath>&#x2f;period</loopxpath>
     <IsInFields>Y</IsInFields>
     <IsAFile>N</IsAFile>
-    <XmlField>title</XmlField>
+    <XmlField>period</XmlField>
     <prunePath/>
     <shortFileFieldName/>
     <pathFieldName/>
@@ -1117,14 +939,848 @@ where typeFile  like &apos;activities&apos;
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>306</xloc>
-      <yloc>627</yloc>
+      <yloc>840</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>keep indicator and keys</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>input_file_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>filename</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>iati-identifier</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>indicator</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>stage_activity_result_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>571</xloc>
+      <yloc>435</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>keep period and keys</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>input_file_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>stage_activity_result_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>stage_activity_result_indicator_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>filename</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>iati-identifier</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>period</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>378</xloc>
+      <yloc>730</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>limit fieldlength</name>
+    <type>StringCut</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>filename</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>typeFile</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>iati-identifier</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>type</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>aggregation-status</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>title</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>65000</cut_to>
+      </field>
+      <field>
+        <in_stream_name>title-lang</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>description</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>65000</cut_to>
+      </field>
+      <field>
+        <in_stream_name>description-lang</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>description-type</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>481</xloc>
+      <yloc>363</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>limit fieldlength 2</name>
+    <type>StringCut</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>filename</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>iati-identifier</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>indicator</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>title</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>65000</cut_to>
+      </field>
+      <field>
+        <in_stream_name>title-lang</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>measure</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>ascending</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>baseline-year</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>baseline-value</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>period</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>description</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>65000</cut_to>
+      </field>
+      <field>
+        <in_stream_name>description-type</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>description-lang</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>442</xloc>
+      <yloc>641</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>limit fieldlength 3</name>
+    <type>StringCut</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>filename</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>iati-identifier</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>period</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>period-start</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>period-end</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>target-value</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>target-comment</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>actual-value</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+      <field>
+        <in_stream_name>actual-comment</in_stream_name>
+        <out_stream_name/>
+        <cut_from>0</cut_from>
+        <cut_to>254</cut_to>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>485</xloc>
+      <yloc>840</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>not empty indicator</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to/>
+<send_false_to/>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>indicator</leftvalue>
+ <function>IS NOT NULL</function>
+ <rightvalue/>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>420</xloc>
+      <yloc>441</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>not empty period</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to/>
+<send_false_to/>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>period</leftvalue>
+ <function>IS NOT NULL</function>
+ <rightvalue/>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>257</xloc>
+      <yloc>731</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>select field for database storage</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>input_file_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>filename</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>size</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>typeFile</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>iati-identifier</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>type</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>aggregation-status</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>title</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>title-lang</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>description</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>description-lang</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>description-type</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>stage_activity_result_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>643</xloc>
+      <yloc>360</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>select field for database storage 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>input_file_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>filename</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>iati-identifier</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>stage_activity_result_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>title</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>title-lang</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>measure</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ascending</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>baseline-year</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>baseline-value</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>description</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>description-type</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>description-lang</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>stage_activity_result_indicator_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>604</xloc>
+      <yloc>641</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>select field for database storage 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>input_file_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>stage_activity_result_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>stage_activity_result_indicator_key</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>filename</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>iati-identifier</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>period-start</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>period-start-iso-date</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>period-end</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>period-end-iso-date</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>target-value</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>target-comment</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>actual-value</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>actual-comment</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>658</xloc>
+      <yloc>840</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>stage_activity_result</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>iati</connection>
+    <schema/>
+    <table>stage_activity_result</table>
+    <commit>10</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>852</xloc>
+      <yloc>358</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>stage_activity_result_indicator</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>iati</connection>
+    <schema/>
+    <table>stage_activity_result_indicator</table>
+    <commit>10</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field>stage_activity_result_key</return_field>
+    <fields>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>833</xloc>
+      <yloc>641</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>stage_activity_result_indicator_key</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <valuename>stage_activity_result_indicator_key</valuename>
+      <use_database>N</use_database>
+      <connection/>
+      <schema/>
+      <seqname>SEQ_</seqname>
+      <use_counter>Y</use_counter>
+      <counter_name/>
+      <start_at>1</start_at>
+      <increment_by>1</increment_by>
+      <max_value>999999999</max_value>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>203</xloc>
+      <yloc>641</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>stage_activity_result_indicator_period</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>iati</connection>
+    <schema/>
+    <table>stage_activity_result_indicator_period</table>
+    <commit>10</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>Y</return_keys>
+    <return_field>stage_activity_result_indicator_period_key</return_field>
+    <fields>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>874</xloc>
+      <yloc>840</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>stage_activity_result_key</name>
+    <type>Sequence</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <valuename>stage_activity_result_key</valuename>
+      <use_database>N</use_database>
+      <connection/>
+      <schema/>
+      <seqname>SEQ_</seqname>
+      <use_counter>Y</use_counter>
+      <counter_name/>
+      <start_at>1</start_at>
+      <increment_by>1</increment_by>
+      <max_value>999999999</max_value>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>221</xloc>
+      <yloc>365</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>strip path to data</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>filename</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>&#x24;&#x7b;PATH_TO_DATA&#x7d;</replace_string>
+        <replace_by_string/>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>431</xloc>
+      <yloc>254</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step_error_handling>
+      <error>
+        <source_step>get activity result</source_step>
+        <target_step/>
+        <is_enabled>Y</is_enabled>
+        <nr_valuename/>
+        <descriptions_valuename/>
+        <fields_valuename/>
+        <codes_valuename/>
+        <max_errors/>
+        <max_pct_errors/>
+        <min_pct_rows/>
+      </error>
   </step_error_handling>
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
+
 </transformation>
