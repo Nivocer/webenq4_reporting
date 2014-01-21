@@ -68,7 +68,7 @@
   <created_user>-</created_user>
   <created_date>2014&#x2f;01&#x2f;10 15&#x3a;52&#x3a;31.108</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;01&#x2f;20 12&#x3a;39&#x3a;19.886</modified_date>
+  <modified_date>2014&#x2f;01&#x2f;21 13&#x3a;41&#x3a;40.115</modified_date>
   </info>
   <notepads>
     <notepad>
@@ -312,7 +312,6 @@
   <hop> <from>stage_activity_result_key</from><to>not empty indicator</to><enabled>Y</enabled> </hop>
   <hop> <from>stage_activity_result_indicator_key</from><to>not empty period</to><enabled>Y</enabled> </hop>
   <hop> <from>stage_activity_result_key</from><to>limit fieldlength</to><enabled>Y</enabled> </hop>
-  <hop> <from>Execute SQL script</from><to>get file names</to><enabled>Y</enabled> </hop>
   <hop> <from>get file names</from><to>Get activity result</to><enabled>Y</enabled> </hop>
   <hop> <from>Get activity result</from><to>strip path to data</to><enabled>Y</enabled> </hop>
   </order>
@@ -332,7 +331,7 @@
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
     <quoteString>N</quoteString>
-    <sql>drop table if exists stage_activity_result&#x3b;&#xa;drop table if exists stage_activity_result_indicator&#x3b;&#xa;drop table if exists stage_activity_result_indicator_period&#x3b;&#xa;CREATE TABLE stage_activity_result&#xa;&#x28;&#xa;  stage_activity_result_key BIGINT NOT NULL PRIMARY KEY&#xa;, input_file_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, size INT&#xa;, typeFile VARCHAR&#x28;12&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, type TINYTEXT&#xa;, &#x60;aggregation-status&#x60; TINYTEXT&#xa;, title TEXT&#xa;, &#x60;title-lang&#x60; TINYTEXT&#xa;, description TEXT&#xa;, &#x60;description-lang&#x60; TINYTEXT&#xa;, &#x60;description-type&#x60; TINYTEXT&#xa;&#x29; ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;&#xa;&#xa;CREATE TABLE stage_activity_result_indicator&#xa;&#x28;&#xa; stage_activity_result_indicator_key BIGINT  NOT NULL PRIMARY KEY&#xa;,  input_file_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, stage_activity_result_key INT&#xa;, title TEXT&#xa;, &#x60;title-lang&#x60; TINYTEXT&#xa;, measure TINYTEXT&#xa;, ascending TINYTEXT&#xa;, &#x60;baseline-year&#x60; TINYTEXT&#xa;, &#x60;baseline-value&#x60; TINYTEXT&#xa;, description TINYTEXT&#xa;, &#x60;description-type&#x60; TINYTEXT&#xa;, &#x60;description-lang&#x60; TINYTEXT&#xa;&#x29;  ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;&#xa;CREATE TABLE stage_activity_result_indicator_period&#xa;&#x28;&#xa;  stage_activity_result_indicator_period_key BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY&#xa;, input_file_key INT&#xa;, stage_activity_result_key INT&#xa;, stage_activity_result_indicator_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, &#x60;period-start&#x60; TINYTEXT&#xa;, &#x60;period-start-iso-date&#x60; DATETIME&#xa;, &#x60;period-end&#x60; TINYTEXT&#xa;, &#x60;period-end-iso-date&#x60; DATETIME&#xa;, &#x60;target-value&#x60; TINYTEXT&#xa;, &#x60;target-comment&#x60; TINYTEXT&#xa;, &#x60;actual-value&#x60; TINYTEXT&#xa;, &#x60;actual-comment&#x60; TINYTEXT&#xa;&#x29;  ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;</sql>
+    <sql>drop table if exists stage_activity_result&#x3b;&#xa;drop table if exists stage_activity_result_indicator&#x3b;&#xa;drop table if exists stage_activity_result_indicator_period&#x3b;&#xa;CREATE TABLE stage_activity_result&#xa;&#x28;&#xa;  stage_activity_result_key BIGINT NOT NULL PRIMARY KEY&#xa;, input_file_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, size INT&#xa;, typeFile VARCHAR&#x28;12&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, type TINYTEXT&#xa;, &#x60;aggregation-status&#x60; TINYTEXT&#xa;, title TEXT&#xa;, &#x60;title-lang&#x60; TINYTEXT&#xa;, description TEXT&#xa;, &#x60;description-lang&#x60; TINYTEXT&#xa;, &#x60;description-type&#x60; TINYTEXT&#xa;&#x29; ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;&#xa;&#xa;CREATE TABLE stage_activity_result_indicator&#xa;&#x28;&#xa; stage_activity_result_indicator_key BIGINT  NOT NULL PRIMARY KEY&#xa;,  input_file_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, stage_activity_result_key INT&#xa;, title TEXT&#xa;, &#x60;title-lang&#x60; TINYTEXT&#xa;, measure TINYTEXT&#xa;, ascending TINYTEXT&#xa;, &#x60;baseline-year&#x60; TINYTEXT&#xa;, &#x60;baseline-value&#x60; TINYTEXT&#xa;, description TINYTEXT&#xa;, &#x60;description-type&#x60; TINYTEXT&#xa;, &#x60;description-lang&#x60; TINYTEXT&#xa;&#x29;  ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;&#xa;CREATE TABLE stage_activity_result_indicator_period&#xa;&#x28;&#xa;  stage_activity_result_indicator_period_key BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY&#xa;, input_file_key INT&#xa;, stage_activity_result_key INT&#xa;, stage_activity_result_indicator_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, &#x60;period-start&#x60; TINYTEXT&#xa;, &#x60;period-start-iso-date&#x60; DATETIME&#xa;, &#x60;period-end&#x60; TINYTEXT&#xa;, &#x60;period-end-iso-date&#x60; DATETIME&#xa;, &#x60;target-value&#x60; TINYTEXT&#xa;, &#x60;target-comment&#x60; TINYTEXT&#xa;, &#x60;actual-value&#x60; TINYTEXT&#xa;, &#x60;actual-comment&#x60; TEXT&#xa;&#x29;  ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -342,8 +341,8 @@
     </arguments>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>60</xloc>
-      <yloc>260</yloc>
+      <xloc>55</xloc>
+      <yloc>207</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -803,7 +802,7 @@
     <fields>
       <field>
         <name>period-start</name>
-        <xpath>period&#x2f;period-start</xpath>
+        <xpath>period-start</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -818,8 +817,8 @@
       </field>
       <field>
         <name>period-start-iso-date</name>
-        <xpath>period-start&#x2f;&#x40;iso-date</xpath>
-        <element_type>node</element_type>
+        <xpath>&#x40;iso-date</xpath>
+        <element_type>attribut</element_type>
         <result_type>valueof</result_type>
         <type>Date</type>
         <format>yyyy-MM-dd</format>
@@ -833,7 +832,7 @@
       </field>
       <field>
         <name>period-end</name>
-        <xpath>period&#x2f;period-end</xpath>
+        <xpath>period-end</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -848,8 +847,8 @@
       </field>
       <field>
         <name>period-end-iso-date</name>
-        <xpath>period-end&#x2f;&#x40;iso-date</xpath>
-        <element_type>node</element_type>
+        <xpath>&#x40;iso-date</xpath>
+        <element_type>attribut</element_type>
         <result_type>valueof</result_type>
         <type>Date</type>
         <format>yyyy-MM-dd</format>
@@ -863,8 +862,8 @@
       </field>
       <field>
         <name>target-value</name>
-        <xpath>period&#x2f;target&#x2f;&#x40;value</xpath>
-        <element_type>node</element_type>
+        <xpath>target&#x2f;&#x40;value</xpath>
+        <element_type>attribut</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
         <format/>
@@ -878,7 +877,7 @@
       </field>
       <field>
         <name>target-comment</name>
-        <xpath>period&#x2f;target&#x2f;comment</xpath>
+        <xpath>target&#x2f;comment</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -893,8 +892,8 @@
       </field>
       <field>
         <name>actual-value</name>
-        <xpath>period&#x2f;actual&#x2f;&#x40;value</xpath>
-        <element_type>node</element_type>
+        <xpath>actual&#x2f;&#x40;value</xpath>
+        <element_type>attribut</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
         <format/>
@@ -908,7 +907,7 @@
       </field>
       <field>
         <name>actual-comment</name>
-        <xpath>period&#x2f;actual&#x2f;comment</xpath>
+        <xpath>actual&#x2f;comment</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -1272,7 +1271,7 @@
         <in_stream_name>actual-comment</in_stream_name>
         <out_stream_name/>
         <cut_from>0</cut_from>
-        <cut_to>254</cut_to>
+        <cut_to>65000</cut_to>
       </field>
     </fields>
      <cluster_schema/>
