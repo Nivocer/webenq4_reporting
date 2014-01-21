@@ -2,12 +2,11 @@
   <info>
     <name>get input files</name>
     <description/>
-    <extended_description>get input files from data snapshot https:&#47;&#47;github.com&#47;Bjwebb&#47;IATI-Data-Snapshot&#47;
-use xsd scheme for validation</extended_description>
+    <extended_description>get input files from data snapshot https&#x3a;&#x2f;&#x2f;github.com&#x2f;Bjwebb&#x2f;IATI-Data-Snapshot&#x2f;&#xa;use xsd scheme for validation</extended_description>
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#47;iati</directory>
+    <directory>&#x2f;iati</directory>
     <parameters>
     </parameters>
     <log>
@@ -17,7 +16,7 @@ use xsd scheme for validation</extended_description>
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
 <perf-log-table><connection/>
 <schema/>
 <table/>
@@ -34,6 +33,11 @@ use xsd scheme for validation</extended_description>
 <table/>
 <timeout_days/>
 <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -62,9 +66,9 @@ use xsd scheme for validation</extended_description>
     <clusterschemas>
     </clusterschemas>
   <created_user>-</created_user>
-  <created_date>2014&#47;01&#47;09 09:08:13.789</created_date>
+  <created_date>2014&#x2f;01&#x2f;09 09&#x3a;08&#x3a;13.789</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#47;01&#47;19 18:24:41.190</modified_date>
+  <modified_date>2014&#x2f;01&#x2f;21 11&#x3a;57&#x3a;53.932</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -73,10 +77,10 @@ use xsd scheme for validation</extended_description>
     <server>localhost</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${TARGET_DB}</database>
+    <database>&#x24;&#x7b;TARGET_DB&#x7d;</database>
     <port>3306</port>
-    <username>${TARGET_USER}</username>
-    <password>${TARGET_PASSWORD}</password>
+    <username>&#x24;&#x7b;TARGET_USER&#x7d;</username>
+    <password>&#x24;&#x7b;TARGET_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -95,13 +99,13 @@ use xsd scheme for validation</extended_description>
   </connection>
   <connection>
     <name>source-database</name>
-    <server>${SOURCE_HOST}</server>
+    <server>&#x24;&#x7b;SOURCE_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${SOURCE_DB}</database>
-    <port>${SOURCE_PORT}</port>
-    <username>${SOURCE_USER}</username>
-    <password>${SOURCE_PASSWORD}</password>
+    <database>&#x24;&#x7b;SOURCE_DB&#x7d;</database>
+    <port>&#x24;&#x7b;SOURCE_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;SOURCE_USER&#x7d;</username>
+    <password>&#x24;&#x7b;SOURCE_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -111,7 +115,7 @@ use xsd scheme for validation</extended_description>
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${SOURCE_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;SOURCE_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -120,13 +124,13 @@ use xsd scheme for validation</extended_description>
   </connection>
   <connection>
     <name>target-database</name>
-    <server>${TARGET_HOST}</server>
+    <server>&#x24;&#x7b;TARGET_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${TARGET_DB}</database>
-    <port>${TARGET_PORT}</port>
-    <username>${TARGET_USER}</username>
-    <password>${TARGET_PASSWORD}</password>
+    <database>&#x24;&#x7b;TARGET_DB&#x7d;</database>
+    <port>&#x24;&#x7b;TARGET_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;TARGET_USER&#x7d;</username>
+    <password>&#x24;&#x7b;TARGET_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -136,7 +140,7 @@ use xsd scheme for validation</extended_description>
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${TARGET_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;TARGET_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -144,12 +148,37 @@ use xsd scheme for validation</extended_description>
     </attributes>
   </connection>
   <order>
-  <hop> <from>Get filenames from snapshot</from><to>File not empty?</to><enabled>Y</enabled> </hop>  <hop> <from>File not empty?</from><to>Filter git stuff</to><enabled>Y</enabled> </hop>  <hop> <from>Validate as activities file</from><to>Validate as organisation file</to><enabled>Y</enabled> </hop>  <hop> <from>Validate as organisation file</from><to>Valid file?</to><enabled>Y</enabled> </hop>  <hop> <from>Filter git stuff</from><to>Validate as activities file</to><enabled>Y</enabled> </hop>  <hop> <from>Valid file?</from><to>Set type of file</to><enabled>Y</enabled> </hop>  <hop> <from>Set type of file</from><to>Add to output list of valid files</to><enabled>Y</enabled> </hop>  <hop> <from>Create tables for (in)valid files</from><to>Get filenames from snapshot</to><enabled>Y</enabled> </hop>  <hop> <from>Valid file?</from><to>Not an activity file?</to><enabled>Y</enabled> </hop>  <hop> <from>Not organisation file?</from><to>Select fields to store</to><enabled>Y</enabled> </hop>  <hop> <from>Not an activity file?</from><to>Set activity to no</to><enabled>Y</enabled> </hop>  <hop> <from>Set activity to no</from><to>Not organisation file?</to><enabled>Y</enabled> </hop>  <hop> <from>Not an activity file?</from><to>Not organisation file?</to><enabled>Y</enabled> </hop>  <hop> <from>Not organisation file?</from><to>Set organisation to no </to><enabled>Y</enabled> </hop>  <hop> <from>Set organisation to no </from><to>Select fields to store</to><enabled>Y</enabled> </hop>  <hop> <from>Select fields to store</from><to>Remove the path of the snapshot</to><enabled>Y</enabled> </hop>  <hop> <from>Remove the path of the snapshot</from><to>Store in list of invalid files</to><enabled>Y</enabled> </hop>  <hop> <from>Set type of file</from><to>Select filename, size and type</to><enabled>Y</enabled> </hop>  <hop> <from>Select filename, size and type</from><to>Replace in string</to><enabled>Y</enabled> </hop>  <hop> <from>Replace in string</from><to>Store in list of valid files</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Get filenames from snapshot</from><to>File not empty&#x3f;</to><enabled>Y</enabled> </hop>
+  <hop> <from>File not empty&#x3f;</from><to>Filter git stuff</to><enabled>Y</enabled> </hop>
+  <hop> <from>Validate as activities file</from><to>Validate as organisation file</to><enabled>Y</enabled> </hop>
+  <hop> <from>Validate as organisation file</from><to>Valid file&#x3f;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter git stuff</from><to>Validate as activities file</to><enabled>Y</enabled> </hop>
+  <hop> <from>Valid file&#x3f;</from><to>Set type of file</to><enabled>Y</enabled> </hop>
+  <hop> <from>Set type of file</from><to>Add to output list of valid files</to><enabled>Y</enabled> </hop>
+  <hop> <from>Create tables for &#x28;in&#x29;valid files</from><to>Get filenames from snapshot</to><enabled>Y</enabled> </hop>
+  <hop> <from>Valid file&#x3f;</from><to>Not an activity file&#x3f;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Not organisation file&#x3f;</from><to>Select fields to store</to><enabled>Y</enabled> </hop>
+  <hop> <from>Not an activity file&#x3f;</from><to>Set activity to no</to><enabled>Y</enabled> </hop>
+  <hop> <from>Set activity to no</from><to>Not organisation file&#x3f;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Not an activity file&#x3f;</from><to>Not organisation file&#x3f;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Not organisation file&#x3f;</from><to>Set organisation to no </to><enabled>Y</enabled> </hop>
+  <hop> <from>Set organisation to no </from><to>Select fields to store</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select fields to store</from><to>Remove the path of the snapshot</to><enabled>Y</enabled> </hop>
+  <hop> <from>Remove the path of the snapshot</from><to>Store in list of invalid files</to><enabled>Y</enabled> </hop>
+  <hop> <from>Set type of file</from><to>Select filename, size and type</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select filename, size and type</from><to>Replace in string</to><enabled>Y</enabled> </hop>
+  <hop> <from>Replace in string</from><to>Store in list of valid files</to><enabled>Y</enabled> </hop>
+  <hop> <from>File not empty&#x3f;</from><to>typeFile</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select fields to store 2</from><to>Remove the path of the snapshot 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>typeFile</from><to>Select fields to store 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Remove the path of the snapshot 2</from><to>Store in list of invalid files &#x28;empty files&#x29;</to><enabled>Y</enabled> </hop>
+  </order>
   <step>
     <name>Add to output list of valid files</name>
     <type>RowsToResult</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -164,10 +193,11 @@ use xsd scheme for validation</extended_description>
     </step>
 
   <step>
-    <name>Create tables for (in)valid files</name>
+    <name>Create tables for &#x28;in&#x29;valid files</name>
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -177,29 +207,9 @@ use xsd scheme for validation</extended_description>
     <execute_each_row>N</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
-    <sql>DROP TABLE IF EXISTS `input_file`;
-CREATE TABLE IF NOT EXISTS `input_file` (
-  `input_file_key` int(11) NOT NULL AUTO_INCREMENT,
-  `filename` varchar(255) DEFAULT NULL,
-  `sfilename` varchar(255),
-  `size` int(11) DEFAULT NULL,
-  `typeFile` varchar(12) DEFAULT NULL,
-  PRIMARY KEY (`input_file_key`)
-) ENGINE=myisam DEFAULT CHARSET=utf8;
-
-DROP TABLE IF EXISTS `input_file_error`;
-CREATE TABLE IF NOT EXISTS `input_file_error` (
-  `input_file_error_key` int(11) NOT NULL AUTO_INCREMENT,
-  `filename` text,
-  `lastmodifiedtime` datetime DEFAULT NULL,
-  `size` int(11) DEFAULT NULL,
-  `activities` varchar(10) DEFAULT NULL,
-  `ValidationMsgFieldActivities` varchar(500) DEFAULT NULL,
-  `organisation` varchar(10) DEFAULT NULL,
-  `ValidationMsgFieldOrganisation` varchar(500) DEFAULT NULL,
-  PRIMARY KEY (`input_file_error_key`)
-) ENGINE=myisam  DEFAULT CHARSET=utf8 ;
-</sql>
+    <quoteString>N</quoteString>
+    <sql>DROP TABLE IF EXISTS &#x60;input_file&#x60;&#x3b;&#xa;CREATE TABLE IF NOT EXISTS &#x60;input_file&#x60; &#x28;&#xa;  &#x60;input_file_key&#x60; int&#x28;11&#x29; NOT NULL AUTO_INCREMENT,&#xa;  &#x60;filename&#x60; varchar&#x28;255&#x29; DEFAULT NULL,&#xa;  &#x60;sfilename&#x60; varchar&#x28;255&#x29;,&#xa;  &#x60;size&#x60; int&#x28;11&#x29; DEFAULT NULL,&#xa;  &#x60;typeFile&#x60; varchar&#x28;12&#x29; DEFAULT NULL,&#xa;  PRIMARY KEY &#x28;&#x60;input_file_key&#x60;&#x29;&#xa;&#x29; ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#xa;DROP TABLE IF EXISTS &#x60;input_file_error&#x60;&#x3b;&#xa;CREATE TABLE IF NOT EXISTS &#x60;input_file_error&#x60; &#x28;&#xa;  &#x60;input_file_error_key&#x60; int&#x28;11&#x29; NOT NULL AUTO_INCREMENT,&#xa;  &#x60;filename&#x60; text,&#xa;  &#x60;lastmodifiedtime&#x60; datetime DEFAULT NULL,&#xa;  &#x60;size&#x60; int&#x28;11&#x29; DEFAULT NULL,&#xa;  &#x60;activities&#x60; varchar&#x28;10&#x29; DEFAULT NULL,&#xa;  &#x60;ValidationMsgFieldActivities&#x60; varchar&#x28;500&#x29; DEFAULT NULL,&#xa;  &#x60;organisation&#x60; varchar&#x28;10&#x29; DEFAULT NULL,&#xa;  &#x60;ValidationMsgFieldOrganisation&#x60; varchar&#x28;500&#x29; DEFAULT NULL,&#xa;  PRIMARY KEY &#x28;&#x60;input_file_error_key&#x60;&#x29;&#xa;&#x29; ENGINE&#x3d;myisam  DEFAULT CHARSET&#x3d;utf8 &#x3b;&#xa;</sql>
+    <set_params>N</set_params>
     <insert_field/>
     <update_field/>
     <delete_field/>
@@ -215,29 +225,30 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     </step>
 
   <step>
-    <name>File not empty?</name>
+    <name>File not empty&#x3f;</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-<send_true_to/>
-<send_false_to/>
+<send_true_to>Filter git stuff</send_true_to>
+<send_false_to>typeFile</send_false_to>
     <compare>
 <condition>
  <negated>N</negated>
  <leftvalue>size</leftvalue>
- <function>&lt;&gt;</function>
+ <function>&#x3c;&#x3e;</function>
  <rightvalue/>
- <value><name>constant</name><type>Integer</type><text>0</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>#;-#</mask></value> </condition>
+ <value><name>constant</name><type>Integer</type><text>0</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;&#x3b;-&#x23;</mask></value> </condition>
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>174</xloc>
-      <yloc>179</yloc>
+      <xloc>172</xloc>
+      <yloc>192</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -247,6 +258,7 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -263,7 +275,7 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
    <leftvalue>filename</leftvalue>
    <function>CONTAINS</function>
    <rightvalue/>
-   <value><name>constant</name><type>String</type><text>&#47;.git&#47;</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
+   <value><name>constant</name><type>String</type><text>&#x2f;.git&#x2f;</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
   <condition>
    <negated>N</negated>
    <operator>AND NOT</operator>
@@ -287,6 +299,7 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     <type>GetFileNames</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -306,8 +319,8 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     <dynamic_include_subfolders>N</dynamic_include_subfolders>
     <limit>0</limit>
     <file>
-      <name>${PATH_TO_DATA}</name>
-      <filemask>.*</filemask>
+      <name>&#x24;&#x7b;PATH_TO_DATA&#x7d;</name>
+      <filemask>.&#x2a;</filemask>
       <exclude_filemask>.git</exclude_filemask>
       <file_required>N</file_required>
       <include_subfolders>Y</include_subfolders>
@@ -321,24 +334,25 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     </step>
 
   <step>
-    <name>Not an activity file?</name>
+    <name>Not an activity file&#x3f;</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
 <send_true_to>Set activity to no</send_true_to>
-<send_false_to>Not organisation file?</send_false_to>
+<send_false_to>Not organisation file&#x3f;</send_false_to>
     <compare>
 <condition>
  <negated>N</negated>
  <leftvalue>ValidationMsgFieldActivities</leftvalue>
  <function>STARTS WITH</function>
  <rightvalue/>
- <value><name>constant</name><type>String</type><text>cvc-elt.1: Cannot find the declaration of element</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+ <value><name>constant</name><type>String</type><text>cvc-elt.1&#x3a; Cannot find the declaration of element</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -349,10 +363,11 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     </step>
 
   <step>
-    <name>Not organisation file?</name>
+    <name>Not organisation file&#x3f;</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -366,7 +381,7 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
  <leftvalue>ValidationMsgFieldOrganisation</leftvalue>
  <function>STARTS WITH</function>
  <rightvalue/>
- <value><name>constant</name><type>String</type><text>cvc-elt.1: Cannot find the declaration of element</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+ <value><name>constant</name><type>String</type><text>cvc-elt.1&#x3a; Cannot find the declaration of element</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -381,6 +396,7 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     <type>ReplaceString</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -391,8 +407,9 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
         <in_stream_name>filename</in_stream_name>
         <out_stream_name/>
         <use_regex>no</use_regex>
-        <replace_string>${PATH_TO_DATA}</replace_string>
+        <replace_string>&#x24;&#x7b;PATH_TO_DATA&#x7d;</replace_string>
         <replace_by_string/>
+        <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
@@ -411,6 +428,7 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     <type>ReplaceString</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -421,8 +439,9 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
         <in_stream_name>filename</in_stream_name>
         <out_stream_name>sfilename</out_stream_name>
         <use_regex>no</use_regex>
-        <replace_string>${PATH_TO_DATA}</replace_string>
+        <replace_string>&#x24;&#x7b;PATH_TO_DATA&#x7d;</replace_string>
         <replace_by_string/>
+        <set_empty_string>N</set_empty_string>
         <replace_field_by_string/>
         <whole_word>no</whole_word>
         <case_sensitive>no</case_sensitive>
@@ -441,6 +460,7 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -488,6 +508,7 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -519,6 +540,7 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     <type>SetValueConstant</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -530,6 +552,7 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
         <name>activities</name>
         <value>no</value>
         <mask/>
+        <set_empty_string>N</set_empty_string>
         </field>
       </fields>
      <cluster_schema/>
@@ -545,6 +568,7 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     <type>SetValueConstant</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -556,6 +580,7 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
         <name>organisation</name>
         <value>no</value>
         <mask/>
+        <set_empty_string>N</set_empty_string>
         </field>
       </fields>
      <cluster_schema/>
@@ -571,6 +596,7 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     <type>ValueMapper</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -598,6 +624,7 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -635,6 +662,7 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -668,17 +696,18 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     </step>
 
   <step>
-    <name>Valid file?</name>
+    <name>Valid file&#x3f;</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
 <send_true_to>Set type of file</send_true_to>
-<send_false_to>Not an activity file?</send_false_to>
+<send_false_to>Not an activity file&#x3f;</send_false_to>
     <compare>
 <condition>
  <negated>N</negated>
@@ -686,14 +715,14 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
   <condition>
    <negated>N</negated>
    <leftvalue>activities</leftvalue>
-   <function>=</function>
+   <function>&#x3d;</function>
    <rightvalue/>
    <value><name>constant</name><type>String</type><text>valid</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
   <condition>
    <negated>N</negated>
    <operator>OR</operator>
    <leftvalue>organisation</leftvalue>
-   <function>=</function>
+   <function>&#x3d;</function>
    <rightvalue/>
    <value><name>constant</name><type>String</type><text>valid</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
   </conditions>
@@ -712,12 +741,13 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     <type>XSDValidator</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <xdsfilename>${PATH_TO_REPOSITORY}iati&#47;iati-activities-schema.xsd</xdsfilename>
+    <xdsfilename>&#x24;&#x7b;PATH_TO_REPOSITORY&#x7d;iati&#x2f;iati-activities-schema.xsd</xdsfilename>
     <xmlstream>filename</xmlstream>
     <resultfieldname>activities</resultfieldname>
     <addvalidationmsg>Y</addvalidationmsg>
@@ -741,12 +771,13 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
     <type>XSDValidator</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <xdsfilename>${PATH_TO_REPOSITORY}iati&#47;iati-organisations-schema.xsd</xdsfilename>
+    <xdsfilename>&#x24;&#x7b;PATH_TO_REPOSITORY&#x7d;iati&#x2f;iati-organisations-schema.xsd</xdsfilename>
     <xmlstream>filename</xmlstream>
     <resultfieldname>organisation</resultfieldname>
     <addvalidationmsg>Y</addvalidationmsg>
@@ -765,9 +796,209 @@ CREATE TABLE IF NOT EXISTS `input_file_error` (
       </GUI>
     </step>
 
+  <step>
+    <name>Store in list of invalid files &#x28;empty files&#x29;</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>iati</connection>
+    <schema/>
+    <table>input_file_error</table>
+    <commit>1</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>N</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>173</xloc>
+      <yloc>547</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>typeFile</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>typeFile</name>
+        <type>String</type>
+        <format>12</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>empty</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>activities</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>Y</set_empty_string>
+      </field>
+      <field>
+        <name>organisation</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>Y</set_empty_string>
+      </field>
+      <field>
+        <name>ValidationMsgFieldActivities</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>Y</set_empty_string>
+      </field>
+      <field>
+        <name>ValidationMsgFieldOrganisation</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>Y</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>172</xloc>
+      <yloc>280</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Remove the path of the snapshot 2</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>filename</in_stream_name>
+        <out_stream_name/>
+        <use_regex>no</use_regex>
+        <replace_string>&#x24;&#x7b;PATH_TO_DATA&#x7d;</replace_string>
+        <replace_by_string/>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>172</xloc>
+      <yloc>442</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select fields to store 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>filename</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>lastmodifiedtime</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>size</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>activities</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ValidationMsgFieldActivities</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>organisation</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ValidationMsgFieldOrganisation</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>172</xloc>
+      <yloc>349</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
   <step_error_handling>
   </step_error_handling>
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
+
 </transformation>
