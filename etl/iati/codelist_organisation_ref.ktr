@@ -68,7 +68,7 @@
   <created_user>-</created_user>
   <created_date>2014&#x2f;01&#x2f;23 17&#x3a;50&#x3a;34.970</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;01&#x2f;24 12&#x3a;43&#x3a;36.920</modified_date>
+  <modified_date>2014&#x2f;01&#x2f;24 14&#x3a;05&#x3a;17.004</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -153,6 +153,86 @@
   <hop> <from>Data Validator</from><to>categories, not unique</to><enabled>Y</enabled> </hop>
   </order>
   <step>
+    <name>Data Validator</name>
+    <type>Validator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<validate_all>N</validate_all>
+<concat_errors>N</concat_errors>
+<concat_separator>&#x7c;</concat_separator>
+       <validator_field><name>code</name>
+<validation_name>category</validation_name>
+<max_length/>
+<min_length/>
+<null_allowed>Y</null_allowed>
+<only_null_allowed>N</only_null_allowed>
+<only_numeric_allowed>N</only_numeric_allowed>
+<data_type>String</data_type>
+<data_type_verified>N</data_type_verified>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<max_value/>
+<min_value/>
+<start_string/>
+<end_string/>
+<start_string_not_allowed/>
+<end_string_not_allowed>000</end_string_not_allowed>
+<regular_expression/>
+<regular_expression_not_allowed/>
+<error_code/>
+<error_description/>
+<is_sourcing_values>N</is_sourcing_values>
+<sourcing_step/>
+<sourcing_field/>
+<allowed_value></allowed_value></validator_field>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>294</xloc>
+      <yloc>179</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Execute SQL script</name>
+    <type>ExecSQL</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>iati</connection>
+    <execute_each_row>N</execute_each_row>
+    <single_statement>N</single_statement>
+    <replace_variables>N</replace_variables>
+    <quoteString>N</quoteString>
+    <sql>drop table if exists codelist_organisation_ref&#x3b;&#xa;CREATE TABLE codelist_organisation_ref&#xa;&#x28;&#xa;  codelist_organisation_ref_key BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY&#xa;, code TINYTEXT&#xa;, name TINYTEXT&#xa;&#x29; engine&#x3d;myisam&#xa;&#x3b;</sql>
+    <set_params>N</set_params>
+    <insert_field/>
+    <update_field/>
+    <delete_field/>
+    <read_field/>
+    <arguments>
+    </arguments>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>94</xloc>
+      <yloc>71</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
     <name>Get codelist from XML</name>
     <type>getXMLData</type>
     <description/>
@@ -173,11 +253,11 @@
     <validating>N</validating>
     <usetoken>N</usetoken>
     <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
-    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
     <rownum_field/>
     <encoding>UTF-8</encoding>
     <file>
-      <name>&#x24;&#x7b;PATH_TO_SSOT&#x7d;&#x2f;IATI-Codelists&#x2f;IATI-Codelists-External&#x2f;xml&#x2f;OrganisationIdentifier.xml</name>
+      <name>&#x24;&#x7b;PATH_TO_SSOT&#x7d;&#x2f;IATI-Codelists-NonEmbedded&#x2f;xml&#x2f;OrganisationIdentifier.xml</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
@@ -238,54 +318,6 @@
     </step>
 
   <step>
-    <name>Data Validator</name>
-    <type>Validator</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<validate_all>N</validate_all>
-<concat_errors>N</concat_errors>
-<concat_separator>&#x7c;</concat_separator>
-       <validator_field><name>code</name>
-<validation_name>category</validation_name>
-<max_length/>
-<min_length/>
-<null_allowed>Y</null_allowed>
-<only_null_allowed>N</only_null_allowed>
-<only_numeric_allowed>N</only_numeric_allowed>
-<data_type>String</data_type>
-<data_type_verified>N</data_type_verified>
-<conversion_mask/>
-<decimal_symbol/>
-<grouping_symbol/>
-<max_value/>
-<min_value/>
-<start_string/>
-<end_string/>
-<start_string_not_allowed/>
-<end_string_not_allowed>000</end_string_not_allowed>
-<regular_expression/>
-<regular_expression_not_allowed/>
-<error_code/>
-<error_description/>
-<is_sourcing_values>N</is_sourcing_values>
-<sourcing_step/>
-<sourcing_field/>
-<allowed_value></allowed_value></validator_field>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>294</xloc>
-      <yloc>179</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
     <name>categories, not unique</name>
     <type>Dummy</type>
     <description/>
@@ -338,38 +370,6 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>490</xloc>
       <yloc>247</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Execute SQL script</name>
-    <type>ExecSQL</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>iati</connection>
-    <execute_each_row>N</execute_each_row>
-    <single_statement>N</single_statement>
-    <replace_variables>N</replace_variables>
-    <quoteString>N</quoteString>
-    <sql>drop table if exists codelist_organisation_ref&#x3b;&#xa;CREATE TABLE codelist_organisation_ref&#xa;&#x28;&#xa;  codelist_organisation_ref_key BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY&#xa;, code TINYTEXT&#xa;, name TINYTEXT&#xa;&#x29; engine&#x3d;myisam&#xa;&#x3b;</sql>
-    <set_params>N</set_params>
-    <insert_field/>
-    <update_field/>
-    <delete_field/>
-    <read_field/>
-    <arguments>
-    </arguments>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>94</xloc>
-      <yloc>71</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

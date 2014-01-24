@@ -68,7 +68,7 @@
   <created_user>-</created_user>
   <created_date>2014&#x2f;01&#x2f;24 10&#x3a;52&#x3a;18.713</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;01&#x2f;24 13&#x3a;13&#x3a;42.419</modified_date>
+  <modified_date>2014&#x2f;01&#x2f;24 14&#x3a;08&#x3a;20.688</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -203,11 +203,11 @@
     <validating>N</validating>
     <usetoken>N</usetoken>
     <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
-    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
+    <doNotFailIfNoFile>N</doNotFailIfNoFile>
     <rownum_field/>
     <encoding>UTF-8</encoding>
     <file>
-      <name>&#x2f;home&#x2f;jaapandre&#x2f;workspace&#x2f;IATI-Standard-SSOT&#x2f;IATI-Codelists&#x2f;combined-xml&#x2f;Country.xml</name>
+      <name>&#x24;&#x7b;PATH_TO_SSOT&#x7d;&#x2f;IATI-Codelists-NonEmbedded&#x2f;xml&#x2f;Country.xml</name>
       <filemask/>
       <exclude_filemask/>
       <file_required>N</file_required>
