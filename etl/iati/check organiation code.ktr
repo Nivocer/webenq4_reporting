@@ -1,11 +1,11 @@
 <transformation>
   <info>
-    <name>proces organisation</name>
+    <name>check organiation code</name>
     <description/>
-    <extended_description/>
+    <extended_description>get ref from previous transformation, returns&#xa;codelist_organisation_key &#x28;null if not&#x29;&#xa;codelist_agency_code &#x28;if ref has format x-y-z&#xa;codelist_agency_code_key &#x28;if agency code on codelist&#x29;&#xa;valid_ref &#x28;valid organisation ref, null when not valid&#x29;&#xa;</extended_description>
     <trans_version/>
     <trans_type>Normal</trans_type>
-    <trans_status>0</trans_status>
+    <trans_status>1</trans_status>
     <directory>&#x2f;iati</directory>
     <parameters>
     </parameters>
@@ -68,9 +68,30 @@
   <created_user>-</created_user>
   <created_date>2014&#x2f;01&#x2f;10 15&#x3a;52&#x3a;31.108</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;01&#x2f;24 15&#x3a;48&#x3a;48.330</modified_date>
+  <modified_date>2014&#x2f;01&#x2f;27 11&#x3a;46&#x3a;45.089</modified_date>
   </info>
   <notepads>
+    <notepad>
+      <note>create agency code from ref</note>
+      <xloc>410</xloc>
+      <yloc>218</yloc>
+      <width>173</width>
+      <heigth>26</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <connection>
     <name>iati</name>
@@ -85,15 +106,15 @@
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
-      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
-      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
@@ -148,29 +169,23 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Select values</from><to>Sort rows</to><enabled>Y</enabled> </hop>
-  <hop> <from>Sort rows</from><to>Unique rows</to><enabled>Y</enabled> </hop>
-  <hop> <from>Table input</from><to>Get data from XML</to><enabled>Y</enabled> </hop>
-  <hop> <from>Strings cut</from><to>lookup organisation</to><enabled>Y</enabled> </hop>
-  <hop> <from>Unique rows</from><to>lookup organisation ref from codelist</to><enabled>Y</enabled> </hop>
-  <hop> <from>Get data from XML</from><to>Select values</to><enabled>Y</enabled> </hop>
   <hop> <from>copy ref</from><to>Split Fields</to><enabled>Y</enabled> </hop>
   <hop> <from>Split Fields</from><to>Concat Fields</to><enabled>Y</enabled> </hop>
-  <hop> <from>Database lookup</from><to>Select values 2</to><enabled>Y</enabled> </hop>
-  <hop> <from>Select values 2</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
-  <hop> <from>Concat Fields</from><to>Database lookup</to><enabled>Y</enabled> </hop>
-  <hop> <from>Add codelist_agency_code</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Concat Fields</from><to>Agency code on codelist</to><enabled>Y</enabled> </hop>
+  <hop> <from>Add null codelist_agency_code</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
   <hop> <from>lookup organisation ref from codelist</from><to>ref has format xx-yy-zz</to><enabled>Y</enabled> </hop>
-  <hop> <from>ref has format xx-yy-zz</from><to>Add codelist_agency_code</to><enabled>Y</enabled> </hop>
+  <hop> <from>ref has format xx-yy-zz</from><to>Add null codelist_agency_code</to><enabled>Y</enabled> </hop>
   <hop> <from>ref has format xx-yy-zz</from><to>copy ref</to><enabled>Y</enabled> </hop>
   <hop> <from>Dummy &#x28;do nothing&#x29;</from><to>valid organisation ref&#x3f;</to><enabled>Y</enabled> </hop>
   <hop> <from>valid organisation ref&#x3f;</from><to>valid_organisation_ref&#x3d;false</to><enabled>Y</enabled> </hop>
-  <hop> <from>valid organisation ref&#x3f;</from><to>valid_organisation_ref&#x3d;true</to><enabled>Y</enabled> </hop>
-  <hop> <from>valid_organisation_ref&#x3d;false</from><to>Strings cut</to><enabled>Y</enabled> </hop>
-  <hop> <from>valid_organisation_ref&#x3d;true</from><to>Strings cut</to><enabled>Y</enabled> </hop>
+  <hop> <from>Agency code on codelist</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>valid organisation ref&#x3f;</from><to>valid-organisation-ref&#x3d;true</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get rows from result</from><to>lookup organisation ref from codelist</to><enabled>Y</enabled> </hop>
+  <hop> <from>valid-organisation-ref&#x3d;true</from><to>temp_check_organisation_code</to><enabled>Y</enabled> </hop>
+  <hop> <from>valid_organisation_ref&#x3d;false</from><to>temp_check_organisation_code</to><enabled>Y</enabled> </hop>
   </order>
   <step>
-    <name>Add codelist_agency_code</name>
+    <name>Add null codelist_agency_code</name>
     <type>Constant</type>
     <description/>
     <distribute>Y</distribute>
@@ -182,7 +197,7 @@
            </partitioning>
     <fields>
       <field>
-        <name>codelist_agency_code</name>
+        <name>codelist_organisation_agency_code</name>
         <type>String</type>
         <format/>
         <currency/>
@@ -193,11 +208,65 @@
         <precision>-1</precision>
         <set_empty_string>Y</set_empty_string>
       </field>
+      <field>
+        <name>codelist_organisation_agency_code_key</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <length>15</length>
+        <precision>-1</precision>
+        <set_empty_string>Y</set_empty_string>
+      </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>296</xloc>
-      <yloc>495</yloc>
+      <xloc>276</xloc>
+      <yloc>367</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Agency code on codelist</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>iati</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>codelist_organisation_registration_agency</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>codelist_organisation_agency_code</name>
+        <field>registry_code</field>
+        <condition>LIKE</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>codelist_organisation_registration_agency_key</name>
+        <rename>codelist_organisation_agency_code_key</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>681</xloc>
+      <yloc>278</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -271,56 +340,14 @@
       </field>
     </fields>
     <ConcatFields>
-<targetFieldName>refAgencyCode</targetFieldName>
-<targetFieldLength>0</targetFieldLength>
+<targetFieldName>codelist_organisation_agency_code</targetFieldName>
+<targetFieldLength>50</targetFieldLength>
 <removeSelectedFields>Y</removeSelectedFields>
     </ConcatFields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>581</xloc>
-      <yloc>404</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Database lookup</name>
-    <type>DBLookup</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>iati</connection>
-    <cache>N</cache>
-    <cache_load_all>N</cache_load_all>
-    <cache_size>0</cache_size>
-    <lookup>
-      <schema/>
-      <table>codelist_organisation_registration_agency</table>
-      <orderby/>
-      <fail_on_multiple>N</fail_on_multiple>
-      <eat_row_on_failure>N</eat_row_on_failure>
-      <key>
-        <name>refAgencyCode</name>
-        <field>registry_code</field>
-        <condition>LIKE</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>registry_code</name>
-        <rename>codelist_agency_code</rename>
-        <default/>
-        <type>String</type>
-      </value>
-    </lookup>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>693</xloc>
-      <yloc>404</yloc>
+      <xloc>553</xloc>
+      <yloc>278</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -338,8 +365,8 @@
            </partitioning>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>463</xloc>
-      <yloc>557</yloc>
+      <xloc>535</xloc>
+      <yloc>368</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -355,12 +382,12 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>iati</connection>
+    <connection>target-database</connection>
     <execute_each_row>N</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
     <quoteString>N</quoteString>
-    <sql>DROP TABLE IF EXISTS &#x60;lookup_organisation&#x60;&#x3b;&#xa;CREATE TABLE lookup_organisation&#xa;&#x28;&#xa;  lookup_organisation_key BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY&#xa;, source_ref TINYTEXT&#xa;, ref TINYTEXT&#xa;, filename VARCHAR&#x28;255&#x29;&#xa;, name TEXT&#xa;, number BIGINT&#xa;, codelist_organisation_ref_key BIGINT&#xa;, codelist_name VARCHAR&#x28;255&#x29;&#xa;, codelist_agency_code VARCHAR&#x28;50&#x29;&#xa;, valid_organisation_ref INT&#xa;&#x29; ENGINE&#x3d;myisam  DEFAULT CHARSET&#x3d;utf8&#xa;&#x3b;</sql>
+    <sql>drop table if exists temp_check_organisation_code&#x3b;&#xa;CREATE TABLE temp_check_organisation_code&#xa;&#x28;&#xa;  org_ref VARCHAR&#x28;255&#x29;&#xa;, org_key BIGINT&#xa;, org_name VARCHAR&#x28;255&#x29;&#xa;, codelist_organisation_ref_key BIGINT&#xa;, codelist_organisation_agency_code VARCHAR&#x28;50&#x29;&#xa;, codelist_organisation_agency_code_key VARCHAR&#x28;15&#x29;&#xa;, valid_ref VARCHAR&#x28;255&#x29;&#xa;&#x29; engine&#x3d;myisam	&#xa;&#x3b;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -370,145 +397,15 @@
     </arguments>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>73</xloc>
-      <yloc>27</yloc>
+      <xloc>78</xloc>
+      <yloc>46</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Get data from XML</name>
-    <type>getXMLData</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <addresultfile>N</addresultfile>
-    <namespaceaware>N</namespaceaware>
-    <ignorecomments>N</ignorecomments>
-    <readurl>N</readurl>
-    <validating>N</validating>
-    <usetoken>N</usetoken>
-    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
-    <doNotFailIfNoFile>N</doNotFailIfNoFile>
-    <rownum_field/>
-    <encoding>UTF-8</encoding>
-    <file>
-      <name/>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
-    <fields>
-      <field>
-        <name>source_ref</name>
-        <xpath>..&#x2f;reporting-org&#x2f;&#x40;ref</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>ref</name>
-        <xpath>&#x40;ref</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>name</name>
-        <xpath>.</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>type</name>
-        <xpath>&#x40;type</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>role</name>
-        <xpath>&#x40;role</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>none</trim_type>
-        <repeat>N</repeat>
-      </field>
-    </fields>
-    <limit>0</limit>
-    <loopxpath>&#x2f;iati-activities&#x2f;iati-activity&#x2f;participating-org</loopxpath>
-    <IsInFields>Y</IsInFields>
-    <IsAFile>Y</IsAFile>
-    <XmlField>filename</XmlField>
-    <prunePath/>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>252</xloc>
-      <yloc>228</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Select values</name>
-    <type>SelectValues</type>
+    <name>Get rows from result</name>
+    <type>RowsFromResult</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -517,125 +414,22 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <fields>      <field>        <name>source_ref</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>ref</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>filename</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>name</name>
-        <rename/>
-        <length>2500</length>
-        <precision>-2</precision>
-      </field>        <select_unspecified>N</select_unspecified>
-    </fields>     <cluster_schema/>
+    <fields>      <field>        <name>org_ref</name>
+        <type>String</type>
+        <length>255</length>
+        <precision>-1</precision>
+        </field>      <field>        <name>org_key</name>
+        <type>Integer</type>
+        <length>15</length>
+        <precision>-1</precision>
+        </field>      <field>        <name>org_name</name>
+        <type>String</type>
+        <length>255</length>
+        <precision>-1</precision>
+        </field>      </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>365</xloc>
-      <yloc>229</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Select values 2</name>
-    <type>SelectValues</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>      <field>        <name>source_ref</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>ref</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>filename</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>name</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>number</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>codelist_organisation_ref_key</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>codelist_name</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>      <field>        <name>codelist_agency_code</name>
-        <rename/>
-        <length>-2</length>
-        <precision>-2</precision>
-      </field>        <select_unspecified>N</select_unspecified>
-    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>831</xloc>
-      <yloc>437</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Sort rows</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>out</prefix>
-      <sort_size>1000000</sort_size>
-      <free_memory/>
-      <compress>N</compress>
-      <compress_variable/>
-      <unique_rows>N</unique_rows>
-    <fields>
-      <field>
-        <name>source_ref</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>ref</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <presorted>N</presorted>
-      </field>
-      <field>
-        <name>name</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <presorted>N</presorted>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>475</xloc>
-      <yloc>229</yloc>
+      <xloc>71</xloc>
+      <yloc>162</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -680,90 +474,8 @@
         <trimtype>none</trimtype>
       </field>    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>459</xloc>
-      <yloc>404</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Strings cut</name>
-    <type>StringCut</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>name</in_stream_name>
-        <out_stream_name/>
-        <cut_from>0</cut_from>
-        <cut_to>254</cut_to>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>491</xloc>
-      <yloc>687</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Table input</name>
-    <type>TableInput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>iati</connection>
-    <sql>SELECT&#xa;  input_file_key&#xa;, filename&#xa;, size&#xa;, typeFile&#xa;FROM input_file&#xa;where typeFile  like &#x27;activities&#x27;&#xa;</sql>
-    <limit>0</limit>
-    <lookup/>
-    <execute_each_row>N</execute_each_row>
-    <variables_active>N</variables_active>
-    <lazy_conversion_active>N</lazy_conversion_active>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>140</xloc>
-      <yloc>155</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Unique rows</name>
-    <type>Unique</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <count_rows>Y</count_rows>
-      <count_field>number</count_field>
-      <reject_duplicate_row>N</reject_duplicate_row>
-      <error_description/>
-    <fields>      <field>        <name>source_ref</name>
-        <case_insensitive>N</case_insensitive>
-        </field>      <field>        <name>ref</name>
-        <case_insensitive>N</case_insensitive>
-        </field>      <field>        <name>name</name>
-        <case_insensitive>N</case_insensitive>
-        </field>      </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>592</xloc>
-      <yloc>230</yloc>
+      <xloc>476</xloc>
+      <yloc>278</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -781,7 +493,7 @@
            </partitioning>
        <calculation><field_name>ref_copy</field_name>
 <calc_type>COPY_FIELD</calc_type>
-<field_a>ref</field_a>
+<field_a>org_ref</field_a>
 <field_b/>
 <field_c/>
 <value_type>String</value_type>
@@ -795,66 +507,8 @@
 </calculation>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>356</xloc>
-      <yloc>404</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>lookup organisation</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>iati</connection>
-    <schema/>
-    <table>lookup_organisation</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>N</use_batch>
-    <specify_fields>N</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>Y</return_keys>
-    <return_field>lookup_organisation_key</return_field>
-    <fields>
-        <field>
-          <column_name>source_ref</column_name>
-          <stream_name>source_ref</stream_name>
-        </field>
-        <field>
-          <column_name>ref</column_name>
-          <stream_name>ref</stream_name>
-        </field>
-        <field>
-          <column_name>name</column_name>
-          <stream_name>name</stream_name>
-        </field>
-        <field>
-          <column_name>number</column_name>
-          <stream_name>number</stream_name>
-        </field>
-        <field>
-          <column_name>filename</column_name>
-          <stream_name>filename</stream_name>
-        </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>654</xloc>
-      <yloc>686</yloc>
+      <xloc>410</xloc>
+      <yloc>278</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -881,7 +535,7 @@
       <fail_on_multiple>N</fail_on_multiple>
       <eat_row_on_failure>N</eat_row_on_failure>
       <key>
-        <name>ref</name>
+        <name>org_ref</name>
         <field>code</field>
         <condition>LIKE</condition>
         <name2/>
@@ -892,17 +546,11 @@
         <default/>
         <type>String</type>
       </value>
-      <value>
-        <name>name</name>
-        <rename>codelist_name</rename>
-        <default/>
-        <type>String</type>
-      </value>
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>222</xloc>
-      <yloc>355</yloc>
+      <xloc>276</xloc>
+      <yloc>161</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -919,19 +567,57 @@
            <schema_name/>
            </partitioning>
 <send_true_to>copy ref</send_true_to>
-<send_false_to>Add codelist_agency_code</send_false_to>
+<send_false_to>Add null codelist_agency_code</send_false_to>
     <compare>
 <condition>
  <negated>N</negated>
- <leftvalue>ref</leftvalue>
+ <leftvalue>org_ref</leftvalue>
  <function>REGEXP</function>
  <rightvalue/>
  <value><name>constant</name><type>String</type><text>&#x5e;.&#x2a;-.&#x2a;-.&#x2a;</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>195</xloc>
-      <yloc>431</yloc>
+      <xloc>276</xloc>
+      <yloc>278</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>temp_check_organisation_code</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>target-database</connection>
+    <schema/>
+    <table>temp_check_organisation_code</table>
+    <commit>100</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>755</xloc>
+      <yloc>594</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -947,7 +633,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-<send_true_to>valid_organisation_ref&#x3d;true</send_true_to>
+<send_true_to>valid-organisation-ref&#x3d;true</send_true_to>
 <send_false_to>valid_organisation_ref&#x3d;false</send_false_to>
     <compare>
 <condition>
@@ -962,7 +648,7 @@
   <condition>
    <negated>N</negated>
    <operator>AND</operator>
-   <leftvalue>codelist_agency_code</leftvalue>
+   <leftvalue>codelist_organisation_agency_code_key</leftvalue>
    <function>IS NULL</function>
    <rightvalue/>
    </condition>
@@ -971,8 +657,41 @@
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>205</xloc>
-      <yloc>669</yloc>
+      <xloc>276</xloc>
+      <yloc>497</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>valid-organisation-ref&#x3d;true</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>valid_ref</field_name>
+<calc_type>COPY_FIELD</calc_type>
+<field_a>org_ref</field_a>
+<field_b/>
+<field_c/>
+<value_type>String</value_type>
+<value_length>255</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>465</xloc>
+      <yloc>595</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -990,55 +709,22 @@
            </partitioning>
     <fields>
       <field>
-        <name>valid_organisation_ref</name>
-        <type>Integer</type>
+        <name>valid_ref</name>
+        <type>String</type>
         <format/>
         <currency/>
         <decimal/>
         <group/>
         <nullif>0</nullif>
-        <length>-1</length>
+        <length>255</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
       </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>365</xloc>
-      <yloc>648</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>valid_organisation_ref&#x3d;true</name>
-    <type>Constant</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      <field>
-        <name>valid_organisation_ref</name>
-        <type>Integer</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif>1</nullif>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>368</xloc>
-      <yloc>719</yloc>
+      <xloc>529</xloc>
+      <yloc>497</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
