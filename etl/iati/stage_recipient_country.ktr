@@ -68,7 +68,7 @@
   <created_user>-</created_user>
   <created_date>2014&#x2f;01&#x2f;10 15&#x3a;52&#x3a;31.108</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;01&#x2f;28 08&#x3a;59&#x3a;13.247</modified_date>
+  <modified_date>2014&#x2f;01&#x2f;28 11&#x3a;23&#x3a;31.185</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -150,8 +150,9 @@
   <order>
   <hop> <from>get file names</from><to>get recipient countries</to><enabled>Y</enabled> </hop>
   <hop> <from>limit fieldlength</from><to>stage_recipient_country</to><enabled>Y</enabled> </hop>
-  <hop> <from>get recipient countries</from><to>strip path to data</to><enabled>Y</enabled> </hop>
   <hop> <from>strip path to data</from><to>limit fieldlength</to><enabled>Y</enabled> </hop>
+  <hop> <from>get recipient countries</from><to>get activity key</to><enabled>Y</enabled> </hop>
+  <hop> <from>get activity key</from><to>strip path to data</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Execute SQL script</name>
@@ -164,12 +165,12 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>iati</connection>
+    <connection>target-database</connection>
     <execute_each_row>N</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
     <quoteString>N</quoteString>
-    <sql>drop table if exists stage_recipient_country&#x3b;&#xa;CREATE TABLE stage_recipient_country&#xa;&#x28;&#xa;  stage_recipient_country_key BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY&#xa;, input_file_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, size INT&#xa;, typeFile VARCHAR&#x28;12&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, &#x60;recipient-country&#x60; TINYTEXT&#xa;, &#x60;recipient-country-code&#x60; TINYTEXT&#xa;, &#x60;recipient-country-percentage&#x60; TINYTEXT&#xa;, &#x60;recipient-country-lang&#x60; TINYTEXT&#xa;&#x29; ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;</sql>
+    <sql>drop table if exists stage_recipient_country&#x3b;&#xa;CREATE TABLE stage_recipient_country&#xa;&#x28;&#xa;  stage_recipient_country_key BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY&#xa;, activity_key BIGINT&#xa;, input_file_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, size INT&#xa;, typeFile VARCHAR&#x28;12&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, &#x60;recipient-country&#x60; TINYTEXT&#xa;, &#x60;recipient-country-code&#x60; TINYTEXT&#xa;, &#x60;recipient-country-percentage&#x60; TINYTEXT&#xa;, &#x60;recipient-country-lang&#x60; TINYTEXT&#xa;&#x29; ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -186,6 +187,48 @@
     </step>
 
   <step>
+    <name>get activity key</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>target-database</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>100</cache_size>
+    <lookup>
+      <schema/>
+      <table>stage_activity</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>iati-identifier</name>
+        <field>iati-identifier</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>stage_activity_key</name>
+        <rename>activity_key</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>385</xloc>
+      <yloc>255</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
     <name>get file names</name>
     <type>TableInput</type>
     <description/>
@@ -196,7 +239,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>iati</connection>
+    <connection>target-database</connection>
     <sql>SELECT&#xa;  input_file_key&#xa;, filename&#xa;, size&#xa;, typeFile&#xa;FROM input_file&#xa;where typeFile  like &#x27;activities&#x27;&#xa;</sql>
     <limit>0</limit>
     <lookup/>
@@ -205,8 +248,8 @@
     <lazy_conversion_active>N</lazy_conversion_active>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>202</xloc>
-      <yloc>259</yloc>
+      <xloc>104</xloc>
+      <yloc>255</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -335,8 +378,8 @@
     <sizeFieldName/>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>335</xloc>
-      <yloc>259</yloc>
+      <xloc>259</xloc>
+      <yloc>255</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -399,7 +442,7 @@
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>633</xloc>
-      <yloc>259</yloc>
+      <yloc>255</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -415,7 +458,7 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>iati</connection>
+    <connection>target-database</connection>
     <schema/>
     <table>stage_recipient_country</table>
     <commit>10</commit>
@@ -469,7 +512,7 @@
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>501</xloc>
-      <yloc>259</yloc>
+      <yloc>255</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
