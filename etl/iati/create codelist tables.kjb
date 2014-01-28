@@ -8,12 +8,12 @@
   <created_user>-</created_user>
   <created_date>2014&#x2f;01&#x2f;24 13&#x3a;11&#x3a;19.534</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;01&#x2f;24 14&#x3a;10&#x3a;38.655</modified_date>
+  <modified_date>2014&#x2f;01&#x2f;28 11&#x3a;54&#x3a;36.730</modified_date>
     <parameters>
     </parameters>
   <connection>
     <name>iati</name>
-    <server>localhost</server>
+    <server>&#x24;&#x7b;TARGET_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
     <database>&#x24;&#x7b;TARGET_DB&#x7d;</database>
@@ -30,9 +30,11 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
       <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>N</attribute></attribute>
       <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
