@@ -6,7 +6,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#47;iati</directory>
+    <directory>&#x2f;iati</directory>
     <parameters>
     </parameters>
     <log>
@@ -16,7 +16,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>N</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>N</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>N</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>N</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
 <perf-log-table><connection/>
 <schema/>
 <table/>
@@ -33,6 +33,11 @@
 <table/>
 <timeout_days/>
 <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -61,15 +66,15 @@
     <clusterschemas>
     </clusterschemas>
   <created_user/>
-  <created_date>2013&#47;08&#47;29 12:34:37.788</created_date>
+  <created_date>2013&#x2f;08&#x2f;29 12&#x3a;34&#x3a;37.788</created_date>
   <modified_user>jaapandre</modified_user>
-  <modified_date>2014&#47;01&#47;15 00:54:31.305</modified_date>
+  <modified_date>2014&#x2f;01&#x2f;28 11&#x3a;56&#x3a;46.604</modified_date>
   </info>
   <notepads>
     <notepad>
-      <note>JAdH: unkown&#47;empty date has n&#47;a as value, but according to database schedule it should be of type integer</note>
-      <xloc>374</xloc>
-      <yloc>39</yloc>
+      <note>JAdH&#x3a; unkown&#x2f;empty date has n&#x2f;a as value, but according to database schedule it should be of type integer</note>
+      <xloc>271</xloc>
+      <yloc>15</yloc>
       <width>637</width>
       <heigth>26</heigth>
       <fontname>Arial</fontname>
@@ -172,7 +177,7 @@
       <drawshadow>N</drawshadow>
     </notepad>
     <notepad>
-      <note>1 january 1990  -  ~ 1 jan 2030</note>
+      <note>1 january 1990  -  &#x7e; 1 jan 2030</note>
       <xloc>386</xloc>
       <yloc>96</yloc>
       <width>187</width>
@@ -194,39 +199,14 @@
     </notepad>
   </notepads>
   <connection>
-    <name>iati</name>
-    <server>localhost</server>
-    <type>MYSQL</type>
-    <access>Native</access>
-    <database>IATI</database>
-    <port>3306</port>
-    <username>root</username>
-    <password>Encrypted 2be98afc86aa7f2e4cb79ce7cd191aed6</password>
-    <servername/>
-    <data_tablespace/>
-    <index_tablespace/>
-    <attributes>
-      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
-      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
-      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
-      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
-      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
-      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
-      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
-    </attributes>
-  </connection>
-  <connection>
     <name>source-database</name>
-    <server>${SOURCE_HOST}</server>
+    <server>&#x24;&#x7b;SOURCE_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${SOURCE_DB}</database>
-    <port>${SOURCE_PORT}</port>
-    <username>${SOURCE_USER}</username>
-    <password>${SOURCE_PASSWORD}</password>
+    <database>&#x24;&#x7b;SOURCE_DB&#x7d;</database>
+    <port>&#x24;&#x7b;SOURCE_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;SOURCE_USER&#x7d;</username>
+    <password>&#x24;&#x7b;SOURCE_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -236,7 +216,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${SOURCE_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;SOURCE_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -245,13 +225,13 @@
   </connection>
   <connection>
     <name>target-database</name>
-    <server>${TARGET_HOST}</server>
+    <server>&#x24;&#x7b;TARGET_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${TARGET_DB}</database>
-    <port>${TARGET_PORT}</port>
-    <username>${TARGET_USER}</username>
-    <password>${TARGET_PASSWORD}</password>
+    <database>&#x24;&#x7b;TARGET_DB&#x7d;</database>
+    <port>&#x24;&#x7b;TARGET_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;TARGET_USER&#x7d;</username>
+    <password>&#x24;&#x7b;TARGET_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -261,7 +241,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${TARGET_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;TARGET_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -269,12 +249,23 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Generate Rows with Initial Date</from><to>Days Sequence</to><enabled>Y</enabled> </hop>  <hop> <from>Days Sequence</from><to>Calculate and Format Dates</to><enabled>Y</enabled> </hop>  <hop> <from>Calculate and Format Dates</from><to>is_first_day_in_month</to><enabled>Y</enabled> </hop>  <hop> <from>is_first_day_in_month</from><to>is_last_day_in_month</to><enabled>Y</enabled> </hop>  <hop> <from>is_first_day_in_week</from><to>is_last_day_in_week</to><enabled>Y</enabled> </hop>  <hop> <from>is_last_day_in_month</from><to>is_first_day_in_week</to><enabled>Y</enabled> </hop>  <hop> <from>is_last_day_in_week</from><to>is_weekend</to><enabled>Y</enabled> </hop>  <hop> <from>Missing Date</from><to>Load dim_date</to><enabled>N</enabled> </hop>  <hop> <from>is_weekend</from><to>rename date</to><enabled>Y</enabled> </hop>  <hop> <from>rename date</from><to>Load dim_date</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Generate Rows with Initial Date</from><to>Days Sequence</to><enabled>Y</enabled> </hop>
+  <hop> <from>Days Sequence</from><to>Calculate and Format Dates</to><enabled>Y</enabled> </hop>
+  <hop> <from>Calculate and Format Dates</from><to>is_first_day_in_month</to><enabled>Y</enabled> </hop>
+  <hop> <from>is_first_day_in_month</from><to>is_last_day_in_month</to><enabled>Y</enabled> </hop>
+  <hop> <from>is_first_day_in_week</from><to>is_last_day_in_week</to><enabled>Y</enabled> </hop>
+  <hop> <from>is_last_day_in_month</from><to>is_first_day_in_week</to><enabled>Y</enabled> </hop>
+  <hop> <from>is_last_day_in_week</from><to>is_weekend</to><enabled>Y</enabled> </hop>
+  <hop> <from>Missing Date</from><to>Load dim_date</to><enabled>N</enabled> </hop>
+  <hop> <from>is_weekend</from><to>rename date</to><enabled>Y</enabled> </hop>
+  <hop> <from>rename date</from><to>Load dim_date</to><enabled>Y</enabled> </hop>
+  </order>
   <step>
     <name>Calculate and Format Dates</name>
     <type>Calculator</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -485,7 +476,7 @@
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>N</remove>
-<conversion_mask>#</conversion_mask>
+<conversion_mask>&#x23;</conversion_mask>
 <decimal_symbol>.</decimal_symbol>
 <grouping_symbol>,</grouping_symbol>
 <currency_symbol/>
@@ -499,7 +490,7 @@
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>N</remove>
-<conversion_mask>#</conversion_mask>
+<conversion_mask>&#x23;</conversion_mask>
 <decimal_symbol>.</decimal_symbol>
 <grouping_symbol>,</grouping_symbol>
 <currency_symbol/>
@@ -513,7 +504,7 @@
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>N</remove>
-<conversion_mask>#</conversion_mask>
+<conversion_mask>&#x23;</conversion_mask>
 <decimal_symbol>.</decimal_symbol>
 <grouping_symbol>,</grouping_symbol>
 <currency_symbol/>
@@ -541,7 +532,7 @@
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>Y</remove>
-<conversion_mask>#</conversion_mask>
+<conversion_mask>&#x23;</conversion_mask>
 <decimal_symbol>.</decimal_symbol>
 <grouping_symbol>,</grouping_symbol>
 <currency_symbol/>
@@ -555,7 +546,7 @@
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>Y</remove>
-<conversion_mask>#</conversion_mask>
+<conversion_mask>&#x23;</conversion_mask>
 <decimal_symbol>.</decimal_symbol>
 <grouping_symbol>,</grouping_symbol>
 <currency_symbol/>
@@ -569,7 +560,7 @@
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>Y</remove>
-<conversion_mask>#</conversion_mask>
+<conversion_mask>&#x23;</conversion_mask>
 <decimal_symbol>.</decimal_symbol>
 <grouping_symbol>,</grouping_symbol>
 <currency_symbol/>
@@ -597,7 +588,7 @@
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>Y</remove>
-<conversion_mask>#</conversion_mask>
+<conversion_mask>&#x23;</conversion_mask>
 <decimal_symbol>.</decimal_symbol>
 <grouping_symbol>,</grouping_symbol>
 <currency_symbol/>
@@ -625,7 +616,7 @@
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>Y</remove>
-<conversion_mask>#</conversion_mask>
+<conversion_mask>&#x23;</conversion_mask>
 <decimal_symbol>.</decimal_symbol>
 <grouping_symbol>,</grouping_symbol>
 <currency_symbol/>
@@ -639,7 +630,7 @@
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>N</remove>
-<conversion_mask>#</conversion_mask>
+<conversion_mask>&#x23;</conversion_mask>
 <decimal_symbol>.</decimal_symbol>
 <grouping_symbol>,</grouping_symbol>
 <currency_symbol/>
@@ -653,7 +644,7 @@
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>N</remove>
-<conversion_mask>#</conversion_mask>
+<conversion_mask>&#x23;</conversion_mask>
 <decimal_symbol>.</decimal_symbol>
 <grouping_symbol>,</grouping_symbol>
 <currency_symbol/>
@@ -741,26 +732,19 @@
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>iati</connection>
+    <connection>target-database</connection>
     <execute_each_row>N</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
-    <sql>DROP TABLE IF EXISTS dim_date;
-CREATE TABLE dim_date
-(
-  date_key DATE
-, year TINYTEXT
-, month INT
-, day INT
-, month_text_en TINYTEXT
-, quarter TINYTEXT
-)
-;</sql>
+    <quoteString>N</quoteString>
+    <sql>DROP TABLE IF EXISTS dim_date&#x3b;&#xa;CREATE TABLE dim_date&#xa;&#x28;&#xa;  date_key DATE&#xa;, year TINYTEXT&#xa;, month INT&#xa;, day INT&#xa;, month_text_en TINYTEXT&#xa;, quarter TINYTEXT&#xa;&#x29;&#xa;&#x3b;</sql>
+    <set_params>N</set_params>
     <insert_field/>
     <update_field/>
     <delete_field/>
@@ -780,6 +764,7 @@ CREATE TABLE dim_date
     <type>Sequence</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -808,6 +793,7 @@ CREATE TABLE dim_date
     <type>RowGenerator</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -824,9 +810,14 @@ CREATE TABLE dim_date
         <nullif>19900101</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
     </fields>
     <limit>15000</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms/>
+    <row_time_field/>
+    <last_time_field/>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>271</xloc>
@@ -840,12 +831,13 @@ CREATE TABLE dim_date
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>iati</connection>
+    <connection>target-database</connection>
     <schema/>
     <table>dim_date</table>
     <commit>1000</commit>
@@ -901,6 +893,7 @@ CREATE TABLE dim_date
     <type>RowGenerator</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -917,6 +910,7 @@ CREATE TABLE dim_date
         <nullif>00010101</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>day_sequence</name>
@@ -928,6 +922,7 @@ CREATE TABLE dim_date
         <nullif>0</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>date</name>
@@ -939,6 +934,7 @@ CREATE TABLE dim_date
         <nullif>00010101</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>date_key</name>
@@ -950,6 +946,7 @@ CREATE TABLE dim_date
         <nullif>10101</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>date_short</name>
@@ -958,9 +955,10 @@ CREATE TABLE dim_date
         <currency/>
         <decimal/>
         <group/>
-        <nullif>N&#47;A</nullif>
+        <nullif>N&#x2f;A</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>date_medium</name>
@@ -969,9 +967,10 @@ CREATE TABLE dim_date
         <currency/>
         <decimal/>
         <group/>
-        <nullif>N&#47;A</nullif>
+        <nullif>N&#x2f;A</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>date_long</name>
@@ -980,9 +979,10 @@ CREATE TABLE dim_date
         <currency/>
         <decimal/>
         <group/>
-        <nullif>N&#47;A</nullif>
+        <nullif>N&#x2f;A</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>date_full</name>
@@ -994,6 +994,7 @@ CREATE TABLE dim_date
         <nullif>Not Applicable</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>day_in_year</name>
@@ -1002,9 +1003,10 @@ CREATE TABLE dim_date
         <currency/>
         <decimal/>
         <group/>
-        <nullif>N&#47;A</nullif>
+        <nullif>N&#x2f;A</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>day_abbreviation</name>
@@ -1013,9 +1015,10 @@ CREATE TABLE dim_date
         <currency/>
         <decimal/>
         <group/>
-        <nullif>N&#47;A</nullif>
+        <nullif>N&#x2f;A</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>day_name</name>
@@ -1027,6 +1030,7 @@ CREATE TABLE dim_date
         <nullif>Not Applicable</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>week_in_year</name>
@@ -1038,6 +1042,7 @@ CREATE TABLE dim_date
         <nullif>NA</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>week_in_month</name>
@@ -1049,6 +1054,7 @@ CREATE TABLE dim_date
         <nullif>N</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>month_abbreviation</name>
@@ -1057,9 +1063,10 @@ CREATE TABLE dim_date
         <currency/>
         <decimal/>
         <group/>
-        <nullif>N&#47;A</nullif>
+        <nullif>N&#x2f;A</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>month_name</name>
@@ -1071,6 +1078,7 @@ CREATE TABLE dim_date
         <nullif>Not Applicable</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>year2</name>
@@ -1082,6 +1090,7 @@ CREATE TABLE dim_date
         <nullif>NA</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>year4</name>
@@ -1090,9 +1099,10 @@ CREATE TABLE dim_date
         <currency/>
         <decimal/>
         <group/>
-        <nullif>N&#47;A</nullif>
+        <nullif>N&#x2f;A</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>day_in_week</name>
@@ -1104,6 +1114,7 @@ CREATE TABLE dim_date
         <nullif>0</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>month_number</name>
@@ -1115,6 +1126,7 @@ CREATE TABLE dim_date
         <nullif>0</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>day_in_month</name>
@@ -1126,6 +1138,7 @@ CREATE TABLE dim_date
         <nullif>0</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>diff_days_curr_day_next_day</name>
@@ -1137,6 +1150,7 @@ CREATE TABLE dim_date
         <nullif>0</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>quarter_number</name>
@@ -1148,6 +1162,7 @@ CREATE TABLE dim_date
         <nullif>0</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>quarter_name</name>
@@ -1159,6 +1174,7 @@ CREATE TABLE dim_date
         <nullif>NA</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>year_quarter</name>
@@ -1167,9 +1183,10 @@ CREATE TABLE dim_date
         <currency/>
         <decimal/>
         <group/>
-        <nullif>N&#47;A</nullif>
+        <nullif>N&#x2f;A</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>year_month_number</name>
@@ -1178,9 +1195,10 @@ CREATE TABLE dim_date
         <currency/>
         <decimal/>
         <group/>
-        <nullif>N&#47;A</nullif>
+        <nullif>N&#x2f;A</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>year_month_abbreviation</name>
@@ -1189,9 +1207,10 @@ CREATE TABLE dim_date
         <currency/>
         <decimal/>
         <group/>
-        <nullif>N&#47;A</nullif>
+        <nullif>N&#x2f;A</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>is_first_day_in_month</name>
@@ -1200,9 +1219,10 @@ CREATE TABLE dim_date
         <currency/>
         <decimal/>
         <group/>
-        <nullif>N&#47;A</nullif>
+        <nullif>N&#x2f;A</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>is_last_day_in_month</name>
@@ -1211,9 +1231,10 @@ CREATE TABLE dim_date
         <currency/>
         <decimal/>
         <group/>
-        <nullif>N&#47;A</nullif>
+        <nullif>N&#x2f;A</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>is_first_day_in_week</name>
@@ -1222,9 +1243,10 @@ CREATE TABLE dim_date
         <currency/>
         <decimal/>
         <group/>
-        <nullif>N&#47;A</nullif>
+        <nullif>N&#x2f;A</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>is_last_day_in_week</name>
@@ -1233,9 +1255,10 @@ CREATE TABLE dim_date
         <currency/>
         <decimal/>
         <group/>
-        <nullif>N&#47;A</nullif>
+        <nullif>N&#x2f;A</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>is_weekend</name>
@@ -1244,12 +1267,17 @@ CREATE TABLE dim_date
         <currency/>
         <decimal/>
         <group/>
-        <nullif>N&#47;A</nullif>
+        <nullif>N&#x2f;A</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
     </fields>
     <limit>1</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms/>
+    <row_time_field/>
+    <last_time_field/>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>649</xloc>
@@ -1263,6 +1291,7 @@ CREATE TABLE dim_date
     <type>ValueMapper</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1290,6 +1319,7 @@ CREATE TABLE dim_date
     <type>ValueMapper</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1317,6 +1347,7 @@ CREATE TABLE dim_date
     <type>ValueMapper</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1344,6 +1375,7 @@ CREATE TABLE dim_date
     <type>ValueMapper</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1371,6 +1403,7 @@ CREATE TABLE dim_date
     <type>ValueMapper</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1402,6 +1435,7 @@ CREATE TABLE dim_date
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1415,6 +1449,9 @@ CREATE TABLE dim_date
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -1433,4 +1470,5 @@ CREATE TABLE dim_date
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
+
 </transformation>
