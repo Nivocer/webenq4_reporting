@@ -10,27 +10,27 @@
     <parameters>
         <parameter>
             <name>DB_SOURCE_TABLE</name>
-            <default_value/>
+            <default_value>stage_reporting_org</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>DB_TARGET_TABLE</name>
-            <default_value/>
+            <default_value>check_reporting_org_ref</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>ORG_KEY</name>
-            <default_value/>
+            <default_value>stage_reporting_org_key</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>ORG_NAME</name>
-            <default_value/>
+            <default_value>reporting-org</default_value>
             <description/>
         </parameter>
         <parameter>
             <name>ORG_REF</name>
-            <default_value/>
+            <default_value>reporting-org-ref</default_value>
             <description/>
         </parameter>
     </parameters>
@@ -93,7 +93,7 @@
   <created_user>-</created_user>
   <created_date>2014&#x2f;01&#x2f;10 15&#x3a;52&#x3a;31.108</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;01&#x2f;30 15&#x3a;11&#x3a;04.116</modified_date>
+  <modified_date>2014&#x2f;01&#x2f;30 15&#x3a;35&#x3a;05.029</modified_date>
   </info>
   <notepads>
     <notepad>
@@ -222,14 +222,16 @@
   <hop> <from>lookup organisation ref from codelist</from><to>ref has format xx-yy-zz</to><enabled>Y</enabled> </hop>
   <hop> <from>ref has format xx-yy-zz</from><to>Add null codelist_agency_code</to><enabled>Y</enabled> </hop>
   <hop> <from>ref has format xx-yy-zz</from><to>copy ref</to><enabled>Y</enabled> </hop>
-  <hop> <from>Dummy &#x28;do nothing&#x29;</from><to>valid organisation ref&#x3f;</to><enabled>Y</enabled> </hop>
   <hop> <from>valid organisation ref&#x3f;</from><to>valid_organisation_ref&#x3d;false</to><enabled>Y</enabled> </hop>
   <hop> <from>Agency code on codelist</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
   <hop> <from>valid organisation ref&#x3f;</from><to>valid-organisation-ref&#x3d;true</to><enabled>Y</enabled> </hop>
   <hop> <from>Table input</from><to>lookup organisation ref from codelist</to><enabled>Y</enabled> </hop>
-  <hop> <from>valid_organisation_ref&#x3d;false</from><to>add valid_ref_boolean</to><enabled>Y</enabled> </hop>
-  <hop> <from>valid-organisation-ref&#x3d;true</from><to>add valid_ref_boolean</to><enabled>Y</enabled> </hop>
-  <hop> <from>add valid_ref_boolean</from><to>Table output</to><enabled>Y</enabled> </hop>
+  <hop> <from>valid_organisation_ref&#x3d;false</from><to>Table output</to><enabled>Y</enabled> </hop>
+  <hop> <from>valid-organisation-ref&#x3d;true</from><to>Table output</to><enabled>Y</enabled> </hop>
+  <hop> <from>Dummy &#x28;do nothing&#x29;</from><to>org_ref is null&#x3f;</to><enabled>Y</enabled> </hop>
+  <hop> <from>org_ref is null&#x3f;</from><to>valid organisation ref&#x3f;</to><enabled>Y</enabled> </hop>
+  <hop> <from>org_ref is null&#x3f;</from><to>org_ref is null</to><enabled>Y</enabled> </hop>
+  <hop> <from>org_ref is null</from><to>Table output</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Add null codelist_agency_code</name>
@@ -508,7 +510,7 @@
            <schema_name/>
            </partitioning>
     <connection>target-database</connection>
-    <sql>SELECT&#xa;  &#x60;&#x24;&#x7b;ORG_KEY&#x7d;&#x60; as org_key&#xa;, &#x60;&#x24;&#x7b;ORG_NAME&#x7d;&#x60; as org_name&#xa;, &#x60;&#x24;&#x7b;ORG_REF&#x7d;&#x60; as org_ref&#xa;FROM &#x24;&#x7b;DB_SOURCE_TABLE&#x7d;&#xa;where &#x60;&#x24;&#x7b;ORG_REF&#x7d;&#x60; is not null&#x3b;</sql>
+    <sql>SELECT&#xa;  &#x60;&#x24;&#x7b;ORG_KEY&#x7d;&#x60; as org_key&#xa;, &#x60;&#x24;&#x7b;ORG_NAME&#x7d;&#x60; as org_name&#xa;, &#x60;&#x24;&#x7b;ORG_REF&#x7d;&#x60; as org_ref&#xa;FROM &#x24;&#x7b;DB_SOURCE_TABLE&#x7d;&#xa;</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -554,36 +556,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>727</xloc>
-      <yloc>538</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>add valid_ref_boolean</name>
-    <type>ValueMapper</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <field_to_use>valid_ref</field_to_use>
-    <target_field>valid_ref_boolean</target_field>
-    <non_match_default>1</non_match_default>
-    <fields>
-      <field>
-        <source_value>0</source_value>
-        <target_value>0</target_value>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>613</xloc>
-      <yloc>555</yloc>
+      <xloc>715</xloc>
+      <yloc>568</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -727,8 +701,8 @@
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>276</xloc>
-      <yloc>497</yloc>
+      <xloc>257</xloc>
+      <yloc>572</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -758,10 +732,24 @@
 <grouping_symbol/>
 <currency_symbol/>
 </calculation>
+       <calculation><field_name>valid_ref_boolean</field_name>
+<calc_type>CONSTANT</calc_type>
+<field_a>Y</field_a>
+<field_b/>
+<field_c/>
+<value_type>String</value_type>
+<value_length>1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>465</xloc>
-      <yloc>595</yloc>
+      <xloc>457</xloc>
+      <yloc>664</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -785,16 +773,102 @@
         <currency/>
         <decimal/>
         <group/>
-        <nullif>0</nullif>
+        <nullif/>
         <length>255</length>
+        <precision>-1</precision>
+        <set_empty_string>Y</set_empty_string>
+      </field>
+      <field>
+        <name>valid_ref_boolean</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>N</nullif>
+        <length>1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
       </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>485</xloc>
-      <yloc>497</yloc>
+      <xloc>457</xloc>
+      <yloc>569</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>org_ref is null&#x3f;</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>org_ref is null</send_true_to>
+<send_false_to>valid organisation ref&#x3f;</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>org_ref</leftvalue>
+ <function>IS NULL</function>
+ <rightvalue/>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>257</xloc>
+      <yloc>454</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>org_ref is null</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>valid_ref</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <length>255</length>
+        <precision>-1</precision>
+        <set_empty_string>Y</set_empty_string>
+      </field>
+      <field>
+        <name>valid_ref_boolean</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <length>1</length>
+        <precision>-1</precision>
+        <set_empty_string>Y</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>457</xloc>
+      <yloc>449</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
