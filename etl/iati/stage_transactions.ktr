@@ -68,7 +68,7 @@
   <created_user>-</created_user>
   <created_date>2014&#x2f;01&#x2f;10 15&#x3a;52&#x3a;31.108</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;01&#x2f;28 11&#x3a;26&#x3a;17.324</modified_date>
+  <modified_date>2014&#x2f;01&#x2f;30 10&#x3a;08&#x3a;17.200</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -161,6 +161,7 @@
   <hop> <from>Receiver_org set&#x3f;</from><to>limit fieldlength</to><enabled>Y</enabled> </hop>
   <hop> <from>Get transactions</from><to>get activity key</to><enabled>Y</enabled> </hop>
   <hop> <from>get activity key</from><to>Currency set&#x3f;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get transactions</from><to>error output to file</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Create staging table</name>
@@ -648,6 +649,58 @@
     </step>
 
   <step>
+    <name>error output to file</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>&#x24;&#x7b;PATH_TO_LOG&#x7d;iati-stage-activity-getXml-&#x24;&#x7b;Internal.Transformation.Name&#x7d;</name>
+      <is_command>N</is_command>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
+      <extention>csv</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>626</xloc>
+      <yloc>24</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
     <name>get activity key</name>
     <type>DBLookup</type>
     <description/>
@@ -875,6 +928,18 @@
     </step>
 
   <step_error_handling>
+      <error>
+        <source_step>Get transactions</source_step>
+        <target_step>error output to file</target_step>
+        <is_enabled>Y</is_enabled>
+        <nr_valuename/>
+        <descriptions_valuename/>
+        <fields_valuename/>
+        <codes_valuename/>
+        <max_errors/>
+        <max_pct_errors/>
+        <min_pct_rows/>
+      </error>
   </step_error_handling>
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>

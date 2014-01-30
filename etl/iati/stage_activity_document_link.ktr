@@ -68,7 +68,7 @@
   <created_user>-</created_user>
   <created_date>2014&#x2f;01&#x2f;10 15&#x3a;52&#x3a;31.108</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;01&#x2f;28 11&#x3a;25&#x3a;31.016</modified_date>
+  <modified_date>2014&#x2f;01&#x2f;30 10&#x3a;18&#x3a;28.434</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -153,6 +153,7 @@
   <hop> <from>strip path to data</from><to>limit fieldlength</to><enabled>Y</enabled> </hop>
   <hop> <from>get activity policy marker</from><to>get activity key</to><enabled>Y</enabled> </hop>
   <hop> <from>get activity key</from><to>strip path to data</to><enabled>Y</enabled> </hop>
+  <hop> <from>get activity policy marker</from><to>error output to file</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Execute SQL script</name>
@@ -170,7 +171,7 @@
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
     <quoteString>N</quoteString>
-    <sql>drop table if exists stage_activity_document_link&#x3b;&#xa;CREATE TABLE stage_activity_document_link&#xa;&#x28;&#xa;  stage_activity_document_link_key BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY&#xa;, activity_key BIGINT&#xa;, input_file_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, size INT&#xa;, typeFile VARCHAR&#x28;12&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, url TINYTEXT&#xa;, format TINYTEXT&#xa;, significance TINYTEXT&#xa;, &#x60;policy-marker&#x60; TEXT&#xa;, title TINYTEXT&#xa;, &#x60;title-lang&#x60; TINYTEXT&#xa;, category TINYTEXT&#xa;, &#x60;category-code&#x60; TINYTEXT&#xa;, &#x60;category-lang&#x60; TINYTEXT&#xa;, language TINYTEXT&#xa;, &#x60;language-code&#x60; TINYTEXT&#xa;, &#x60;lanuage-lang&#x60; TINYTEXT&#xa;&#x29; ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;</sql>
+    <sql>drop table if exists stage_activity_document_link&#x3b;&#xa;CREATE TABLE stage_activity_document_link&#xa;&#x28;&#xa;  stage_activity_document_link_key BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY&#xa;, activity_key BIGINT&#xa;, input_file_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, size INT&#xa;, typeFile VARCHAR&#x28;12&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, url TINYTEXT&#xa;, format TINYTEXT&#xa;, significance TINYTEXT&#xa;, &#x60;policy-marker&#x60; TEXT&#xa;, title TEXT&#xa;, &#x60;title-lang&#x60; TINYTEXT&#xa;, category TINYTEXT&#xa;, &#x60;category-code&#x60; TINYTEXT&#xa;, &#x60;category-lang&#x60; TINYTEXT&#xa;, language TINYTEXT&#xa;, &#x60;language-code&#x60; TINYTEXT&#xa;, &#x60;lanuage-lang&#x60; TINYTEXT&#xa;&#x29; ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -182,6 +183,58 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>88</xloc>
       <yloc>138</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>error output to file</name>
+    <type>TextFileOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
+    <enclosure_forced>N</enclosure_forced>
+    <enclosure_fix_disabled>N</enclosure_fix_disabled>
+    <header>Y</header>
+    <footer>N</footer>
+    <format>DOS</format>
+    <compression>None</compression>
+    <encoding/>
+    <endedLine/>
+    <fileNameInField>N</fileNameInField>
+    <fileNameField/>
+    <create_parent_folder>Y</create_parent_folder>
+    <file>
+      <name>&#x24;&#x7b;PATH_TO_LOG&#x7d;iati-stage-activity-getXml-&#x24;&#x7b;Internal.Transformation.Name&#x7d;</name>
+      <is_command>N</is_command>
+      <servlet_output>N</servlet_output>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
+      <extention>csv</extention>
+      <append>N</append>
+      <split>N</split>
+      <haspartno>N</haspartno>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <SpecifyFormat>N</SpecifyFormat>
+      <date_time_format/>
+      <add_to_result_filenames>Y</add_to_result_filenames>
+      <pad>N</pad>
+      <fast_dump>N</fast_dump>
+      <splitevery>0</splitevery>
+    </file>
+    <fields>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>342</xloc>
+      <yloc>151</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -562,7 +615,7 @@
         <in_stream_name>title</in_stream_name>
         <out_stream_name/>
         <cut_from>0</cut_from>
-        <cut_to>254</cut_to>
+        <cut_to>65000</cut_to>
       </field>
       <field>
         <in_stream_name>title-lang</in_stream_name>
@@ -686,6 +739,18 @@
     </step>
 
   <step_error_handling>
+      <error>
+        <source_step>get activity policy marker</source_step>
+        <target_step>error output to file</target_step>
+        <is_enabled>Y</is_enabled>
+        <nr_valuename/>
+        <descriptions_valuename/>
+        <fields_valuename/>
+        <codes_valuename/>
+        <max_errors/>
+        <max_pct_errors/>
+        <min_pct_rows/>
+      </error>
   </step_error_handling>
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
