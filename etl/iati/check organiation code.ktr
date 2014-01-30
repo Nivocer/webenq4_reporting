@@ -8,6 +8,31 @@
     <trans_status>1</trans_status>
     <directory>&#x2f;iati</directory>
     <parameters>
+        <parameter>
+            <name>DB_SOURCE_TABLE</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>DB_TARGET_TABLE</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>ORG_KEY</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>ORG_NAME</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>ORG_REF</name>
+            <default_value/>
+            <description/>
+        </parameter>
     </parameters>
     <log>
 <trans-log-table><connection/>
@@ -68,7 +93,7 @@
   <created_user>-</created_user>
   <created_date>2014&#x2f;01&#x2f;10 15&#x3a;52&#x3a;31.108</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;01&#x2f;27 11&#x3a;46&#x3a;45.089</modified_date>
+  <modified_date>2014&#x2f;01&#x2f;30 15&#x3a;03&#x3a;46.709</modified_date>
   </info>
   <notepads>
     <notepad>
@@ -76,6 +101,27 @@
       <xloc>410</xloc>
       <yloc>218</yloc>
       <width>173</width>
+      <heigth>26</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>source&#x2f;target table, org_ref, org_name, org_key fields are retrieved from parameters</note>
+      <xloc>243</xloc>
+      <yloc>14</yloc>
+      <width>495</width>
       <heigth>26</heigth>
       <fontname>Arial</fontname>
       <fontsize>10</fontsize>
@@ -180,9 +226,10 @@
   <hop> <from>valid organisation ref&#x3f;</from><to>valid_organisation_ref&#x3d;false</to><enabled>Y</enabled> </hop>
   <hop> <from>Agency code on codelist</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
   <hop> <from>valid organisation ref&#x3f;</from><to>valid-organisation-ref&#x3d;true</to><enabled>Y</enabled> </hop>
-  <hop> <from>Get rows from result</from><to>lookup organisation ref from codelist</to><enabled>Y</enabled> </hop>
-  <hop> <from>valid-organisation-ref&#x3d;true</from><to>temp_check_organisation_code</to><enabled>Y</enabled> </hop>
-  <hop> <from>valid_organisation_ref&#x3d;false</from><to>temp_check_organisation_code</to><enabled>Y</enabled> </hop>
+  <hop> <from>Table input</from><to>lookup organisation ref from codelist</to><enabled>Y</enabled> </hop>
+  <hop> <from>valid_organisation_ref&#x3d;false</from><to>add valid_ref_boolean</to><enabled>Y</enabled> </hop>
+  <hop> <from>valid-organisation-ref&#x3d;true</from><to>add valid_ref_boolean</to><enabled>Y</enabled> </hop>
+  <hop> <from>add valid_ref_boolean</from><to>Table output</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Add null codelist_agency_code</name>
@@ -385,9 +432,9 @@
     <connection>target-database</connection>
     <execute_each_row>N</execute_each_row>
     <single_statement>N</single_statement>
-    <replace_variables>N</replace_variables>
+    <replace_variables>Y</replace_variables>
     <quoteString>N</quoteString>
-    <sql>drop table if exists temp_check_organisation_code&#x3b;&#xa;CREATE TABLE temp_check_organisation_code&#xa;&#x28;&#xa;  org_ref VARCHAR&#x28;255&#x29;&#xa;, org_key BIGINT&#xa;, org_name VARCHAR&#x28;255&#x29;&#xa;, codelist_organisation_ref_key BIGINT&#xa;, codelist_organisation_agency_code VARCHAR&#x28;50&#x29;&#xa;, codelist_organisation_agency_code_key VARCHAR&#x28;15&#x29;&#xa;, valid_ref VARCHAR&#x28;255&#x29;&#xa;&#x29; engine&#x3d;myisam	&#xa;&#x3b;</sql>
+    <sql>drop table if exists &#x24;&#x7b;DB_TARGET_TABLE&#x7d;&#x3b;&#xa;CREATE TABLE &#x24;&#x7b;DB_TARGET_TABLE&#x7d;&#xa;&#x28;&#xa;  org_ref VARCHAR&#x28;255&#x29;&#xa;, org_key BIGINT&#xa;, org_name VARCHAR&#x28;255&#x29;&#xa;, codelist_organisation_agency_code VARCHAR&#x28;50&#x29;&#xa;, codelist_organisation_agency_code_key VARCHAR&#x28;15&#x29;&#xa;, codelist_organisation_ref_key BIGINT&#xa;, valid_ref VARCHAR&#x28;255&#x29; &#xa;, valid_ref_boolean char&#x28;1&#x29;&#xa;&#x29; engine&#x3d;myisam	&#xa;&#x3b;&#xa;&#xa;&#xa;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -397,39 +444,8 @@
     </arguments>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>78</xloc>
-      <yloc>46</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Get rows from result</name>
-    <type>RowsFromResult</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>      <field>        <name>org_ref</name>
-        <type>String</type>
-        <length>255</length>
-        <precision>-1</precision>
-        </field>      <field>        <name>org_key</name>
-        <type>Integer</type>
-        <length>15</length>
-        <precision>-1</precision>
-        </field>      <field>        <name>org_name</name>
-        <type>String</type>
-        <length>255</length>
-        <precision>-1</precision>
-        </field>      </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>71</xloc>
-      <yloc>162</yloc>
+      <xloc>106</xloc>
+      <yloc>36</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -476,6 +492,98 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>476</xloc>
       <yloc>278</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Table input</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>target-database</connection>
+    <sql>SELECT&#xa;  &#x60;&#x24;&#x7b;ORG_KEY&#x7d;&#x60; as org_key&#xa;, &#x60;&#x24;&#x7b;ORG_NAME&#x7d;&#x60; as org_name&#xa;, &#x60;&#x24;&#x7b;ORG_REF&#x7d;&#x60; as org_ref&#xa;FROM &#x24;&#x7b;DB_SOURCE_TABLE&#x7d;&#xa;where &#x60;&#x24;&#x7b;ORG_REF&#x7d;&#x60; is not null&#x3b;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>87</xloc>
+      <yloc>136</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Table output</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>target-database</connection>
+    <schema/>
+    <table>&#x24;&#x7b;DB_TARGET_TABLE&#x7d;</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>Y</use_batch>
+    <specify_fields>N</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field/>
+    <fields>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>727</xloc>
+      <yloc>538</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>add valid_ref_boolean</name>
+    <type>ValueMapper</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <field_to_use>valid_ref</field_to_use>
+    <target_field>valid_ref_boolean</target_field>
+    <non_match_default>1</non_match_default>
+    <fields>
+      <field>
+        <source_value>0</source_value>
+        <target_value>0</target_value>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>613</xloc>
+      <yloc>555</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -585,44 +693,6 @@
     </step>
 
   <step>
-    <name>temp_check_organisation_code</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>target-database</connection>
-    <schema/>
-    <table>temp_check_organisation_code</table>
-    <commit>100</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>N</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>755</xloc>
-      <yloc>594</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
     <name>valid organisation ref&#x3f;</name>
     <type>FilterRows</type>
     <description/>
@@ -723,7 +793,7 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>529</xloc>
+      <xloc>485</xloc>
       <yloc>497</yloc>
       <draw>Y</draw>
       </GUI>
