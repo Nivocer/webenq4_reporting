@@ -1,11 +1,11 @@
 <transformation>
   <info>
-    <name>check organiation code</name>
+    <name>check organisation ref</name>
     <description/>
     <extended_description>get ref from previous transformation, returns&#xa;codelist_organisation_key &#x28;null if not&#x29;&#xa;codelist_agency_code &#x28;if ref has format x-y-z&#xa;codelist_agency_code_key &#x28;if agency code on codelist&#x29;&#xa;valid_ref &#x28;valid organisation ref, null when not valid&#x29;&#xa;</extended_description>
     <trans_version/>
     <trans_type>Normal</trans_type>
-    <trans_status>1</trans_status>
+    <trans_status>2</trans_status>
     <directory>&#x2f;iati</directory>
     <parameters>
         <parameter>
@@ -93,7 +93,7 @@
   <created_user>-</created_user>
   <created_date>2014&#x2f;01&#x2f;10 15&#x3a;52&#x3a;31.108</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;01&#x2f;30 15&#x3a;03&#x3a;46.709</modified_date>
+  <modified_date>2014&#x2f;01&#x2f;30 15&#x3a;11&#x3a;04.116</modified_date>
   </info>
   <notepads>
     <notepad>
