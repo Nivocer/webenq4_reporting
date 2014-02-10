@@ -4,27 +4,22 @@
     <extended_description/>
     <job_version/>
     <job_status>0</job_status>
-  <directory>&#47;questback</directory>
+  <directory>&#x2f;questback</directory>
   <created_user>-</created_user>
-  <created_date>2013&#47;11&#47;29 14:16:09.547</created_date>
+  <created_date>2013&#x2f;11&#x2f;29 14&#x3a;16&#x3a;09.547</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2013&#47;12&#47;03 16:38:32.375</modified_date>
+  <modified_date>2014&#x2f;01&#x2f;31 16&#x3a;18&#x3a;44.904</modified_date>
     <parameters>
-        <parameter>
-            <name>PATH_TO_DATA</name>
-            <default_value>&#47;home&#47;jaapandre&#47;workspace&#47;management_git&#47;SLA&#47;2013&#47;hva-oo&#47;inputs&#47;meting1&#47;</default_value>
-            <description/>
-        </parameter>
     </parameters>
   <connection>
     <name>source-database</name>
-    <server>${SOURCE_HOST}</server>
+    <server>&#x24;&#x7b;SOURCE_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${SOURCE_DB}</database>
-    <port>${SOURCE_PORT}</port>
-    <username>${SOURCE_USER}</username>
-    <password>${SOURCE_PASSWORD}</password>
+    <database>&#x24;&#x7b;SOURCE_DB&#x7d;</database>
+    <port>&#x24;&#x7b;SOURCE_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;SOURCE_USER&#x7d;</username>
+    <password>&#x24;&#x7b;SOURCE_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -34,7 +29,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${SOURCE_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;SOURCE_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -43,13 +38,13 @@
   </connection>
   <connection>
     <name>target-database</name>
-    <server>${TARGET_HOST}</server>
+    <server>&#x24;&#x7b;TARGET_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${TARGET_DB}</database>
-    <port>${TARGET_PORT}</port>
-    <username>${TARGET_USER}</username>
-    <password>${TARGET_PASSWORD}</password>
+    <database>&#x24;&#x7b;TARGET_DB&#x7d;</database>
+    <port>&#x24;&#x7b;TARGET_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;TARGET_USER&#x7d;</username>
+    <password>&#x24;&#x7b;TARGET_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -59,7 +54,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${TARGET_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;TARGET_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -74,7 +69,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_JOB</id><enabled>Y</enabled><name>ID_JOB</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>JOBNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></job-log-table>
+<field><id>ID_JOB</id><enabled>Y</enabled><name>ID_JOB</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>JOBNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>START_JOB_ENTRY</id><enabled>N</enabled><name>START_JOB_ENTRY</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></job-log-table>
 <jobentry-log-table><connection/>
 <schema/>
 <table/>
@@ -96,14 +91,14 @@
       <trans_object_id/>
       <filename/>
       <transname>dim_questionnaire</transname>
-      <directory>&#47;questback</directory>
+      <directory>&#x2f;questback</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
       <clear_rows>N</clear_rows>
       <clear_files>N</clear_files>
       <set_logfile>N</set_logfile>
-      <logfile>&#47;tmp&#47;dim_quest.log</logfile>
+      <logfile>&#x2f;tmp&#x2f;dim_quest.log</logfile>
       <logext>txt</logext>
       <add_date>N</add_date>
       <add_time>N</add_time>
@@ -114,12 +109,13 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>257</xloc>
-      <yloc>146</yloc>
+      <xloc>321</xloc>
+      <yloc>345</yloc>
       </entry>
     <entry>
       <name>dim_group-module</name>
@@ -129,7 +125,7 @@
       <trans_object_id/>
       <filename/>
       <transname>dim_group-module</transname>
-      <directory>&#47;questback</directory>
+      <directory>&#x2f;questback</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -147,12 +143,13 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>386</xloc>
-      <yloc>149</yloc>
+      <xloc>321</xloc>
+      <yloc>413</yloc>
       </entry>
     <entry>
       <name>stage_group-module</name>
@@ -162,7 +159,7 @@
       <trans_object_id/>
       <filename/>
       <transname>stage_group-module</transname>
-      <directory>&#47;questback</directory>
+      <directory>&#x2f;questback</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -180,12 +177,13 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>N</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>538</xloc>
-      <yloc>149</yloc>
+      <xloc>507</xloc>
+      <yloc>413</yloc>
       </entry>
     <entry>
       <name>Add filenames to result</name>
@@ -196,8 +194,8 @@
       <delete_all_before>N</delete_all_before>
       <fields>
         <field>
-          <name>${PATH_TO_DATA}</name>
-          <filemask>.*.*xlsx</filemask>
+          <name>&#x24;&#x7b;PATH_TO_DATA&#x7d;</name>
+          <filemask>.&#x2a;.&#x2a;xlsx</filemask>
         </field>
       </fields>
       <parallel>N</parallel>
@@ -234,7 +232,7 @@
       <trans_object_id/>
       <filename/>
       <transname>dim_question</transname>
-      <directory>&#47;questback</directory>
+      <directory>&#x2f;questback</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -252,12 +250,13 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>209</xloc>
-      <yloc>247</yloc>
+      <xloc>321</xloc>
+      <yloc>492</yloc>
       </entry>
     <entry>
       <name>stage_question</name>
@@ -267,7 +266,7 @@
       <trans_object_id/>
       <filename/>
       <transname>stage_question</transname>
-      <directory>&#47;questback</directory>
+      <directory>&#x2f;questback</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -285,12 +284,13 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>367</xloc>
-      <yloc>251</yloc>
+      <xloc>507</xloc>
+      <yloc>492</yloc>
       </entry>
     <entry>
       <name>fact_answers</name>
@@ -300,7 +300,7 @@
       <trans_object_id/>
       <filename/>
       <transname>fact_answers</transname>
-      <directory>&#47;questback</directory>
+      <directory>&#x2f;questback</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -318,12 +318,13 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>195</xloc>
-      <yloc>368</yloc>
+      <xloc>321</xloc>
+      <yloc>861</yloc>
       </entry>
     <entry>
       <name>lookup_answers</name>
@@ -333,7 +334,7 @@
       <trans_object_id/>
       <filename/>
       <transname>lookup_answers</transname>
-      <directory>&#47;questback</directory>
+      <directory>&#x2f;questback</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -351,25 +352,19 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>780</xloc>
-      <yloc>248</yloc>
+      <xloc>321</xloc>
+      <yloc>710</yloc>
       </entry>
     <entry>
       <name>lookup_up_answer.sql</name>
       <description/>
       <type>SQL</type>
-      <sql>INSERT INTO `lookup_answer_label` (`answer_group_key`, `answer_label`, `answer`, `sequence`) VALUES
-(1, &apos;nvt&#47;na&apos;, null, 1),
-(2, &apos;Helemaal mee oneens&apos;, 1, 1),
-(2, &apos;Mee oneens&apos;, 2, 2),
-(2, &apos;Neutraal&apos;, 3, 3),
-(2, &apos;Mee eens&apos;, 4, 4),
-(2, &apos;Helemaal mee eens&apos;, 5, 5);
-</sql>
+      <sql>INSERT INTO &#x60;lookup_answer_label&#x60; &#x28;&#x60;answer_group_key&#x60;, &#x60;answer_label&#x60;, &#x60;answer&#x60;, &#x60;sequence&#x60;&#x29; VALUES&#xa;&#x28;1, &#x27;nvt&#x2f;na&#x27;, null, 1&#x29;,&#xa;&#x28;2, &#x27;Helemaal mee oneens&#x27;, 1, 1&#x29;,&#xa;&#x28;2, &#x27;Mee oneens&#x27;, 2, 2&#x29;,&#xa;&#x28;2, &#x27;Neutraal&#x27;, 3, 3&#x29;,&#xa;&#x28;2, &#x27;Mee eens&#x27;, 4, 4&#x29;,&#xa;&#x28;2, &#x27;Helemaal mee eens&#x27;, 5, 5&#x29;&#x3b;&#xa;</sql>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
       <sqlfilename/>
@@ -378,11 +373,11 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>616</xloc>
-      <yloc>194</yloc>
+      <xloc>507</xloc>
+      <yloc>588</yloc>
       </entry>
     <entry>
-      <name>empty lookup_answer_table?</name>
+      <name>empty lookup_answer_table&#x3f;</name>
       <description/>
       <type>EVAL_TABLE_CONTENT</type>
       <connection>target-database</connection>
@@ -398,8 +393,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>523</xloc>
-      <yloc>249</yloc>
+      <xloc>321</xloc>
+      <yloc>589</yloc>
       </entry>
     <entry>
       <name>dim_respondent</name>
@@ -409,7 +404,7 @@
       <trans_object_id/>
       <filename/>
       <transname>dim_respondent</transname>
-      <directory>&#47;questback</directory>
+      <directory>&#x2f;questback</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -427,12 +422,13 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>374</xloc>
-      <yloc>341</yloc>
+      <xloc>321</xloc>
+      <yloc>783</yloc>
       </entry>
     <entry>
       <name>dim_date</name>
@@ -442,7 +438,7 @@
       <trans_object_id/>
       <filename/>
       <transname>dim_date</transname>
-      <directory>&#47;questback</directory>
+      <directory>&#x2f;questback</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
@@ -460,15 +456,16 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>405</xloc>
+      <xloc>498</xloc>
       <yloc>59</yloc>
       </entry>
     <entry>
-      <name>Evaluate rows number in a table</name>
+      <name>number in dim date</name>
       <description/>
       <type>EVAL_TABLE_CONTENT</type>
       <connection>target-database</connection>
@@ -484,8 +481,104 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>255</xloc>
-      <yloc>61</yloc>
+      <xloc>326</xloc>
+      <yloc>59</yloc>
+      </entry>
+    <entry>
+      <name>DUMMY</name>
+      <description/>
+      <type>SPECIAL</type>
+      <start>N</start>
+      <dummy>Y</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>408</xloc>
+      <yloc>137</yloc>
+      </entry>
+    <entry>
+      <name>Evaluate rows number in a table 2</name>
+      <description/>
+      <type>EVAL_TABLE_CONTENT</type>
+      <connection>target-database</connection>
+      <schemaname/>
+      <tablename>dim_group</tablename>
+      <success_condition>rows_count_smaller_equal</success_condition>
+      <limit>0</limit>
+      <is_custom_sql>N</is_custom_sql>
+      <is_usevars>N</is_usevars>
+      <custom_sql/>
+      <add_rows_result>N</add_rows_result>
+      <clear_result_rows>Y</clear_result_rows>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>324</xloc>
+      <yloc>206</yloc>
+      </entry>
+    <entry>
+      <name>add no module row</name>
+      <description/>
+      <type>SQL</type>
+      <sql>INSERT INTO &#x60;webenq_org_hva_pentaho&#x60;.&#x60;dim_module&#x60; &#x28;&#x60;module_key&#x60;, &#x60;module_code&#x60;, &#x60;type_opleiding&#x60;, &#x60;jaar&#x60;, &#x60;klasletter&#x60;, &#x60;module&#x60;, &#x60;docent&#x60;&#x29; VALUES &#x28;1, &#x27;&#x27;, &#x27;&#x27;, &#x27;0&#x27;, &#x27;&#x27;, &#x27;&#x27;, &#x27;&#x27;&#x29;&#x3b;</sql>
+      <useVariableSubstitution>F</useVariableSubstitution>
+      <sqlfromfile>F</sqlfromfile>
+      <sqlfilename/>
+      <sendOneStatement>F</sendOneStatement>
+      <connection>target-database</connection>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>507</xloc>
+      <yloc>204</yloc>
+      </entry>
+    <entry>
+      <name>DUMMY 2</name>
+      <description/>
+      <type>SPECIAL</type>
+      <start>N</start>
+      <dummy>Y</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>409</xloc>
+      <yloc>273</yloc>
+      </entry>
+    <entry>
+      <name>DUMMY 3</name>
+      <description/>
+      <type>SPECIAL</type>
+      <start>N</start>
+      <dummy>Y</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>409</xloc>
+      <yloc>666</yloc>
       </entry>
   </entries>
   <hops>
@@ -535,16 +628,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>lookup_up_answer.sql</from>
-      <to>lookup_answers</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>empty lookup_answer_table?</from>
+      <from>empty lookup_answer_table&#x3f;</from>
       <to>lookup_up_answer.sql</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -553,17 +637,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>empty lookup_answer_table?</from>
-      <to>lookup_answers</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>stage_question</from>
-      <to>empty lookup_answer_table?</to>
+      <to>empty lookup_answer_table&#x3f;</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -589,17 +664,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>dim_date</from>
-      <to>dim_questionnaire</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>Add filenames to result</from>
-      <to>Evaluate rows number in a table</to>
+      <to>number in dim date</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -607,7 +673,7 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>Evaluate rows number in a table</from>
+      <from>number in dim date</from>
       <to>dim_date</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -616,15 +682,97 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Evaluate rows number in a table</from>
-      <to>dim_questionnaire</to>
+      <from>number in dim date</from>
+      <to>DUMMY</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>N</evaluation>
       <unconditional>N</unconditional>
     </hop>
+    <hop>
+      <from>dim_date</from>
+      <to>DUMMY</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>DUMMY</from>
+      <to>Evaluate rows number in a table 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Evaluate rows number in a table 2</from>
+      <to>add no module row</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>add no module row</from>
+      <to>DUMMY 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Evaluate rows number in a table 2</from>
+      <to>DUMMY 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>DUMMY 2</from>
+      <to>dim_questionnaire</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>lookup_up_answer.sql</from>
+      <to>DUMMY 3</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>empty lookup_answer_table&#x3f;</from>
+      <to>DUMMY 3</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>DUMMY 3</from>
+      <to>lookup_answers</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
   </hops>
   <notepads>
   </notepads>
+
 </job>

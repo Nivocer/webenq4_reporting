@@ -6,13 +6,8 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#47;questback</directory>
+    <directory>&#x2f;questback</directory>
     <parameters>
-        <parameter>
-            <name>PATH_TO_DATA</name>
-            <default_value>&#47;home&#47;jaapandre&#47;workspace&#47;management_git&#47;SLA&#47;2013&#47;hva-oo&#47;inputs&#47;meting1&#47;</default_value>
-            <description/>
-        </parameter>
     </parameters>
     <log>
 <trans-log-table><connection/>
@@ -21,7 +16,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
 <perf-log-table><connection/>
 <schema/>
 <table/>
@@ -38,6 +33,11 @@
 <table/>
 <timeout_days/>
 <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -83,14 +83,13 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>-</created_user>
-  <created_date>2011&#47;02&#47;24 23:14:08.270</created_date>
+  <created_date>2011&#x2f;02&#x2f;24 23&#x3a;14&#x3a;08.270</created_date>
   <modified_user>admin</modified_user>
-  <modified_date>2013&#47;12&#47;03 14:49:35.742</modified_date>
+  <modified_date>2014&#x2f;01&#x2f;31 15&#x3a;29&#x3a;41.044</modified_date>
   </info>
   <notepads>
     <notepad>
-      <note>Microsoft excel input and row noramliser are generated with &apos;spreadsheet reader generator&apos;.
-it reads (currently) 1000 columns</note>
+      <note>Microsoft excel input and row noramliser are generated with &#x27;spreadsheet reader generator&#x27;.&#xa;it reads &#x28;currently&#x29; 1000 columns</note>
       <xloc>500</xloc>
       <yloc>3</yloc>
       <width>539</width>
@@ -113,13 +112,13 @@ it reads (currently) 1000 columns</note>
   </notepads>
   <connection>
     <name>source-database</name>
-    <server>${SOURCE_HOST}</server>
+    <server>&#x24;&#x7b;SOURCE_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${SOURCE_DB}</database>
-    <port>${SOURCE_PORT}</port>
-    <username>${SOURCE_USER}</username>
-    <password>${SOURCE_PASSWORD}</password>
+    <database>&#x24;&#x7b;SOURCE_DB&#x7d;</database>
+    <port>&#x24;&#x7b;SOURCE_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;SOURCE_USER&#x7d;</username>
+    <password>&#x24;&#x7b;SOURCE_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -129,7 +128,7 @@ it reads (currently) 1000 columns</note>
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${SOURCE_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;SOURCE_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -138,13 +137,13 @@ it reads (currently) 1000 columns</note>
   </connection>
   <connection>
     <name>target-database</name>
-    <server>${TARGET_HOST}</server>
+    <server>&#x24;&#x7b;TARGET_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${TARGET_DB}</database>
-    <port>${TARGET_PORT}</port>
-    <username>${TARGET_USER}</username>
-    <password>${TARGET_PASSWORD}</password>
+    <database>&#x24;&#x7b;TARGET_DB&#x7d;</database>
+    <port>&#x24;&#x7b;TARGET_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;TARGET_USER&#x7d;</username>
+    <password>&#x24;&#x7b;TARGET_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -154,7 +153,7 @@ it reads (currently) 1000 columns</note>
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${TARGET_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;TARGET_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -162,12 +161,33 @@ it reads (currently) 1000 columns</note>
     </attributes>
   </connection>
   <order>
-  <hop> <from>reset counter for each filename</from><to>not header row</to><enabled>Y</enabled> </hop>  <hop> <from>Get files from result</from><to>Microsoft Excel Input</to><enabled>Y</enabled> </hop>  <hop> <from>Microsoft Excel Input</from><to>add questionnaire key</to><enabled>Y</enabled> </hop>  <hop> <from>add questionnaire key</from><to>reset counter for each filename</to><enabled>Y</enabled> </hop>  <hop> <from>not header row</from><to>Row Normaliser answer</to><enabled>Y</enabled> </hop>  <hop> <from>Select values</from><to>answer not null</to><enabled>Y</enabled> </hop>  <hop> <from>Row Normaliser answer</from><to>trim answer</to><enabled>Y</enabled> </hop>  <hop> <from>trim answer</from><to>Select values</to><enabled>Y</enabled> </hop>  <hop> <from>answer is numeric?</from><to>lookup answer key</to><enabled>Y</enabled> </hop>  <hop> <from>answer not null</from><to>lookup question info (keys)</to><enabled>Y</enabled> </hop>  <hop> <from>answer is numeric?</from><to>Add constants 2</to><enabled>Y</enabled> </hop>  <hop> <from>lookup answer key</from><to>Select values 2</to><enabled>Y</enabled> </hop>  <hop> <from>Select values 2</from><to>save text answer</to><enabled>Y</enabled> </hop>  <hop> <from>Add constants 2</from><to>Select values 2 2</to><enabled>Y</enabled> </hop>  <hop> <from>Select values 2 2</from><to>save numeric answer</to><enabled>Y</enabled> </hop>  <hop> <from>lookup respondent&#47;date key</from><to>answer is numeric?</to><enabled>Y</enabled> </hop>  <hop> <from>lookup question info (keys)</from><to>not empty question_key&#47;module_key</to><enabled>Y</enabled> </hop>  <hop> <from>not empty question_key&#47;module_key</from><to>lookup respondent&#47;date key</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>reset counter for each filename</from><to>not header row</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get files from result</from><to>Microsoft Excel Input</to><enabled>N</enabled> </hop>
+  <hop> <from>Microsoft Excel Input</from><to>add questionnaire key</to><enabled>Y</enabled> </hop>
+  <hop> <from>add questionnaire key</from><to>reset counter for each filename</to><enabled>N</enabled> </hop>
+  <hop> <from>not header row</from><to>Row Normaliser answer</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values</from><to>answer not null</to><enabled>Y</enabled> </hop>
+  <hop> <from>Row Normaliser answer</from><to>trim answer</to><enabled>Y</enabled> </hop>
+  <hop> <from>trim answer</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>answer is numeric&#x3f;</from><to>lookup answer key</to><enabled>Y</enabled> </hop>
+  <hop> <from>answer not null</from><to>lookup question info &#x28;keys&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>answer is numeric&#x3f;</from><to>Add constants 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>lookup answer key</from><to>Select values 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 2</from><to>save text answer</to><enabled>Y</enabled> </hop>
+  <hop> <from>Add constants 2</from><to>Select values 2 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 2 2</from><to>save numeric answer</to><enabled>Y</enabled> </hop>
+  <hop> <from>lookup respondent&#x2f;date key</from><to>answer is numeric&#x3f;</to><enabled>Y</enabled> </hop>
+  <hop> <from>lookup question info &#x28;keys&#x29;</from><to>not empty question_key</to><enabled>Y</enabled> </hop>
+  <hop> <from>not empty question_key</from><to>If field value is null</to><enabled>Y</enabled> </hop>
+  <hop> <from>If field value is null</from><to>lookup respondent&#x2f;date key</to><enabled>Y</enabled> </hop>
+  <hop> <from>add questionnaire key</from><to>reset counter for each filename</to><enabled>Y</enabled> </hop>
+  </order>
   <step>
     <name>Add constants 2</name>
     <type>Constant</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -184,6 +204,7 @@ it reads (currently) 1000 columns</note>
         <nullif>1</nullif>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
     </fields>
      <cluster_schema/>
@@ -199,6 +220,7 @@ it reads (currently) 1000 columns</note>
     <type>FilesFromResult</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -213,10 +235,45 @@ it reads (currently) 1000 columns</note>
     </step>
 
   <step>
+    <name>If field value is null</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <replaceAllByValue/>
+      <replaceAllMask/>
+      <selectFields>Y</selectFields>
+      <selectValuesType>N</selectValuesType>
+      <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>module_key</name>
+        <value>1</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>818</xloc>
+      <yloc>248</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
     <name>Microsoft Excel Input</name>
     <type>ExcelInput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -234,12 +291,12 @@ it reads (currently) 1000 columns</note>
     <limit>0</limit>
     <encoding>UTF-8</encoding>
     <add_to_result_filenames>Y</add_to_result_filenames>
-    <accept_filenames>Y</accept_filenames>
-    <accept_field>path</accept_field>
-    <accept_stepname>Get files from result</accept_stepname>
+    <accept_filenames>N</accept_filenames>
+    <accept_field/>
+    <accept_stepname/>
     <file>
-      <name>${PATH_TO_DATA}</name>
-      <filemask>.*.xlsx</filemask>
+      <name>&#x24;&#x7b;PATH_TO_DATA&#x7d;</name>
+      <filemask>.&#x2a;.xlsx</filemask>
       <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
@@ -12252,6 +12309,11 @@ it reads (currently) 1000 columns</note>
         <startrow>0</startrow>
         <startcol>0</startcol>
         </sheet>
+      <sheet>
+        <name>Raw Data</name>
+        <startrow>0</startrow>
+        <startcol>0</startcol>
+        </sheet>
     </sheets>
     <strict_types>N</strict_types>
     <error_ignored>N</error_ignored>
@@ -12284,6 +12346,7 @@ it reads (currently) 1000 columns</note>
     <type>Normaliser</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15303,6 +15366,7 @@ it reads (currently) 1000 columns</note>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15338,6 +15402,7 @@ it reads (currently) 1000 columns</note>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15389,6 +15454,7 @@ it reads (currently) 1000 columns</note>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15440,6 +15506,7 @@ it reads (currently) 1000 columns</note>
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15458,7 +15525,7 @@ it reads (currently) 1000 columns</note>
       <key>
         <name>file_name</name>
         <field>file_name</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -15477,10 +15544,11 @@ it reads (currently) 1000 columns</note>
     </step>
 
   <step>
-    <name>answer is numeric?</name>
+    <name>answer is numeric&#x3f;</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15494,7 +15562,7 @@ it reads (currently) 1000 columns</note>
  <leftvalue>answer</leftvalue>
  <function>REGEXP</function>
  <rightvalue/>
- <value><name>constant</name><type>String</type><text>[-]?[0-9]*\.?[0-9]+</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+ <value><name>constant</name><type>String</type><text>&#x5b;-&#x5d;&#x3f;&#x5b;0-9&#x5d;&#x2a;&#x5c;.&#x3f;&#x5b;0-9&#x5d;&#x2b;</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -15509,6 +15577,7 @@ it reads (currently) 1000 columns</note>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15530,7 +15599,7 @@ it reads (currently) 1000 columns</note>
    <negated>N</negated>
    <operator>AND</operator>
    <leftvalue>answer</leftvalue>
-   <function>&lt;&gt;</function>
+   <function>&#x3c;&#x3e;</function>
    <rightvalue/>
    <value><name>constant</name><type>String</type><text>0</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
   </conditions>
@@ -15549,6 +15618,7 @@ it reads (currently) 1000 columns</note>
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15592,10 +15662,11 @@ it reads (currently) 1000 columns</note>
     </step>
 
   <step>
-    <name>lookup question info (keys)</name>
+    <name>lookup question info &#x28;keys&#x29;</name>
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15614,13 +15685,13 @@ it reads (currently) 1000 columns</note>
       <key>
         <name>questionnaire_key</name>
         <field>questionnaire_key</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <key>
         <name>column_number</name>
         <field>column_number</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -15651,10 +15722,11 @@ it reads (currently) 1000 columns</note>
     </step>
 
   <step>
-    <name>lookup respondent&#47;date key</name>
+    <name>lookup respondent&#x2f;date key</name>
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15673,13 +15745,13 @@ it reads (currently) 1000 columns</note>
       <key>
         <name>respondent_id</name>
         <field>respondent_id_external</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <key>
         <name>questionnaire_key</name>
         <field>questionnaire_key</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -15697,8 +15769,42 @@ it reads (currently) 1000 columns</note>
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>805</xloc>
-      <yloc>242</yloc>
+      <xloc>955</xloc>
+      <yloc>244</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>not empty question_key</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to/>
+<send_false_to/>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <leftvalue>question_key</leftvalue>
+   <function>IS NOT NULL</function>
+   <rightvalue/>
+   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>676</xloc>
+      <yloc>247</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -15708,6 +15814,7 @@ it reads (currently) 1000 columns</note>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15719,9 +15826,9 @@ it reads (currently) 1000 columns</note>
 <condition>
  <negated>N</negated>
  <leftvalue>rowCounter</leftvalue>
- <function>&lt;&gt;</function>
+ <function>&#x3c;&#x3e;</function>
  <rightvalue/>
- <value><name>constant</name><type>Integer</type><text>1</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>#;-#</mask></value> </condition>
+ <value><name>constant</name><type>Integer</type><text>1</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;&#x3b;-&#x23;</mask></value> </condition>
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -15736,6 +15843,7 @@ it reads (currently) 1000 columns</note>
     <type>FieldsChangeSequence</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15762,6 +15870,7 @@ it reads (currently) 1000 columns</note>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15831,6 +15940,7 @@ it reads (currently) 1000 columns</note>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15900,6 +16010,7 @@ it reads (currently) 1000 columns</note>
     <type>StringOperations</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15928,49 +16039,10 @@ it reads (currently) 1000 columns</note>
       </GUI>
     </step>
 
-  <step>
-    <name>not empty question_key&#47;module_key</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<send_true_to/>
-<send_false_to/>
-    <compare>
-<condition>
- <negated>N</negated>
- <conditions>
-  <condition>
-   <negated>N</negated>
-   <leftvalue>question_key</leftvalue>
-   <function>IS NOT NULL</function>
-   <rightvalue/>
-   </condition>
-  <condition>
-   <negated>N</negated>
-   <operator>AND</operator>
-   <leftvalue>module_key</leftvalue>
-   <function>IS NOT NULL</function>
-   <rightvalue/>
-   </condition>
-  </conditions>
- </condition>
-    </compare>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>639</xloc>
-      <yloc>248</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
   <step_error_handling>
   </step_error_handling>
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
+
 </transformation>

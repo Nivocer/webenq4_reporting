@@ -6,7 +6,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#47;questback</directory>
+    <directory>&#x2f;questback</directory>
     <parameters>
     </parameters>
     <log>
@@ -16,7 +16,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
 <perf-log-table><connection/>
 <schema/>
 <table/>
@@ -33,6 +33,11 @@
 <table/>
 <timeout_days/>
 <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -61,9 +66,9 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>-</created_user>
-  <created_date>2013&#47;11&#47;28 14:50:12.391</created_date>
+  <created_date>2013&#x2f;11&#x2f;28 14&#x3a;50&#x3a;12.391</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2013&#47;12&#47;06 11:56:28.534</modified_date>
+  <modified_date>2014&#x2f;01&#x2f;31 15&#x3a;31&#x3a;19.792</modified_date>
   </info>
   <notepads>
     <notepad>
@@ -90,13 +95,13 @@
   </notepads>
   <connection>
     <name>source-database</name>
-    <server>${SOURCE_HOST}</server>
+    <server>&#x24;&#x7b;SOURCE_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${SOURCE_DB}</database>
-    <port>${SOURCE_PORT}</port>
-    <username>${SOURCE_USER}</username>
-    <password>${SOURCE_PASSWORD}</password>
+    <database>&#x24;&#x7b;SOURCE_DB&#x7d;</database>
+    <port>&#x24;&#x7b;SOURCE_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;SOURCE_USER&#x7d;</username>
+    <password>&#x24;&#x7b;SOURCE_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -106,7 +111,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${SOURCE_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;SOURCE_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -115,13 +120,13 @@
   </connection>
   <connection>
     <name>target-database</name>
-    <server>${TARGET_HOST}</server>
+    <server>&#x24;&#x7b;TARGET_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${TARGET_DB}</database>
-    <port>${TARGET_PORT}</port>
-    <username>${TARGET_USER}</username>
-    <password>${TARGET_PASSWORD}</password>
+    <database>&#x24;&#x7b;TARGET_DB&#x7d;</database>
+    <port>&#x24;&#x7b;TARGET_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;TARGET_USER&#x7d;</username>
+    <password>&#x24;&#x7b;TARGET_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -131,7 +136,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${TARGET_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;TARGET_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -139,12 +144,31 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Split row</from><to>has module code</to><enabled>Y</enabled> </hop>  <hop> <from>Microsoft Excel Input</from><to>lookup questionnaire</to><enabled>Y</enabled> </hop>  <hop> <from>lookup questionnaire</from><to>Split row</to><enabled>Y</enabled> </hop>  <hop> <from>has module code</from><to>Database lookup</to><enabled>Y</enabled> </hop>  <hop> <from>Database lookup</from><to>select rename fields</to><enabled>Y</enabled> </hop>  <hop> <from>has module code</from><to>Split group info</to><enabled>Y</enabled> </hop>  <hop> <from>Database lookup 2</from><to>Select values</to><enabled>Y</enabled> </hop>  <hop> <from>Database lookup 3</from><to>Select values 2</to><enabled>Y</enabled> </hop>  <hop> <from>Select values 2</from><to>Filter rows</to><enabled>Y</enabled> </hop>  <hop> <from>Filter rows</from><to>stage module</to><enabled>Y</enabled> </hop>  <hop> <from>Select values</from><to>Filter rows 2</to><enabled>Y</enabled> </hop>  <hop> <from>Filter rows 2</from><to>stage_group 2</to><enabled>Y</enabled> </hop>  <hop> <from>select rename fields</from><to>Filter rows 3</to><enabled>Y</enabled> </hop>  <hop> <from>Filter rows 3</from><to>stage_group</to><enabled>Y</enabled> </hop>  <hop> <from>Get files from result</from><to>Microsoft Excel Input</to><enabled>Y</enabled> </hop>  <hop> <from>Split group info</from><to>correct module code</to><enabled>Y</enabled> </hop>  <hop> <from>correct module code</from><to>Database lookup 2</to><enabled>Y</enabled> </hop>  <hop> <from>correct module code</from><to>Database lookup 3</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Split row</from><to>has module code</to><enabled>Y</enabled> </hop>
+  <hop> <from>Microsoft Excel Input</from><to>lookup questionnaire</to><enabled>Y</enabled> </hop>
+  <hop> <from>lookup questionnaire</from><to>Split row</to><enabled>Y</enabled> </hop>
+  <hop> <from>has module code</from><to>Database lookup</to><enabled>Y</enabled> </hop>
+  <hop> <from>Database lookup</from><to>select rename fields</to><enabled>Y</enabled> </hop>
+  <hop> <from>has module code</from><to>Split group info</to><enabled>Y</enabled> </hop>
+  <hop> <from>Database lookup 2</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>Database lookup 3</from><to>Select values 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 2</from><to>Filter rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows</from><to>stage module</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values</from><to>Filter rows 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows 2</from><to>stage_group 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>select rename fields</from><to>Filter rows 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows 3</from><to>stage_group</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get files from result</from><to>Microsoft Excel Input</to><enabled>Y</enabled> </hop>
+  <hop> <from>Split group info</from><to>correct module code</to><enabled>Y</enabled> </hop>
+  <hop> <from>correct module code</from><to>Database lookup 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>correct module code</from><to>Database lookup 3</to><enabled>Y</enabled> </hop>
+  </order>
   <step>
     <name>Database lookup</name>
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -163,7 +187,7 @@
       <key>
         <name>group_info</name>
         <field>group_text</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -186,6 +210,7 @@
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -204,7 +229,7 @@
       <key>
         <name>group_text</name>
         <field>group_text</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -227,6 +252,7 @@
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -245,7 +271,7 @@
       <key>
         <name>module_code</name>
         <field>module_code</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -268,6 +294,7 @@
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -296,6 +323,7 @@
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -324,6 +352,7 @@
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -352,6 +381,7 @@
     <type>FilesFromResult</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -370,6 +400,7 @@
     <type>ExcelInput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -417,6 +448,11 @@
         <startrow>0</startrow>
         <startcol>0</startcol>
         </sheet>
+      <sheet>
+        <name>Explanations</name>
+        <startrow>0</startrow>
+        <startcol>0</startcol>
+        </sheet>
     </sheets>
     <strict_types>N</strict_types>
     <error_ignored>N</error_ignored>
@@ -449,6 +485,7 @@
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -480,6 +517,7 @@
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -515,13 +553,15 @@
     <type>FieldSplitter</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
    <splitfield>group_info</splitfield>
-   <delimiter>:</delimiter>
+   <delimiter>&#x3a;</delimiter>
+   <enclosure/>
     <fields>      <field>        <name>module_code</name>
         <id/>
         <idrem>N</idrem>
@@ -559,13 +599,15 @@
     <type>FieldSplitter</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
    <splitfield>row</splitfield>
-   <delimiter>=</delimiter>
+   <delimiter>&#x3d;</delimiter>
+   <enclosure/>
     <fields>      <field>        <name>group_id</name>
         <id/>
         <idrem>N</idrem>
@@ -599,10 +641,43 @@
     </step>
 
   <step>
+    <name>correct module code</name>
+    <type>ReplaceString</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>module_code</in_stream_name>
+        <out_stream_name/>
+        <use_regex>yes</use_regex>
+        <replace_string>&#x5e;&#x28;K_&#x29;&#x28;.&#x2a;&#x29;</replace_string>
+        <replace_by_string>DT_&#x24;2</replace_by_string>
+        <set_empty_string>N</set_empty_string>
+        <replace_field_by_string/>
+        <whole_word>no</whole_word>
+        <case_sensitive>no</case_sensitive>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>246</xloc>
+      <yloc>242</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
     <name>has module code</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -616,7 +691,7 @@
  <leftvalue>group_info</leftvalue>
  <function>REGEXP</function>
  <rightvalue/>
- <value><name>constant</name><type>String</type><text>([^_]+_[^_]+_[^_]+_[^_]+_[^_]+)</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+ <value><name>constant</name><type>String</type><text>&#x28;&#x5b;&#x5e;_&#x5d;&#x2b;_&#x5b;&#x5e;_&#x5d;&#x2b;_&#x5b;&#x5e;_&#x5d;&#x2b;_&#x5b;&#x5e;_&#x5d;&#x2b;_&#x5b;&#x5e;_&#x5d;&#x2b;&#x29;</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -631,6 +706,7 @@
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -649,7 +725,7 @@
       <key>
         <name>file_name</name>
         <field>file_name</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -672,6 +748,7 @@
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -703,6 +780,7 @@
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -756,6 +834,7 @@
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -805,6 +884,7 @@
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -849,39 +929,10 @@
       </GUI>
     </step>
 
-  <step>
-    <name>correct module code</name>
-    <type>ReplaceString</type>
-    <description/>
-    <distribute>N</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>module_code</in_stream_name>
-        <out_stream_name/>
-        <use_regex>yes</use_regex>
-        <replace_string>^(K_)(.*)</replace_string>
-        <replace_by_string>DT_$2</replace_by_string>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>246</xloc>
-      <yloc>242</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
   <step_error_handling>
   </step_error_handling>
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
+
 </transformation>

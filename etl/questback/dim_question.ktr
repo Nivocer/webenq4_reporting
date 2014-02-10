@@ -6,11 +6,11 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#47;questback</directory>
+    <directory>&#x2f;questback</directory>
     <parameters>
         <parameter>
             <name>PATH_TO_DATA</name>
-            <default_value>&#47;home&#47;jaapandre&#47;workspace&#47;management_git&#47;SLA&#47;2013&#47;hva-oo&#47;inputs&#47;meting1&#47;</default_value>
+            <default_value>&#x2f;home&#x2f;jaapandre&#x2f;workspace&#x2f;management_git&#x2f;SLA&#x2f;2013&#x2f;hva-oo&#x2f;inputs&#x2f;meting1&#x2f;</default_value>
             <description/>
         </parameter>
     </parameters>
@@ -21,7 +21,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
 <perf-log-table><connection/>
 <schema/>
 <table/>
@@ -38,6 +38,11 @@
 <table/>
 <timeout_days/>
 <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -83,14 +88,13 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>-</created_user>
-  <created_date>2011&#47;02&#47;24 23:14:08.270</created_date>
+  <created_date>2011&#x2f;02&#x2f;24 23&#x3a;14&#x3a;08.270</created_date>
   <modified_user>admin</modified_user>
-  <modified_date>2013&#47;12&#47;03 12:37:27.418</modified_date>
+  <modified_date>2014&#x2f;01&#x2f;31 14&#x3a;20&#x3a;29.027</modified_date>
   </info>
   <notepads>
     <notepad>
-      <note>Microsoft excel input and row noramliser are generated with &apos;spreadsheet reader generator&apos;.
-it reads (currently) 1000 columns</note>
+      <note>Microsoft excel input and row noramliser are generated with &#x27;spreadsheet reader generator&#x27;.&#xa;it reads &#x28;currently&#x29; 1000 columns</note>
       <xloc>500</xloc>
       <yloc>3</yloc>
       <width>539</width>
@@ -111,7 +115,7 @@ it reads (currently) 1000 columns</note>
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>date&#47;respondent</note>
+      <note>date&#x2f;respondent</note>
       <xloc>831</xloc>
       <yloc>682</yloc>
       <width>103</width>
@@ -132,10 +136,7 @@ it reads (currently) 1000 columns</note>
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>Normal questions,
-but in case of hva: 
-which module 
-did you follow?</note>
+      <note>Normal questions,&#xa;but in case of hva&#x3a; &#xa;which module &#xa;did you follow&#x3f;</note>
       <xloc>481</xloc>
       <yloc>674</yloc>
       <width>122</width>
@@ -156,9 +157,7 @@ did you follow?</note>
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>table questions
-hva: satisfied 
-per module</note>
+      <note>table questions&#xa;hva&#x3a; satisfied &#xa;per module</note>
       <xloc>672</xloc>
       <yloc>678</yloc>
       <width>98</width>
@@ -179,9 +178,7 @@ per module</note>
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>hva: questions starting 
-with module code
-(grade, remarks)</note>
+      <note>hva&#x3a; questions starting &#xa;with module code&#xa;&#x28;grade, remarks&#x29;</note>
       <xloc>299</xloc>
       <yloc>676</yloc>
       <width>146</width>
@@ -204,13 +201,13 @@ with module code
   </notepads>
   <connection>
     <name>source-database</name>
-    <server>${SOURCE_HOST}</server>
+    <server>&#x24;&#x7b;SOURCE_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${SOURCE_DB}</database>
-    <port>${SOURCE_PORT}</port>
-    <username>${SOURCE_USER}</username>
-    <password>${SOURCE_PASSWORD}</password>
+    <database>&#x24;&#x7b;SOURCE_DB&#x7d;</database>
+    <port>&#x24;&#x7b;SOURCE_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;SOURCE_USER&#x7d;</username>
+    <password>&#x24;&#x7b;SOURCE_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -220,7 +217,7 @@ with module code
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${SOURCE_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;SOURCE_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -229,13 +226,13 @@ with module code
   </connection>
   <connection>
     <name>target-database</name>
-    <server>${TARGET_HOST}</server>
+    <server>&#x24;&#x7b;TARGET_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${TARGET_DB}</database>
-    <port>${TARGET_PORT}</port>
-    <username>${TARGET_USER}</username>
-    <password>${TARGET_PASSWORD}</password>
+    <database>&#x24;&#x7b;TARGET_DB&#x7d;</database>
+    <port>&#x24;&#x7b;TARGET_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;TARGET_USER&#x7d;</username>
+    <password>&#x24;&#x7b;TARGET_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -245,7 +242,7 @@ with module code
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${TARGET_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;TARGET_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -253,19 +250,41 @@ with module code
     </attributes>
   </connection>
   <order>
-  <hop> <from>Row Normaliser question</from><to>only rows with question</to><enabled>Y</enabled> </hop>  <hop> <from>reset counter for each filename</from><to>header row</to><enabled>Y</enabled> </hop>  <hop> <from>header row</from><to>Row Normaliser question</to><enabled>Y</enabled> </hop>  <hop> <from>only rows with question</from><to>count rows with question</to><enabled>Y</enabled> </hop>  <hop> <from>count rows with question</from><to>too many questions</to><enabled>Y</enabled> </hop>  <hop> <from>too many questions</from><to>Abort</to><enabled>Y</enabled> </hop>  <hop> <from>too many questions</from><to>Dummy (do nothing)</to><enabled>Y</enabled> </hop>  <hop> <from>too many questions</from><to>Dummy (do nothing)</to><enabled>Y</enabled> </hop>  <hop> <from>Dummy (do nothing)</from><to>has group_id </to><enabled>Y</enabled> </hop>  <hop> <from>has module code and question</from><to>splits modcode&#47;rapportcijfer-openvraag</to><enabled>Y</enabled> </hop>  <hop> <from>splits modcode&#47;rapportcijfer-openvraag</from><to>insert questions which has modulecode</to><enabled>Y</enabled> </hop>  <hop> <from>has group_id </from><to>has module code</to><enabled>Y</enabled> </hop>  <hop> <from>has module code</from><to>has module code and question</to><enabled>Y</enabled> </hop>  <hop> <from>has module code</from><to>Split Fields</to><enabled>Y</enabled> </hop>  <hop> <from>Get files from result</from><to>Microsoft Excel Input</to><enabled>Y</enabled> </hop>  <hop> <from>has group_id </from><to>insert background colums (date)</to><enabled>Y</enabled> </hop>  <hop> <from>has module code and question</from><to>splits group_id, question_text</to><enabled>Y</enabled> </hop>  <hop> <from>splits group_id, question_text</from><to>insert &apos;normal&apos; questions</to><enabled>N</enabled> </hop>  <hop> <from>Microsoft Excel Input</from><to>add questionnaire key</to><enabled>Y</enabled> </hop>  <hop> <from>add questionnaire key</from><to>reset counter for each filename</to><enabled>Y</enabled> </hop>  <hop> <from>Split Fields</from><to>insert table questions</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>Row Normaliser question</from><to>only rows with question</to><enabled>Y</enabled> </hop>
+  <hop> <from>reset counter for each filename</from><to>header row</to><enabled>Y</enabled> </hop>
+  <hop> <from>header row</from><to>Row Normaliser question</to><enabled>Y</enabled> </hop>
+  <hop> <from>only rows with question</from><to>count rows with question</to><enabled>Y</enabled> </hop>
+  <hop> <from>count rows with question</from><to>too many questions</to><enabled>Y</enabled> </hop>
+  <hop> <from>too many questions</from><to>Abort</to><enabled>Y</enabled> </hop>
+  <hop> <from>too many questions</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>too many questions</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Dummy &#x28;do nothing&#x29;</from><to>has group_id </to><enabled>Y</enabled> </hop>
+  <hop> <from>has module code and question</from><to>splits modcode&#x2f;rapportcijfer-openvraag</to><enabled>Y</enabled> </hop>
+  <hop> <from>splits modcode&#x2f;rapportcijfer-openvraag</from><to>insert questions which has modulecode</to><enabled>Y</enabled> </hop>
+  <hop> <from>has group_id </from><to>has module code</to><enabled>Y</enabled> </hop>
+  <hop> <from>has module code</from><to>has module code and question</to><enabled>Y</enabled> </hop>
+  <hop> <from>has module code</from><to>Split Fields</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get files from result</from><to>Microsoft Excel Input</to><enabled>Y</enabled> </hop>
+  <hop> <from>has group_id </from><to>insert background colums &#x28;date&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>has module code and question</from><to>splits group_id, question_text</to><enabled>Y</enabled> </hop>
+  <hop> <from>splits group_id, question_text</from><to>insert &#x27;normal&#x27; questions</to><enabled>Y</enabled> </hop>
+  <hop> <from>Microsoft Excel Input</from><to>add questionnaire key</to><enabled>Y</enabled> </hop>
+  <hop> <from>add questionnaire key</from><to>reset counter for each filename</to><enabled>Y</enabled> </hop>
+  <hop> <from>Split Fields</from><to>insert table questions</to><enabled>Y</enabled> </hop>
+  </order>
   <step>
     <name>Abort</name>
     <type>Abort</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
       <row_threshold>0</row_threshold>
-      <message>aborting: not all columns are read, change input and normaliser step</message>
+      <message>aborting&#x3a; not all columns are read, change input and normaliser step</message>
       <always_log_rows>Y</always_log_rows>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -276,10 +295,11 @@ with module code
     </step>
 
   <step>
-    <name>Dummy (do nothing)</name>
+    <name>Dummy &#x28;do nothing&#x29;</name>
     <type>Dummy</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -298,6 +318,7 @@ with module code
     <type>FilesFromResult</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -316,6 +337,7 @@ with module code
     <type>ExcelInput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -337,8 +359,8 @@ with module code
     <accept_field>path</accept_field>
     <accept_stepname>Get files from result</accept_stepname>
     <file>
-      <name>${PATH_TO_DATA}</name>
-      <filemask>.*.xlsx</filemask>
+      <name>&#x24;&#x7b;PATH_TO_DATA&#x7d;</name>
+      <filemask>.&#x2a;.xlsx</filemask>
       <exclude_filemask/>
       <file_required>N</file_required>
       <include_subfolders>N</include_subfolders>
@@ -12383,6 +12405,7 @@ with module code
     <type>Normaliser</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15402,13 +15425,15 @@ with module code
     <type>FieldSplitter</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
    <splitfield>question</splitfield>
-   <delimiter>:</delimiter>
+   <delimiter>&#x3a;</delimiter>
+   <enclosure/>
     <fields>      <field>        <name>group_id</name>
         <id/>
         <idrem>N</idrem>
@@ -15446,6 +15471,7 @@ with module code
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15464,7 +15490,7 @@ with module code
       <key>
         <name>file_name</name>
         <field>file_name</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -15487,6 +15513,7 @@ with module code
     <type>FieldsChangeSequence</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15513,20 +15540,21 @@ with module code
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
 <send_true_to>has module code</send_true_to>
-<send_false_to>insert background colums (date)</send_false_to>
+<send_false_to>insert background colums &#x28;date&#x29;</send_false_to>
     <compare>
 <condition>
  <negated>N</negated>
  <leftvalue>question</leftvalue>
  <function>REGEXP</function>
  <rightvalue/>
- <value><name>constant</name><type>String</type><text>^[0-9]+:.*</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+ <value><name>constant</name><type>String</type><text>&#x5e;&#x5b;0-9&#x5d;&#x2b;&#x3a;.&#x2a;</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -15541,6 +15569,7 @@ with module code
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15554,7 +15583,7 @@ with module code
  <leftvalue>question</leftvalue>
  <function>REGEXP</function>
  <rightvalue/>
- <value><name>constant</name><type>String</type><text>.*[^_]+_[^_]+_[^_]+_[^_]+_[^_]+.*</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+ <value><name>constant</name><type>String</type><text>.&#x2a;&#x5b;&#x5e;_&#x5d;&#x2b;_&#x5b;&#x5e;_&#x5d;&#x2b;_&#x5b;&#x5e;_&#x5d;&#x2b;_&#x5b;&#x5e;_&#x5d;&#x2b;_&#x5b;&#x5e;_&#x5d;&#x2b;.&#x2a;</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -15569,12 +15598,13 @@ with module code
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-<send_true_to>splits modcode&#47;rapportcijfer-openvraag</send_true_to>
+<send_true_to>splits modcode&#x2f;rapportcijfer-openvraag</send_true_to>
 <send_false_to>splits group_id, question_text</send_false_to>
     <compare>
 <condition>
@@ -15582,7 +15612,7 @@ with module code
  <leftvalue>question</leftvalue>
  <function>REGEXP</function>
  <rightvalue/>
- <value><name>constant</name><type>String</type><text>.*[^_]+_[^_]+_[^_]+_[^_]+_[^_]+:.*</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+ <value><name>constant</name><type>String</type><text>.&#x2a;&#x5b;&#x5e;_&#x5d;&#x2b;_&#x5b;&#x5e;_&#x5d;&#x2b;_&#x5b;&#x5e;_&#x5d;&#x2b;_&#x5b;&#x5e;_&#x5d;&#x2b;_&#x5b;&#x5e;_&#x5d;&#x2b;&#x3a;.&#x2a;</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -15597,6 +15627,7 @@ with module code
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15608,9 +15639,9 @@ with module code
 <condition>
  <negated>N</negated>
  <leftvalue>rowCounter</leftvalue>
- <function>=</function>
+ <function>&#x3d;</function>
  <rightvalue/>
- <value><name>constant</name><type>Integer</type><text>1</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>#;-#</mask></value> </condition>
+ <value><name>constant</name><type>Integer</type><text>1</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;&#x3b;-&#x23;</mask></value> </condition>
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -15621,10 +15652,11 @@ with module code
     </step>
 
   <step>
-    <name>insert &apos;normal&apos; questions</name>
+    <name>insert &#x27;normal&#x27; questions</name>
     <type>InsertUpdate</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15647,6 +15679,11 @@ with module code
         <rename>question_text</rename>
         <update>N</update>
       </value>
+      <value>
+        <name>sequence</name>
+        <rename>nrRows</rename>
+        <update>N</update>
+      </value>
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -15657,10 +15694,11 @@ with module code
     </step>
 
   <step>
-    <name>insert background colums (date)</name>
+    <name>insert background colums &#x28;date&#x29;</name>
     <type>InsertUpdate</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15683,6 +15721,11 @@ with module code
         <rename>question</rename>
         <update>N</update>
       </value>
+      <value>
+        <name>sequence</name>
+        <rename>nrRows</rename>
+        <update>N</update>
+      </value>
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -15697,6 +15740,7 @@ with module code
     <type>InsertUpdate</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15717,6 +15761,11 @@ with module code
       <value>
         <name>question_text</name>
         <rename>question_text</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>sequence</name>
+        <rename>nrRows</rename>
         <update>N</update>
       </value>
     </lookup>
@@ -15733,6 +15782,7 @@ with module code
     <type>InsertUpdate</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15755,6 +15805,11 @@ with module code
         <rename>question_text</rename>
         <update>N</update>
       </value>
+      <value>
+        <name>sequence</name>
+        <rename>nrRows</rename>
+        <update>N</update>
+      </value>
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -15769,6 +15824,7 @@ with module code
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15797,6 +15853,7 @@ with module code
     <type>FieldsChangeSequence</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -15823,13 +15880,15 @@ with module code
     <type>FieldSplitter</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
    <splitfield>question</splitfield>
-   <delimiter>:</delimiter>
+   <delimiter>&#x3a;</delimiter>
+   <enclosure/>
     <fields>      <field>        <name>group_id</name>
         <id/>
         <idrem>N</idrem>
@@ -15863,17 +15922,19 @@ with module code
     </step>
 
   <step>
-    <name>splits modcode&#47;rapportcijfer-openvraag</name>
+    <name>splits modcode&#x2f;rapportcijfer-openvraag</name>
     <type>FieldSplitter</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
    <splitfield>question</splitfield>
-   <delimiter>:</delimiter>
+   <delimiter>&#x3a;</delimiter>
+   <enclosure/>
     <fields>      <field>        <name>group_id</name>
         <id/>
         <idrem>N</idrem>
@@ -15923,20 +15984,21 @@ with module code
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
 <send_true_to>Abort</send_true_to>
-<send_false_to>Dummy (do nothing)</send_false_to>
+<send_false_to>Dummy &#x28;do nothing&#x29;</send_false_to>
     <compare>
 <condition>
  <negated>N</negated>
  <leftvalue>nrRows</leftvalue>
- <function>&gt;=</function>
+ <function>&#x3e;&#x3d;</function>
  <rightvalue/>
- <value><name>constant</name><type>Integer</type><text>999</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>#;-#</mask></value> </condition>
+ <value><name>constant</name><type>Integer</type><text>999</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;&#x3b;-&#x23;</mask></value> </condition>
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -15951,4 +16013,5 @@ with module code
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
+
 </transformation>

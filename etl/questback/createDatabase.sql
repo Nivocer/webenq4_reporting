@@ -1,8 +1,19 @@
 
+CREATE TABLE stage_question (
+                stage_question_key INT AUTO_INCREMENT NOT NULL,
+                questionnaire_key INT NOT NULL,
+                column_number INT NOT NULL,
+                question_key INT NOT NULL,
+                group_key INT,
+                module_key INT,
+                PRIMARY KEY (stage_question_key)
+);
+
+
 CREATE TABLE dim_module (
                 module_key INT AUTO_INCREMENT NOT NULL,
                 module_code VARCHAR(512) NOT NULL,
-                type_opleiding VARCHAR(4) NOT NULL,
+                type_opleiding VARCHAR(8) NOT NULL,
                 jaar INT NOT NULL,
                 klasletter VARCHAR(4) NOT NULL,
                 module VARCHAR(150) NOT NULL,
@@ -21,9 +32,9 @@ CREATE TABLE dim_group (
 CREATE TABLE lookup_answer_label (
                 answer_label_key INT AUTO_INCREMENT NOT NULL,
                 answer_group_key INT NOT NULL,
-                answer_label VARCHAR(1024) NOT NULL,
+                answer_label VARCHAR(4096) NOT NULL,
                 answer INT NOT NULL,
-                sequence BIGINT NOT NULL,
+                sequence BIGINT DEFAULT 0 NOT NULL,
                 PRIMARY KEY (answer_label_key)
 );
 
@@ -33,7 +44,7 @@ ALTER TABLE lookup_answer_label MODIFY COLUMN answer INTEGER COMMENT 'w3: tbl_an
 CREATE TABLE dim_question (
                 question_key INT AUTO_INCREMENT NOT NULL,
                 question_text VARCHAR(512),
-                sequence BIGINT NOT NULL,
+                sequence BIGINT DEFAULT 0 NOT NULL,
                 PRIMARY KEY (question_key)
 );
 
@@ -77,7 +88,8 @@ CREATE TABLE dim_questionnaire (
 CREATE TABLE stage_module (
                 module_key INT NOT NULL,
                 questionnaire_key INT NOT NULL,
-                module_code VARCHAR(512) NOT NULL,
+                module_code VARCHAR(512),
+                group_id INT,
                 PRIMARY KEY (module_key, questionnaire_key)
 );
 
@@ -94,6 +106,7 @@ CREATE TABLE dim_respondent (
                 respondent_key INT AUTO_INCREMENT NOT NULL,
                 questionnaire_key INT NOT NULL,
                 respondent_id_external INT NOT NULL,
+                date_key INT,
                 respondent_name VARCHAR(255),
                 respondent_email VARCHAR(255),
                 language CHAR(3) DEFAULT "en",
@@ -105,26 +118,26 @@ CREATE TABLE fact_answer (
                 respondent_key INT NOT NULL,
                 question_key INT NOT NULL,
                 answer_label_key INT NOT NULL,
-                group_key INT NOT NULL,
-                date_key INT NOT NULL,
                 questionnaire_key INT NOT NULL,
                 module_key INT NOT NULL,
+                group_key INT,
+                date_key INT NOT NULL,
                 answer DOUBLE PRECISION DEFAULT NULL,
-                PRIMARY KEY (respondent_key, question_key, answer_label_key)
+                PRIMARY KEY (respondent_key, question_key, answer_label_key, questionnaire_key, module_key)
 );
 
 
 ALTER TABLE fact_answer ADD CONSTRAINT dim_module_fact_answer_fk
 FOREIGN KEY (module_key)
 REFERENCES dim_module (module_key)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION;
+ON DELETE CASCADE
+ON UPDATE CASCADE;
 
 ALTER TABLE fact_answer ADD CONSTRAINT dim_group_fact_answer_fk
 FOREIGN KEY (group_key)
 REFERENCES dim_group (group_key)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION;
+ON DELETE CASCADE
+ON UPDATE CASCADE;
 
 ALTER TABLE fact_answer ADD CONSTRAINT lookup_answer_label_fact_answer_fk
 FOREIGN KEY (answer_label_key)
@@ -153,20 +166,20 @@ ON UPDATE CASCADE;
 ALTER TABLE dim_respondent ADD CONSTRAINT dim_questionnaire_dim_respondent_fk
 FOREIGN KEY (questionnaire_key)
 REFERENCES dim_questionnaire (questionnaire_key)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION;
+ON DELETE CASCADE
+ON UPDATE CASCADE;
 
 ALTER TABLE stage_group ADD CONSTRAINT dim_questionnaire_stage_group_fk
 FOREIGN KEY (questionnaire_key)
 REFERENCES dim_questionnaire (questionnaire_key)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION;
+ON DELETE CASCADE
+ON UPDATE CASCADE;
 
 ALTER TABLE stage_module ADD CONSTRAINT dim_questionnaire_stage_module_fk
 FOREIGN KEY (questionnaire_key)
 REFERENCES dim_questionnaire (questionnaire_key)
-ON DELETE NO ACTION
-ON UPDATE NO ACTION;
+ON DELETE CASCADE
+ON UPDATE CASCADE;
 
 ALTER TABLE fact_answer ADD CONSTRAINT fact_answer_dim_respondent_fk
 FOREIGN KEY (respondent_key)
