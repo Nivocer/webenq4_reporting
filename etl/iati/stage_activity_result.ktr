@@ -68,7 +68,7 @@
   <created_user>-</created_user>
   <created_date>2014&#x2f;01&#x2f;10 15&#x3a;52&#x3a;31.108</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;01&#x2f;30 10&#x3a;56&#x3a;57.932</modified_date>
+  <modified_date>2014&#x2f;02&#x2f;11 12&#x3a;51&#x3a;40.907</modified_date>
   </info>
   <notepads>
     <notepad>
@@ -335,7 +335,7 @@
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
     <quoteString>N</quoteString>
-    <sql>drop table if exists stage_activity_result&#x3b;&#xa;drop table if exists stage_activity_result_indicator&#x3b;&#xa;drop table if exists stage_activity_result_indicator_period&#x3b;&#xa;CREATE TABLE stage_activity_result&#xa;&#x28;&#xa;  stage_activity_result_key BIGINT NOT NULL PRIMARY KEY&#xa;, activity_key BIGINT&#xa;, input_file_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, size INT&#xa;, typeFile VARCHAR&#x28;12&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, type TINYTEXT&#xa;, &#x60;aggregation-status&#x60; TINYTEXT&#xa;, title TEXT&#xa;, &#x60;title-lang&#x60; TINYTEXT&#xa;, description TEXT&#xa;, &#x60;description-lang&#x60; TINYTEXT&#xa;, &#x60;description-type&#x60; TINYTEXT&#xa;&#x29; ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;&#xa;&#xa;CREATE TABLE stage_activity_result_indicator&#xa;&#x28;&#xa; stage_activity_result_indicator_key BIGINT  NOT NULL PRIMARY KEY&#xa;, activity_key BIGINT&#xa;,  input_file_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, stage_activity_result_key INT&#xa;, title TEXT&#xa;, &#x60;title-lang&#x60; TINYTEXT&#xa;, measure TINYTEXT&#xa;, ascending TINYTEXT&#xa;, &#x60;baseline-year&#x60; TINYTEXT&#xa;, &#x60;baseline-value&#x60; TINYTEXT&#xa;, description TEXT&#xa;, &#x60;description-type&#x60; TINYTEXT&#xa;, &#x60;description-lang&#x60; TINYTEXT&#xa;&#x29;  ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;&#xa;CREATE TABLE stage_activity_result_indicator_period&#xa;&#x28;&#xa;  stage_activity_result_indicator_period_key BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY&#xa;, activity_key BIGINT&#xa;, input_file_key INT&#xa;, stage_activity_result_key INT&#xa;, stage_activity_result_indicator_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, &#x60;period-start&#x60; TINYTEXT&#xa;, &#x60;period-start-iso-date&#x60; DATETIME&#xa;, &#x60;period-end&#x60; TINYTEXT&#xa;, &#x60;period-end-iso-date&#x60; DATETIME&#xa;, &#x60;target-value&#x60; TINYTEXT&#xa;, &#x60;target-comment&#x60; TINYTEXT&#xa;, &#x60;actual-value&#x60; TINYTEXT&#xa;, &#x60;actual-comment&#x60; TEXT&#xa;&#x29;  ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;</sql>
+    <sql>drop table if exists stage_activity_result&#x3b;&#xa;drop table if exists stage_activity_result_indicator&#x3b;&#xa;drop table if exists stage_activity_result_indicator_period&#x3b;&#xa;CREATE TABLE stage_activity_result&#xa;&#x28;&#xa;  stage_activity_result_key BIGINT NOT NULL PRIMARY KEY&#xa;, activity_key BIGINT&#xa;, input_file_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, size INT&#xa;, typeFile VARCHAR&#x28;12&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, type TINYTEXT&#xa;, &#x60;aggregation-status&#x60; TINYTEXT&#xa;, title TEXT&#xa;, &#x60;title-lang&#x60; TINYTEXT&#xa;, description TEXT&#xa;, &#x60;description-lang&#x60; TINYTEXT&#xa;, &#x60;description-type&#x60; TINYTEXT&#xa;&#x29; ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;&#xa;&#xa;CREATE TABLE stage_activity_result_indicator&#xa;&#x28;&#xa; stage_activity_result_indicator_key BIGINT  NOT NULL PRIMARY KEY&#xa;, activity_key BIGINT&#xa;,  input_file_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, stage_activity_result_key INT&#xa;, title TEXT&#xa;, &#x60;title-lang&#x60; TINYTEXT&#xa;, measure TINYTEXT&#xa;, ascending TINYTEXT&#xa;, &#x60;baseline-year&#x60; TINYTEXT&#xa;, &#x60;baseline-value&#x60; TINYTEXT&#xa;, description TEXT&#xa;, &#x60;description-type&#x60; TINYTEXT&#xa;, &#x60;description-lang&#x60; TINYTEXT&#xa;&#x29;  ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;&#xa;CREATE TABLE stage_activity_result_indicator_period&#xa;&#x28;&#xa;  stage_activity_result_indicator_period_key BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY&#xa;, activity_key BIGINT&#xa;, input_file_key INT&#xa;, stage_activity_result_key INT&#xa;, stage_activity_result_indicator_key INT&#xa;, filename VARCHAR&#x28;100&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, &#x60;period-start&#x60; TINYTEXT&#xa;, &#x60;period-start-iso-date&#x60; DATETIME&#xa;, &#x60;period-end&#x60; TINYTEXT&#xa;, &#x60;period-end-iso-date&#x60; DATETIME&#xa;, &#x60;target-value&#x60; TINYTEXT&#xa;, &#x60;target-comment&#x60; TEXT&#xa;, &#x60;actual-value&#x60; TINYTEXT&#xa;, &#x60;actual-comment&#x60; TEXT&#xa;&#x29;  ENGINE&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -1469,7 +1469,7 @@
         <in_stream_name>target-comment</in_stream_name>
         <out_stream_name/>
         <cut_from>0</cut_from>
-        <cut_to>254</cut_to>
+        <cut_to>65000</cut_to>
       </field>
       <field>
         <in_stream_name>actual-value</in_stream_name>
