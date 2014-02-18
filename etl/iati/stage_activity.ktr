@@ -68,7 +68,7 @@
   <created_user>-</created_user>
   <created_date>2014&#x2f;01&#x2f;10 15&#x3a;52&#x3a;31.108</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;02&#x2f;13 11&#x3a;02&#x3a;16.295</modified_date>
+  <modified_date>2014&#x2f;02&#x2f;17 17&#x3a;25&#x3a;35.550</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -171,7 +171,7 @@
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
     <quoteString>N</quoteString>
-    <sql>drop table if exists stage_activity&#x3b;&#xa;CREATE TABLE stage_activity&#xa;&#x28;&#xa;  stage_activity_key BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY&#xa;, input_file_key INT&#xa;, filename VARCHAR&#x28;255&#x29;&#xa;, size INT&#xa;, typeFile VARCHAR&#x28;12&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, title TEXT&#xa;, &#x60;activity-status&#x60; TINYTEXT&#xa;, &#x60;activitity-status-code&#x60; TINYTEXT&#xa;, &#x60;activity-website&#x60; TINYTEXT&#xa;, &#x60;default-finance-type&#x60; TINYTEXT&#xa;, &#x60;default-finance-type-code&#x60; TINYTEXT&#xa;, &#x60;default-tied-status&#x60; TINYTEXT&#xa;, &#x60;default-tied-status-code&#x60; TINYTEXT&#xa;, &#x60;default-aid-type&#x60; TINYTEXT&#xa;, &#x60;default-aid-type-code&#x60; TINYTEXT&#xa;, &#x60;other-identifier&#x60; TEXT&#xa;, &#x60;activity-scope&#x60; TINYTEXT&#xa;, &#x60;activity-scope-code&#x60; TINYTEXT&#xa;, &#x60;collaboration-type&#x60; TINYTEXT&#xa;, &#x60;collaboration-type-code&#x60; TINYTEXT&#xa;&#x29; engine&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;</sql>
+    <sql>drop table if exists stage_activity&#x3b;&#xa;CREATE TABLE stage_activity&#xa;&#x28;&#xa;  stage_activity_key BIGINT AUTO_INCREMENT NOT NULL PRIMARY KEY&#xa;, input_file_key INT&#xa;, filename VARCHAR&#x28;255&#x29;&#xa;, size INT&#xa;, typeFile VARCHAR&#x28;12&#x29;&#xa;, &#x60;reporting-org-ref&#x60; VARCHAR&#x28;255&#x29;&#xa;, &#x60;iati-identifier&#x60; TINYTEXT&#xa;, title TEXT&#xa;, &#x60;activity-status&#x60; TINYTEXT&#xa;, &#x60;activitity-status-code&#x60; TINYTEXT&#xa;, &#x60;activity-website&#x60; TINYTEXT&#xa;, &#x60;default-finance-type&#x60; TINYTEXT&#xa;, &#x60;default-finance-type-code&#x60; TINYTEXT&#xa;, &#x60;default-tied-status&#x60; TINYTEXT&#xa;, &#x60;default-tied-status-code&#x60; TINYTEXT&#xa;, &#x60;default-aid-type&#x60; TINYTEXT&#xa;, &#x60;default-aid-type-code&#x60; TINYTEXT&#xa;, &#x60;other-identifier&#x60; TEXT&#xa;, &#x60;activity-scope&#x60; TINYTEXT&#xa;, &#x60;activity-scope-code&#x60; TINYTEXT&#xa;, &#x60;collaboration-type&#x60; TINYTEXT&#xa;, &#x60;collaboration-type-code&#x60; TINYTEXT&#xa;&#x29; engine&#x3d;myisam DEFAULT CHARSET&#x3d;utf8&#x3b;&#xa;&#x3b;</sql>
     <set_params>N</set_params>
     <insert_field/>
     <update_field/>
@@ -533,6 +533,21 @@
       <field>
         <name>collaboration-type-code</name>
         <xpath>collaboration-type&#x2f;&#x40;code</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>reporting-org-ref</name>
+        <xpath>reporting-org&#x2f;&#x40;ref</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
