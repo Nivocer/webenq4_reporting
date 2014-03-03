@@ -4,11 +4,11 @@
     <extended_description/>
     <job_version/>
     <job_status>0</job_status>
-  <directory>&#47;webenq</directory>
+  <directory>&#x2f;webenq</directory>
   <created_user/>
-  <created_date>2013&#47;08&#47;29 12:34:38.111</created_date>
+  <created_date>2013&#x2f;08&#x2f;29 12&#x3a;34&#x3a;38.111</created_date>
   <modified_user>jaapandre</modified_user>
-  <modified_date>2013&#47;11&#47;19 10:27:55.567</modified_date>
+  <modified_date>2014&#x2f;03&#x2f;03 21&#x3a;48&#x3a;18.576</modified_date>
     <parameters>
         <parameter>
             <name>config-file</name>
@@ -18,13 +18,13 @@
     </parameters>
   <connection>
     <name>source-database</name>
-    <server>${SOURCE_HOST}</server>
+    <server>&#x24;&#x7b;SOURCE_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${SOURCE_DB}</database>
-    <port>${SOURCE_PORT}</port>
-    <username>${SOURCE_USER}</username>
-    <password>${SOURCE_PASSWORD}</password>
+    <database>&#x24;&#x7b;SOURCE_DB&#x7d;</database>
+    <port>&#x24;&#x7b;SOURCE_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;SOURCE_USER&#x7d;</username>
+    <password>&#x24;&#x7b;SOURCE_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -34,7 +34,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${SOURCE_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;SOURCE_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -43,13 +43,13 @@
   </connection>
   <connection>
     <name>target-database</name>
-    <server>${TARGET_HOST}</server>
+    <server>&#x24;&#x7b;TARGET_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${TARGET_DB}</database>
-    <port>${TARGET_PORT}</port>
-    <username>${TARGET_USER}</username>
-    <password>${TARGET_PASSWORD}</password>
+    <database>&#x24;&#x7b;TARGET_DB&#x7d;</database>
+    <port>&#x24;&#x7b;TARGET_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;TARGET_USER&#x7d;</username>
+    <password>&#x24;&#x7b;TARGET_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -59,7 +59,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${TARGET_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;TARGET_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -74,7 +74,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_JOB</id><enabled>Y</enabled><name>ID_JOB</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>JOBNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></job-log-table>
+<field><id>ID_JOB</id><enabled>Y</enabled><name>ID_JOB</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>JOBNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>START_JOB_ENTRY</id><enabled>N</enabled><name>START_JOB_ENTRY</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></job-log-table>
 <jobentry-log-table><connection/>
 <schema/>
 <table/>
@@ -105,8 +105,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>188</xloc>
-      <yloc>68</yloc>
+      <xloc>86</xloc>
+      <yloc>17</yloc>
       </entry>
     <entry>
       <name>dim_country</name>
@@ -116,14 +116,14 @@
       <trans_object_id/>
       <filename/>
       <transname>dim_country</transname>
-      <directory>&#47;webenq</directory>
+      <directory>&#x2f;webenq</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
       <clear_rows>N</clear_rows>
       <clear_files>N</clear_files>
       <set_logfile>Y</set_logfile>
-      <logfile>${PATH_TO_LOG}${Internal.Job.Name}</logfile>
+      <logfile>&#x24;&#x7b;PATH_TO_LOG&#x7d;&#x24;&#x7b;Internal.Job.Name&#x7d;</logfile>
       <logext>txt</logext>
       <add_date>Y</add_date>
       <add_time>N</add_time>
@@ -134,6 +134,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
@@ -149,14 +150,14 @@
       <trans_object_id/>
       <filename/>
       <transname>dim_project</transname>
-      <directory>&#47;webenq</directory>
+      <directory>&#x2f;webenq</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
       <clear_rows>N</clear_rows>
       <clear_files>N</clear_files>
       <set_logfile>Y</set_logfile>
-      <logfile>${PATH_TO_LOG}${Internal.Job.Name}</logfile>
+      <logfile>&#x24;&#x7b;PATH_TO_LOG&#x7d;&#x24;&#x7b;Internal.Job.Name&#x7d;</logfile>
       <logext>txt</logext>
       <add_date>Y</add_date>
       <add_time>N</add_time>
@@ -167,6 +168,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
@@ -182,14 +184,14 @@
       <trans_object_id/>
       <filename/>
       <transname>dim_training</transname>
-      <directory>&#47;webenq</directory>
+      <directory>&#x2f;webenq</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
       <clear_rows>N</clear_rows>
       <clear_files>N</clear_files>
       <set_logfile>Y</set_logfile>
-      <logfile>${PATH_TO_LOG}${Internal.Job.Name}</logfile>
+      <logfile>&#x24;&#x7b;PATH_TO_LOG&#x7d;&#x24;&#x7b;Internal.Job.Name&#x7d;</logfile>
       <logext>txt</logext>
       <add_date>Y</add_date>
       <add_time>N</add_time>
@@ -200,6 +202,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
@@ -215,14 +218,14 @@
       <trans_object_id/>
       <filename/>
       <transname>dim_questionnaire</transname>
-      <directory>&#47;webenq</directory>
+      <directory>&#x2f;webenq</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
       <clear_rows>N</clear_rows>
       <clear_files>N</clear_files>
       <set_logfile>Y</set_logfile>
-      <logfile>${PATH_TO_LOG}${Internal.Job.Name}</logfile>
+      <logfile>&#x24;&#x7b;PATH_TO_LOG&#x7d;&#x24;&#x7b;Internal.Job.Name&#x7d;</logfile>
       <logext>txt</logext>
       <add_date>Y</add_date>
       <add_time>N</add_time>
@@ -233,6 +236,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
@@ -241,21 +245,21 @@
       <yloc>341</yloc>
       </entry>
     <entry>
-      <name>dim_question &#47; stage_lookup_question</name>
+      <name>dim_question &#x2f; stage_lookup_question</name>
       <description/>
       <type>TRANS</type>
       <specification_method>rep_name</specification_method>
       <trans_object_id/>
       <filename/>
       <transname>dim_question</transname>
-      <directory>&#47;webenq</directory>
+      <directory>&#x2f;webenq</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
       <clear_rows>N</clear_rows>
       <clear_files>N</clear_files>
       <set_logfile>Y</set_logfile>
-      <logfile>${PATH_TO_LOG}${Internal.Job.Name}</logfile>
+      <logfile>&#x24;&#x7b;PATH_TO_LOG&#x7d;&#x24;&#x7b;Internal.Job.Name&#x7d;</logfile>
       <logext>txt</logext>
       <add_date>Y</add_date>
       <add_time>N</add_time>
@@ -266,6 +270,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
@@ -281,14 +286,14 @@
       <trans_object_id/>
       <filename/>
       <transname>dim_respondent</transname>
-      <directory>&#47;webenq</directory>
+      <directory>&#x2f;webenq</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
       <clear_rows>N</clear_rows>
       <clear_files>N</clear_files>
       <set_logfile>Y</set_logfile>
-      <logfile>${PATH_TO_LOG}${Internal.Job.Name}</logfile>
+      <logfile>&#x24;&#x7b;PATH_TO_LOG&#x7d;&#x24;&#x7b;Internal.Job.Name&#x7d;</logfile>
       <logext>txt</logext>
       <add_date>Y</add_date>
       <add_time>N</add_time>
@@ -299,6 +304,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
@@ -314,14 +320,14 @@
       <trans_object_id/>
       <filename/>
       <transname>dim_date</transname>
-      <directory>&#47;webenq</directory>
+      <directory>&#x2f;webenq</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
       <clear_rows>N</clear_rows>
       <clear_files>N</clear_files>
       <set_logfile>Y</set_logfile>
-      <logfile>${PATH_TO_LOG}${Internal.Job.Name}</logfile>
+      <logfile>&#x24;&#x7b;PATH_TO_LOG&#x7d;&#x24;&#x7b;Internal.Job.Name&#x7d;</logfile>
       <logext>txt</logext>
       <add_date>Y</add_date>
       <add_time>N</add_time>
@@ -332,6 +338,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
@@ -347,14 +354,14 @@
       <trans_object_id/>
       <filename/>
       <transname>lookup_answer_label_and_stage_lookup_answer_label</transname>
-      <directory>&#47;webenq</directory>
+      <directory>&#x2f;webenq</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
       <clear_rows>N</clear_rows>
       <clear_files>N</clear_files>
       <set_logfile>Y</set_logfile>
-      <logfile>${PATH_TO_LOG}${Internal.Job.Name}</logfile>
+      <logfile>&#x24;&#x7b;PATH_TO_LOG&#x7d;&#x24;&#x7b;Internal.Job.Name&#x7d;</logfile>
       <logext>txt</logext>
       <add_date>Y</add_date>
       <add_time>N</add_time>
@@ -365,6 +372,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
@@ -380,14 +388,14 @@
       <trans_object_id/>
       <filename/>
       <transname>fact_answer</transname>
-      <directory>&#47;webenq</directory>
+      <directory>&#x2f;webenq</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
       <clear_rows>N</clear_rows>
       <clear_files>N</clear_files>
       <set_logfile>Y</set_logfile>
-      <logfile>${PATH_TO_LOG}${Internal.Job.Name}</logfile>
+      <logfile>&#x24;&#x7b;PATH_TO_LOG&#x7d;&#x24;&#x7b;Internal.Job.Name&#x7d;</logfile>
       <logext>txt</logext>
       <add_date>Y</add_date>
       <add_time>N</add_time>
@@ -398,12 +406,13 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>523</xloc>
-      <yloc>527</yloc>
+      <xloc>507</xloc>
+      <yloc>517</yloc>
       </entry>
     <entry>
       <name>Set answer label key</name>
@@ -432,7 +441,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>${PATH_TO_SQL}setupdataMart-Webenq3Cleaned.sql</sqlfilename>
+      <sqlfilename>&#x24;&#x7b;PATH_TO_SQL&#x7d;setupdataMart-Webenq3Cleaned.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>target-database</connection>
       <parallel>N</parallel>
@@ -449,14 +458,14 @@
       <trans_object_id/>
       <filename/>
       <transname>dimension add null values</transname>
-      <directory>&#47;webenq</directory>
+      <directory>&#x2f;webenq</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
       <clear_rows>N</clear_rows>
       <clear_files>N</clear_files>
       <set_logfile>Y</set_logfile>
-      <logfile>${PATH_TO_LOG}${Internal.Job.Name}</logfile>
+      <logfile>&#x24;&#x7b;PATH_TO_LOG&#x7d;&#x24;&#x7b;Internal.Job.Name&#x7d;</logfile>
       <logext>txt</logext>
       <add_date>Y</add_date>
       <add_time>N</add_time>
@@ -467,6 +476,7 @@
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
@@ -481,7 +491,7 @@
       <sql/>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>T</sqlfromfile>
-      <sqlfilename>${PATH_TO_SQL}setupdataMart-Webenq3DropTables.sql</sqlfilename>
+      <sqlfilename>&#x24;&#x7b;PATH_TO_SQL&#x7d;setupdataMart-Webenq3DropTables.sql</sqlfilename>
       <sendOneStatement>F</sendOneStatement>
       <connection>target-database</connection>
       <parallel>N</parallel>
@@ -495,15 +505,15 @@
       <description/>
       <type>SET_VARIABLES</type>
       <replacevars>Y</replacevars>
-      <filename>${config-file}</filename>
+      <filename>&#x24;&#x7b;config-file&#x7d;</filename>
       <file_variable_type>ROOT_JOB</file_variable_type>
       <fields>
       </fields>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>286</xloc>
-      <yloc>66</yloc>
+      <xloc>228</xloc>
+      <yloc>68</yloc>
       </entry>
     <entry>
       <name>succes-mail</name>
@@ -511,17 +521,16 @@
       <type>MAIL</type>
       <server>localhost</server>
       <port/>
-      <destination>${LOG_EMAIL}</destination>
+      <destination>&#x24;&#x7b;LOG_EMAIL&#x7d;</destination>
       <destinationCc/>
       <destinationBCc/>
-      <replyto>${LOG_EMAIL}</replyto>
+      <replyto>&#x24;&#x7b;LOG_EMAIL&#x7d;</replyto>
       <replytoname>Pentaho mailer</replytoname>
       <subject>Etl iicd succes</subject>
       <include_date>Y</include_date>
       <contact_person/>
       <contact_phone/>
-      <comment>De etl van iicd is succesvol verlopen
-</comment>
+      <comment>De etl van iicd is succesvol verlopen&#xa;</comment>
       <include_files>Y</include_files>
       <zip_files>N</zip_files>
       <zip_name/>
@@ -535,6 +544,7 @@
       <encoding>UTF-8</encoding>
       <priority>normal</priority>
       <importance>normal</importance>
+      <sensitivity/>
       <secureconnectiontype>SSL</secureconnectiontype>
       <replyToAddresses/>
       <filetypes>        <filetype>LOG</filetype>
@@ -546,8 +556,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>708</xloc>
-      <yloc>559</yloc>
+      <xloc>765</xloc>
+      <yloc>496</yloc>
       </entry>
     <entry>
       <name>error mail</name>
@@ -555,17 +565,16 @@
       <type>MAIL</type>
       <server>localhost</server>
       <port/>
-      <destination>${LOG_EMAIL}</destination>
+      <destination>&#x24;&#x7b;LOG_EMAIL&#x7d;</destination>
       <destinationCc/>
       <destinationBCc/>
-      <replyto>${LOG_EMAIL}</replyto>
+      <replyto>&#x24;&#x7b;LOG_EMAIL&#x7d;</replyto>
       <replytoname>Pentaho</replytoname>
       <subject>problem with etl  iicd </subject>
       <include_date>Y</include_date>
       <contact_person/>
       <contact_phone/>
-      <comment>De etl van iicd is niet succesvol verlopen
-</comment>
+      <comment>De etl van iicd is niet succesvol verlopen&#xa;</comment>
       <include_files>N</include_files>
       <zip_files>N</zip_files>
       <zip_name/>
@@ -579,6 +588,7 @@
       <encoding>UTF-8</encoding>
       <priority>normal</priority>
       <importance>normal</importance>
+      <sensitivity/>
       <secureconnectiontype>SSL</secureconnectiontype>
       <replyToAddresses/>
       <filetypes>        <filetype>LOG</filetype>
@@ -590,8 +600,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>919</xloc>
-      <yloc>168</yloc>
+      <xloc>932</xloc>
+      <yloc>226</yloc>
       </entry>
     <entry>
       <name>Check Db connections</name>
@@ -619,13 +629,7 @@
       <name>alter dim_country</name>
       <description/>
       <type>SQL</type>
-      <sql>ALTER TABLE dim_country ADD civic_activism_range VARCHAR(255);
-ALTER TABLE dim_country ADD clubs_and_associations_range VARCHAR(255);
-ALTER TABLE dim_country ADD gender_equality_range VARCHAR(255);
-ALTER TABLE dim_country ADD inclusion_range VARCHAR(255);
-ALTER TABLE dim_country ADD intergroup_cohesion_range VARCHAR(255);
-ALTER TABLE dim_country ADD interpersonal_safety_and_trust_range VARCHAR(255);
-ALTER TABLE dim_country ADD year_indsoc INT;</sql>
+      <sql>ALTER TABLE dim_country ADD civic_activism_range VARCHAR&#x28;255&#x29;&#x3b;&#xa;ALTER TABLE dim_country ADD clubs_and_associations_range VARCHAR&#x28;255&#x29;&#x3b;&#xa;ALTER TABLE dim_country ADD gender_equality_range VARCHAR&#x28;255&#x29;&#x3b;&#xa;ALTER TABLE dim_country ADD inclusion_range VARCHAR&#x28;255&#x29;&#x3b;&#xa;ALTER TABLE dim_country ADD intergroup_cohesion_range VARCHAR&#x28;255&#x29;&#x3b;&#xa;ALTER TABLE dim_country ADD interpersonal_safety_and_trust_range VARCHAR&#x28;255&#x29;&#x3b;&#xa;ALTER TABLE dim_country ADD year_indsoc INT&#x3b;</sql>
       <useVariableSubstitution>F</useVariableSubstitution>
       <sqlfromfile>F</sqlfromfile>
       <sqlfilename/>
@@ -645,14 +649,14 @@ ALTER TABLE dim_country ADD year_indsoc INT;</sql>
       <trans_object_id/>
       <filename/>
       <transname>lookup2010</transname>
-      <directory>&#47;other&#47;indsoc</directory>
+      <directory>&#x2f;other&#x2f;indsoc</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
       <clear_rows>N</clear_rows>
       <clear_files>N</clear_files>
       <set_logfile>Y</set_logfile>
-      <logfile>${PATH_TO_LOG}${Internal.Job.Name}</logfile>
+      <logfile>&#x24;&#x7b;PATH_TO_LOG&#x7d;&#x24;&#x7b;Internal.Job.Name&#x7d;</logfile>
       <logext>txt</logext>
       <add_date>Y</add_date>
       <add_time>N</add_time>
@@ -663,6 +667,7 @@ ALTER TABLE dim_country ADD year_indsoc INT;</sql>
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
@@ -678,14 +683,14 @@ ALTER TABLE dim_country ADD year_indsoc INT;</sql>
       <trans_object_id/>
       <filename/>
       <transname>lookup_open_answer</transname>
-      <directory>&#47;webenq</directory>
+      <directory>&#x2f;webenq</directory>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
       <exec_per_row>N</exec_per_row>
       <clear_rows>N</clear_rows>
       <clear_files>N</clear_files>
       <set_logfile>Y</set_logfile>
-      <logfile>${PATH_TO_LOG}${Internal.Job.Name}</logfile>
+      <logfile>&#x24;&#x7b;PATH_TO_LOG&#x7d;&#x24;&#x7b;Internal.Job.Name&#x7d;</logfile>
       <logext>txt</logext>
       <add_date>Y</add_date>
       <add_time>N</add_time>
@@ -696,12 +701,117 @@ ALTER TABLE dim_country ADD year_indsoc INT;</sql>
       <wait_until_finished>Y</wait_until_finished>
       <follow_abort_remote>N</follow_abort_remote>
       <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
       <parameters>        <pass_all_parameters>Y</pass_all_parameters>
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
       <xloc>622</xloc>
       <yloc>375</yloc>
+      </entry>
+    <entry>
+      <name>nagios critical</name>
+      <description/>
+      <type>SEND_NAGIOS_PASSIVE_CHECK</type>
+      <port>5667</port>
+      <servername>&#x24;&#x7b;NAGIOS_SERVER&#x7d;</servername>
+      <password>&#x24;&#x7b;NAGIOS_PASSWORD&#x7d;</password>
+      <responseTimeOut>10000</responseTimeOut>
+      <connectionTimeOut>5000</connectionTimeOut>
+      <senderServerName>&#x24;&#x7b;NAGIOS_SENDER&#x7d;</senderServerName>
+      <senderServiceName>ETL</senderServiceName>
+      <message>database problems&#x21;</message>
+      <encryptionMode>none</encryptionMode>
+      <level>critical</level>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>925</xloc>
+      <yloc>144</yloc>
+      </entry>
+    <entry>
+      <name>nagios ok</name>
+      <description/>
+      <type>SEND_NAGIOS_PASSIVE_CHECK</type>
+      <port>5667</port>
+      <servername>&#x24;&#x7b;NAGIOS_SERVER&#x7d;</servername>
+      <password>&#x24;&#x7b;NAGIOS_PASSWORD&#x7d;</password>
+      <responseTimeOut>10000</responseTimeOut>
+      <connectionTimeOut>5000</connectionTimeOut>
+      <senderServerName>&#x24;&#x7b;NAGIOS_SENDER&#x7d;</senderServerName>
+      <senderServiceName>ETL</senderServiceName>
+      <message>ETL succesfull</message>
+      <encryptionMode>none</encryptionMode>
+      <level>ok</level>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>770</xloc>
+      <yloc>601</yloc>
+      </entry>
+    <entry>
+      <name>DUMMY</name>
+      <description/>
+      <type>SPECIAL</type>
+      <start>N</start>
+      <dummy>Y</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>734</xloc>
+      <yloc>178</yloc>
+      </entry>
+    <entry>
+      <name>production&#x3f;</name>
+      <description/>
+      <type>SIMPLE_EVAL</type>
+      <valuetype>variable</valuetype>
+      <fieldname/>
+      <variablename>APPLICATION_ENVIRONMENT</variablename>
+      <fieldtype>string</fieldtype>
+      <mask/>
+      <comparevalue>production</comparevalue>
+      <minvalue/>
+      <maxvalue/>
+      <successcondition>equal</successcondition>
+      <successnumbercondition>equal</successnumbercondition>
+      <successbooleancondition>false</successbooleancondition>
+      <successwhenvarset>N</successwhenvarset>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>823</xloc>
+      <yloc>183</yloc>
+      </entry>
+    <entry>
+      <name>production&#x3f; &#x28;succes&#x29; </name>
+      <description/>
+      <type>SIMPLE_EVAL</type>
+      <valuetype>variable</valuetype>
+      <fieldname/>
+      <variablename>APPLICATION_ENVIRONMENT</variablename>
+      <fieldtype>string</fieldtype>
+      <mask/>
+      <comparevalue>production</comparevalue>
+      <minvalue/>
+      <maxvalue/>
+      <successcondition>equal</successcondition>
+      <successnumbercondition>equal</successnumbercondition>
+      <successbooleancondition>false</successbooleancondition>
+      <successwhenvarset>N</successwhenvarset>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>634</xloc>
+      <yloc>554</yloc>
       </entry>
   </entries>
   <hops>
@@ -734,7 +844,7 @@ ALTER TABLE dim_country ADD year_indsoc INT;</sql>
     </hop>
     <hop>
       <from>dim_questionnaire</from>
-      <to>dim_question &#47; stage_lookup_question</to>
+      <to>dim_question &#x2f; stage_lookup_question</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -787,42 +897,6 @@ ALTER TABLE dim_country ADD year_indsoc INT;</sql>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>fact_answer</from>
-      <to>succes-mail</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>drop tables</from>
-      <to>error mail</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>create database</from>
-      <to>error mail</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Check Db connections</from>
-      <to>error mail</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>START</from>
       <to>read config file</to>
       <from_nr>0</from_nr>
@@ -830,15 +904,6 @@ ALTER TABLE dim_country ADD year_indsoc INT;</sql>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
       <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>read config file</from>
-      <to>Check Db connections</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>Check Db connections</from>
@@ -886,7 +951,7 @@ ALTER TABLE dim_country ADD year_indsoc INT;</sql>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>dim_question &#47; stage_lookup_question</from>
+      <from>dim_question &#x2f; stage_lookup_question</from>
       <to>lookup_open_answer</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -903,11 +968,100 @@ ALTER TABLE dim_country ADD year_indsoc INT;</sql>
       <evaluation>Y</evaluation>
       <unconditional>N</unconditional>
     </hop>
+    <hop>
+      <from>read config file</from>
+      <to>Check Db connections</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>create database</from>
+      <to>DUMMY</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>drop tables</from>
+      <to>DUMMY</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Check Db connections</from>
+      <to>DUMMY</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>DUMMY</from>
+      <to>production&#x3f;</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>production&#x3f;</from>
+      <to>error mail</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>production&#x3f;</from>
+      <to>nagios critical</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>fact_answer</from>
+      <to>production&#x3f; &#x28;succes&#x29; </to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>production&#x3f; &#x28;succes&#x29; </from>
+      <to>nagios ok</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>production&#x3f; &#x28;succes&#x29; </from>
+      <to>succes-mail</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
   </hops>
   <notepads>
     <notepad>
-      <note>Prepare 
-no datase lookup</note>
+      <note>Prepare &#xa;no datase lookup</note>
       <xloc>53</xloc>
       <yloc>81</yloc>
       <width>109</width>
@@ -949,9 +1103,7 @@ no datase lookup</note>
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>Questionnaires
-Questions
-Answer possibilities</note>
+      <note>Questionnaires&#xa;Questions&#xa;Answer possibilities</note>
       <xloc>53</xloc>
       <yloc>362</yloc>
       <width>126</width>
@@ -972,8 +1124,7 @@ Answer possibilities</note>
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>Respondents &amp; 
-Answers</note>
+      <note>Respondents &#x26; &#xa;Answers</note>
       <xloc>54</xloc>
       <yloc>481</yloc>
       <width>104</width>
@@ -994,4 +1145,5 @@ Answers</note>
       <drawshadow>Y</drawshadow>
     </notepad>
   </notepads>
+
 </job>

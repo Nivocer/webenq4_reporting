@@ -6,7 +6,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#47;webenq</directory>
+    <directory>&#x2f;webenq</directory>
     <parameters>
     </parameters>
     <log>
@@ -16,7 +16,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>N</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>N</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>N</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>N</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
 <perf-log-table><connection/>
 <schema/>
 <table/>
@@ -33,6 +33,11 @@
 <table/>
 <timeout_days/>
 <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -61,9 +66,9 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>admin</created_user>
-  <created_date>2013&#47;08&#47;27 09:53:07.000</created_date>
+  <created_date>2013&#x2f;08&#x2f;27 09&#x3a;53&#x3a;07.000</created_date>
   <modified_user>jaapandre</modified_user>
-  <modified_date>2013&#47;11&#47;22 16:12:48.204</modified_date>
+  <modified_date>2014&#x2f;03&#x2f;03 21&#x3a;19&#x3a;59.178</modified_date>
   </info>
   <notepads>
     <notepad>
@@ -216,13 +221,13 @@
   </notepads>
   <connection>
     <name>source-database</name>
-    <server>${SOURCE_HOST}</server>
+    <server>&#x24;&#x7b;SOURCE_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${SOURCE_DB}</database>
-    <port>${SOURCE_PORT}</port>
-    <username>${SOURCE_USER}</username>
-    <password>${SOURCE_PASSWORD}</password>
+    <database>&#x24;&#x7b;SOURCE_DB&#x7d;</database>
+    <port>&#x24;&#x7b;SOURCE_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;SOURCE_USER&#x7d;</username>
+    <password>&#x24;&#x7b;SOURCE_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -232,7 +237,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${SOURCE_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;SOURCE_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -241,13 +246,13 @@
   </connection>
   <connection>
     <name>target-database</name>
-    <server>${TARGET_HOST}</server>
+    <server>&#x24;&#x7b;TARGET_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${TARGET_DB}</database>
-    <port>${TARGET_PORT}</port>
-    <username>${TARGET_USER}</username>
-    <password>${TARGET_PASSWORD}</password>
+    <database>&#x24;&#x7b;TARGET_DB&#x7d;</database>
+    <port>&#x24;&#x7b;TARGET_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;TARGET_USER&#x7d;</username>
+    <password>&#x24;&#x7b;TARGET_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -257,7 +262,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${TARGET_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;TARGET_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -265,12 +270,59 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>lookup respondent</from><to>lookup question</to><enabled>Y</enabled> </hop>  <hop> <from>add field country</from><to>Select field country</to><enabled>Y</enabled> </hop>  <hop> <from>add field project</from><to>Select field project</to><enabled>Y</enabled> </hop>  <hop> <from>get answers</from><to>trim answer</to><enabled>Y</enabled> </hop>  <hop> <from>trim answer</from><to>lookup respondent</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>lookup country</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>lookup project</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>lookup training</to><enabled>Y</enabled> </hop>  <hop> <from>lookup project</from><to>add field project</to><enabled>Y</enabled> </hop>  <hop> <from>lookup country</from><to>add field country</to><enabled>Y</enabled> </hop>  <hop> <from>Select field numeric</from><to>Output to fact_answer numeric</to><enabled>Y</enabled> </hop>  <hop> <from>select field string</from><to>Output to fact_answer string</to><enabled>Y</enabled> </hop>  <hop> <from>Select field training</from><to>Output to fact_answer training</to><enabled>Y</enabled> </hop>  <hop> <from>Select field project</from><to>Output to fact_answer project</to><enabled>Y</enabled> </hop>  <hop> <from>Select field country</from><to>Output to fact_answer country</to><enabled>Y</enabled> </hop>  <hop> <from>Select fiels answer_id</from><to>Output to fact_answer answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer answer_id</from><to>error output answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer numeric</from><to>error output numeric</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer string</from><to>error output string</to><enabled>Y</enabled> </hop>  <hop> <from>lookup answer_key (answer_id)</from><to>error output lookup answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>answer_db to integer</to><enabled>Y</enabled> </hop>  <hop> <from>answer_db to integer</from><to>lookup answer_key (answer_id)</to><enabled>Y</enabled> </hop>  <hop> <from>answer_db to integer</from><to>error output answer_db  to integer</to><enabled>Y</enabled> </hop>  <hop> <from>lookup question</from><to>valid answer</to><enabled>Y</enabled> </hop>  <hop> <from>valid answer</from><to>Dummy (do nothing)</to><enabled>Y</enabled> </hop>  <hop> <from>lookup country</from><to>error output lookup country</to><enabled>Y</enabled> </hop>  <hop> <from>lookup project</from><to>error output lookup project</to><enabled>Y</enabled> </hop>  <hop> <from>lookup training</from><to>error output lookup training</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer training</from><to>error output training</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer project</from><to>error output project</to><enabled>Y</enabled> </hop>  <hop> <from>Output to fact_answer country</from><to>error output country</to><enabled>Y</enabled> </hop>  <hop> <from>lookup answer_key (answer_id)</from><to>remove missing answer</to><enabled>Y</enabled> </hop>  <hop> <from>remove missing answer</from><to>Dummy (do nothing) 2</to><enabled>Y</enabled> </hop>  <hop> <from>clean answer label</from><to>shorten Answer</to><enabled>Y</enabled> </hop>  <hop> <from>answer type switch</from><to>clean answer label</to><enabled>Y</enabled> </hop>  <hop> <from>shorten Answer</from><to>lookup Answer Label</to><enabled>Y</enabled> </hop>  <hop> <from>lookup Answer Label</from><to>answer is numeric?</to><enabled>Y</enabled> </hop>  <hop> <from>answer is numeric?</from><to>Select field numeric</to><enabled>Y</enabled> </hop>  <hop> <from>lookup Answer Label</from><to>Text file output</to><enabled>Y</enabled> </hop>  <hop> <from>lookup training</from><to>Select field training</to><enabled>Y</enabled> </hop>  <hop> <from>remove missing answer</from><to>Select fiels answer_id</to><enabled>Y</enabled> </hop>  <hop> <from>answer is numeric?</from><to>Add constants</to><enabled>Y</enabled> </hop>  <hop> <from>Add constants</from><to>select field string</to><enabled>Y</enabled> </hop>  <hop> <from>valid answer</from><to>invalid answers</to><enabled>Y</enabled> </hop>  <hop> <from>invalid answers</from><to>answer type switch</to><enabled>Y</enabled> </hop>  <hop> <from>invalid answers</from><to>Dummy (do nothing)</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>lookup respondent</from><to>lookup question</to><enabled>Y</enabled> </hop>
+  <hop> <from>add field country</from><to>Select field country</to><enabled>Y</enabled> </hop>
+  <hop> <from>add field project</from><to>Select field project</to><enabled>Y</enabled> </hop>
+  <hop> <from>get answers</from><to>trim answer</to><enabled>Y</enabled> </hop>
+  <hop> <from>trim answer</from><to>lookup respondent</to><enabled>Y</enabled> </hop>
+  <hop> <from>answer type switch</from><to>lookup country</to><enabled>Y</enabled> </hop>
+  <hop> <from>answer type switch</from><to>lookup project</to><enabled>Y</enabled> </hop>
+  <hop> <from>answer type switch</from><to>lookup training</to><enabled>Y</enabled> </hop>
+  <hop> <from>lookup project</from><to>add field project</to><enabled>Y</enabled> </hop>
+  <hop> <from>lookup country</from><to>add field country</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select field numeric</from><to>Output to fact_answer numeric</to><enabled>Y</enabled> </hop>
+  <hop> <from>select field string</from><to>Output to fact_answer string</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select field training</from><to>Output to fact_answer training</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select field project</from><to>Output to fact_answer project</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select field country</from><to>Output to fact_answer country</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select fiels answer_id</from><to>Output to fact_answer answer_id</to><enabled>Y</enabled> </hop>
+  <hop> <from>Output to fact_answer answer_id</from><to>error output answer_id</to><enabled>Y</enabled> </hop>
+  <hop> <from>Output to fact_answer numeric</from><to>error output numeric</to><enabled>Y</enabled> </hop>
+  <hop> <from>Output to fact_answer string</from><to>error output string</to><enabled>Y</enabled> </hop>
+  <hop> <from>lookup answer_key &#x28;answer_id&#x29;</from><to>error output lookup answer_id</to><enabled>Y</enabled> </hop>
+  <hop> <from>answer type switch</from><to>answer_db to integer</to><enabled>Y</enabled> </hop>
+  <hop> <from>answer_db to integer</from><to>lookup answer_key &#x28;answer_id&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>answer_db to integer</from><to>error output answer_db  to integer</to><enabled>Y</enabled> </hop>
+  <hop> <from>lookup question</from><to>valid answer</to><enabled>Y</enabled> </hop>
+  <hop> <from>valid answer</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>lookup country</from><to>error output lookup country</to><enabled>Y</enabled> </hop>
+  <hop> <from>lookup project</from><to>error output lookup project</to><enabled>Y</enabled> </hop>
+  <hop> <from>lookup training</from><to>error output lookup training</to><enabled>Y</enabled> </hop>
+  <hop> <from>Output to fact_answer training</from><to>error output training</to><enabled>Y</enabled> </hop>
+  <hop> <from>Output to fact_answer project</from><to>error output project</to><enabled>Y</enabled> </hop>
+  <hop> <from>Output to fact_answer country</from><to>error output country</to><enabled>Y</enabled> </hop>
+  <hop> <from>lookup answer_key &#x28;answer_id&#x29;</from><to>remove missing answer</to><enabled>Y</enabled> </hop>
+  <hop> <from>remove missing answer</from><to>Dummy &#x28;do nothing&#x29; 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>clean answer label</from><to>shorten Answer</to><enabled>Y</enabled> </hop>
+  <hop> <from>answer type switch</from><to>clean answer label</to><enabled>Y</enabled> </hop>
+  <hop> <from>shorten Answer</from><to>lookup Answer Label</to><enabled>Y</enabled> </hop>
+  <hop> <from>lookup Answer Label</from><to>answer is numeric&#x3f;</to><enabled>Y</enabled> </hop>
+  <hop> <from>answer is numeric&#x3f;</from><to>Select field numeric</to><enabled>Y</enabled> </hop>
+  <hop> <from>lookup Answer Label</from><to>Text file output</to><enabled>Y</enabled> </hop>
+  <hop> <from>lookup training</from><to>Select field training</to><enabled>Y</enabled> </hop>
+  <hop> <from>remove missing answer</from><to>Select fiels answer_id</to><enabled>Y</enabled> </hop>
+  <hop> <from>answer is numeric&#x3f;</from><to>Add constants</to><enabled>Y</enabled> </hop>
+  <hop> <from>Add constants</from><to>select field string</to><enabled>Y</enabled> </hop>
+  <hop> <from>valid answer</from><to>invalid answers</to><enabled>Y</enabled> </hop>
+  <hop> <from>invalid answers</from><to>answer type switch</to><enabled>Y</enabled> </hop>
+  <hop> <from>invalid answers</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
+  </order>
   <step>
     <name>Add constants</name>
     <type>Constant</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -287,6 +339,7 @@
         <nullif/>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
     </fields>
      <cluster_schema/>
@@ -298,10 +351,11 @@
     </step>
 
   <step>
-    <name>Dummy (do nothing)</name>
+    <name>Dummy &#x28;do nothing&#x29;</name>
     <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -316,10 +370,11 @@
     </step>
 
   <step>
-    <name>Dummy (do nothing) 2</name>
+    <name>Dummy &#x28;do nothing&#x29; 2</name>
     <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -338,6 +393,7 @@
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -411,6 +467,7 @@
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -484,6 +541,7 @@
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -557,6 +615,7 @@
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -630,6 +689,7 @@
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -703,6 +763,7 @@
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -776,6 +837,7 @@
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -831,6 +893,7 @@
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -880,6 +943,9 @@
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -898,6 +964,7 @@
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -953,6 +1020,7 @@
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1002,6 +1070,9 @@
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -1020,6 +1091,7 @@
     <type>SelectValues</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1069,6 +1141,9 @@
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -1087,13 +1162,14 @@
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <separator>;</separator>
-    <enclosure>&quot;</enclosure>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
     <enclosure_forced>N</enclosure_forced>
     <enclosure_fix_disabled>N</enclosure_fix_disabled>
     <header>Y</header>
@@ -1106,7 +1182,7 @@
     <fileNameField/>
     <create_parent_folder>N</create_parent_folder>
     <file>
-      <name>${PATH_TO_LOG}pentaho_${Internal.Transformation.Name}_lookupOpenAnswer</name>
+      <name>&#x24;&#x7b;PATH_TO_LOG&#x7d;pentaho_&#x24;&#x7b;Internal.Transformation.Name&#x7d;_lookupOpenAnswer</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -1138,6 +1214,7 @@
     <type>Constant</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1154,6 +1231,7 @@
         <nullif/>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
     </fields>
      <cluster_schema/>
@@ -1169,6 +1247,7 @@
     <type>Constant</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1185,6 +1264,7 @@
         <nullif/>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
     </fields>
      <cluster_schema/>
@@ -1196,10 +1276,11 @@
     </step>
 
   <step>
-    <name>answer is numeric?</name>
+    <name>answer is numeric&#x3f;</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1213,7 +1294,7 @@
  <leftvalue>answer_db</leftvalue>
  <function>REGEXP</function>
  <rightvalue/>
- <value><name>constant</name><type>String</type><text>[-]?[0-9]*\.?[0-9]+</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+ <value><name>constant</name><type>String</type><text>&#x5b;-&#x5d;&#x3f;&#x5b;0-9&#x5d;&#x2a;&#x5c;.&#x3f;&#x5b;0-9&#x5d;&#x2b;</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -1228,6 +1309,7 @@
     <type>SwitchCase</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1263,6 +1345,7 @@
     <type>SelectValues</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1271,11 +1354,14 @@
     <fields>        <select_unspecified>N</select_unspecified>
       <meta>        <name>respondent_id</name>
         <rename>respondent_id</rename>
-        <type>-</type>
+        <type>None</type>
         <length>9</length>
         <precision>0</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -1283,11 +1369,14 @@
         <storage_type/>
       </meta>      <meta>        <name>vraag_id</name>
         <rename>vraag_id</rename>
-        <type>-</type>
+        <type>None</type>
         <length>9</length>
         <precision>0</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -1300,6 +1389,9 @@
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -1307,11 +1399,14 @@
         <storage_type/>
       </meta>      <meta>        <name>respondent_key</name>
         <rename>respondent_key</rename>
-        <type>-</type>
+        <type>None</type>
         <length>9</length>
         <precision>0</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -1319,11 +1414,14 @@
         <storage_type/>
       </meta>      <meta>        <name>date_key</name>
         <rename>date_key</rename>
-        <type>-</type>
+        <type>None</type>
         <length>9</length>
         <precision>0</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -1331,11 +1429,14 @@
         <storage_type/>
       </meta>      <meta>        <name>questionnaire_key</name>
         <rename>questionnaire_key</rename>
-        <type>-</type>
+        <type>None</type>
         <length>9</length>
         <precision>0</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -1343,11 +1444,14 @@
         <storage_type/>
       </meta>      <meta>        <name>country_key</name>
         <rename>country_key</rename>
-        <type>-</type>
+        <type>None</type>
         <length>9</length>
         <precision>0</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -1355,11 +1459,14 @@
         <storage_type/>
       </meta>      <meta>        <name>training_key</name>
         <rename>training_key</rename>
-        <type>-</type>
+        <type>None</type>
         <length>9</length>
         <precision>0</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -1367,11 +1474,14 @@
         <storage_type/>
       </meta>      <meta>        <name>project_key</name>
         <rename>project_key</rename>
-        <type>-</type>
+        <type>None</type>
         <length>9</length>
         <precision>0</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -1379,11 +1489,14 @@
         <storage_type/>
       </meta>      <meta>        <name>question_key</name>
         <rename>question_key</rename>
-        <type>-</type>
+        <type>None</type>
         <length>9</length>
         <precision>0</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -1391,11 +1504,14 @@
         <storage_type/>
       </meta>      <meta>        <name>answer_type</name>
         <rename>answer_type</rename>
-        <type>-</type>
+        <type>None</type>
         <length>255</length>
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -1414,6 +1530,7 @@
     <type>StringOperations</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1447,13 +1564,14 @@
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <separator>;</separator>
-    <enclosure>&quot;</enclosure>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
     <enclosure_forced>N</enclosure_forced>
     <enclosure_fix_disabled>N</enclosure_fix_disabled>
     <header>Y</header>
@@ -1466,7 +1584,7 @@
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>${PATH_TO_LOG}pentaho_${Internal.Transformation.Name}_answerDbToInteger</name>
+      <name>&#x24;&#x7b;PATH_TO_LOG&#x7d;pentaho_&#x24;&#x7b;Internal.Transformation.Name&#x7d;_answerDbToInteger</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -1630,13 +1748,14 @@
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <separator>;</separator>
-    <enclosure>&quot;</enclosure>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
     <enclosure_forced>N</enclosure_forced>
     <enclosure_fix_disabled>N</enclosure_fix_disabled>
     <header>Y</header>
@@ -1649,7 +1768,7 @@
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>${PATH_TO_LOG}pentaho_fact_answer_save_answer_id</name>
+      <name>&#x24;&#x7b;PATH_TO_LOG&#x7d;pentaho_fact_answer_save_answer_id</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -1789,13 +1908,14 @@
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <separator>;</separator>
-    <enclosure>&quot;</enclosure>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
     <enclosure_forced>N</enclosure_forced>
     <enclosure_fix_disabled>N</enclosure_fix_disabled>
     <header>Y</header>
@@ -1808,7 +1928,7 @@
     <fileNameField/>
     <create_parent_folder>N</create_parent_folder>
     <file>
-      <name>${PATH_TO_LOG}pentaho_fact_answer_save_answer_country</name>
+      <name>&#x24;&#x7b;PATH_TO_LOG&#x7d;pentaho_fact_answer_save_answer_country</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>Y</do_not_open_new_file_init>
@@ -1948,13 +2068,14 @@
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <separator>;</separator>
-    <enclosure>&quot;</enclosure>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
     <enclosure_forced>N</enclosure_forced>
     <enclosure_fix_disabled>N</enclosure_fix_disabled>
     <header>Y</header>
@@ -1967,7 +2088,7 @@
     <fileNameField/>
     <create_parent_folder>N</create_parent_folder>
     <file>
-      <name>${PATH_TO_LOG}pentaho_${Internal.Transformation.Name}_lookupAnswerId</name>
+      <name>&#x24;&#x7b;PATH_TO_LOG&#x7d;pentaho_&#x24;&#x7b;Internal.Transformation.Name&#x7d;_lookupAnswerId</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -2131,13 +2252,14 @@
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <separator>;</separator>
-    <enclosure>&quot;</enclosure>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
     <enclosure_forced>N</enclosure_forced>
     <enclosure_fix_disabled>N</enclosure_fix_disabled>
     <header>Y</header>
@@ -2150,7 +2272,7 @@
     <fileNameField/>
     <create_parent_folder>N</create_parent_folder>
     <file>
-      <name>${PATH_TO_LOG}pentaho_${Internal.Transformation.Name}_lookupCountry</name>
+      <name>&#x24;&#x7b;PATH_TO_LOG&#x7d;pentaho_&#x24;&#x7b;Internal.Transformation.Name&#x7d;_lookupCountry</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -2314,13 +2436,14 @@
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <separator>;</separator>
-    <enclosure>&quot;</enclosure>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
     <enclosure_forced>N</enclosure_forced>
     <enclosure_fix_disabled>N</enclosure_fix_disabled>
     <header>Y</header>
@@ -2333,7 +2456,7 @@
     <fileNameField/>
     <create_parent_folder>N</create_parent_folder>
     <file>
-      <name>${PATH_TO_LOG}pentaho_${Internal.Transformation.Name}_lookupProject</name>
+      <name>&#x24;&#x7b;PATH_TO_LOG&#x7d;pentaho_&#x24;&#x7b;Internal.Transformation.Name&#x7d;_lookupProject</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -2497,13 +2620,14 @@
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <separator>;</separator>
-    <enclosure>&quot;</enclosure>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
     <enclosure_forced>N</enclosure_forced>
     <enclosure_fix_disabled>N</enclosure_fix_disabled>
     <header>Y</header>
@@ -2516,7 +2640,7 @@
     <fileNameField/>
     <create_parent_folder>N</create_parent_folder>
     <file>
-      <name>${PATH_TO_LOG}pentaho_${Internal.Transformation.Name}_lookupTraining</name>
+      <name>&#x24;&#x7b;PATH_TO_LOG&#x7d;pentaho_&#x24;&#x7b;Internal.Transformation.Name&#x7d;_lookupTraining</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -2680,13 +2804,14 @@
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <separator>;</separator>
-    <enclosure>&quot;</enclosure>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
     <enclosure_forced>N</enclosure_forced>
     <enclosure_fix_disabled>N</enclosure_fix_disabled>
     <header>Y</header>
@@ -2699,7 +2824,7 @@
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>${PATH_TO_LOG}pentaho_fact_answer_save_answer_numeric</name>
+      <name>&#x24;&#x7b;PATH_TO_LOG&#x7d;pentaho_fact_answer_save_answer_numeric</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -2839,13 +2964,14 @@
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <separator>;</separator>
-    <enclosure>&quot;</enclosure>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
     <enclosure_forced>N</enclosure_forced>
     <enclosure_fix_disabled>N</enclosure_fix_disabled>
     <header>Y</header>
@@ -2858,7 +2984,7 @@
     <fileNameField/>
     <create_parent_folder>N</create_parent_folder>
     <file>
-      <name>${PATH_TO_LOG}pentaho_fact_answer_save_answer_project</name>
+      <name>&#x24;&#x7b;PATH_TO_LOG&#x7d;pentaho_fact_answer_save_answer_project</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>Y</do_not_open_new_file_init>
@@ -2998,13 +3124,14 @@
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <separator>;</separator>
-    <enclosure>&quot;</enclosure>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
     <enclosure_forced>N</enclosure_forced>
     <enclosure_fix_disabled>N</enclosure_fix_disabled>
     <header>Y</header>
@@ -3017,7 +3144,7 @@
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>${PATH_TO_LOG}pentaho_fact_answer_save_answer_string</name>
+      <name>&#x24;&#x7b;PATH_TO_LOG&#x7d;pentaho_fact_answer_save_answer_string</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
@@ -3157,13 +3284,14 @@
     <type>TextFileOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <separator>;</separator>
-    <enclosure>&quot;</enclosure>
+    <separator>&#x3b;</separator>
+    <enclosure>&#x22;</enclosure>
     <enclosure_forced>N</enclosure_forced>
     <enclosure_fix_disabled>N</enclosure_fix_disabled>
     <header>Y</header>
@@ -3176,7 +3304,7 @@
     <fileNameField/>
     <create_parent_folder>N</create_parent_folder>
     <file>
-      <name>${PATH_TO_LOG}pentaho_fact_answer_save_answer_training</name>
+      <name>&#x24;&#x7b;PATH_TO_LOG&#x7d;pentaho_fact_answer_save_answer_training</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>Y</do_not_open_new_file_init>
@@ -3316,14 +3444,14 @@
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
     <connection>source-database</connection>
-    <sql>SELECT respondent_id, vraag_id, waarde AS answer_db
-from tbl_respondent_antwoorden</sql>
+    <sql>SELECT respondent_id, vraag_id, waarde AS answer_db&#xa;from tbl_respondent_antwoorden</sql>
     <limit/>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -3338,10 +3466,58 @@ from tbl_respondent_antwoorden</sql>
     </step>
 
   <step>
+    <name>invalid answers</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Dummy &#x28;do nothing&#x29;</send_true_to>
+<send_false_to>answer type switch</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <operator>AND</operator>
+   <conditions>
+    <condition>
+     <negated>N</negated>
+     <leftvalue>vraag_id</leftvalue>
+     <function>&#x3d;</function>
+     <rightvalue/>
+     <value><name>constant</name><type>Integer</type><text>1821</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;&#x3b;-&#x23;</mask></value>     </condition>
+    <condition>
+     <negated>N</negated>
+     <operator>AND</operator>
+     <leftvalue>answer_db</leftvalue>
+     <function>&#x3c;</function>
+     <rightvalue/>
+     <value><name>constant</name><type>String</type><text>0</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>     </condition>
+    </conditions>
+   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>657</xloc>
+      <yloc>91</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
     <name>lookup Answer Label</name>
     <type>DBLookup</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -3360,13 +3536,13 @@ from tbl_respondent_antwoorden</sql>
       <key>
         <name>question_key</name>
         <field>question_key</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <key>
         <name>answer_db</name>
         <field>answer_label</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -3391,10 +3567,11 @@ from tbl_respondent_antwoorden</sql>
     </step>
 
   <step>
-    <name>lookup answer_key (answer_id)</name>
+    <name>lookup answer_key &#x28;answer_id&#x29;</name>
     <type>DBLookup</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -3413,13 +3590,13 @@ from tbl_respondent_antwoorden</sql>
       <key>
         <name>vraag_id</name>
         <field>question_id</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <key>
         <name>answer_db</name>
         <field>answer_id</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -3454,6 +3631,7 @@ from tbl_respondent_antwoorden</sql>
     <type>DBLookup</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -3472,7 +3650,7 @@ from tbl_respondent_antwoorden</sql>
       <key>
         <name>answer_db</name>
         <field>country_code3</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -3495,6 +3673,7 @@ from tbl_respondent_antwoorden</sql>
     <type>DBLookup</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -3513,7 +3692,7 @@ from tbl_respondent_antwoorden</sql>
       <key>
         <name>answer_db</name>
         <field>project_id</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -3536,6 +3715,7 @@ from tbl_respondent_antwoorden</sql>
     <type>DBLookup</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -3554,7 +3734,7 @@ from tbl_respondent_antwoorden</sql>
       <key>
         <name>vraag_id</name>
         <field>question_id</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -3583,6 +3763,7 @@ from tbl_respondent_antwoorden</sql>
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -3601,7 +3782,7 @@ from tbl_respondent_antwoorden</sql>
       <key>
         <name>respondent_id</name>
         <field>respondent_id</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -3654,6 +3835,7 @@ from tbl_respondent_antwoorden</sql>
     <type>DBLookup</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -3672,7 +3854,7 @@ from tbl_respondent_antwoorden</sql>
       <key>
         <name>answer_db</name>
         <field>training_id</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -3695,20 +3877,21 @@ from tbl_respondent_antwoorden</sql>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
 <send_true_to>Select fiels answer_id</send_true_to>
-<send_false_to>Dummy (do nothing) 2</send_false_to>
+<send_false_to>Dummy &#x28;do nothing&#x29; 2</send_false_to>
     <compare>
 <condition>
  <negated>N</negated>
  <leftvalue>missing_answer</leftvalue>
- <function>=</function>
+ <function>&#x3d;</function>
  <rightvalue/>
- <value><name>constant</name><type>Integer</type><text>0</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>#;-#</mask></value> </condition>
+ <value><name>constant</name><type>Integer</type><text>0</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;&#x3b;-&#x23;</mask></value> </condition>
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -3723,6 +3906,7 @@ from tbl_respondent_antwoorden</sql>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -3778,6 +3962,7 @@ from tbl_respondent_antwoorden</sql>
     <type>StringCut</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -3804,6 +3989,7 @@ from tbl_respondent_antwoorden</sql>
     <type>StringOperations</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -3837,13 +4023,14 @@ from tbl_respondent_antwoorden</sql>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
 <send_true_to>invalid answers</send_true_to>
-<send_false_to>Dummy (do nothing)</send_false_to>
+<send_false_to>Dummy &#x28;do nothing&#x29;</send_false_to>
     <compare>
 <condition>
  <negated>N</negated>
@@ -3858,28 +4045,28 @@ from tbl_respondent_antwoorden</sql>
    <negated>N</negated>
    <operator>AND</operator>
    <leftvalue>answer_db</leftvalue>
-   <function>&lt;&gt;</function>
+   <function>&#x3c;&#x3e;</function>
    <rightvalue/>
    <value><name>constant</name><type>String</type><text>-999998</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
   <condition>
    <negated>N</negated>
    <operator>AND</operator>
    <leftvalue>answer_db</leftvalue>
-   <function>&lt;&gt;</function>
+   <function>&#x3c;&#x3e;</function>
    <rightvalue/>
    <value><name>constant</name><type>String</type><text>-999999</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
   <condition>
    <negated>N</negated>
    <operator>AND</operator>
    <leftvalue>answer_db</leftvalue>
-   <function>&lt;&gt;</function>
+   <function>&#x3c;&#x3e;</function>
    <rightvalue/>
    <value><name>constant</name><type>String</type><text>-999998.</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
   <condition>
    <negated>N</negated>
    <operator>AND</operator>
    <leftvalue>answer_db</leftvalue>
-   <function>&lt;&gt;</function>
+   <function>&#x3c;&#x3e;</function>
    <rightvalue/>
    <value><name>constant</name><type>String</type><text>-999999.</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>   </condition>
   </conditions>
@@ -3889,52 +4076,6 @@ from tbl_respondent_antwoorden</sql>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>741</xloc>
       <yloc>19</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>invalid answers</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<send_true_to>Dummy (do nothing)</send_true_to>
-<send_false_to>answer type switch</send_false_to>
-    <compare>
-<condition>
- <negated>N</negated>
- <conditions>
-  <condition>
-   <negated>N</negated>
-   <operator>AND</operator>
-   <conditions>
-    <condition>
-     <negated>N</negated>
-     <leftvalue>vraag_id</leftvalue>
-     <function>=</function>
-     <rightvalue/>
-     <value><name>constant</name><type>Integer</type><text>1821</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>#;-#</mask></value>     </condition>
-    <condition>
-     <negated>N</negated>
-     <operator>AND</operator>
-     <leftvalue>answer_db</leftvalue>
-     <function>&lt;</function>
-     <rightvalue/>
-     <value><name>constant</name><type>String</type><text>0</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value>     </condition>
-    </conditions>
-   </condition>
-  </conditions>
- </condition>
-    </compare>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>657</xloc>
-      <yloc>91</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -4037,7 +4178,7 @@ from tbl_respondent_antwoorden</sql>
         <min_pct_rows/>
       </error>
       <error>
-        <source_step>lookup answer_key (answer_id)</source_step>
+        <source_step>lookup answer_key &#x28;answer_id&#x29;</source_step>
         <target_step>error output lookup answer_id</target_step>
         <is_enabled>Y</is_enabled>
         <nr_valuename/>
@@ -4088,4 +4229,5 @@ from tbl_respondent_antwoorden</sql>
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
+
 </transformation>

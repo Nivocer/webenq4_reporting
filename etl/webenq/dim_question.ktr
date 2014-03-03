@@ -6,7 +6,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#47;webenq</directory>
+    <directory>&#x2f;webenq</directory>
     <parameters>
     </parameters>
     <log>
@@ -16,7 +16,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>N</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>N</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>N</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>N</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
 <perf-log-table><connection/>
 <schema/>
 <table/>
@@ -33,6 +33,11 @@
 <table/>
 <timeout_days/>
 <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -61,9 +66,9 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>admin</created_user>
-  <created_date>2013&#47;08&#47;27 09:52:28.000</created_date>
+  <created_date>2013&#x2f;08&#x2f;27 09&#x3a;52&#x3a;28.000</created_date>
   <modified_user>jaapandre</modified_user>
-  <modified_date>2013&#47;11&#47;08 16:00:15.964</modified_date>
+  <modified_date>2014&#x2f;03&#x2f;03 21&#x3a;19&#x3a;12.928</modified_date>
   </info>
   <notepads>
     <notepad>
@@ -88,8 +93,7 @@
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>merge to get type of answer 
-in tbl_respondent_antwoorden</note>
+      <note>merge to get type of answer &#xa;in tbl_respondent_antwoorden</note>
       <xloc>11</xloc>
       <yloc>95</yloc>
       <width>183</width>
@@ -110,8 +114,7 @@ in tbl_respondent_antwoorden</note>
       <drawshadow>Y</drawshadow>
     </notepad>
     <notepad>
-      <note>get group to which question 
-(optional) belong</note>
+      <note>get group to which question &#xa;&#x28;optional&#x29; belong</note>
       <xloc>17</xloc>
       <yloc>179</yloc>
       <width>174</width>
@@ -134,13 +137,13 @@ in tbl_respondent_antwoorden</note>
   </notepads>
   <connection>
     <name>source-database</name>
-    <server>${SOURCE_HOST}</server>
+    <server>&#x24;&#x7b;SOURCE_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${SOURCE_DB}</database>
-    <port>${SOURCE_PORT}</port>
-    <username>${SOURCE_USER}</username>
-    <password>${SOURCE_PASSWORD}</password>
+    <database>&#x24;&#x7b;SOURCE_DB&#x7d;</database>
+    <port>&#x24;&#x7b;SOURCE_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;SOURCE_USER&#x7d;</username>
+    <password>&#x24;&#x7b;SOURCE_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -150,7 +153,7 @@ in tbl_respondent_antwoorden</note>
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${SOURCE_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;SOURCE_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -159,13 +162,13 @@ in tbl_respondent_antwoorden</note>
   </connection>
   <connection>
     <name>target-database</name>
-    <server>${TARGET_HOST}</server>
+    <server>&#x24;&#x7b;TARGET_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${TARGET_DB}</database>
-    <port>${TARGET_PORT}</port>
-    <username>${TARGET_USER}</username>
-    <password>${TARGET_PASSWORD}</password>
+    <database>&#x24;&#x7b;TARGET_DB&#x7d;</database>
+    <port>&#x24;&#x7b;TARGET_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;TARGET_USER&#x7d;</username>
+    <password>&#x24;&#x7b;TARGET_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -175,7 +178,7 @@ in tbl_respondent_antwoorden</note>
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${TARGET_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;TARGET_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -183,12 +186,28 @@ in tbl_respondent_antwoorden</note>
     </attributes>
   </connection>
   <order>
-  <hop> <from>get group</from><to>merge group</to><enabled>Y</enabled> </hop>  <hop> <from>Select field dim_question</from><to>Output to dim_question</to><enabled>Y</enabled> </hop>  <hop> <from>add question_key</from><to>Select field dim_question</to><enabled>Y</enabled> </hop>  <hop> <from>add question_key</from><to>Get System Info</to><enabled>Y</enabled> </hop>  <hop> <from>Get System Info</from><to>Select field lookup_question</to><enabled>Y</enabled> </hop>  <hop> <from>Select field lookup_question</from><to>output stage_lookup_question</to><enabled>Y</enabled> </hop>  <hop> <from>get questions</from><to>Stream lookup</to><enabled>Y</enabled> </hop>  <hop> <from>question_answerType</from><to>Stream lookup</to><enabled>Y</enabled> </hop>  <hop> <from>add sequence in questionnaire</from><to>add question_key</to><enabled>Y</enabled> </hop>  <hop> <from>lookup questionnaire key</from><to>merge group</to><enabled>Y</enabled> </hop>  <hop> <from>merge group</from><to>Clean text</to><enabled>Y</enabled> </hop>  <hop> <from>Clean text</from><to>add sequence in questionnaire</to><enabled>Y</enabled> </hop>  <hop> <from>Stream lookup</from><to>Filter rows</to><enabled>Y</enabled> </hop>  <hop> <from>Filter rows</from><to>lookup questionnaire key</to><enabled>Y</enabled> </hop>  <hop> <from>Filter rows</from><to>No answer</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>get group</from><to>merge group</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select field dim_question</from><to>Output to dim_question</to><enabled>Y</enabled> </hop>
+  <hop> <from>add question_key</from><to>Select field dim_question</to><enabled>Y</enabled> </hop>
+  <hop> <from>add question_key</from><to>Get System Info</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get System Info</from><to>Select field lookup_question</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select field lookup_question</from><to>output stage_lookup_question</to><enabled>Y</enabled> </hop>
+  <hop> <from>get questions</from><to>Stream lookup</to><enabled>Y</enabled> </hop>
+  <hop> <from>question_answerType</from><to>Stream lookup</to><enabled>Y</enabled> </hop>
+  <hop> <from>add sequence in questionnaire</from><to>add question_key</to><enabled>Y</enabled> </hop>
+  <hop> <from>lookup questionnaire key</from><to>merge group</to><enabled>Y</enabled> </hop>
+  <hop> <from>merge group</from><to>Clean text</to><enabled>Y</enabled> </hop>
+  <hop> <from>Clean text</from><to>add sequence in questionnaire</to><enabled>Y</enabled> </hop>
+  <hop> <from>Stream lookup</from><to>Filter rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows</from><to>lookup questionnaire key</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows</from><to>No answer</to><enabled>Y</enabled> </hop>
+  </order>
   <step>
     <name>Clean text</name>
     <type>StringOperations</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -235,6 +254,7 @@ in tbl_respondent_antwoorden</note>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -246,7 +266,7 @@ in tbl_respondent_antwoorden</note>
 <condition>
  <negated>N</negated>
  <leftvalue>answer_type</leftvalue>
- <function>&lt;&gt;</function>
+ <function>&#x3c;&#x3e;</function>
  <rightvalue/>
  <value><name>constant</name><type>String</type><text>no-answer</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
     </compare>
@@ -263,6 +283,7 @@ in tbl_respondent_antwoorden</note>
     <type>SystemInfo</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -271,7 +292,7 @@ in tbl_respondent_antwoorden</note>
     <fields>
       <field>
         <name>date_import</name>
-        <type>system date (fixed)</type>
+        <type>system date &#x28;fixed&#x29;</type>
         </field>
       </fields>
      <cluster_schema/>
@@ -287,6 +308,7 @@ in tbl_respondent_antwoorden</note>
     <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -305,6 +327,7 @@ in tbl_respondent_antwoorden</note>
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -362,6 +385,7 @@ in tbl_respondent_antwoorden</note>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -388,6 +412,7 @@ in tbl_respondent_antwoorden</note>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -416,6 +441,7 @@ in tbl_respondent_antwoorden</note>
     <type>StreamLookup</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -451,6 +477,7 @@ in tbl_respondent_antwoorden</note>
     <type>Sequence</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -479,6 +506,7 @@ in tbl_respondent_antwoorden</note>
     <type>Calculator</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -521,7 +549,7 @@ in tbl_respondent_antwoorden</note>
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>Y</remove>
-<conversion_mask>#</conversion_mask>
+<conversion_mask>&#x23;</conversion_mask>
 <decimal_symbol>.</decimal_symbol>
 <grouping_symbol>,</grouping_symbol>
 <currency_symbol/>
@@ -535,7 +563,7 @@ in tbl_respondent_antwoorden</note>
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>Y</remove>
-<conversion_mask>#</conversion_mask>
+<conversion_mask>&#x23;</conversion_mask>
 <decimal_symbol>.</decimal_symbol>
 <grouping_symbol>,</grouping_symbol>
 <currency_symbol/>
@@ -549,7 +577,7 @@ in tbl_respondent_antwoorden</note>
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>N</remove>
-<conversion_mask>#</conversion_mask>
+<conversion_mask>&#x23;</conversion_mask>
 <decimal_symbol>.</decimal_symbol>
 <grouping_symbol>,</grouping_symbol>
 <currency_symbol/>
@@ -567,18 +595,14 @@ in tbl_respondent_antwoorden</note>
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
     <connection>source-database</connection>
-    <sql>SELECT meta.vraag_id as question_id,
-	meta_txt.text as group_title_en
-FROM tbl_vragen_meta meta, tbl_vragen_meta_text  meta_txt
-where meta.group_id=meta_txt.group_id
-and meta_txt.language=&apos;ENG&apos;
-order by question_id</sql>
+    <sql>SELECT meta.vraag_id as question_id,&#xa;	meta_txt.text as group_title_en&#xa;FROM tbl_vragen_meta meta, tbl_vragen_meta_text  meta_txt&#xa;where meta.group_id&#x3d;meta_txt.group_id&#xa;and meta_txt.language&#x3d;&#x27;ENG&#x27;&#xa;order by question_id</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -597,26 +621,14 @@ order by question_id</sql>
     <type>TableInput</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
     <connection>source-database</connection>
-    <sql>SELECT 
-	vrg.enquete_id as questionnaire_id_external,
-    vrg.vraag_id as question_id,
-	vrg.pagina_nr as page_number,
-	vrg.vraag_nummer as page_order,
-	vrg.sub_order as sub_order,
-	vrg_txt.vraag as question_text_en,
-	vrg.vraag_type as question_type
-from tbl_vragen vrg
-join tbl_vragen_text vrg_txt
-	on vrg.vraag_id=vrg_txt.vraag_id
-where vrg_txt.language=&apos;ENG&apos; 
-order by vrg.enquete_id, vrg.vraag_id
-</sql>
+    <sql>SELECT &#xa;	vrg.enquete_id as questionnaire_id_external,&#xa;    vrg.vraag_id as question_id,&#xa;	vrg.pagina_nr as page_number,&#xa;	vrg.vraag_nummer as page_order,&#xa;	vrg.sub_order as sub_order,&#xa;	vrg_txt.vraag as question_text_en,&#xa;	vrg.vraag_type as question_type&#xa;from tbl_vragen vrg&#xa;join tbl_vragen_text vrg_txt&#xa;	on vrg.vraag_id&#x3d;vrg_txt.vraag_id&#xa;where vrg_txt.language&#x3d;&#x27;ENG&#x27; &#xa;order by vrg.enquete_id, vrg.vraag_id&#xa;</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -635,6 +647,7 @@ order by vrg.enquete_id, vrg.vraag_id
     <type>DBLookup</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -653,7 +666,7 @@ order by vrg.enquete_id, vrg.vraag_id
       <key>
         <name>questionnaire_id_external</name>
         <field>questionnaire_id_external</field>
-        <condition>=</condition>
+        <condition>&#x3d;</condition>
         <name2/>
       </key>
       <value>
@@ -676,6 +689,7 @@ order by vrg.enquete_id, vrg.vraag_id
     <type>StreamLookup</type>
     <description/>
     <distribute>N</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -711,6 +725,7 @@ order by vrg.enquete_id, vrg.vraag_id
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -764,6 +779,7 @@ order by vrg.enquete_id, vrg.vraag_id
     <type>DataGrid</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -779,6 +795,7 @@ order by vrg.enquete_id, vrg.vraag_id
         <group/>
         <length>-1</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
       <field>
         <name>answer_type</name>
@@ -789,6 +806,7 @@ order by vrg.enquete_id, vrg.vraag_id
         <group/>
         <length>20</length>
         <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
       </field>
     </fields>
     <data>
@@ -828,4 +846,5 @@ order by vrg.enquete_id, vrg.vraag_id
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
+
 </transformation>
