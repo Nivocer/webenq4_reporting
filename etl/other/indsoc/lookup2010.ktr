@@ -6,7 +6,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#47;other&#47;indsoc</directory>
+    <directory>&#x2f;other&#x2f;indsoc</directory>
     <parameters>
     </parameters>
     <log>
@@ -16,7 +16,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
 <perf-log-table><connection/>
 <schema/>
 <table/>
@@ -33,6 +33,11 @@
 <table/>
 <timeout_days/>
 <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -61,21 +66,21 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>-</created_user>
-  <created_date>2013&#47;11&#47;02 09:44:33.879</created_date>
+  <created_date>2013&#x2f;11&#x2f;02 09&#x3a;44&#x3a;33.879</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2013&#47;11&#47;05 12:43:33.441</modified_date>
+  <modified_date>2014&#x2f;03&#x2f;03 21&#x3a;18&#x3a;13.942</modified_date>
   </info>
   <notepads>
   </notepads>
   <connection>
     <name>source-database</name>
-    <server>${SOURCE_HOST}</server>
+    <server>&#x24;&#x7b;SOURCE_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${SOURCE_DB}</database>
-    <port>${SOURCE_PORT}</port>
-    <username>${SOURCE_USER}</username>
-    <password>${SOURCE_PASSWORD}</password>
+    <database>&#x24;&#x7b;SOURCE_DB&#x7d;</database>
+    <port>&#x24;&#x7b;SOURCE_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;SOURCE_USER&#x7d;</username>
+    <password>&#x24;&#x7b;SOURCE_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -85,7 +90,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${SOURCE_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;SOURCE_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -94,13 +99,13 @@
   </connection>
   <connection>
     <name>target-database</name>
-    <server>${TARGET_HOST}</server>
+    <server>&#x24;&#x7b;TARGET_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${TARGET_DB}</database>
-    <port>${TARGET_PORT}</port>
-    <username>${TARGET_USER}</username>
-    <password>${TARGET_PASSWORD}</password>
+    <database>&#x24;&#x7b;TARGET_DB&#x7d;</database>
+    <port>&#x24;&#x7b;TARGET_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;TARGET_USER&#x7d;</username>
+    <password>&#x24;&#x7b;TARGET_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -110,7 +115,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${TARGET_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;TARGET_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -118,12 +123,26 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>get 2010</from><to>Dummy (do nothing)</to><enabled>Y</enabled> </hop>  <hop> <from>get 2010</from><to>drop se&#47;country</to><enabled>Y</enabled> </hop>  <hop> <from>drop se&#47;country</from><to>recode civic activism</to><enabled>Y</enabled> </hop>  <hop> <from>recode civic activism</from><to>recode intergroup cohesion</to><enabled>Y</enabled> </hop>  <hop> <from>recode intergroup cohesion</from><to>recode clubs and associations</to><enabled>Y</enabled> </hop>  <hop> <from>recode clubs and associations</from><to>recode interpersonal_safety_and_trust</to><enabled>Y</enabled> </hop>  <hop> <from>recode interpersonal_safety_and_trust</from><to>recode gender equality</to><enabled>Y</enabled> </hop>  <hop> <from>recode gender equality</from><to>recode inclusion</to><enabled>Y</enabled> </hop>  <hop> <from>recode inclusion</from><to>drop original scales</to><enabled>Y</enabled> </hop>  <hop> <from>drop original scales</from><to>stage_lookup_country_indsoc</to><enabled>Y</enabled> </hop>  <hop> <from>get indsocdev data</from><to>empty country-code</to><enabled>Y</enabled> </hop>  <hop> <from>empty country-code</from><to>get 2010</to><enabled>Y</enabled> </hop>  <hop> <from>empty country-code</from><to>Dummy (do nothing)</to><enabled>Y</enabled> </hop>  </order>
+  <hop> <from>get 2010</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>get 2010</from><to>drop se&#x2f;country</to><enabled>Y</enabled> </hop>
+  <hop> <from>drop se&#x2f;country</from><to>recode civic activism</to><enabled>Y</enabled> </hop>
+  <hop> <from>recode civic activism</from><to>recode intergroup cohesion</to><enabled>Y</enabled> </hop>
+  <hop> <from>recode intergroup cohesion</from><to>recode clubs and associations</to><enabled>Y</enabled> </hop>
+  <hop> <from>recode clubs and associations</from><to>recode interpersonal_safety_and_trust</to><enabled>Y</enabled> </hop>
+  <hop> <from>recode interpersonal_safety_and_trust</from><to>recode gender equality</to><enabled>Y</enabled> </hop>
+  <hop> <from>recode gender equality</from><to>recode inclusion</to><enabled>Y</enabled> </hop>
+  <hop> <from>recode inclusion</from><to>drop original scales</to><enabled>Y</enabled> </hop>
+  <hop> <from>drop original scales</from><to>stage_lookup_country_indsoc</to><enabled>Y</enabled> </hop>
+  <hop> <from>get indsocdev data</from><to>empty country-code</to><enabled>Y</enabled> </hop>
+  <hop> <from>empty country-code</from><to>get 2010</to><enabled>Y</enabled> </hop>
+  <hop> <from>empty country-code</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
+  </order>
   <step>
-    <name>Dummy (do nothing)</name>
+    <name>Dummy &#x28;do nothing&#x29;</name>
     <type>Dummy</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -142,6 +161,7 @@
     <type>ExecSQL</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -151,20 +171,9 @@
     <execute_each_row>N</execute_each_row>
     <single_statement>N</single_statement>
     <replace_variables>N</replace_variables>
-    <sql>drop table if exists stage_lookup_country_indsoc;
-CREATE TABLE stage_lookup_country_indsoc
-(
-  iso_country_code VARCHAR(3)
-, year INT
-, civic_activism_range VARCHAR(255)
-, intergroup_cohesion_range VARCHAR(255)
-, clubs_and_associations_range VARCHAR(255)
-, interpersonal_safety_and_trust_range VARCHAR(255)
-, gender_equality_range VARCHAR(255)
-, inclusion_range VARCHAR(255)
-)
-;
-ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;</sql>
+    <quoteString>N</quoteString>
+    <sql>drop table if exists stage_lookup_country_indsoc&#x3b;&#xa;CREATE TABLE stage_lookup_country_indsoc&#xa;&#x28;&#xa;  iso_country_code VARCHAR&#x28;3&#x29;&#xa;, year INT&#xa;, civic_activism_range VARCHAR&#x28;255&#x29;&#xa;, intergroup_cohesion_range VARCHAR&#x28;255&#x29;&#xa;, clubs_and_associations_range VARCHAR&#x28;255&#x29;&#xa;, interpersonal_safety_and_trust_range VARCHAR&#x28;255&#x29;&#xa;, gender_equality_range VARCHAR&#x28;255&#x29;&#xa;, inclusion_range VARCHAR&#x28;255&#x29;&#xa;&#x29;&#xa;&#x3b;&#xa;ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY &#x28; &#x60;iso_country_code&#x60; &#x29; &#x3b;</sql>
+    <set_params>N</set_params>
     <insert_field/>
     <update_field/>
     <delete_field/>
@@ -184,6 +193,7 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -205,10 +215,11 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
     </step>
 
   <step>
-    <name>drop se&#47;country</name>
+    <name>drop se&#x2f;country</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -231,24 +242,54 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
     </step>
 
   <step>
-    <name>get 2010</name>
+    <name>empty country-code</name>
     <type>FilterRows</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-<send_true_to>drop se&#47;country</send_true_to>
-<send_false_to>Dummy (do nothing)</send_false_to>
+<send_true_to>get 2010</send_true_to>
+<send_false_to>Dummy &#x28;do nothing&#x29;</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>iso_country_code</leftvalue>
+ <function>IS NOT NULL</function>
+ <rightvalue/>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>258</xloc>
+      <yloc>162</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>get 2010</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>drop se&#x2f;country</send_true_to>
+<send_false_to>Dummy &#x28;do nothing&#x29;</send_false_to>
     <compare>
 <condition>
  <negated>N</negated>
  <leftvalue>year</leftvalue>
- <function>=</function>
+ <function>&#x3d;</function>
  <rightvalue/>
- <value><name>constant</name><type>Integer</type><text>2010</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>#;-#</mask></value> </condition>
+ <value><name>constant</name><type>Integer</type><text>2010</text><length>-1</length><precision>0</precision><isnull>N</isnull><mask>&#x23;&#x3b;-&#x23;</mask></value> </condition>
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -263,17 +304,18 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
     <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <filename>${PATH_TO_DATA}isd_data.csv</filename>
+    <filename>&#x24;&#x7b;PATH_TO_DATA&#x7d;isd_data.csv</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
     <separator>,</separator>
-    <enclosure>&quot;</enclosure>
+    <enclosure>&#x22;</enclosure>
     <header>Y</header>
     <buffer_size>50000</buffer_size>
     <lazy_conversion>Y</lazy_conversion>
@@ -286,7 +328,7 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
         <name>country</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
+        <currency>&#x24;</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>19</length>
@@ -297,7 +339,7 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
         <name>iso_country_code</name>
         <type>String</type>
         <format/>
-        <currency>$</currency>
+        <currency>&#x24;</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>3</length>
@@ -307,8 +349,8 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
       <field>
         <name>year</name>
         <type>Integer</type>
-        <format>#</format>
-        <currency>$</currency>
+        <format>&#x23;</format>
+        <currency>&#x24;</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -318,8 +360,8 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
       <field>
         <name>civic_activism</name>
         <type>Number</type>
-        <format>#.###</format>
-        <currency>$</currency>
+        <format>&#x23;.&#x23;&#x23;&#x23;</format>
+        <currency>&#x24;</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -329,8 +371,8 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
       <field>
         <name>se_civicactivism</name>
         <type>Number</type>
-        <format>#.###</format>
-        <currency>$</currency>
+        <format>&#x23;.&#x23;&#x23;&#x23;</format>
+        <currency>&#x24;</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -340,8 +382,8 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
       <field>
         <name>intergroup_cohesion</name>
         <type>Number</type>
-        <format>#.###</format>
-        <currency>$</currency>
+        <format>&#x23;.&#x23;&#x23;&#x23;</format>
+        <currency>&#x24;</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -351,8 +393,8 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
       <field>
         <name>se_intergroupcohesion</name>
         <type>Number</type>
-        <format>#.###</format>
-        <currency>$</currency>
+        <format>&#x23;.&#x23;&#x23;&#x23;</format>
+        <currency>&#x24;</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -362,8 +404,8 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
       <field>
         <name>clubs_and_associations</name>
         <type>Number</type>
-        <format>#.###</format>
-        <currency>$</currency>
+        <format>&#x23;.&#x23;&#x23;&#x23;</format>
+        <currency>&#x24;</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -373,8 +415,8 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
       <field>
         <name>se_clubsassociations</name>
         <type>Number</type>
-        <format>#.###</format>
-        <currency>$</currency>
+        <format>&#x23;.&#x23;&#x23;&#x23;</format>
+        <currency>&#x24;</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -384,8 +426,8 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
       <field>
         <name>interpersonal_safety_and_trust</name>
         <type>Number</type>
-        <format>#.###</format>
-        <currency>$</currency>
+        <format>&#x23;.&#x23;&#x23;&#x23;</format>
+        <currency>&#x24;</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -395,8 +437,8 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
       <field>
         <name>se_safetytrust</name>
         <type>Number</type>
-        <format>#.###</format>
-        <currency>$</currency>
+        <format>&#x23;.&#x23;&#x23;&#x23;</format>
+        <currency>&#x24;</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -406,8 +448,8 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
       <field>
         <name>gender_equality</name>
         <type>Number</type>
-        <format>#.###</format>
-        <currency>$</currency>
+        <format>&#x23;.&#x23;&#x23;&#x23;</format>
+        <currency>&#x24;</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -417,8 +459,8 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
       <field>
         <name>se_genderequality</name>
         <type>Number</type>
-        <format>#.###</format>
-        <currency>$</currency>
+        <format>&#x23;.&#x23;&#x23;&#x23;</format>
+        <currency>&#x24;</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -428,8 +470,8 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
       <field>
         <name>inclusion</name>
         <type>Number</type>
-        <format>#.###</format>
-        <currency>$</currency>
+        <format>&#x23;.&#x23;&#x23;&#x23;</format>
+        <currency>&#x24;</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -439,8 +481,8 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
       <field>
         <name>se_inclusion</name>
         <type>Number</type>
-        <format>#.###</format>
-        <currency>$</currency>
+        <format>&#x23;.&#x23;&#x23;&#x23;</format>
+        <currency>&#x24;</currency>
         <decimal>.</decimal>
         <group>,</group>
         <length>15</length>
@@ -461,6 +503,7 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
     <type>NumberRange</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -468,7 +511,7 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
            </partitioning>
     <inputField>civic_activism</inputField>
     <outputField>civic_activism_range</outputField>
-    <fallBackValue>NA</fallBackValue>
+    <fallBackValue/>
     <rules>
       <rule>
         <lower_bound>0.0</lower_bound>
@@ -499,6 +542,7 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
     <type>NumberRange</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -506,7 +550,7 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
            </partitioning>
     <inputField>clubs_and_associations</inputField>
     <outputField>clubs_and_associations_range</outputField>
-    <fallBackValue>NA</fallBackValue>
+    <fallBackValue/>
     <rules>
       <rule>
         <lower_bound>0.0</lower_bound>
@@ -537,6 +581,7 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
     <type>NumberRange</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -544,7 +589,7 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
            </partitioning>
     <inputField>gender_equality</inputField>
     <outputField>gender_equality_range</outputField>
-    <fallBackValue>NA</fallBackValue>
+    <fallBackValue/>
     <rules>
       <rule>
         <lower_bound>0.0</lower_bound>
@@ -575,6 +620,7 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
     <type>NumberRange</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -582,7 +628,7 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
            </partitioning>
     <inputField>inclusion</inputField>
     <outputField>inclusion_range</outputField>
-    <fallBackValue>NA</fallBackValue>
+    <fallBackValue/>
     <rules>
       <rule>
         <lower_bound>0.0</lower_bound>
@@ -613,6 +659,7 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
     <type>NumberRange</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -620,7 +667,7 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
            </partitioning>
     <inputField>intergroup_cohesion</inputField>
     <outputField>intergroup_cohesion_range</outputField>
-    <fallBackValue>NA</fallBackValue>
+    <fallBackValue/>
     <rules>
       <rule>
         <lower_bound>0.0</lower_bound>
@@ -651,6 +698,7 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
     <type>NumberRange</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -658,7 +706,7 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
            </partitioning>
     <inputField>interpersonal_safety_and_trust</inputField>
     <outputField>interpersonal_safety_and_trust_range</outputField>
-    <fallBackValue>NA</fallBackValue>
+    <fallBackValue/>
     <rules>
       <rule>
         <lower_bound>0.0</lower_bound>
@@ -689,6 +737,7 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
     <type>TableOutput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -753,37 +802,10 @@ ALTER TABLE stage_lookup_country_indsoc ADD PRIMARY KEY ( `iso_country_code` ) ;
       </GUI>
     </step>
 
-  <step>
-    <name>empty country-code</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<send_true_to>get 2010</send_true_to>
-<send_false_to>Dummy (do nothing)</send_false_to>
-    <compare>
-<condition>
- <negated>N</negated>
- <leftvalue>iso_country_code</leftvalue>
- <function>IS NOT NULL</function>
- <rightvalue/>
- </condition>
-    </compare>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>258</xloc>
-      <yloc>162</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
   <step_error_handling>
   </step_error_handling>
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
+
 </transformation>

@@ -8,7 +8,7 @@
   <created_user/>
   <created_date>2013&#x2f;08&#x2f;29 12&#x3a;34&#x3a;38.111</created_date>
   <modified_user>jaapandre</modified_user>
-  <modified_date>2014&#x2f;03&#x2f;03 21&#x3a;48&#x3a;18.576</modified_date>
+  <modified_date>2014&#x2f;03&#x2f;04 12&#x3a;41&#x3a;05.749</modified_date>
     <parameters>
         <parameter>
             <name>config-file</name>
@@ -730,7 +730,7 @@
       <yloc>144</yloc>
       </entry>
     <entry>
-      <name>nagios ok</name>
+      <name>nagios etl ok</name>
       <description/>
       <type>SEND_NAGIOS_PASSIVE_CHECK</type>
       <port>5667</port>
@@ -812,6 +812,26 @@
       <nr>0</nr>
       <xloc>634</xloc>
       <yloc>554</yloc>
+      </entry>
+    <entry>
+      <name>nagios aggregate warning</name>
+      <description/>
+      <type>SEND_NAGIOS_PASSIVE_CHECK</type>
+      <port>5667</port>
+      <servername>&#x24;&#x7b;NAGIOS_SERVER&#x7d;</servername>
+      <password>&#x24;&#x7b;NAGIOS_PASSWORD&#x7d;</password>
+      <responseTimeOut>10000</responseTimeOut>
+      <connectionTimeOut>5000</connectionTimeOut>
+      <senderServerName>&#x24;&#x7b;NAGIOS_SENDER&#x7d;</senderServerName>
+      <senderServiceName>AGGREGATE</senderServiceName>
+      <message>Aggregates are not up to date</message>
+      <encryptionMode>none</encryptionMode>
+      <level>warning</level>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>878</xloc>
+      <yloc>628</yloc>
       </entry>
   </entries>
   <hops>
@@ -1042,7 +1062,7 @@
     </hop>
     <hop>
       <from>production&#x3f; &#x28;succes&#x29; </from>
-      <to>nagios ok</to>
+      <to>nagios etl ok</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -1052,6 +1072,15 @@
     <hop>
       <from>production&#x3f; &#x28;succes&#x29; </from>
       <to>succes-mail</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>nagios etl ok</from>
+      <to>nagios aggregate warning</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
