@@ -68,7 +68,7 @@
   <created_user>admin</created_user>
   <created_date>2013&#x2f;08&#x2f;27 09&#x3a;52&#x3a;47.000</created_date>
   <modified_user>jaapandre</modified_user>
-  <modified_date>2014&#x2f;03&#x2f;03 21&#x3a;19&#x3a;46.456</modified_date>
+  <modified_date>2014&#x2f;03&#x2f;10 16&#x3a;03&#x3a;30.236</modified_date>
   </info>
   <notepads>
   </notepads>
@@ -609,7 +609,7 @@
            <schema_name/>
            </partitioning>
     <connection>source-database</connection>
-    <sql>SELECT respondent_id AS respondent_id_external, &#xa;	enquete_id as enquete_id_external,&#xa;	name AS respondent_name, &#xa;	email AS respondent_email, &#xa;	language AS language,&#xa;	country as country,&#xa;	iicd_project as project,&#xa;	iicd_training as training&#xa;FROM tbl_respondentgegevens &#xa;order by respondent_id</sql>
+    <sql>&#x23;only respondents who fill in at least one page&#xa;SELECT DISTINCT &#xa;  resp.respondent_id AS respondent_id_external&#xa;, resp.enquete_id AS enquete_id_external&#xa;, resp.name AS respondent_name&#xa;, resp.email AS respondent_email&#xa;, resp.language AS language&#xa;, resp.country AS country&#xa;, resp.iicd_project AS project&#xa;, resp.iicd_training AS training&#xa;FROM tbl_respondentgegevens resp, tbl_respondent_enquete_log log&#xa;WHERE resp.respondent_id &#x3d; log.respondent_id&#xa;ORDER BY resp.respondent_id</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
