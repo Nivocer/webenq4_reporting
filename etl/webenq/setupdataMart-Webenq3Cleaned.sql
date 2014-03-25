@@ -1,4 +1,4 @@
-SET storage_engine=INNODB;
+SET storage_engine=MYISAM;
 
 CREATE TABLE stage_lookup_respondent (
                 respondent_id INT NOT NULL,
@@ -10,7 +10,8 @@ CREATE TABLE stage_lookup_respondent (
                 training_key INT,
                 project_key INT,
                 PRIMARY KEY (respondent_id)
-);
+)    Default CHARACTER SET utf8 COLLATE utf8_bin
+;
 
 
 CREATE TABLE stage_lookup_question (
@@ -19,7 +20,8 @@ CREATE TABLE stage_lookup_question (
                 answer_type VARCHAR(255) NOT NULL,
                 question_key INT NOT NULL,
                 PRIMARY KEY (question_id)
-);
+)             CHARACTER SET utf8 COLLATE utf8_bin
+;
 
 
 CREATE TABLE stage_lookup_answer_label (
@@ -31,7 +33,8 @@ CREATE TABLE stage_lookup_answer_label (
                 sequence BIGINT NOT NULL,
                 missing_answer INT DEFAULT 0 NOT NULL,
                 PRIMARY KEY (question_id, answer_id)
-);
+)             CHARACTER SET utf8 COLLATE utf8_bin
+;
 
 ALTER TABLE stage_lookup_answer_label MODIFY COLUMN answer INTEGER COMMENT 'w3: tbl_antwoordmogelijkheden: antw_nummer';
 
@@ -41,7 +44,8 @@ CREATE TABLE dim_project (
                 project_id INT NOT NULL,
                 project_text_en VARCHAR(255) NOT NULL,
                 PRIMARY KEY (project_key)
-);
+)             CHARACTER SET utf8 COLLATE utf8_bin
+;
 
 
 CREATE TABLE dim_training (
@@ -49,7 +53,8 @@ CREATE TABLE dim_training (
                 training_id INT,
                 training_text_en VARCHAR(255),
                 PRIMARY KEY (training_key)
-);
+)             CHARACTER SET utf8 COLLATE utf8_bin
+;
 
 
 CREATE TABLE dim_date (
@@ -61,7 +66,8 @@ CREATE TABLE dim_date (
                 month_text_en VARCHAR(255) NOT NULL,
                 day INT NOT NULL,
                 PRIMARY KEY (date_key)
-);
+)             CHARACTER SET utf8 COLLATE utf8_bin
+;
 
 ALTER TABLE dim_date MODIFY COLUMN date_key INTEGER COMMENT 'in format yyyymmdd';
 
@@ -77,7 +83,8 @@ CREATE TABLE dim_respondent (
                 respondent_email VARCHAR(255),
                 language CHAR(3) DEFAULT "en",
                 PRIMARY KEY (respondent_key)
-);
+)             CHARACTER SET utf8 COLLATE utf8_bin
+;
 
 
 CREATE TABLE dim_country (
@@ -86,7 +93,8 @@ CREATE TABLE dim_country (
                 country_code3 VARCHAR(3) NOT NULL,
                 country_name_en VARCHAR(255) NOT NULL,
                 PRIMARY KEY (country_key)
-);
+)             CHARACTER SET utf8 COLLATE utf8_bin
+;
 
 ALTER TABLE dim_country COMMENT 'dimension for handling country and region';
 
@@ -100,7 +108,8 @@ CREATE TABLE dim_questionnaire (
                 questionnaire_category_text_en VARCHAR(255),
                 sequence BIGINT NOT NULL,
                 PRIMARY KEY (questionnaire_key)
-);
+)             CHARACTER SET utf8 COLLATE utf8_bin
+;
 
 
 CREATE TABLE dim_question (
@@ -110,7 +119,8 @@ CREATE TABLE dim_question (
                 question_text_en VARCHAR(512),
                 sequence BIGINT NOT NULL,
                 PRIMARY KEY (question_key)
-);
+)             CHARACTER SET utf8 COLLATE utf8_bin
+;
 
 
 CREATE TABLE lookup_answer_label (
@@ -120,7 +130,8 @@ CREATE TABLE lookup_answer_label (
                 missing_answer INT,
                 sequence BIGINT NOT NULL,
                 PRIMARY KEY (answer_label_key)
-);
+)             CHARACTER SET utf8 COLLATE utf8_bin
+;
 
 
 CREATE TABLE fact_answer (
@@ -134,7 +145,8 @@ CREATE TABLE fact_answer (
                 training_key INT NOT NULL,
                 answer DOUBLE PRECISION DEFAULT NULL,
                 PRIMARY KEY (respondent_key, question_key, answer_label_key)
-);
+)             CHARACTER SET utf8 COLLATE utf8_bin
+;
 
 
 ALTER TABLE fact_answer ADD CONSTRAINT dim_project_fact_answer_fk
