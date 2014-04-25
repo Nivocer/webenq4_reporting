@@ -8,11 +8,6 @@
     <trans_status>0</trans_status>
     <directory>&#x2f;questback</directory>
     <parameters>
-        <parameter>
-            <name>PATH_TO_DATA</name>
-            <default_value>&#x2f;home&#x2f;jaapandre&#x2f;workspace&#x2f;management_git&#x2f;SLA&#x2f;2013&#x2f;hva-oo&#x2f;inputs&#x2f;meting1&#x2f;</default_value>
-            <description/>
-        </parameter>
     </parameters>
     <log>
 <trans-log-table><connection/>
@@ -90,7 +85,7 @@
   <created_user>-</created_user>
   <created_date>2011&#x2f;02&#x2f;24 23&#x3a;14&#x3a;08.270</created_date>
   <modified_user>admin</modified_user>
-  <modified_date>2014&#x2f;01&#x2f;31 14&#x3a;20&#x3a;29.027</modified_date>
+  <modified_date>2014&#x2f;03&#x2f;03 16&#x3a;44&#x3a;54.029</modified_date>
   </info>
   <notepads>
     <notepad>
@@ -116,8 +111,8 @@
     </notepad>
     <notepad>
       <note>date&#x2f;respondent</note>
-      <xloc>831</xloc>
-      <yloc>682</yloc>
+      <xloc>699</xloc>
+      <yloc>700</yloc>
       <width>103</width>
       <heigth>26</heigth>
       <fontname>Arial</fontname>
@@ -137,8 +132,8 @@
     </notepad>
     <notepad>
       <note>Normal questions,&#xa;but in case of hva&#x3a; &#xa;which module &#xa;did you follow&#x3f;</note>
-      <xloc>481</xloc>
-      <yloc>674</yloc>
+      <xloc>334</xloc>
+      <yloc>688</yloc>
       <width>122</width>
       <heigth>74</heigth>
       <fontname>Arial</fontname>
@@ -158,8 +153,8 @@
     </notepad>
     <notepad>
       <note>table questions&#xa;hva&#x3a; satisfied &#xa;per module</note>
-      <xloc>672</xloc>
-      <yloc>678</yloc>
+      <xloc>520</xloc>
+      <yloc>688</yloc>
       <width>98</width>
       <heigth>58</heigth>
       <fontname>Arial</fontname>
@@ -179,8 +174,8 @@
     </notepad>
     <notepad>
       <note>hva&#x3a; questions starting &#xa;with module code&#xa;&#x28;grade, remarks&#x29;</note>
-      <xloc>299</xloc>
-      <yloc>676</yloc>
+      <xloc>117</xloc>
+      <yloc>697</yloc>
       <width>146</width>
       <heigth>58</heigth>
       <fontname>Arial</fontname>
@@ -260,17 +255,27 @@
   <hop> <from>too many questions</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
   <hop> <from>Dummy &#x28;do nothing&#x29;</from><to>has group_id </to><enabled>Y</enabled> </hop>
   <hop> <from>has module code and question</from><to>splits modcode&#x2f;rapportcijfer-openvraag</to><enabled>Y</enabled> </hop>
-  <hop> <from>splits modcode&#x2f;rapportcijfer-openvraag</from><to>insert questions which has modulecode</to><enabled>Y</enabled> </hop>
   <hop> <from>has group_id </from><to>has module code</to><enabled>Y</enabled> </hop>
   <hop> <from>has module code</from><to>has module code and question</to><enabled>Y</enabled> </hop>
   <hop> <from>has module code</from><to>Split Fields</to><enabled>Y</enabled> </hop>
   <hop> <from>Get files from result</from><to>Microsoft Excel Input</to><enabled>Y</enabled> </hop>
-  <hop> <from>has group_id </from><to>insert background colums &#x28;date&#x29;</to><enabled>Y</enabled> </hop>
   <hop> <from>has module code and question</from><to>splits group_id, question_text</to><enabled>Y</enabled> </hop>
-  <hop> <from>splits group_id, question_text</from><to>insert &#x27;normal&#x27; questions</to><enabled>Y</enabled> </hop>
   <hop> <from>Microsoft Excel Input</from><to>add questionnaire key</to><enabled>Y</enabled> </hop>
   <hop> <from>add questionnaire key</from><to>reset counter for each filename</to><enabled>Y</enabled> </hop>
-  <hop> <from>Split Fields</from><to>insert table questions</to><enabled>Y</enabled> </hop>
+  <hop> <from>use question_text</from><to>insert questions</to><enabled>Y</enabled> </hop>
+  <hop> <from>question_text_nl null &#x28;no translation&#x29;</from><to>use question_text_nl</to><enabled>Y</enabled> </hop>
+  <hop> <from>question_text_nl null &#x28;no translation&#x29;</from><to>use question_text</to><enabled>Y</enabled> </hop>
+  <hop> <from>use question_text_nl</from><to>insert questions</to><enabled>Y</enabled> </hop>
+  <hop> <from>splits modcode&#x2f;rapportcijfer-openvraag</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>splits group_id, question_text</from><to>Select values 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Split Fields</from><to>Select values 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>has group_id </from><to>Select values 4</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 4</from><to>gather streams</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 3</from><to>gather streams</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values</from><to>gather streams</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 2</from><to>gather streams</to><enabled>Y</enabled> </hop>
+  <hop> <from>gather streams</from><to>get translation</to><enabled>Y</enabled> </hop>
+  <hop> <from>get translation</from><to>question_text_nl null &#x28;no translation&#x29;</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Abort</name>
@@ -288,8 +293,8 @@
       <always_log_rows>Y</always_log_rows>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>858</xloc>
-      <yloc>235</yloc>
+      <xloc>884</xloc>
+      <yloc>167</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -307,8 +312,8 @@
            </partitioning>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>436</xloc>
-      <yloc>260</yloc>
+      <xloc>83</xloc>
+      <yloc>252</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -326,8 +331,8 @@
            </partitioning>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>34</xloc>
-      <yloc>3</yloc>
+      <xloc>57</xloc>
+      <yloc>69</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -12394,8 +12399,8 @@
     <spreadsheet_type>POI</spreadsheet_type>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>78</xloc>
-      <yloc>62</yloc>
+      <xloc>200</xloc>
+      <yloc>69</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -15414,8 +15419,120 @@
         <norm>question</norm>
         </field>      </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>379</xloc>
-      <yloc>23</yloc>
+      <xloc>83</xloc>
+      <yloc>167</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>question_text</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>nrRows</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>165</xloc>
+      <yloc>626</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>question_text</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>nrRows</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>374</xloc>
+      <yloc>626</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>question_text</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>nrRows</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>554</xloc>
+      <yloc>626</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 4</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>question</name>
+        <rename>question_text</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>nrRows</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>742</xloc>
+      <yloc>626</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -15433,7 +15550,7 @@
            </partitioning>
    <splitfield>question</splitfield>
    <delimiter>&#x3a;</delimiter>
-   <enclosure/>
+   <enclosure>_</enclosure>
     <fields>      <field>        <name>group_id</name>
         <id/>
         <idrem>N</idrem>
@@ -15460,8 +15577,8 @@
         <trimtype>both</trimtype>
       </field>    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>581</xloc>
-      <yloc>503</yloc>
+      <xloc>535</xloc>
+      <yloc>522</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -15502,8 +15619,8 @@
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>127</xloc>
-      <yloc>123</yloc>
+      <xloc>356</xloc>
+      <yloc>69</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -15529,8 +15646,27 @@
       </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>534</xloc>
-      <yloc>163</yloc>
+      <xloc>465</xloc>
+      <yloc>167</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>gather streams</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>159</xloc>
+      <yloc>819</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -15547,7 +15683,7 @@
            <schema_name/>
            </partitioning>
 <send_true_to>has module code</send_true_to>
-<send_false_to>insert background colums &#x28;date&#x29;</send_false_to>
+<send_false_to>Select values 4</send_false_to>
     <compare>
 <condition>
  <negated>N</negated>
@@ -15558,8 +15694,8 @@
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>460</xloc>
-      <yloc>329</yloc>
+      <xloc>384</xloc>
+      <yloc>252</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -15587,8 +15723,8 @@
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>386</xloc>
-      <yloc>388</yloc>
+      <xloc>363</xloc>
+      <yloc>343</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -15616,8 +15752,8 @@
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>297</xloc>
-      <yloc>471</yloc>
+      <xloc>274</xloc>
+      <yloc>430</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -15645,14 +15781,14 @@
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>299</xloc>
-      <yloc>129</yloc>
+      <xloc>683</xloc>
+      <yloc>69</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>insert &#x27;normal&#x27; questions</name>
+    <name>insert questions</name>
     <type>InsertUpdate</type>
     <description/>
     <distribute>Y</distribute>
@@ -15669,14 +15805,14 @@
       <schema/>
       <table>dim_question</table>
       <key>
-        <name>question_text</name>
+        <name>question_text_db</name>
         <field>question_text</field>
         <condition>LIKE</condition>
         <name2/>
       </key>
       <value>
         <name>question_text</name>
-        <rename>question_text</rename>
+        <rename>question_text_db</rename>
         <update>N</update>
       </value>
       <value>
@@ -15687,134 +15823,8 @@
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>521</xloc>
-      <yloc>580</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>insert background colums &#x28;date&#x29;</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>target-database</connection>
-    <commit>1</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema/>
-      <table>dim_question</table>
-      <key>
-        <name>question</name>
-        <field>question_text</field>
-        <condition>LIKE</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>question_text</name>
-        <rename>question</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>sequence</name>
-        <rename>nrRows</rename>
-        <update>N</update>
-      </value>
-    </lookup>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>882</xloc>
-      <yloc>583</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>insert questions which has modulecode</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>target-database</connection>
-    <commit>1</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema/>
-      <table>dim_question</table>
-      <key>
-        <name>question_text</name>
-        <field>question_text</field>
-        <condition>LIKE</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>question_text</name>
-        <rename>question_text</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>sequence</name>
-        <rename>nrRows</rename>
-        <update>N</update>
-      </value>
-    </lookup>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>320</xloc>
-      <yloc>595</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>insert table questions</name>
-    <type>InsertUpdate</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>target-database</connection>
-    <commit>1</commit>
-    <update_bypassed>N</update_bypassed>
-    <lookup>
-      <schema/>
-      <table>dim_question</table>
-      <key>
-        <name>question_text</name>
-        <field>question_text</field>
-        <condition>LIKE</condition>
-        <name2/>
-      </key>
-      <value>
-        <name>question_text</name>
-        <rename>question_text</rename>
-        <update>N</update>
-      </value>
-      <value>
-        <name>sequence</name>
-        <rename>nrRows</rename>
-        <update>N</update>
-      </value>
-    </lookup>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>716</xloc>
-      <yloc>582</yloc>
+      <xloc>760</xloc>
+      <yloc>819</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -15842,8 +15852,37 @@
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>462</xloc>
-      <yloc>101</yloc>
+      <xloc>311</xloc>
+      <yloc>167</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>question_text_nl null &#x28;no translation&#x29;</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>use question_text</send_true_to>
+<send_false_to>use question_text_nl</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>question_text_nl</leftvalue>
+ <function>IS NULL</function>
+ <rightvalue/>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>419</xloc>
+      <yloc>819</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -15869,8 +15908,8 @@
       </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>203</xloc>
-      <yloc>151</yloc>
+      <xloc>527</xloc>
+      <yloc>69</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -15888,7 +15927,7 @@
            </partitioning>
    <splitfield>question</splitfield>
    <delimiter>&#x3a;</delimiter>
-   <enclosure/>
+   <enclosure>_</enclosure>
     <fields>      <field>        <name>group_id</name>
         <id/>
         <idrem>N</idrem>
@@ -15915,8 +15954,8 @@
         <trimtype>both</trimtype>
       </field>    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>394</xloc>
-      <yloc>516</yloc>
+      <xloc>367</xloc>
+      <yloc>522</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -15934,7 +15973,7 @@
            </partitioning>
    <splitfield>question</splitfield>
    <delimiter>&#x3a;</delimiter>
-   <enclosure/>
+   <enclosure>_</enclosure>
     <fields>      <field>        <name>group_id</name>
         <id/>
         <idrem>N</idrem>
@@ -15973,8 +16012,8 @@
         <trimtype>both</trimtype>
       </field>    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>219</xloc>
-      <yloc>539</yloc>
+      <xloc>163</xloc>
+      <yloc>522</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -16002,8 +16041,106 @@
     </compare>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>630</xloc>
-      <yloc>248</yloc>
+      <xloc>681</xloc>
+      <yloc>167</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>use question_text</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>nrRows</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>question_text</name>
+        <rename>question_text_db</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>600</xloc>
+      <yloc>819</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>use question_text_nl</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>nrRows</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>question_text_nl</name>
+        <rename>question_text_db</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>591</xloc>
+      <yloc>891</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>get translation</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>target-database</connection>
+    <cache>Y</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>trans_question</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>question_text</name>
+        <field>question_text_en</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>question_text</name>
+        <rename>question_text_nl</rename>
+        <default/>
+        <type>String</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>268</xloc>
+      <yloc>819</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

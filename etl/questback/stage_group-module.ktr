@@ -68,7 +68,7 @@
   <created_user>-</created_user>
   <created_date>2013&#x2f;11&#x2f;28 14&#x3a;50&#x3a;12.391</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;01&#x2f;31 15&#x3a;31&#x3a;19.792</modified_date>
+  <modified_date>2014&#x2f;03&#x2f;07 09&#x3a;40&#x3a;01.783</modified_date>
   </info>
   <notepads>
     <notepad>
@@ -153,15 +153,15 @@
   <hop> <from>Database lookup 2</from><to>Select values</to><enabled>Y</enabled> </hop>
   <hop> <from>Database lookup 3</from><to>Select values 2</to><enabled>Y</enabled> </hop>
   <hop> <from>Select values 2</from><to>Filter rows</to><enabled>Y</enabled> </hop>
-  <hop> <from>Filter rows</from><to>stage module</to><enabled>Y</enabled> </hop>
   <hop> <from>Select values</from><to>Filter rows 2</to><enabled>Y</enabled> </hop>
-  <hop> <from>Filter rows 2</from><to>stage_group 2</to><enabled>Y</enabled> </hop>
   <hop> <from>select rename fields</from><to>Filter rows 3</to><enabled>Y</enabled> </hop>
-  <hop> <from>Filter rows 3</from><to>stage_group</to><enabled>Y</enabled> </hop>
   <hop> <from>Get files from result</from><to>Microsoft Excel Input</to><enabled>Y</enabled> </hop>
   <hop> <from>Split group info</from><to>correct module code</to><enabled>Y</enabled> </hop>
   <hop> <from>correct module code</from><to>Database lookup 2</to><enabled>Y</enabled> </hop>
   <hop> <from>correct module code</from><to>Database lookup 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows</from><to>stage_module</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows 2</from><to>stage_group_2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter rows 3</from><to>stage_group</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Database lookup</name>
@@ -187,7 +187,7 @@
       <key>
         <name>group_info</name>
         <field>group_text</field>
-        <condition>&#x3d;</condition>
+        <condition>LIKE</condition>
         <name2/>
       </key>
       <value>
@@ -229,7 +229,7 @@
       <key>
         <name>group_text</name>
         <field>group_text</field>
-        <condition>&#x3d;</condition>
+        <condition>LIKE</condition>
         <name2/>
       </key>
       <value>
@@ -271,7 +271,7 @@
       <key>
         <name>module_code</name>
         <field>module_code</field>
-        <condition>&#x3d;</condition>
+        <condition>LIKE</condition>
         <name2/>
       </key>
       <value>
@@ -561,7 +561,7 @@
            </partitioning>
    <splitfield>group_info</splitfield>
    <delimiter>&#x3a;</delimiter>
-   <enclosure/>
+   <enclosure>_</enclosure>
     <fields>      <field>        <name>module_code</name>
         <id/>
         <idrem>N</idrem>
@@ -776,8 +776,8 @@
     </step>
 
   <step>
-    <name>stage module</name>
-    <type>TableOutput</type>
+    <name>stage_module</name>
+    <type>InsertUpdate</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -787,51 +787,108 @@
            <schema_name/>
            </partitioning>
     <connection>target-database</connection>
-    <schema/>
-    <table>stage_module</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>N</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-        <field>
-          <column_name>module_code</column_name>
-          <stream_name>module_code</stream_name>
-        </field>
-        <field>
-          <column_name>questionnaire_key</column_name>
-          <stream_name>questionnaire_key</stream_name>
-        </field>
-        <field>
-          <column_name>module_key</column_name>
-          <stream_name>module_key</stream_name>
-        </field>
-        <field>
-          <column_name>group_id</column_name>
-          <stream_name>group_id</stream_name>
-        </field>
-    </fields>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>stage_module</table>
+      <key>
+        <name>module_code</name>
+        <field>module_code</field>
+        <condition>LIKE</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>module_code</name>
+        <rename>module_code</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>questionnaire_key</name>
+        <rename>questionnaire_key</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>module_key</name>
+        <rename>module_key</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>group_id</name>
+        <rename>group_id</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>166</xloc>
-      <yloc>571</yloc>
+      <xloc>161</xloc>
+      <yloc>578</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>stage_group_2</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>target-database</connection>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>stage_group</table>
+      <key>
+        <name>group_id</name>
+        <field>group_id</field>
+        <condition>LIKE</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>questionnaire_key</name>
+        <field>questionnaire_key</field>
+        <condition>LIKE</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>group_key</name>
+        <field>group_key</field>
+        <condition>LIKE</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>group_id</name>
+        <rename>group_id</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>questionnaire_key</name>
+        <rename>questionnaire_key</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>group_key</name>
+        <rename>group_key</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>290</xloc>
+      <yloc>594</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
     <name>stage_group</name>
-    <type>TableOutput</type>
+    <type>InsertUpdate</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -841,90 +898,49 @@
            <schema_name/>
            </partitioning>
     <connection>target-database</connection>
-    <schema/>
-    <table>stage_group</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>N</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-        <field>
-          <column_name>group_id</column_name>
-          <stream_name>group_id</stream_name>
-        </field>
-        <field>
-          <column_name>questionnaire_key</column_name>
-          <stream_name>questionnaire_key</stream_name>
-        </field>
-        <field>
-          <column_name>group_key</column_name>
-          <stream_name>group_key</stream_name>
-        </field>
-    </fields>
+    <commit>100</commit>
+    <update_bypassed>N</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>stage_group</table>
+      <key>
+        <name>group_id</name>
+        <field>group_id</field>
+        <condition>LIKE</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>questionnaire_key</name>
+        <field>questionnaire_key</field>
+        <condition>LIKE</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>group_key</name>
+        <field>group_key</field>
+        <condition>LIKE</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>group_id</name>
+        <rename>group_id</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>questionnaire_key</name>
+        <rename>questionnaire_key</rename>
+        <update>N</update>
+      </value>
+      <value>
+        <name>group_key</name>
+        <rename>group_key</rename>
+        <update>N</update>
+      </value>
+    </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>526</xloc>
-      <yloc>567</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>stage_group 2</name>
-    <type>TableOutput</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <connection>target-database</connection>
-    <schema/>
-    <table>stage_group</table>
-    <commit>1000</commit>
-    <truncate>N</truncate>
-    <ignore_errors>N</ignore_errors>
-    <use_batch>Y</use_batch>
-    <specify_fields>N</specify_fields>
-    <partitioning_enabled>N</partitioning_enabled>
-    <partitioning_field/>
-    <partitioning_daily>N</partitioning_daily>
-    <partitioning_monthly>Y</partitioning_monthly>
-    <tablename_in_field>N</tablename_in_field>
-    <tablename_field/>
-    <tablename_in_table>Y</tablename_in_table>
-    <return_keys>N</return_keys>
-    <return_field/>
-    <fields>
-        <field>
-          <column_name>group_id</column_name>
-          <stream_name>group_id</stream_name>
-        </field>
-        <field>
-          <column_name>questionnaire_key</column_name>
-          <stream_name>questionnaire_key</stream_name>
-        </field>
-        <field>
-          <column_name>group_key</column_name>
-          <stream_name>group_key</stream_name>
-        </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>300</xloc>
-      <yloc>571</yloc>
+      <xloc>529</xloc>
+      <yloc>585</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

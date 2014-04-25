@@ -8,11 +8,6 @@
     <trans_status>0</trans_status>
     <directory>&#x2f;questback</directory>
     <parameters>
-        <parameter>
-            <name>PATH_TO_DATA</name>
-            <default_value>&#x2f;home&#x2f;jaapandre&#x2f;workspace&#x2f;management_git&#x2f;SLA&#x2f;2013&#x2f;hva-oo&#x2f;inputs&#x2f;meting1&#x2f;</default_value>
-            <description/>
-        </parameter>
     </parameters>
     <log>
 <trans-log-table><connection/>
@@ -90,7 +85,7 @@
   <created_user>-</created_user>
   <created_date>2011&#x2f;02&#x2f;24 23&#x3a;14&#x3a;08.270</created_date>
   <modified_user>admin</modified_user>
-  <modified_date>2014&#x2f;01&#x2f;31 15&#x3a;30&#x3a;02.610</modified_date>
+  <modified_date>2014&#x2f;02&#x2f;21 13&#x3a;27&#x3a;28.840</modified_date>
   </info>
   <notepads>
     <notepad>

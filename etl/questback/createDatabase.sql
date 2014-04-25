@@ -1,4 +1,12 @@
 
+CREATE TABLE trans_question (
+                translation_key INT AUTO_INCREMENT NOT NULL,
+                question_text TEXT NOT NULL,
+                question_text_en TEXT NOT NULL,
+                PRIMARY KEY (translation_key)
+) engine=myisam;
+
+
 CREATE TABLE stage_question (
                 stage_question_key INT AUTO_INCREMENT NOT NULL,
                 questionnaire_key INT NOT NULL,
@@ -7,7 +15,8 @@ CREATE TABLE stage_question (
                 group_key INT,
                 module_key INT,
                 PRIMARY KEY (stage_question_key)
-);
+) engine=myisam;
+
 
 
 CREATE TABLE dim_module (
@@ -18,15 +27,19 @@ CREATE TABLE dim_module (
                 klasletter VARCHAR(4) NOT NULL,
                 module VARCHAR(150) NOT NULL,
                 docent VARCHAR(100) NOT NULL,
+                group_id INT,
                 PRIMARY KEY (module_key)
-);
+) engine=myisam;
+
 
 
 CREATE TABLE dim_group (
                 group_key INT AUTO_INCREMENT NOT NULL,
                 group_text VARCHAR(255) NOT NULL,
+                group_id INT NOT NULL,
                 PRIMARY KEY (group_key)
-);
+) engine=myisam;
+
 
 
 CREATE TABLE lookup_answer_label (
@@ -36,7 +49,8 @@ CREATE TABLE lookup_answer_label (
                 answer INT NOT NULL,
                 sequence BIGINT DEFAULT 0 NOT NULL,
                 PRIMARY KEY (answer_label_key)
-);
+) engine=myisam;
+
 
 ALTER TABLE lookup_answer_label MODIFY COLUMN answer INTEGER COMMENT 'w3: tbl_antwoordmogelijkheden: antw_nummer';
 
@@ -46,7 +60,8 @@ CREATE TABLE dim_question (
                 question_text VARCHAR(512),
                 sequence BIGINT DEFAULT 0 NOT NULL,
                 PRIMARY KEY (question_key)
-);
+) engine=myisam;
+
 
 
 CREATE TABLE dim_date (
@@ -58,7 +73,8 @@ CREATE TABLE dim_date (
                 month_text_en VARCHAR(255) NOT NULL,
                 day INT NOT NULL,
                 PRIMARY KEY (date_key)
-);
+) engine=myisam;
+
 
 ALTER TABLE dim_date MODIFY COLUMN date_key INTEGER COMMENT 'in format yyyymmdd';
 
@@ -72,6 +88,10 @@ CREATE TABLE dim_questionnaire (
                 questionnaire_title_en VARCHAR(255) NOT NULL,
                 questionnaire_id_external INT NOT NULL,
                 questionnaire_category_text_en VARCHAR(255),
+                periode VARCHAR(255),
+                cluster VARCHAR(255),
+                opleiding VARCHAR(255),
+                questionnaire_target_population VARCHAR(255),
                 sequence BIGINT,
                 file_name VARCHAR(255) NOT NULL,
                 start_date VARCHAR(20) NOT NULL,
@@ -82,7 +102,8 @@ CREATE TABLE dim_questionnaire (
                 response_percentage VARCHAR(6) NOT NULL,
                 export_date VARCHAR(20) NOT NULL,
                 PRIMARY KEY (questionnaire_key)
-);
+) engine=myisam;
+
 
 
 CREATE TABLE stage_module (
@@ -91,7 +112,8 @@ CREATE TABLE stage_module (
                 module_code VARCHAR(512),
                 group_id INT,
                 PRIMARY KEY (module_key, questionnaire_key)
-);
+) engine=myisam;
+
 
 
 CREATE TABLE stage_group (
@@ -99,7 +121,8 @@ CREATE TABLE stage_group (
                 group_id INT NOT NULL,
                 group_key INT NOT NULL,
                 PRIMARY KEY (questionnaire_key, group_id)
-);
+) engine=myisam;
+
 
 
 CREATE TABLE dim_respondent (
@@ -111,7 +134,8 @@ CREATE TABLE dim_respondent (
                 respondent_email VARCHAR(255),
                 language CHAR(3) DEFAULT "en",
                 PRIMARY KEY (respondent_key)
-);
+) engine=myisam;
+
 
 
 CREATE TABLE fact_answer (
@@ -124,7 +148,8 @@ CREATE TABLE fact_answer (
                 date_key INT NOT NULL,
                 answer DOUBLE PRECISION DEFAULT NULL,
                 PRIMARY KEY (respondent_key, question_key, answer_label_key, questionnaire_key, module_key)
-);
+) engine=myisam;
+
 
 
 ALTER TABLE fact_answer ADD CONSTRAINT dim_module_fact_answer_fk

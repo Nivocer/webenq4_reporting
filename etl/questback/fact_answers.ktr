@@ -85,7 +85,7 @@
   <created_user>-</created_user>
   <created_date>2011&#x2f;02&#x2f;24 23&#x3a;14&#x3a;08.270</created_date>
   <modified_user>admin</modified_user>
-  <modified_date>2014&#x2f;01&#x2f;31 15&#x3a;29&#x3a;41.044</modified_date>
+  <modified_date>2014&#x2f;02&#x2f;21 14&#x3a;31&#x3a;33.843</modified_date>
   </info>
   <notepads>
     <notepad>
@@ -292,8 +292,8 @@
     <encoding>UTF-8</encoding>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <accept_filenames>N</accept_filenames>
-    <accept_field/>
-    <accept_stepname/>
+    <accept_field>path</accept_field>
+    <accept_stepname>Get files from result</accept_stepname>
     <file>
       <name>&#x24;&#x7b;PATH_TO_DATA&#x7d;</name>
       <filemask>.&#x2a;.xlsx</filemask>

@@ -6,7 +6,7 @@
     <trans_version/>
     <trans_type>Normal</trans_type>
     <trans_status>0</trans_status>
-    <directory>&#47;questback</directory>
+    <directory>&#x2f;questback</directory>
     <parameters>
     </parameters>
     <log>
@@ -16,7 +16,7 @@
 <size_limit_lines/>
 <interval/>
 <timeout_days/>
-<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field></trans-log-table>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
 <perf-log-table><connection/>
 <schema/>
 <table/>
@@ -33,6 +33,11 @@
 <table/>
 <timeout_days/>
 <field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
     </log>
     <maxdate>
       <connection/>
@@ -61,15 +66,15 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>-</created_user>
-  <created_date>2013&#47;12&#47;04 11:51:21.117</created_date>
+  <created_date>2013&#x2f;12&#x2f;04 11&#x3a;51&#x3a;21.117</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2013&#47;12&#47;06 11:58:46.631</modified_date>
+  <modified_date>2014&#x2f;03&#x2f;06 13&#x3a;33&#x3a;39.995</modified_date>
   </info>
   <notepads>
     <notepad>
       <note>rapportrijen</note>
-      <xloc>57</xloc>
-      <yloc>318</yloc>
+      <xloc>54</xloc>
+      <yloc>687</yloc>
       <width>74</width>
       <heigth>26</heigth>
       <fontname>Arial</fontname>
@@ -90,13 +95,13 @@
   </notepads>
   <connection>
     <name>source-database</name>
-    <server>${SOURCE_HOST}</server>
+    <server>&#x24;&#x7b;SOURCE_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${SOURCE_DB}</database>
-    <port>${SOURCE_PORT}</port>
-    <username>${SOURCE_USER}</username>
-    <password>${SOURCE_PASSWORD}</password>
+    <database>&#x24;&#x7b;SOURCE_DB&#x7d;</database>
+    <port>&#x24;&#x7b;SOURCE_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;SOURCE_USER&#x7d;</username>
+    <password>&#x24;&#x7b;SOURCE_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -106,7 +111,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${SOURCE_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;SOURCE_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -115,13 +120,13 @@
   </connection>
   <connection>
     <name>target-database</name>
-    <server>${TARGET_HOST}</server>
+    <server>&#x24;&#x7b;TARGET_HOST&#x7d;</server>
     <type>MYSQL</type>
     <access>Native</access>
-    <database>${TARGET_DB}</database>
-    <port>${TARGET_PORT}</port>
-    <username>${TARGET_USER}</username>
-    <password>${TARGET_PASSWORD}</password>
+    <database>&#x24;&#x7b;TARGET_DB&#x7d;</database>
+    <port>&#x24;&#x7b;TARGET_PORT&#x7d;</port>
+    <username>&#x24;&#x7b;TARGET_USER&#x7d;</username>
+    <password>&#x24;&#x7b;TARGET_PASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
@@ -131,7 +136,7 @@
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>${TARGET_PORT}</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;TARGET_PORT&#x7d;</attribute></attribute>
       <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
       <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
@@ -139,43 +144,33 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>get answers</from><to>Row denormaliser</to><enabled>Y</enabled> </hop>  <hop> <from>Row denormaliser</from><to>splits questionnaire title</to><enabled>Y</enabled> </hop>  <hop> <from>splits questionnaire title</from><to>determin opleiding</to><enabled>Y</enabled> </hop>  <hop> <from>determin opleiding</from><to>Add periode</to><enabled>Y</enabled> </hop>  <hop> <from>Add periode</from><to>Calculator</to><enabled>Y</enabled> </hop>  <hop> <from>Calculator</from><to>rapport 1</to><enabled>Y</enabled> </hop>  <hop> <from>rapport 1</from><to>rapport  2</to><enabled>Y</enabled> </hop>  <hop> <from>rapport  2</from><to>group 2</to><enabled>Y</enabled> </hop>  <hop> <from>group 2</from><to>rapport  3</to><enabled>Y</enabled> </hop>  <hop> <from>rapport  3</from><to>group  3</to><enabled>Y</enabled> </hop>  <hop> <from>group  3</from><to>rapport  4</to><enabled>Y</enabled> </hop>  <hop> <from>rapport  4</from><to>group  4</to><enabled>Y</enabled> </hop>  <hop> <from>group  4</from><to>rapport  5</to><enabled>Y</enabled> </hop>  <hop> <from>rapport  5</from><to>group  5</to><enabled>Y</enabled> </hop>  <hop> <from>group  5</from><to>rapport  6</to><enabled>Y</enabled> </hop>  <hop> <from>rapport  6</from><to>group  6</to><enabled>Y</enabled> </hop>  <hop> <from>group  6</from><to>rapport  7</to><enabled>Y</enabled> </hop>  <hop> <from>rapport  7</from><to>group  7</to><enabled>Y</enabled> </hop>  <hop> <from>group  7</from><to>rapport  8</to><enabled>Y</enabled> </hop>  <hop> <from>rapport  8</from><to>group  8</to><enabled>Y</enabled> </hop>  <hop> <from>Select values</from><to>Microsoft Excel Writer</to><enabled>Y</enabled> </hop>  <hop> <from>group  8</from><to>String operations</to><enabled>Y</enabled> </hop>  <hop> <from>String operations</from><to>Select values</to><enabled>Y</enabled> </hop>  </order>
-  <step>
-    <name>Add periode</name>
-    <type>Constant</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      <field>
-        <name>9999: periode</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <nullif>2013-2014 sem.1 blok 1</nullif>
-        <length>-1</length>
-        <precision>-1</precision>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>633</xloc>
-      <yloc>186</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
+  <hop> <from>get answers</from><to>Row denormaliser</to><enabled>Y</enabled> </hop>
+  <hop> <from>Calculator</from><to>rapport 1</to><enabled>Y</enabled> </hop>
+  <hop> <from>rapport 1</from><to>rapport  2</to><enabled>Y</enabled> </hop>
+  <hop> <from>rapport  2</from><to>group 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>group 2</from><to>rapport  3</to><enabled>Y</enabled> </hop>
+  <hop> <from>rapport  3</from><to>group  3</to><enabled>Y</enabled> </hop>
+  <hop> <from>group  3</from><to>rapport  4</to><enabled>Y</enabled> </hop>
+  <hop> <from>rapport  4</from><to>group  4</to><enabled>Y</enabled> </hop>
+  <hop> <from>group  4</from><to>rapport  5</to><enabled>Y</enabled> </hop>
+  <hop> <from>rapport  5</from><to>group  5</to><enabled>Y</enabled> </hop>
+  <hop> <from>group  5</from><to>rapport  6</to><enabled>Y</enabled> </hop>
+  <hop> <from>rapport  6</from><to>group  6</to><enabled>Y</enabled> </hop>
+  <hop> <from>group  6</from><to>rapport  7</to><enabled>Y</enabled> </hop>
+  <hop> <from>rapport  7</from><to>group  7</to><enabled>Y</enabled> </hop>
+  <hop> <from>group  7</from><to>rapport  8</to><enabled>Y</enabled> </hop>
+  <hop> <from>rapport  8</from><to>group  8</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values</from><to>Microsoft Excel Writer</to><enabled>Y</enabled> </hop>
+  <hop> <from>group  8</from><to>String operations</to><enabled>Y</enabled> </hop>
+  <hop> <from>String operations</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>Row denormaliser</from><to>Calculator</to><enabled>Y</enabled> </hop>
+  </order>
   <step>
     <name>Calculator</name>
     <type>Calculator</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -183,10 +178,10 @@
            </partitioning>
        <calculation><field_name>splits1</field_name>
 <calc_type>CONSTANT</calc_type>
-<field_a>rapport1</field_a>
+<field_a>vak-docent_RP1</field_a>
 <field_b/>
 <field_c/>
-<value_type>-</value_type>
+<value_type>None</value_type>
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>N</remove>
@@ -197,10 +192,10 @@
 </calculation>
        <calculation><field_name>splits2</field_name>
 <calc_type>CONSTANT</calc_type>
-<field_a>rapport2</field_a>
+<field_a>vakken-per-klas-&#x28;met- docent&#x29; _RP2</field_a>
 <field_b/>
 <field_c/>
-<value_type>-</value_type>
+<value_type>None</value_type>
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>N</remove>
@@ -211,10 +206,10 @@
 </calculation>
        <calculation><field_name>splits3</field_name>
 <calc_type>CONSTANT</calc_type>
-<field_a>rapport3</field_a>
+<field_a>vakken-per-klas-&#x28;zonder- docent&#x29; _RP3</field_a>
 <field_b/>
 <field_c/>
-<value_type>-</value_type>
+<value_type>None</value_type>
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>N</remove>
@@ -225,10 +220,10 @@
 </calculation>
        <calculation><field_name>splits4</field_name>
 <calc_type>CONSTANT</calc_type>
-<field_a>rapport4</field_a>
+<field_a>rapportcijfer_RP4</field_a>
 <field_b/>
 <field_c/>
-<value_type>-</value_type>
+<value_type>None</value_type>
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>N</remove>
@@ -239,10 +234,10 @@
 </calculation>
        <calculation><field_name>splits5</field_name>
 <calc_type>CONSTANT</calc_type>
-<field_a>rapport5</field_a>
+<field_a>aandachtspunten_RP5</field_a>
 <field_b/>
 <field_c/>
-<value_type>-</value_type>
+<value_type>None</value_type>
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>N</remove>
@@ -253,10 +248,10 @@
 </calculation>
        <calculation><field_name>splits6</field_name>
 <calc_type>CONSTANT</calc_type>
-<field_a>rapport6</field_a>
+<field_a>responsoverzicht_RP6</field_a>
 <field_b/>
 <field_c/>
-<value_type>-</value_type>
+<value_type>None</value_type>
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>N</remove>
@@ -267,10 +262,10 @@
 </calculation>
        <calculation><field_name>splits7</field_name>
 <calc_type>CONSTANT</calc_type>
-<field_a>rapport7</field_a>
+<field_a>toetsvraag-&#x28;met-docent&#x29;_RP7</field_a>
 <field_b/>
 <field_c/>
-<value_type>-</value_type>
+<value_type>None</value_type>
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>N</remove>
@@ -281,10 +276,10 @@
 </calculation>
        <calculation><field_name>splits8</field_name>
 <calc_type>CONSTANT</calc_type>
-<field_a>rapport8</field_a>
+<field_a>toetsvraag-&#x28;zonder-docent&#x29;_RP8</field_a>
 <field_b/>
 <field_c/>
-<value_type>-</value_type>
+<value_type>None</value_type>
 <value_length>-1</value_length>
 <value_precision>-1</value_precision>
 <remove>N</remove>
@@ -295,8 +290,8 @@
 </calculation>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>176</xloc>
-      <yloc>317</yloc>
+      <xloc>156</xloc>
+      <yloc>231</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -306,6 +301,7 @@
     <type>TypeExitExcelWriterStep</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -325,7 +321,7 @@
     <appendLines>N</appendLines>
     <add_to_result_filenames>Y</add_to_result_filenames>
     <file>
-      <name>&#47;home&#47;jaapandre&#47;pentaho-hva</name>
+      <name>&#x2f;home&#x2f;jaapandre&#x2f;pentaho-hva</name>
       <extention>xls</extention>
       <do_not_open_newfile_init>N</do_not_open_newfile_init>
       <split>N</split>
@@ -411,10 +407,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>2: De doelen zijn relevant voor mijn toekomstig beroep &#47; professionele ontwikkeling</name>
+        <name>2&#x3a; De doelen zijn relevant voor mijn toekomstig beroep &#x2f; professionele ontwikkeling</name>
         <type>String</type>
         <format/>
-        <title>2: De doelen zijn relevant voor mijn toekomstig beroep &#47; professionele ontwikkeling</title>
+        <title>2&#x3a; De doelen zijn relevant voor mijn toekomstig beroep &#x2f; professionele ontwikkeling</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -423,10 +419,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>2: De inhoud van deze module heeft bijgedragen aan het bereiken van de doelen</name>
+        <name>2&#x3a; De inhoud van deze module heeft bijgedragen aan het bereiken van de doelen</name>
         <type>String</type>
         <format/>
-        <title>2: De inhoud van deze module heeft bijgedragen aan het bereiken van de doelen</title>
+        <title>2&#x3a; De inhoud van deze module heeft bijgedragen aan het bereiken van de doelen</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -435,10 +431,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>2: Het niveau van de module was goed</name>
+        <name>2&#x3a; Het niveau van de module was goed</name>
         <type>String</type>
         <format/>
-        <title>2: Het niveau van de module was goed</title>
+        <title>2&#x3a; Het niveau van de module was goed</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -447,10 +443,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>2: Het studiemateriaal was goed</name>
+        <name>2&#x3a; Het studiemateriaal was goed</name>
         <type>String</type>
         <format/>
-        <title>2: Het studiemateriaal was goed</title>
+        <title>2&#x3a; Het studiemateriaal was goed</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -459,10 +455,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>2: De docent heeft bijgedragen aan mijn leerproces</name>
+        <name>2&#x3a; De docent heeft bijgedragen aan mijn leerproces</name>
         <type>String</type>
         <format/>
-        <title>2: De docent heeft bijgedragen aan mijn leerproces</title>
+        <title>2&#x3a; De docent heeft bijgedragen aan mijn leerproces</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -471,10 +467,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>2: De balans tussen theorie en praktijk klopte met de doelen van deze module</name>
+        <name>2&#x3a; De balans tussen theorie en praktijk klopte met de doelen van deze module</name>
         <type>String</type>
         <format/>
-        <title>2: De balans tussen theorie en praktijk klopte met de doelen van deze module</title>
+        <title>2&#x3a; De balans tussen theorie en praktijk klopte met de doelen van deze module</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -483,10 +479,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>2: Ik ben tevreden met de wijze waarop deze module getoetst is</name>
+        <name>2&#x3a; Ik ben tevreden met de wijze waarop deze module getoetst is</name>
         <type>String</type>
         <format/>
-        <title>2: Ik ben tevreden met de wijze waarop deze module getoetst is</title>
+        <title>2&#x3a; Ik ben tevreden met de wijze waarop deze module getoetst is</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -495,10 +491,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>2: Het aantal uren dat ik aan deze module heb besteed kwam overeen met het aantal studiepunten (+ 28 uur per studiepunt)</name>
+        <name>2&#x3a; Het aantal uren dat ik aan deze module heb besteed kwam overeen met het aantal studiepunten &#x28;&#x2b; 28 uur per studiepunt&#x29;</name>
         <type>String</type>
         <format/>
-        <title>2: Het aantal uren dat ik aan deze module heb besteed kwam overeen met het aantal studiepunten (+ 28 uur per studiepunt)</title>
+        <title>2&#x3a; Het aantal uren dat ik aan deze module heb besteed kwam overeen met het aantal studiepunten &#x28;&#x2b; 28 uur per studiepunt&#x29;</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -507,10 +503,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>3: De waardering voor deze module wil ik graag uitdrukken met het volgende (rapport)cijfer in de schaal van 1-10</name>
+        <name>3&#x3a; De waardering voor deze module wil ik graag uitdrukken met het volgende &#x28;rapport&#x29;cijfer in de schaal van 1-10</name>
         <type>Number</type>
         <format/>
-        <title>3: De waardering voor deze module wil ik graag uitdrukken met het volgende (rapport)cijfer in de schaal van 1-10</title>
+        <title>3&#x3a; De waardering voor deze module wil ik graag uitdrukken met het volgende &#x28;rapport&#x29;cijfer in de schaal van 1-10</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -519,10 +515,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>4: Hier kun je opmerkingen en suggesties kwijt die je niet in de vragen kwijt kunt</name>
+        <name>4&#x3a; Hier kun je opmerkingen en suggesties kwijt die je niet in de vragen kwijt kunt</name>
         <type>String</type>
         <format/>
-        <title>4: Hier kun je opmerkingen en suggesties kwijt die je niet in de vragen kwijt kunt</title>
+        <title>4&#x3a; Hier kun je opmerkingen en suggesties kwijt die je niet in de vragen kwijt kunt</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -531,10 +527,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>10000: splits1</name>
+        <name>10000&#x3a; splits1</name>
         <type>String</type>
         <format/>
-        <title>10000: splits1</title>
+        <title>10000&#x3a; splits1</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -543,10 +539,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>10000: splits2</name>
+        <name>10000&#x3a; splits2</name>
         <type>String</type>
         <format/>
-        <title>10000: splits2</title>
+        <title>10000&#x3a; splits2</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -555,10 +551,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>10000: group2</name>
+        <name>10000&#x3a; group2</name>
         <type>String</type>
         <format/>
-        <title>10000: group2</title>
+        <title>10000&#x3a; group2</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -567,10 +563,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>10000: splits3</name>
+        <name>10000&#x3a; splits3</name>
         <type>String</type>
         <format/>
-        <title>10000: splits3</title>
+        <title>10000&#x3a; splits3</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -579,10 +575,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>10000: group3</name>
+        <name>10000&#x3a; group3</name>
         <type>String</type>
         <format/>
-        <title>10000: group3</title>
+        <title>10000&#x3a; group3</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -591,10 +587,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>10000: splits4</name>
+        <name>10000&#x3a; splits4</name>
         <type>String</type>
         <format/>
-        <title>10000: splits4</title>
+        <title>10000&#x3a; splits4</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -603,10 +599,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>10000: group4</name>
+        <name>10000&#x3a; group4</name>
         <type>String</type>
         <format/>
-        <title>10000: group4</title>
+        <title>10000&#x3a; group4</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -615,10 +611,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>10000: splits5</name>
+        <name>10000&#x3a; splits5</name>
         <type>String</type>
         <format/>
-        <title>10000: splits5</title>
+        <title>10000&#x3a; splits5</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -627,10 +623,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>10000: group5</name>
+        <name>10000&#x3a; group5</name>
         <type>String</type>
         <format/>
-        <title>10000: group5</title>
+        <title>10000&#x3a; group5</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -639,10 +635,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>10000: splits6</name>
+        <name>10000&#x3a; splits6</name>
         <type>String</type>
         <format/>
-        <title>10000: splits6</title>
+        <title>10000&#x3a; splits6</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -651,10 +647,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>10000: group6</name>
+        <name>10000&#x3a; group6</name>
         <type>String</type>
         <format/>
-        <title>10000: group6</title>
+        <title>10000&#x3a; group6</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -663,10 +659,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>10000: splits7</name>
+        <name>10000&#x3a; splits7</name>
         <type>String</type>
         <format/>
-        <title>10000: splits7</title>
+        <title>10000&#x3a; splits7</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -675,10 +671,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>10000: group7</name>
+        <name>10000&#x3a; group7</name>
         <type>String</type>
         <format/>
-        <title>10000: group7</title>
+        <title>10000&#x3a; group7</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -687,10 +683,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>10000: splits8</name>
+        <name>10000&#x3a; splits8</name>
         <type>String</type>
         <format/>
-        <title>10000: splits8</title>
+        <title>10000&#x3a; splits8</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -699,10 +695,10 @@
         <hyperlinkField/>
       </field>
       <field>
-        <name>10000: group8</name>
+        <name>10000&#x3a; group8</name>
         <type>String</type>
         <format/>
-        <title>10000: group8</title>
+        <title>10000&#x3a; group8</title>
         <titleStyleCell/>
         <styleCell/>
         <commentField/>
@@ -713,8 +709,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>832</xloc>
-      <yloc>593</yloc>
+      <xloc>816</xloc>
+      <yloc>499</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -724,6 +720,7 @@
     <type>Denormaliser</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -741,8 +738,8 @@
       <fields>
         <field>
           <field_name>answer_label</field_name>
-          <key_value>De doelen zijn relevant voor mijn toekomstig beroep &#47; professionele ontwikkeling</key_value>
-          <target_name>2: De doelen zijn relevant voor mijn toekomstig beroep &#47; professionele ontwikkeling</target_name>
+          <key_value>De doelen zijn relevant voor mijn toekomstig beroep &#x2f; professionele ontwikkeling</key_value>
+          <target_name>2&#x3a; De doelen zijn relevant voor mijn toekomstig beroep &#x2f; professionele ontwikkeling</target_name>
           <target_type>String</target_type>
           <target_format/>
           <target_length>-1</target_length>
@@ -756,7 +753,7 @@
         <field>
           <field_name>answer_label</field_name>
           <key_value>De inhoud van deze module heeft bijgedragen aan het bereiken van de doelen</key_value>
-          <target_name>2: De inhoud van deze module heeft bijgedragen aan het bereiken van de doelen</target_name>
+          <target_name>2&#x3a; De inhoud van deze module heeft bijgedragen aan het bereiken van de doelen</target_name>
           <target_type>String</target_type>
           <target_format/>
           <target_length>-1</target_length>
@@ -770,7 +767,7 @@
         <field>
           <field_name>answer_label</field_name>
           <key_value>Het niveau van de module was goed</key_value>
-          <target_name>2: Het niveau van de module was goed</target_name>
+          <target_name>2&#x3a; Het niveau van de module was goed</target_name>
           <target_type>String</target_type>
           <target_format/>
           <target_length>-1</target_length>
@@ -784,7 +781,7 @@
         <field>
           <field_name>answer_label</field_name>
           <key_value>Het studiemateriaal was goed</key_value>
-          <target_name>2: Het studiemateriaal was goed</target_name>
+          <target_name>2&#x3a; Het studiemateriaal was goed</target_name>
           <target_type>String</target_type>
           <target_format/>
           <target_length>-1</target_length>
@@ -798,7 +795,7 @@
         <field>
           <field_name>answer_label</field_name>
           <key_value>De docent heeft bijgedragen aan mijn leerproces</key_value>
-          <target_name>2: De docent heeft bijgedragen aan mijn leerproces</target_name>
+          <target_name>2&#x3a; De docent heeft bijgedragen aan mijn leerproces</target_name>
           <target_type>String</target_type>
           <target_format/>
           <target_length>-1</target_length>
@@ -812,7 +809,7 @@
         <field>
           <field_name>answer_label</field_name>
           <key_value>De balans tussen theorie en praktijk klopte met de doelen van deze module</key_value>
-          <target_name>2: De balans tussen theorie en praktijk klopte met de doelen van deze module</target_name>
+          <target_name>2&#x3a; De balans tussen theorie en praktijk klopte met de doelen van deze module</target_name>
           <target_type>String</target_type>
           <target_format/>
           <target_length>-1</target_length>
@@ -826,7 +823,7 @@
         <field>
           <field_name>answer_label</field_name>
           <key_value>Ik ben tevreden met de wijze waarop deze module getoetst is</key_value>
-          <target_name>2: Ik ben tevreden met de wijze waarop deze module getoetst is</target_name>
+          <target_name>2&#x3a; Ik ben tevreden met de wijze waarop deze module getoetst is</target_name>
           <target_type>String</target_type>
           <target_format/>
           <target_length>-1</target_length>
@@ -839,8 +836,8 @@
           </field>
         <field>
           <field_name>answer_label</field_name>
-          <key_value>Het aantal uren dat ik aan deze module heb besteed kwam overeen met het aantal studiepunten (+ 28 uur per studiepunt)</key_value>
-          <target_name>2: Het aantal uren dat ik aan deze module heb besteed kwam overeen met het aantal studiepunten (+ 28 uur per studiepunt)</target_name>
+          <key_value>Het aantal uren dat ik aan deze module heb besteed kwam overeen met het aantal studiepunten &#x28;&#x2b; 28 uur per studiepunt&#x29;</key_value>
+          <target_name>2&#x3a; Het aantal uren dat ik aan deze module heb besteed kwam overeen met het aantal studiepunten &#x28;&#x2b; 28 uur per studiepunt&#x29;</target_name>
           <target_type>String</target_type>
           <target_format/>
           <target_length>-1</target_length>
@@ -853,8 +850,8 @@
           </field>
         <field>
           <field_name>answer</field_name>
-          <key_value>De waardering voor deze module wil ik graag uitdrukken met het volgende (rapport)cijfer in de schaal van 1-10</key_value>
-          <target_name>3: De waardering voor deze module wil ik graag uitdrukken met het volgende (rapport)cijfer in de schaal van 1-10</target_name>
+          <key_value>De waardering voor deze module wil ik graag uitdrukken met het volgende &#x28;rapport&#x29;cijfer in de schaal van 1-10</key_value>
+          <target_name>3&#x3a; De waardering voor deze module wil ik graag uitdrukken met het volgende &#x28;rapport&#x29;cijfer in de schaal van 1-10</target_name>
           <target_type>Number</target_type>
           <target_format/>
           <target_length>-1</target_length>
@@ -868,7 +865,7 @@
         <field>
           <field_name>answer_label</field_name>
           <key_value>Hier kun je opmerkingen en suggesties kwijt die je niet in de vragen kwijt kunt</key_value>
-          <target_name>4: Hier kun je opmerkingen en suggesties kwijt die je niet in de vragen kwijt kunt</target_name>
+          <target_name>4&#x3a; Hier kun je opmerkingen en suggesties kwijt die je niet in de vragen kwijt kunt</target_name>
           <target_type>String</target_type>
           <target_format/>
           <target_length>-1</target_length>
@@ -882,8 +879,8 @@
         </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>255</xloc>
-      <yloc>99</yloc>
+      <xloc>275</xloc>
+      <yloc>98</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -893,6 +890,7 @@
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -918,103 +916,103 @@
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>2: De doelen zijn relevant voor mijn toekomstig beroep &#47; professionele ontwikkeling</name>
+      </field>      <field>        <name>2&#x3a; De doelen zijn relevant voor mijn toekomstig beroep &#x2f; professionele ontwikkeling</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>2: De inhoud van deze module heeft bijgedragen aan het bereiken van de doelen</name>
+      </field>      <field>        <name>2&#x3a; De inhoud van deze module heeft bijgedragen aan het bereiken van de doelen</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>2: Het niveau van de module was goed</name>
+      </field>      <field>        <name>2&#x3a; Het niveau van de module was goed</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>2: Het studiemateriaal was goed</name>
+      </field>      <field>        <name>2&#x3a; Het studiemateriaal was goed</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>2: De docent heeft bijgedragen aan mijn leerproces</name>
+      </field>      <field>        <name>2&#x3a; De docent heeft bijgedragen aan mijn leerproces</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>2: De balans tussen theorie en praktijk klopte met de doelen van deze module</name>
+      </field>      <field>        <name>2&#x3a; De balans tussen theorie en praktijk klopte met de doelen van deze module</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>2: Ik ben tevreden met de wijze waarop deze module getoetst is</name>
+      </field>      <field>        <name>2&#x3a; Ik ben tevreden met de wijze waarop deze module getoetst is</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>2: Het aantal uren dat ik aan deze module heb besteed kwam overeen met het aantal studiepunten (+ 28 uur per studiepunt)</name>
+      </field>      <field>        <name>2&#x3a; Het aantal uren dat ik aan deze module heb besteed kwam overeen met het aantal studiepunten &#x28;&#x2b; 28 uur per studiepunt&#x29;</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>3: De waardering voor deze module wil ik graag uitdrukken met het volgende (rapport)cijfer in de schaal van 1-10</name>
+      </field>      <field>        <name>3&#x3a; De waardering voor deze module wil ik graag uitdrukken met het volgende &#x28;rapport&#x29;cijfer in de schaal van 1-10</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>4: Hier kun je opmerkingen en suggesties kwijt die je niet in de vragen kwijt kunt</name>
+      </field>      <field>        <name>4&#x3a; Hier kun je opmerkingen en suggesties kwijt die je niet in de vragen kwijt kunt</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>10000: splits1</name>
+      </field>      <field>        <name>10000&#x3a; splits1</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>10000: splits2</name>
+      </field>      <field>        <name>10000&#x3a; splits2</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>10000: group2</name>
+      </field>      <field>        <name>10000&#x3a; group2</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>10000: splits3</name>
+      </field>      <field>        <name>10000&#x3a; splits3</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>10000: group3</name>
+      </field>      <field>        <name>10000&#x3a; group3</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>10000: splits4</name>
+      </field>      <field>        <name>10000&#x3a; splits4</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>10000: group4</name>
+      </field>      <field>        <name>10000&#x3a; group4</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>10000: splits5</name>
+      </field>      <field>        <name>10000&#x3a; splits5</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>10000: group5</name>
+      </field>      <field>        <name>10000&#x3a; group5</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>10000: splits6</name>
+      </field>      <field>        <name>10000&#x3a; splits6</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>10000: group6</name>
+      </field>      <field>        <name>10000&#x3a; group6</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>10000: splits7</name>
+      </field>      <field>        <name>10000&#x3a; splits7</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>10000: group7</name>
+      </field>      <field>        <name>10000&#x3a; group7</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>10000: splits8</name>
+      </field>      <field>        <name>10000&#x3a; splits8</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
-      </field>      <field>        <name>10000: group8</name>
+      </field>      <field>        <name>10000&#x3a; group8</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
@@ -1026,6 +1024,9 @@
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -1038,6 +1039,9 @@
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -1050,6 +1054,9 @@
         <precision>-2</precision>
         <conversion_mask/>
         <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
         <encoding/>
         <decimal_symbol/>
         <grouping_symbol/>
@@ -1057,8 +1064,8 @@
         <storage_type/>
       </meta>    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>739</xloc>
-      <yloc>563</yloc>
+      <xloc>723</xloc>
+      <yloc>469</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1068,6 +1075,7 @@
     <type>StringOperations</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1116,38 +1124,8 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>659</xloc>
-      <yloc>546</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>determin opleiding</name>
-    <type>ReplaceString</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      <field>
-        <in_stream_name>title1</in_stream_name>
-        <out_stream_name>9999: opleiding</out_stream_name>
-        <use_regex>no</use_regex>
-        <replace_string>Modulenevaluatie </replace_string>
-        <replace_by_string/>
-        <replace_field_by_string/>
-        <whole_word>no</whole_word>
-        <case_sensitive>no</case_sensitive>
-      </field>
-    </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>446</xloc>
-      <yloc>182</yloc>
+      <xloc>643</xloc>
+      <yloc>452</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1157,33 +1135,14 @@
     <type>TableInput</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
     <connection>target-database</connection>
-    <sql>SELECT
-  a.respondent_key
-, a.date_key
-, a.answer
-, q.question_text
-, m.*
-, l.answer_label
-, qe.questionnaire_title_en
-, qe.email_invitations
-, qe.total_response
-, qe.response_percentage
-FROM fact_answer a,
-	dim_question q,
-	dim_module m,
-	lookup_answer_label l,
-	dim_questionnaire qe
-Where a.question_key=q.question_key
-AND	a.module_key=m.module_key
-AND a.answer_label_key=l.answer_label_key
-AND a.questionnaire_key=qe.questionnaire_key
-order by a.respondent_key, a.module_key, q.`sequence`</sql>
+    <sql>SELECT&#xa;  a.respondent_key&#xa;, a.date_key&#xa;, a.answer&#xa;, q.question_text&#xa;, m.&#x2a;&#xa;, l.answer_label&#xa;, qe.questionnaire_title_en&#xa;, qe.email_invitations&#xa;, qe.total_response&#xa;, qe.response_percentage&#xa;, qe.cluster&#xa;, qe.periode&#xa;, qe.opleiding&#xa;, qe.questionnaire_target_population&#xa;FROM fact_answer a,&#xa;	dim_question q,&#xa;	dim_module m,&#xa;	lookup_answer_label l,&#xa;	dim_questionnaire qe&#xa;Where a.question_key&#x3d;q.question_key&#xa;AND	a.module_key&#x3d;m.module_key&#xa;AND a.answer_label_key&#x3d;l.answer_label_key&#xa;AND a.questionnaire_key&#x3d;qe.questionnaire_key&#xa;and a.module_key &#x3c;&#x3e;1&#xa;order by a.respondent_key, a.module_key, q.&#x60;sequence&#x60;</sql>
     <limit>0</limit>
     <lookup/>
     <execute_each_row>N</execute_each_row>
@@ -1192,7 +1151,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>81</xloc>
-      <yloc>99</yloc>
+      <yloc>98</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1202,6 +1161,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <type>ConcatFields</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1224,7 +1184,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       <name>file</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
       <extention>txt</extention>
       <append>N</append>
       <split>N</split>
@@ -1241,7 +1201,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <fields>
       <field>
         <name>module</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1253,14 +1213,14 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
     </fields>
     <ConcatFields>
-<targetFieldName>10000: group3</targetFieldName>
+<targetFieldName>10000&#x3a; group3</targetFieldName>
 <targetFieldLength>0</targetFieldLength>
 <removeSelectedFields>N</removeSelectedFields>
     </ConcatFields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>776</xloc>
-      <yloc>316</yloc>
+      <xloc>760</xloc>
+      <yloc>222</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1270,6 +1230,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <type>ConcatFields</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1292,7 +1253,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       <name>file</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
       <extention>txt</extention>
       <append>N</append>
       <split>N</split>
@@ -1309,7 +1270,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <fields>
       <field>
         <name>jaar</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1321,7 +1282,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>module</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1333,14 +1294,14 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
     </fields>
     <ConcatFields>
-<targetFieldName>10000: group4</targetFieldName>
+<targetFieldName>10000&#x3a; group4</targetFieldName>
 <targetFieldLength>0</targetFieldLength>
 <removeSelectedFields>N</removeSelectedFields>
     </ConcatFields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>403</xloc>
-      <yloc>426</yloc>
+      <xloc>387</xloc>
+      <yloc>332</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1350,6 +1311,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <type>ConcatFields</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1372,7 +1334,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       <name>file</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
       <extention>txt</extention>
       <append>N</append>
       <split>N</split>
@@ -1389,7 +1351,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <fields>
       <field>
         <name>module</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1401,7 +1363,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>docent</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1413,7 +1375,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>jaar</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1425,7 +1387,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>klasletter</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1437,14 +1399,14 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
     </fields>
     <ConcatFields>
-<targetFieldName>10000: group5</targetFieldName>
+<targetFieldName>10000&#x3a; group5</targetFieldName>
 <targetFieldLength>0</targetFieldLength>
 <removeSelectedFields>N</removeSelectedFields>
     </ConcatFields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>584</xloc>
-      <yloc>426</yloc>
+      <xloc>568</xloc>
+      <yloc>332</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1454,6 +1416,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <type>ConcatFields</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1476,7 +1439,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       <name>file</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
       <extention>txt</extention>
       <append>N</append>
       <split>N</split>
@@ -1492,8 +1455,8 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     </file>
     <fields>
       <field>
-        <name>title1</name>
-        <type>-</type>
+        <name>opleiding</name>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1504,8 +1467,8 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
         <precision>-1</precision>
       </field>
       <field>
-        <name>title2</name>
-        <type>-</type>
+        <name>questionnaire_target_population</name>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1517,14 +1480,14 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
     </fields>
     <ConcatFields>
-<targetFieldName>10000: group6</targetFieldName>
+<targetFieldName>10000&#x3a; group6</targetFieldName>
 <targetFieldLength>0</targetFieldLength>
 <removeSelectedFields>N</removeSelectedFields>
     </ConcatFields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>787</xloc>
-      <yloc>426</yloc>
+      <xloc>772</xloc>
+      <yloc>331</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1534,6 +1497,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <type>ConcatFields</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1556,7 +1520,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       <name>file</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
       <extention>txt</extention>
       <append>N</append>
       <split>N</split>
@@ -1573,7 +1537,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <fields>
       <field>
         <name>module_code</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1585,14 +1549,14 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
     </fields>
     <ConcatFields>
-<targetFieldName>10000: group7</targetFieldName>
+<targetFieldName>10000&#x3a; group7</targetFieldName>
 <targetFieldLength>0</targetFieldLength>
 <removeSelectedFields>N</removeSelectedFields>
     </ConcatFields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>396</xloc>
-      <yloc>524</yloc>
+      <xloc>380</xloc>
+      <yloc>430</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1602,6 +1566,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <type>ConcatFields</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1624,7 +1589,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       <name>file</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
       <extention>txt</extention>
       <append>N</append>
       <split>N</split>
@@ -1641,7 +1606,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <fields>
       <field>
         <name>type_opleiding</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1653,7 +1618,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>jaar</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1665,7 +1630,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>klasletter</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1677,7 +1642,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>module</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1689,14 +1654,14 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
     </fields>
     <ConcatFields>
-<targetFieldName>10000: group8</targetFieldName>
+<targetFieldName>10000&#x3a; group8</targetFieldName>
 <targetFieldLength>0</targetFieldLength>
 <removeSelectedFields>N</removeSelectedFields>
     </ConcatFields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>592</xloc>
-      <yloc>524</yloc>
+      <xloc>576</xloc>
+      <yloc>430</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1706,6 +1671,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <type>ConcatFields</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1728,7 +1694,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       <name>file</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
       <extention>txt</extention>
       <append>N</append>
       <split>N</split>
@@ -1745,7 +1711,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <fields>
       <field>
         <name>module</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1757,7 +1723,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>docent</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1769,14 +1735,14 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
     </fields>
     <ConcatFields>
-<targetFieldName>10000: group2</targetFieldName>
+<targetFieldName>10000&#x3a; group2</targetFieldName>
 <targetFieldLength>0</targetFieldLength>
 <removeSelectedFields>N</removeSelectedFields>
     </ConcatFields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>575</xloc>
-      <yloc>318</yloc>
+      <xloc>559</xloc>
+      <yloc>224</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1786,6 +1752,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <type>ConcatFields</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1808,7 +1775,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       <name>file</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
       <extention>txt</extention>
       <append>N</append>
       <split>N</split>
@@ -1824,8 +1791,8 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     </file>
     <fields>
       <field>
-        <name>9999: opleiding</name>
-        <type>-</type>
+        <name>opleiding</name>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1837,7 +1804,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>type_opleiding</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1849,7 +1816,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>jaar</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1860,8 +1827,8 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
         <precision>-1</precision>
       </field>
       <field>
-        <name>9999: periode</name>
-        <type>-</type>
+        <name>periode</name>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1873,7 +1840,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>splits2</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1885,14 +1852,14 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
     </fields>
     <ConcatFields>
-<targetFieldName>10000: splits2</targetFieldName>
+<targetFieldName>10000&#x3a; splits2</targetFieldName>
 <targetFieldLength>0</targetFieldLength>
 <removeSelectedFields>N</removeSelectedFields>
     </ConcatFields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>494</xloc>
-      <yloc>319</yloc>
+      <xloc>478</xloc>
+      <yloc>225</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1902,6 +1869,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <type>ConcatFields</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -1924,7 +1892,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       <name>file</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
       <extention>txt</extention>
       <append>N</append>
       <split>N</split>
@@ -1940,8 +1908,8 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     </file>
     <fields>
       <field>
-        <name>9999: opleiding</name>
-        <type>-</type>
+        <name>opleiding</name>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1953,7 +1921,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>type_opleiding</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1965,7 +1933,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>jaar</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1976,8 +1944,8 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
         <precision>-1</precision>
       </field>
       <field>
-        <name>9999: periode</name>
-        <type>-</type>
+        <name>periode</name>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -1989,7 +1957,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>splits3</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2001,14 +1969,14 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
     </fields>
     <ConcatFields>
-<targetFieldName>10000: splits3</targetFieldName>
+<targetFieldName>10000&#x3a; splits3</targetFieldName>
 <targetFieldLength>0</targetFieldLength>
 <removeSelectedFields>N</removeSelectedFields>
     </ConcatFields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>669</xloc>
-      <yloc>317</yloc>
+      <xloc>653</xloc>
+      <yloc>223</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -2018,6 +1986,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <type>ConcatFields</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -2040,7 +2009,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       <name>file</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
       <extention>txt</extention>
       <append>N</append>
       <split>N</split>
@@ -2056,8 +2025,8 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     </file>
     <fields>
       <field>
-        <name>9999: opleiding</name>
-        <type>-</type>
+        <name>opleiding</name>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2069,7 +2038,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>type_opleiding</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2080,8 +2049,8 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
         <precision>-1</precision>
       </field>
       <field>
-        <name>9999: periode</name>
-        <type>-</type>
+        <name>periode</name>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2093,7 +2062,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>splits4</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2105,14 +2074,14 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
     </fields>
     <ConcatFields>
-<targetFieldName>10000: splits4</targetFieldName>
+<targetFieldName>10000&#x3a; splits4</targetFieldName>
 <targetFieldLength>0</targetFieldLength>
 <removeSelectedFields>N</removeSelectedFields>
     </ConcatFields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>296</xloc>
-      <yloc>426</yloc>
+      <xloc>280</xloc>
+      <yloc>332</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -2122,6 +2091,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <type>ConcatFields</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -2144,7 +2114,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       <name>file</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
       <extention>txt</extention>
       <append>N</append>
       <split>N</split>
@@ -2160,8 +2130,8 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     </file>
     <fields>
       <field>
-        <name>9999: opleiding</name>
-        <type>-</type>
+        <name>opleiding</name>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2173,7 +2143,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>type_opleiding</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2185,7 +2155,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>jaar</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2196,8 +2166,8 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
         <precision>-1</precision>
       </field>
       <field>
-        <name>9999: periode</name>
-        <type>-</type>
+        <name>periode</name>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2209,7 +2179,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>splits5</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2221,14 +2191,14 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
     </fields>
     <ConcatFields>
-<targetFieldName>10000: splits5</targetFieldName>
+<targetFieldName>10000&#x3a; splits5</targetFieldName>
 <targetFieldLength>0</targetFieldLength>
 <removeSelectedFields>N</removeSelectedFields>
     </ConcatFields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>495</xloc>
-      <yloc>426</yloc>
+      <xloc>479</xloc>
+      <yloc>332</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -2238,6 +2208,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <type>ConcatFields</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -2260,7 +2231,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       <name>file</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
       <extention>txt</extention>
       <append>N</append>
       <split>N</split>
@@ -2276,8 +2247,8 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     </file>
     <fields>
       <field>
-        <name>9999: opleiding</name>
-        <type>-</type>
+        <name>cluster</name>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2288,8 +2259,8 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
         <precision>-1</precision>
       </field>
       <field>
-        <name>9999: periode</name>
-        <type>-</type>
+        <name>periode</name>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2301,7 +2272,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>splits6</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2313,14 +2284,14 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
     </fields>
     <ConcatFields>
-<targetFieldName>10000: splits6</targetFieldName>
+<targetFieldName>10000&#x3a; splits6</targetFieldName>
 <targetFieldLength>0</targetFieldLength>
 <removeSelectedFields>N</removeSelectedFields>
     </ConcatFields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>672</xloc>
-      <yloc>426</yloc>
+      <xloc>656</xloc>
+      <yloc>332</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -2330,6 +2301,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <type>ConcatFields</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -2352,7 +2324,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       <name>file</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
       <extention>txt</extention>
       <append>N</append>
       <split>N</split>
@@ -2368,8 +2340,8 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     </file>
     <fields>
       <field>
-        <name>9999: opleiding</name>
-        <type>-</type>
+        <name>cluster</name>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2380,8 +2352,8 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
         <precision>-1</precision>
       </field>
       <field>
-        <name>9999: periode</name>
-        <type>-</type>
+        <name>periode</name>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2393,7 +2365,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>splits7</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2405,14 +2377,14 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
     </fields>
     <ConcatFields>
-<targetFieldName>10000: splits7</targetFieldName>
+<targetFieldName>10000&#x3a; splits7</targetFieldName>
 <targetFieldLength>0</targetFieldLength>
 <removeSelectedFields>N</removeSelectedFields>
     </ConcatFields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>289</xloc>
-      <yloc>524</yloc>
+      <xloc>273</xloc>
+      <yloc>430</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -2422,6 +2394,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <type>ConcatFields</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -2444,7 +2417,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       <name>file</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
       <extention>txt</extention>
       <append>N</append>
       <split>N</split>
@@ -2460,8 +2433,8 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     </file>
     <fields>
       <field>
-        <name>9999: opleiding</name>
-        <type>-</type>
+        <name>cluster</name>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2472,8 +2445,8 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
         <precision>-1</precision>
       </field>
       <field>
-        <name>9999: periode</name>
-        <type>-</type>
+        <name>periode</name>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2485,7 +2458,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>splits8</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2497,14 +2470,14 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
     </fields>
     <ConcatFields>
-<targetFieldName>10000: splits8</targetFieldName>
+<targetFieldName>10000&#x3a; splits8</targetFieldName>
 <targetFieldLength>0</targetFieldLength>
 <removeSelectedFields>N</removeSelectedFields>
     </ConcatFields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>497</xloc>
-      <yloc>524</yloc>
+      <xloc>481</xloc>
+      <yloc>430</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -2514,6 +2487,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     <type>ConcatFields</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
@@ -2536,7 +2510,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       <name>file</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
-      <do_not_open_new_file_init>N</do_not_open_new_file_init>
+      <do_not_open_new_file_init>Y</do_not_open_new_file_init>
       <extention>txt</extention>
       <append>N</append>
       <split>N</split>
@@ -2552,8 +2526,8 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
     </file>
     <fields>
       <field>
-        <name>9999: opleiding</name>
-        <type>-</type>
+        <name>opleiding</name>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2565,7 +2539,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>type_opleiding</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2577,7 +2551,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>jaar</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2589,7 +2563,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>klasletter</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2600,8 +2574,8 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
         <precision>-1</precision>
       </field>
       <field>
-        <name>9999: periode</name>
-        <type>-</type>
+        <name>periode</name>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2613,7 +2587,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>module</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2625,7 +2599,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>docent</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2637,7 +2611,7 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
       <field>
         <name>splits1</name>
-        <type>-</type>
+        <type>None</type>
         <format/>
         <currency/>
         <decimal/>
@@ -2649,58 +2623,14 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
       </field>
     </fields>
     <ConcatFields>
-<targetFieldName>10000: splits1</targetFieldName>
+<targetFieldName>10000&#x3a; splits1</targetFieldName>
 <targetFieldLength>0</targetFieldLength>
 <removeSelectedFields>N</removeSelectedFields>
     </ConcatFields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>301</xloc>
-      <yloc>321</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>splits questionnaire title</name>
-    <type>FieldSplitter</type>
-    <description/>
-    <distribute>Y</distribute>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-   <splitfield>questionnaire_title_en</splitfield>
-   <delimiter>:</delimiter>
-    <fields>      <field>        <name>title1</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>      <field>        <name>title2</name>
-        <id/>
-        <idrem>N</idrem>
-        <type>String</type>
-        <format/>
-        <group/>
-        <decimal/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <nullif/>
-        <ifnull/>
-        <trimtype>none</trimtype>
-      </field>    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>277</xloc>
-      <yloc>183</yloc>
+      <xloc>285</xloc>
+      <yloc>227</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -2710,4 +2640,5 @@ order by a.respondent_key, a.module_key, q.`sequence`</sql>
    <slave-step-copy-partition-distribution>
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
+
 </transformation>
