@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <job>
   <name>create Aggregates</name>
     <description/>
     <extended_description/>
     <job_version/>
     <job_status>0</job_status>
-  <directory>&#x2f;webenq</directory>
+  <directory>&#x2f;</directory>
   <created_user>-</created_user>
   <created_date>2013&#x2f;10&#x2f;29 14&#x3a;36&#x3a;57.476</created_date>
   <modified_user>-</modified_user>
@@ -350,7 +351,7 @@
       <senderServerName>&#x24;&#x7b;NAGIOS_SENDER&#x7d;</senderServerName>
       <senderServiceName>AGGREGATE</senderServiceName>
       <message>Aggregates generated succesfull</message>
-      <encryptionMode>none</encryptionMode>
+      <encryptionMode>xor</encryptionMode>
       <level>ok</level>
       <parallel>N</parallel>
       <draw>Y</draw>
