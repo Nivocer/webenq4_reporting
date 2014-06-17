@@ -115,7 +115,7 @@ CREATE TABLE dim_questionnaire (
 CREATE TABLE dim_question (
                 question_key INT AUTO_INCREMENT NOT NULL,
                 questionnaire_key INT NOT NULL,
-                group_title_en VARCHAR(255),
+                group_title_en VARCHAR(512),
                 question_text_en VARCHAR(512),
                 sequence BIGINT NOT NULL,
                 PRIMARY KEY (question_key)
