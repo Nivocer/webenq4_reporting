@@ -115,8 +115,8 @@ CREATE TABLE dim_questionnaire (
 CREATE TABLE dim_question (
                 question_key INT AUTO_INCREMENT NOT NULL,
                 questionnaire_key INT NOT NULL,
-                group_title_en VARCHAR(512),
-                question_text_en VARCHAR(512),
+                group_title_en VARCHAR(1024),
+                question_text_en VARCHAR(1024),
                 sequence BIGINT NOT NULL,
                 PRIMARY KEY (question_key)
 )             CHARACTER SET utf8 COLLATE utf8_bin
