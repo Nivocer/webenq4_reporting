@@ -4,8 +4,8 @@
  <print-settings numCopies="1" zoom="1.0" pageNumbersPrinted="true" orientation="1" paperWidth="612.0" paperHeight="792.0" leftBorder="50.0" rightBorder="50.0" topBorder="50.0" bottomBorder="50.0" />
  <project-data-sources>
   <data-source id="DS0">
-   <property key="Logical" value="pentaho_iicd" />
    <property key="Connection Type" value="MySQL" />
+   <property key="Logical" value="PlayPen Database" />
    <property key="JDBC URL" value="jdbc:mysql://localhost:3306/pentaho_iicd" />
    <property key="UID" value="jaapandre" />
    <property key="PWD" value="koffie" />
@@ -52,8 +52,8 @@
    <property key="ca.sqlpower.architect.etl.kettle.repos.password" value="" />
   </data-source>
   <data-source id="DS0">
-   <property key="Logical" value="pentaho_iicd" />
    <property key="Connection Type" value="MySQL" />
+   <property key="Logical" value="PlayPen Database" />
    <property key="JDBC URL" value="jdbc:mysql://localhost:3306/pentaho_iicd" />
    <property key="UID" value="jaapandre" />
    <property key="PWD" value="koffie" />
@@ -65,7 +65,7 @@
   </data-source>
  </project-data-sources>
  <source-databases>
-  <database id="DB0" populated="true" UUID="c567306d-3adc-4474-890f-59dd64795b9c" dbcs-ref="DS2" name="mysql-localhost iicd" physicalName="mysql-localhost iicd" sql-exception="ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: Couldn&apos;t connect to database: Access denied for user &apos;jaapandre&apos;@&apos;localhost&apos; (using password: NO)" >
+  <database id="DB0" populated="true" UUID="c567306d-3adc-4474-890f-59dd64795b9c" dbcs-ref="DS2" name="mysql-localhost iicd" physicalName="mysql-localhost iicd" sql-exception="ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: ca.sqlpower.sqlobject.SQLObjectException: Couldn&apos;t connect to database: Access denied for user &apos;jaapandre&apos;@&apos;localhost&apos; (using password: NO)" >
    <catalog id="CAT1" populated="true" UUID="0e97a56e-f73f-435d-a09e-2f5b1b73b49b" name="information_schema" nativeTerm="database" physicalName="information_schema" >
    </catalog>
    <catalog id="CAT2" populated="true" UUID="44d5cede-1fe4-4300-a202-ef932462ae9d" name="iicd_org" nativeTerm="database" physicalName="iicd_org" >
@@ -4403,7 +4403,7 @@
    <relationships>
    </relationships>
   </database>
-  <database id="DB1425" populated="true" UUID="c89c7139-0240-4840-8de0-08d4e00d5bf8" dbcs-ref="DS0" name="pentaho_iicd" physicalName="pentaho_iicd" >
+  <database id="DB1425" populated="true" UUID="c89c7139-0240-4840-8de0-08d4e00d5bf8" dbcs-ref="DS0" name="PlayPen Database" physicalName="pentaho_iicd" >
    <catalog id="CAT1426" populated="false" UUID="5d6cd146-a6a0-4492-9d0e-e488cd4c99a6" name="information_schema" nativeTerm="database" physicalName="information_schema" >
    </catalog>
    <catalog id="CAT1427" populated="false" UUID="63437c55-0226-4f2a-96b9-88f6ccf87b75" name="iicd_org" nativeTerm="database" physicalName="iicd_org" >
@@ -4646,10 +4646,10 @@
     <column id="COL1498" populated="true" UUID="4ccf0f63-182f-4cbe-be0e-22c7d2bfa21e" autoIncrement="false" autoIncrementSequenceName="dim_questionnaire_questionnaire_key_seq_1" defaultValue="" name="questionnaire_key" nullable="0" physicalName="questionnaire_key" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL1499" populated="true" UUID="d842c1fc-d45b-42a2-96f3-e964f0c2249f" autoIncrement="false" autoIncrementSequenceName="dim_question_group_title_en_seq" defaultValue="" name="group_title_en" nullable="1" physicalName="group_title_en" precision="255" referenceCount="1" scale="0" source-column-ref="COL1305" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL1499" populated="true" UUID="d842c1fc-d45b-42a2-96f3-e964f0c2249f" autoIncrement="false" autoIncrementSequenceName="dim_question_group_title_en_seq" defaultValue="" name="group_title_en" nullable="1" physicalName="group_title_en" precision="1024" referenceCount="1" scale="0" source-column-ref="COL1305" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL1500" populated="true" UUID="8e8711cc-0850-4bf9-960c-e1385564d126" autoIncrement="false" autoIncrementSequenceName="dim_question_question_text_en_seq" defaultValue="" name="question_text_en" nullable="1" physicalName="question_text_en" precision="512" referenceCount="1" scale="0" source-column-ref="COL1315" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL1500" populated="true" UUID="8e8711cc-0850-4bf9-960c-e1385564d126" autoIncrement="false" autoIncrementSequenceName="dim_question_question_text_en_seq" defaultValue="" name="question_text_en" nullable="1" physicalName="question_text_en" precision="1024" referenceCount="1" scale="0" source-column-ref="COL1315" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
     <column id="COL1501" populated="true" UUID="5e2a2dc2-2a53-4440-a2df-f8224936c665" autoIncrement="false" autoIncrementSequenceName="dim_question_sequence_seq" defaultValue="" name="sequence" nullable="0" physicalName="sequence" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="-5" userDefinedTypeUUID="433cc8af-284d-4abb-8ef7-08ebcb34dbf1" >
@@ -4828,7 +4828,7 @@
    </relationship>
   </relationships>
  </target-database>
- <ddl-generator type="ca.sqlpower.architect.ddl.MySqlDDLGenerator" allow-connection="false" target-catalog="pentaho_iicd"> </ddl-generator>
+ <ddl-generator type="ca.sqlpower.architect.ddl.MySqlDDLGenerator" allow-connection="true" target-catalog="pentaho_iicd"> </ddl-generator>
  <liquibase-settings useSeparateChangeSets="false" generateId="false" idStart="1"/>
  <create-kettle-job-settings filePath="/home/jaapandre/Dropbox/Nivocer/pentaho/webenq3_extract/iicd" jobName="extract webenq3 to pentaho" schemaName="" kettleJoinType="0" savingToFile="true" />
  <play-pen zoom="0.8408964152537148" viewportX="0" viewportY="0" relationship-style="rectilinear" names-displayLogicalNames="true" showPrimaryTag="true" showForeignTag="true" showAlternateTag="true" columnVisibility="ALL" relationshipLabelVisibility="true">
